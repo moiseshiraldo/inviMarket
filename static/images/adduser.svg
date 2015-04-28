@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created using Karbon, part of Calligra: http://www.calligra.org/karbon -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="244.063pt" height="255.969pt">
+<defs/>
+<g id="layer0">
+  <rect id="shape0" transform="translate(220.562, 55.279)" fill="#ffffff" stroke="#000000" stroke-width="0.00000000000" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="2.00000000000" width="26.34975000000pt" height="108.18077745851pt"/>
+  <path id="shape1" transform="matrix(1 -0.00350143 0 1 26.6049 33.671)" fill="#ffffff" stroke="#000000" stroke-width="0.00000000000" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="2.00000000000" d="M119.701 59.2856C119.701 26.543 92.9051 2.0049e-15 59.8506 0C26.796 -2.0049e-15 4.04801e-15 26.543 0 59.2856C-4.04801e-15 92.0282 26.796 118.572 59.8506 118.572C92.9051 118.572 119.701 92.0282 119.701 59.2856"/>
+  <path id="shape2" transform="translate(0.37235, 164.644)" fill="#ffffff" stroke="#000000" stroke-width="0.00000000000" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="2.00000000000" d="M0.54755 135.774L172.236 135.399C173.157 56.092 156.58 1.26055 89.3758 0.153004C25.1282 -2.98757 -4.48118 42.2195 0.54755 135.774Z"/>
+  <rect id="shape01" transform="matrix(-1 0 0 -1 302.489 139.395)" fill="#ffffff" stroke="#000000" stroke-width="0.00000000000" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="2.00000000000" width="104.36689271248pt" height="25.40868750000pt"/>
+ </g>
+</svg>

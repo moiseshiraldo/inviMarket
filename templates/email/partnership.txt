@@ -1,0 +1,4 @@
+Hello {{ name }},
+
+{{ user.first_name }} wants to be your partner. Click the following
+link to view the request https://{{ domain }}{% url 'partners' partner_id=user.id %}

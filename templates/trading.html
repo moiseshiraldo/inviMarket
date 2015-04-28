@@ -1,0 +1,61 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block main %}
+
+<main id="trading">
+
+  {% if not message and users.object_list.count > 2 %}
+  {% include "ads/topAd.html" %}
+  {% endif %}
+
+  {% if request_filter or offer_filter %}
+  <aside class="filter trade-filter">
+    {% include "ads/asideLink.html" %}
+    <form action="{% url 'trading' %}" method="get">
+      <div class="mobile slideButton">&gt;&gt;</div>
+      {% trans "Filter by requests" %} <span class="showOptions">+</span>
+      <ul class="options">
+        {{ request_filter.as_ul }}
+        {{ show_filter.as_ul }}
+      </ul>
+      {% trans "Filter by offers" %} <span class="showOptions">+</span>
+      <ul class="options">
+        {{ offer_filter.as_ul }}
+      </ul>
+      <ul>
+        <li class="submit"><input type="submit" value="Update"/></li>
+      </ul>
+    </form>
+  </aside>
+  {% endif %}
+
+  <div class="content">
+    {% if message %}
+    <div class="searchInfo">{% trans message %}</div>
+    {% endif %}
+
+    {% for u in users %}
+    {% with myPartners=user.profile.partners.all hisPartners=u.profile.partners.all%}
+    <section class="user">
+      <a class="button" href="{% url 'propose' receptor_id=u.pk %}">Trade</a>
+      {% include "blocks/user.html" with profileLink='True' %}
+      {% if u.profile.get_offers.count %}
+      {% include "blocks/inline-sites-list.html" with offers=u.profile.get_offers %}
+      {% endif %}
+      {% if u.profile.get_requests.count %}
+      {% include "blocks/inline-sites-list.html" with requests=u.profile.get_requests %}
+      {% endif %}
+    </section>
+    {% endwith %}
+    {% endfor %}
+
+    {% include "blocks/pagination.html" with results=users queries=queries %}
+    {% include "ads/bottomAd.html" %}
+  </div>
+
+  {% include "ads/sideAd.html" %}
+
+</main>
+
+{% endblock %}

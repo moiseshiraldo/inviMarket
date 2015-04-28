@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+{% load i18n %}
+{% block main %}
+
+<main>
+  <h1>
+    {% if header %}
+    {% trans header %}
+    {% else %}
+    {% trans "Confirmation" %}
+    {% endif %}
+  </h1>
+  <div class="message">
+    <p>{% trans message %}</p>
+  </div>
+</main>
+
+{% endblock %}

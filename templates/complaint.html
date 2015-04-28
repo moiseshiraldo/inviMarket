@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block main %}
+
+<main id="complaint">
+
+  <h1>{% trans "Complaint" %}</h1>
+  <form action="{% url 'complaint' trade_id=trade.id %}"
+        class="form inline-block indented-block" method="post">{% csrf_token %}
+
+    {% if error %}
+    <p>{% trans error %}</p>
+    {% else %}
+
+    {% if user == trade.proposer %}
+    {% include "blocks/user.html" with u=trade.receptor profileLink='True' %}
+    {% else %}
+    {% include "blocks/user.html" with u=trade.proposer profileLink='True' %}
+    {% endif %}
+
+    {% if user == trade.proposer %}
+    {% if trade.get_proposer_requests %}
+    {% include "blocks/sites-list.html" with requests=trade.get_proposer_requests trade='True' %}
+    {% endif %}
+    {% else %}
+    {% if trade.get_receptor_requests %}
+    {% include "blocks/sites-list.html" with requests=trade.get_receptor_requests trade='True' %}
+    {% endif %}
+    {% endif %}
+
+    {{ form.as_p }}
+    <input class="float-input" type="submit" value="Submit" />
+  </form>
+  {% endif %}
+
+</main>
+
+{% endblock %}

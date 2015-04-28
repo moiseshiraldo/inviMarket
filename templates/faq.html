@@ -1,0 +1,107 @@
+{% extends "index.html" %}
+{% load i18n %}
+{% block main %}
+
+<main id="FAQ">
+  <h1>{% trans "Frequently Asked Questions" %}</h1>
+  <ul class="infotext">
+    <li>
+      <h4 class="faq-header">{% trans "What is InviMarket?" %}</h4>
+      <p class="faqtext">
+        {% blocktrans %}
+        InviMarket is a website where you can share and get invites
+        or referral links to other sites, as well as get information
+        relative to the invite/referral system of these sites.
+        {% endblocktrans%}
+      </p>
+    </li>
+    <li>
+      <h4 class="faq-header">{% trans "What is not InviMarket?" %}</h4>
+      <p class="faqtext">
+        {% blocktrans %}
+        InviMarket is not a website where you can sell or buy invites.
+        The use of a market terminology is a mere gamification to
+        encourage users to share invites, referral links and
+        information.
+        {% endblocktrans %}
+      </p>
+    </li>
+    <li>
+      <h4 class="faq-header">{% trans "How does it work?" %}</h4>
+      <p class="faqtext">
+        {% blocktrans %}
+        Search sites by using the search form in the top menu or the
+        the 'Sites' page, and request/offer invites or referral links to
+        the ones your interested in. In the Trading page you can find
+        users that match up with your requests/offers and propose
+        trades to them.
+        {% endblocktrans %}
+      </p>
+    </li>
+    <li>
+      <h4 class="faq-header">{% trans "Do I have to register?" %}</h4>
+      <p class="faqtext">
+        {% blocktrans %}
+        You can search sites, view their information and get random
+        referral links without an account. You need to register to trade
+        invites and edit sites information.
+        {% endblocktrans %}
+      </p>
+    </li>
+    <li>
+      <h4 class="faq-header">{% trans "What does the lock icon mean?" %}</h4>
+      <p class="faqtext">
+        {% blocktrans %}
+        It means the site is protected, so you can't view an invite
+        request/offer to that site unless the user is your friend. The
+        working of many sites depends on the correct use of the invites
+        system, and though the ultimate responsibility lays on the user,
+        we don't want to be an easy tool to break other sites rules.
+        {% endblocktrans %}
+      </p>
+    </li>
+    <li>
+      <h4 class="faq-header">{% trans "I have an accepted trade proposal, what now?" %}</h4>
+      <p class="faqtext">
+        {% blocktrans %}
+        Go to the Trades section on your profile, check the trade
+        details and send the invites to the specified email address.
+        {% endblocktrans %}
+      </p>
+    </li>
+    <li>
+      <h4 class="faq-header">{% trans "Can other users view my email address?" %}</h4>
+      <p class="faqtext">
+        {% blocktrans %}No, the invites are sended to an email addres
+        at the inviMarket domain, then forwarded to your email address.
+        {% endblocktrans %}
+      </p>
+    </li>
+    <li>
+      <h4 class="faq-header">
+          {% trans "What if the other user don't send the invites?" %}
+      </h4>
+      <p class="faqtext">
+        {% blocktrans %}
+        We keep a temporary copy of the emails. If the user haven't sent
+        the invites within one week since the trade proposal was
+        accepted, you can make a complaint on the trade details page
+        and the user will receive a warning. Every warning will
+        decrease the user rating, and after three warnings the account
+        will be banned.
+        {% endblocktrans %}
+      </p>
+    </li>
+    <li>
+      <h4 class="faq-header">{% trans "Can I change my username?" %}</h4>
+      <p class="faqtext">
+        {% blocktrans %}
+        No, the username cannot be edited. You can create a new
+        account, but can't migrate trades, rating and editions.
+        {% endblocktrans %}
+      </p>
+    </li>
+  </ul>
+</main>
+
+{% endblock %}

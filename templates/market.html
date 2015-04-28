@@ -1,0 +1,88 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block main %}
+
+<main id="market">
+
+{% include "ads/topAd.html" %}
+
+  <div class="content">
+    <div class="container">
+      <h2>{% trans "Popular sites" %}</h2>
+      <section id="popular-sites" class="wrapper"
+               onmouseover="pauseTimer(this)" onmouseout="resetTimer(this)">
+        {% for site in popular %}
+        {% include "blocks/site-block.html" with class="slider" %}
+        {% endfor %}
+      </section>
+      {% include "blocks/slide-buttons.html" with wrapper="popular-sites" %}
+    </div>
+
+    <div class="smallContainer">
+      <h2>{% trans "Recent offers" %}</h2>
+      <section id="recent-offers" class="wrapper"
+               onmouseover="pauseTimer(this)" onmouseout="resetTimer(this)">
+        {% for offer in offers %}
+        <div class="slider tradeSlider">
+          {% include "blocks/user.html" with u=offer.user profileLink='True'%}
+          <img class="envelop" src="{% static "images/out.svg" %}"
+               alt="Offer"/>
+          <a class="siteLink"
+             href="{% url 'sites' site_name=offer.website.name %}">
+            <img class="siteLogo" src="{{offer.website.logo.url}}"
+                 alt="{{ ofer.website }} logo"/>
+          </a>
+        </div>
+        {% endfor %}
+      </section>
+      {% include "blocks/slide-buttons.html" with wrapper="recent-offers" size="small" %}
+    </div>
+
+    {% include "ads/sideAd.html" with class="tabletAd" %}
+
+    <div class="container">
+      <h2>{% trans "New sites" %}</h2>
+      <section id="new-sites" class="wrapper" onmouseover="pauseTimer(this)"
+          onmouseout="resetTimer(this)">
+        {% for site in new %}
+        {% include "blocks/site-block.html" with class="slider" %}
+        {% endfor %}
+      </section>
+      {% include "blocks/slide-buttons.html" with wrapper="new-sites" %}
+    </div>
+
+    <div class="smallContainer">
+      <h2>{% trans "Recent requests" %}</h2>
+      <section id="recent-requests" class="wrapper"
+               onmouseover="pauseTimer(this)" onmouseout="resetTimer(this)">
+        {% for request in requests %}
+        <div class="slider tradeSlider">
+          {% include "blocks/user.html" with u=request.user profileLink='True' %}
+          <img class="envelop" src="{% static "images/in.svg" %}"
+               alt="Request"/>
+          <a class="siteLink"
+             href="{% url 'sites' site_name=request.website.name %}">
+            <img class="siteLogo" src="{{request.website.logo.url}}"
+                 alt="{{ site }} logo"/>
+          </a>
+        </div>
+        {% endfor %}
+      </section>
+      {% include "blocks/slide-buttons.html" with wrapper="recent-requests" size="small"%}
+    </div>
+
+    {% include "ads/sideAd.html" with class="tabletAd" %}
+    {% include "ads/bottomLink.html" %}
+  </div>
+
+  {% include "ads/sideAd.html" with class="desktop" %}
+
+  {% if recent_sites %}
+  {% include "blocks/recently-viewed.html" %}
+  {% endif %}
+
+  <script src="{% static "js/sliders.js" %}"></script>
+
+</main>
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block main %}
+<main>
+
+  <section id="login">
+
+    <h1>{% trans "Login" %}</h1>
+
+    {% if next %}
+    <form action="/login/?next={{next}}"
+          class="form indented-block inline-block" method="post" >
+    {% else %}
+    <form method="post" action="{% url 'login' %}"
+          class="form indented-block inline-block">
+    {% endif %}
+    {% csrf_token %}
+
+      {% if error %}
+      <span class="error"> {% trans error %} </span>
+      {% endif %}
+      <ul>
+        <li>{{ form.username.label_tag }} {{ form.username }}</li>
+        <li>{{ form.password.label_tag }} {{ form.password }}</li>
+        <li><input class="input" type="submit" value="Login" /></li>
+      </ul>
+      <span>{% trans "Have you forgotten your password?" %}
+        <a href="{% url 'password_reset' %}">
+            {% trans "Click here" %}
+        </a>
+        <br/>
+      </span>
+    </form>
+
+    <div class="faq infotext">
+      <h4 class="faq-header">{% trans "What is InviMarket?" %}</h4>
+      <p class="faqtext">
+        {% blocktrans %}
+        It's a website where you can share and get invites or referral
+        links to other sites, as well as get information relative to
+        the invite/referral system of those sites.
+        {% endblocktrans %}
+      </p>
+      <h4 class="faq-header">{% trans "Don't have an account yet?" %}</h4>
+      <p class="faqtext">{% trans "As a registered user, you could:" %}</p>
+      <ul>
+        <li><span>
+          {% blocktrans %}
+          Request and offer invites or referral links to your
+          favourites sites.
+          {% endblocktrans %}
+        </span></li>
+        <li><span>
+          {% blocktrans %}
+          Find users interested in the same sites and share or trade
+          your invites.
+          {% endblocktrans %}
+        </span></li>
+        <li><span>
+          {% blocktrans %}
+          All your user information will be stored in your profile.
+          Share all your referral links with your friends in one
+          click.
+          {% endblocktrans %}
+        </span></li>
+        <li><span>
+          {% blocktrans %}
+          Edit new sites and modify the information of the existing
+          ones.
+          {% endblocktrans %}
+        </span></li>
+      </ul>
+    </div>
+
+    <div class="downButton">
+      <h2>Register</h2>
+      <img src="{% static "images/down.svg" %}" alt="Down"/>
+    </div>
+
+  </section>
+
+  <section id="register">
+  </section>
+</main>
+{% endblock %}

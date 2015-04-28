@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+{% load i18n %}
+{% block main %}
+
+<main id="delete-profile">
+  <h1>{% trans "Profile deletion" %}</h1>
+  <form action="{% url 'register' %}"
+        class="form" method="post">{% csrf_token %}
+    <p>
+      {% blocktrans %}
+      By default we will set your account as inactive and keep all your
+      information, in case you want to activate it again in the future.
+      If you want to completely delete your account, select the option
+      below.
+      {% endblocktrans %}
+    </p>
+    <input type="CheckBox" name="delete"/>
+    <span>
+      {% blocktrans %}
+      Delete all the information relative to my account.
+      {% endblocktrans %}
+    </span>
+    <br/><br/>
+    <input class="input" type="submit" value="Delete" />
+  </form>
+</main>
+
+{% endblock %}
+

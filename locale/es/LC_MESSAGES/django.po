@@ -1,0 +1,1500 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Moises, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-04-23 01:17+0100\n"
+"PO-Revision-Date: 2015-04-23 01:41+0100\n"
+"Last-Translator: Moises\n"
+"Language-Team: American English <kde-i18n-doc@kde.org>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: forms.py:15
+msgid "Username"
+msgstr "Usuario"
+
+#: forms.py:18
+msgid "Required. 30 characters or fewer. Letters, digits and ./+/-/_ only."
+msgstr "Obligatorio. 30 caracteres o menos. Solo letras, dígitos y ./+/-/_."
+
+#: forms.py:21
+msgid "This value may contain only letters, numbers and ./+/-/_ characters."
+msgstr ""
+"Este campo solo puede contener letras, números y los caracteres ./+/-/_ ."
+
+#: forms.py:26
+msgid "Name"
+msgstr "Nombre"
+
+#: forms.py:38
+msgid "This value may not start with, end with or contain two consecutive '.'"
+msgstr "Este campo no puede empezar, terminar o contener dos '.' consecutivos."
+
+#: forms.py:59
+msgid "A user with that email already exists."
+msgstr "Ya existe un usuario con ese email."
+
+#: forms.py:95
+msgid "Popularity"
+msgstr "Popularidad."
+
+#: forms.py:96 templates/site.html:35
+msgid "Category"
+msgstr "Categoría"
+
+#: forms.py:97 templates/site.html:36
+msgid "Type"
+msgstr "Tipo"
+
+#: forms.py:98
+msgid "Requested invites"
+msgstr "Invitaciones pedidas"
+
+#: forms.py:102
+msgid "Order by"
+msgstr "Ordenar por"
+
+#: forms.py:110
+msgid ""
+"The number of invites to donate can't be greater than the total offered "
+"number."
+msgstr ""
+"El número de invitaciones para donar no puede ser mayor que el número total "
+"ofrecido."
+
+#: forms.py:128
+msgid "Referral link"
+msgstr "Enlace de referido"
+
+#: forms.py:169
+msgid "All"
+msgstr "Todo"
+
+#: forms.py:170
+msgid "Donations"
+msgstr "Donaciones"
+
+#: forms.py:188
+msgid "Received"
+msgstr "Recibido"
+
+#: forms.py:189
+msgid "Sent"
+msgstr "Enviado"
+
+#: forms.py:190 templates/trades.html:68
+msgid "Accepted"
+msgstr "Aceptado"
+
+#: forms.py:218
+msgid "Change avatar"
+msgstr "Cambiar avatar"
+
+#: forms.py:219 templates/site.html:37
+msgid "Language"
+msgstr "Idioma"
+
+#: forms.py:220
+msgid "Receive email notifications"
+msgstr "Recibir notificaciones por email"
+
+#: forms.py:233 forms.py:253
+msgid "Password"
+msgstr "Contraseña"
+
+#: models.py:25
+msgid "Max file size is 25KB"
+msgstr ""
+
+#: models.py:28
+msgid "Spanish"
+msgstr "Español"
+
+#: models.py:29
+msgid "English"
+msgstr "Inglés"
+
+#: models.py:30
+msgid "Multi-language"
+msgstr "Varios idiomas"
+
+#: models.py:105 templates/propose.html:8
+msgid "Trade proposal"
+msgstr "Propuesta de intercambio"
+
+#: models.py:106 views/add_partner.py:30
+msgid "Partnership request"
+msgstr "Solicitud de asociación"
+
+#: models.py:107
+msgid "Proposal accepted"
+msgstr "Propuesta aceptada"
+
+#: models.py:131
+msgid "Forum"
+msgstr "Foro"
+
+#: models.py:132
+msgid "Tracker"
+msgstr "Tracker"
+
+#: models.py:133
+msgid "Direct Download"
+msgstr "Descarga directa"
+
+#: models.py:134
+msgid "Streaming"
+msgstr "Streaming"
+
+#: models.py:135
+msgid "Cloud Service"
+msgstr "Servicio en la nube"
+
+#: models.py:136
+msgid "Paid-To-Click"
+msgstr "Pago por click"
+
+#: models.py:140
+msgid "Generic"
+msgstr "Genérico"
+
+#: models.py:141
+msgid "Multimedia"
+msgstr "Multimedia"
+
+#: models.py:142
+msgid "Commerce"
+msgstr "Comercio"
+
+#: models.py:143
+msgid "Referral"
+msgstr "Referidos"
+
+#: templates/blocks/profile-menu.html:4
+msgid "Status"
+msgstr "Estado"
+
+#: templates/blocks/profile-menu.html:5 templates/complaint.html:37
+msgid "Trades"
+msgstr "Intercambios"
+
+#: templates/blocks/profile-menu.html:6
+msgid "Partners"
+msgstr "Socios"
+
+#: templates/blocks/profile-menu.html:7
+msgid "Config"
+msgstr "Config"
+
+#: templates/blocks/recently-viewed.html:5
+msgid "Recently viewed:"
+msgstr "Visto recientemente:"
+
+#: templates/blocks/site-block.html:19
+msgid "Offer"
+msgstr "Ofrecer"
+
+#: templates/blocks/site-block.html:23
+msgid "Get Link"
+msgstr "Referido"
+
+#: templates/blocks/site-block.html:27
+msgid "Request"
+msgstr "Pedir"
+
+#: templates/blocks/site-block.html:33
+msgid "Popularity:"
+msgstr "Popularidad:"
+
+#: templates/blocks/site-block.html:44
+msgid "Links:"
+msgstr "Enlaces:"
+
+#: templates/blocks/site-block.html:47
+msgid "Ratio:"
+msgstr "Ratio:"
+
+#: templates/blocks/sites-list.html:11
+msgid "Requests"
+msgstr "Peticiones:"
+
+#: templates/blocks/sites-list.html:21
+msgid "Delete"
+msgstr "Eliminar"
+
+#: templates/blocks/sites-list.html:33
+msgid "Offers"
+msgstr "Ofertas"
+
+#: templates/blocks/sites-list.html:43 templates/blocks/sites-list.html:64
+#: templates/site.html:16
+msgid "Edit"
+msgstr "Editar"
+
+#: templates/blocks/sites-list.html:55
+msgid "Referral links"
+msgstr "Enlaces de referido"
+
+#: templates/blocks/sites-list.html:65
+msgid "Chain"
+msgstr "Cadena"
+
+#: templates/blocks/sites-list.html:67
+msgid "Use"
+msgstr "Usar"
+
+#: templates/blocks/user.html:28 templates/propose.html:23
+msgid "Rating:"
+msgstr "Rating:"
+
+#: templates/blocks/user.html:29 templates/propose.html:27
+msgid "Trades:"
+msgstr "Intercambios:"
+
+#: templates/chain.html:8
+msgid "Chain creation to"
+msgstr "Cadena de referidos para"
+
+#: templates/chain.html:22
+msgid "Create"
+msgstr "Crear"
+
+#: templates/chain.html:26
+#, fuzzy
+msgid ""
+"\n"
+"    Leave the password fields blank if you want anyone with the link to be\n"
+"    able to access the referral chain.</br>\n"
+"    The referrals to jump field determines how many referrals will get a\n"
+"    member of the chain before jump to the next link.\n"
+"    "
+msgstr ""
+
+#: templates/chain.html:35
+msgid "Referral link to"
+msgstr "Enlace de referido para"
+
+#: templates/chain.html:43 templates/request.html:17
+msgid "Use this link:"
+msgstr "Usa este enlace:"
+
+#: templates/chain.html:51 templates/chain.html.py:74
+msgid "Referral chain to"
+msgstr "Cadena de referidos para"
+
+#: templates/chain.html:69
+msgid "Join"
+msgstr "Unirse"
+
+#: templates/complaint.html:8
+msgid "Complaint"
+msgstr ""
+
+#: templates/config.html:6 templates/index.html:57 templates/partners.html:9
+#: templates/profile.html:11 templates/trades.html:8
+msgid "Profile"
+msgstr "Perfil"
+
+#: templates/confirm.html:9
+msgid "Your account has been validated."
+msgstr "Tu cuenta ha sido validada."
+
+#: templates/confirm.html:11
+msgid "The activation key is incorrect or has expired."
+msgstr "La clave de activación es incorrecta o ha expirado."
+
+#: templates/confirm.html:13
+msgid "A confirmation email has been sended to your email address."
+msgstr "Se ha enviado un email de confirmación a tu dirección de correo."
+
+#: templates/del_profile.html:6
+msgid "Profile deletion"
+msgstr "Eliminar cuenta"
+
+#: templates/del_profile.html:10
+msgid ""
+"\n"
+"      By default we will set your account as inactive and keep all your\n"
+"      information, in case you want to activate it again in the future.\n"
+"      If you want to completely delete your account, select the option\n"
+"      below.\n"
+"      "
+msgstr ""
+"Por defecto estableceremos tu cuenta como inactiva y mantendremos toda tu "
+"información, en caso de que quieras activarla de nuevo en el futuro. Si "
+"quieres borrar tu cuenta completamente, marca la opción indicada abajo."
+
+#: templates/del_profile.html:19
+msgid ""
+"\n"
+"      Delete all the information relative to my account.\n"
+"      "
+msgstr "Borrar toda la información relativa a mi cuenta."
+
+#: templates/editing.html:8 templates/index.html:137
+msgid "Editing"
+msgstr "Ediciones"
+
+#: templates/editing.html:10
+msgid ""
+"\n"
+"      If you can't find the site you're looking for in our database,\n"
+"      you can submit it by filling up the new sites edition formulary.\n"
+"      "
+msgstr ""
+
+#: templates/editing.html:16
+msgid ""
+"\n"
+"      If you notice that the information of a site is wrong, outdated\n"
+"      or just missing, you can modify it by following the edit link\n"
+"      at the site page.\n"
+"      "
+msgstr ""
+
+#: templates/editing.html:23
+msgid ""
+"\n"
+"      For both actions you need to be a registered user. Once\n"
+"      submitted the information will be reviewed by the admin, until\n"
+"      we grow up in users and can implement a wiki-based system.\n"
+"      "
+msgstr ""
+
+#: templates/editing.html:31 templates/index.html:64
+msgid "Sites"
+msgstr "Sitios"
+
+#: templates/editing.html:33 templates/getstarted.html:133
+#: templates/index.html:45 templates/register.html:6
+msgid "Register"
+msgstr "Registrarse"
+
+#: templates/edition.html:6 templates/getstarted.html:111
+msgid "Site edition"
+msgstr ""
+
+#: templates/edition.html:15
+msgid ""
+"\n"
+"    The description field is not necessary and should only contain a brief\n"
+"    description of the site as well as information about the invite or\n"
+"    referral system.</br>\n"
+"    If you copy some information from an external site that allows it,\n"
+"    insert the link in the source field.</br>\n"
+"    Use the comments field for any additional comments to the admin.\n"
+"    "
+msgstr ""
+
+#: templates/faq.html:6
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: templates/faq.html:9 templates/login.html:36
+msgid "What is InviMarket?"
+msgstr ""
+
+#: templates/faq.html:11
+msgid ""
+"\n"
+"        InviMarket is a website where you can share and get invites\n"
+"        or referral links to other sites, as well as get information\n"
+"        relative to the invite/referral system of these sites.\n"
+"        "
+msgstr ""
+
+#: templates/faq.html:19
+msgid "What is not InviMarket?"
+msgstr ""
+
+#: templates/faq.html:21
+msgid ""
+"\n"
+"        InviMarket is not a website where you can sell or buy invites.\n"
+"        The use of a market terminology is a mere gamification to\n"
+"        encourage users to share invites, referral links and\n"
+"        information.\n"
+"        "
+msgstr ""
+
+#: templates/faq.html:30
+msgid "How does it work?"
+msgstr ""
+
+#: templates/faq.html:32
+msgid ""
+"\n"
+"        Search sites by using the search form in the top menu or the\n"
+"        the 'Sites' page, and request/offer invites or referral links to\n"
+"        the ones your interested in. In the Trading page you can find\n"
+"        users that match up with your requests/offers and propose\n"
+"        trades to them.\n"
+"        "
+msgstr ""
+
+#: templates/faq.html:42
+msgid "Do I have to register?"
+msgstr ""
+
+#: templates/faq.html:44
+msgid ""
+"\n"
+"        You can search sites, view their information and get random\n"
+"        referral links without an account. You need to register to trade\n"
+"        invites and edit sites information.\n"
+"        "
+msgstr ""
+
+#: templates/faq.html:52
+msgid "What does the lock icon mean?"
+msgstr ""
+
+#: templates/faq.html:54
+msgid ""
+"\n"
+"        It means the site is protected, so you can't view an invite\n"
+"        request/offer to that site unless the user is your friend. The\n"
+"        working of many sites depends on the correct use of the invites\n"
+"        system, and though the ultimate responsibility lays on the user,\n"
+"        we don't want to be an easy tool to break other sites rules.\n"
+"        "
+msgstr ""
+
+#: templates/faq.html:64
+msgid "I have an accepted trade proposal, what now?"
+msgstr ""
+
+#: templates/faq.html:66
+msgid ""
+"\n"
+"        Go to the Trades section on your profile, check the trade\n"
+"        details and send the invites to the specified email address.\n"
+"        "
+msgstr ""
+
+#: templates/faq.html:73
+msgid "Can other users view my email address?"
+msgstr ""
+
+#: templates/faq.html:75
+msgid ""
+"No, the invites are sended to an email addres\n"
+"        at the inviMarket domain, then forwarded to your email address.\n"
+"        "
+msgstr ""
+
+#: templates/faq.html:82
+msgid "What if the other user don't send the invites?"
+msgstr ""
+
+#: templates/faq.html:85
+msgid ""
+"\n"
+"        We keep a temporary copy of the emails. If the user haven't sent\n"
+"        the invites within one week since the trade proposal was\n"
+"        accepted, you can make a complaint on the trade details page\n"
+"        and the user will receive a warning. Every warning will\n"
+"        decrease the user rating, and after three warnings the account\n"
+"        will be banned.\n"
+"        "
+msgstr ""
+
+#: templates/faq.html:96
+msgid "Can I change my username?"
+msgstr ""
+
+#: templates/faq.html:98
+msgid ""
+"\n"
+"        No, the username cannot be edited. You can create a new\n"
+"        account, but can't migrate trades, rating and editions.\n"
+"        "
+msgstr ""
+
+#: templates/getstarted.html:8 templates/index.html:152
+msgid "Get started"
+msgstr ""
+
+#: templates/getstarted.html:14
+msgid "Search sites"
+msgstr ""
+
+#: templates/getstarted.html:17
+msgid ""
+"\n"
+"            Go to the sites page or use the search box in the\n"
+"            navigation menu to search your favourites sites.\n"
+"            "
+msgstr ""
+
+#: templates/getstarted.html:23
+msgid ""
+"\n"
+"            Filter and order the results using the formulary on the\n"
+"            left side.\n"
+"            "
+msgstr ""
+
+#: templates/getstarted.html:29
+msgid ""
+"\n"
+"            Click on the site logo or name to get information about the "
+"invites\n"
+"            system of the site.\n"
+"            "
+msgstr ""
+
+#: templates/getstarted.html:35
+msgid ""
+"\n"
+"            Offer or request invites using the buttons at the top\n"
+"            right.\n"
+"            "
+msgstr ""
+
+#: templates/getstarted.html:48
+msgid "Search invites"
+msgstr ""
+
+#: templates/getstarted.html:51
+msgid ""
+"\n"
+"            Select the trading option in the navigation menu to go\n"
+"            to invites sarch page.\n"
+"            "
+msgstr ""
+
+#: templates/getstarted.html:57
+msgid ""
+"\n"
+"            You will be shown a list of users matching up with\n"
+"            your invites requests and offers.\n"
+"            "
+msgstr ""
+
+#: templates/getstarted.html:63
+msgid ""
+"\n"
+"            Refine the search using the formulary on the left\n"
+"            side.\n"
+"            "
+msgstr ""
+
+#: templates/getstarted.html:69
+msgid ""
+"\n"
+"            To request or trade invites, just click on the trade\n"
+"            button and select de invites your interested in.\n"
+"            "
+msgstr ""
+
+#: templates/getstarted.html:82
+msgid "Your profile"
+msgstr ""
+
+#: templates/getstarted.html:85
+msgid ""
+"\n"
+"            View and manage your current invite requests and offers,\n"
+"            friends list and invites trades.\n"
+"            "
+msgstr ""
+
+#: templates/getstarted.html:91
+msgid ""
+"\n"
+"            Share your profile in other social networks and let your\n"
+"            fiends know about your invite requests.\n"
+"            "
+msgstr ""
+
+#: templates/getstarted.html:97
+msgid ""
+"\n"
+"            All your referrals links are also visible in your\n"
+"            profile. Forget about share every single link, spam\n"
+"            them all with one!\n"
+"            "
+msgstr ""
+
+#: templates/getstarted.html:114
+msgid ""
+"\n"
+"              Can't find the site you're looking for in our database?\n"
+"              Submit it yourself filling up a simple form.\n"
+"              "
+msgstr ""
+
+#: templates/getstarted.html:120
+msgid ""
+"\n"
+"              You can also edit the existing sites if you notice\n"
+"              that some information is wrong.\n"
+"              "
+msgstr ""
+
+#: templates/index.html:41
+msgid "Logout"
+msgstr ""
+
+#: templates/index.html:44 templates/login.html:9
+msgid "Login"
+msgstr "Iniciar sesión"
+
+#: templates/index.html:60
+msgid "Trading"
+msgstr "Intercambios"
+
+#: templates/index.html:68
+msgid "Site name..."
+msgstr ""
+
+#: templates/index.html:73
+msgid "Notifications"
+msgstr ""
+
+#: templates/index.html:125
+msgid "License and source code"
+msgstr ""
+
+#: templates/index.html:128
+msgid "Terms and conditions"
+msgstr ""
+
+#: templates/index.html:131
+msgid "Privacy policy"
+msgstr ""
+
+#: templates/index.html:133 templates/legal.html:11 templates/legal.html.py:23
+msgid "Contact"
+msgstr ""
+
+#: templates/index.html:136
+msgid "Get involved"
+msgstr ""
+
+#: templates/index.html:138 templates/market.html:45
+msgid "New sites"
+msgstr ""
+
+#: templates/index.html:140 templates/suggestions.html:6
+msgid "Suggestions"
+msgstr ""
+
+#: templates/index.html:144
+msgid "Connect"
+msgstr ""
+
+#: templates/index.html:145
+msgid "Twitter"
+msgstr ""
+
+#: templates/index.html:146
+msgid "Facebook"
+msgstr ""
+
+#: templates/index.html:147
+msgid "Google+"
+msgstr ""
+
+#: templates/index.html:155
+msgid "Glossary"
+msgstr ""
+
+#: templates/index.html:186
+msgid "This place uses"
+msgstr ""
+
+#: templates/index.html:187
+msgid "cookies"
+msgstr ""
+
+#: templates/index.html:188
+msgid "and no animals were harmed in the development process."
+msgstr ""
+
+#: templates/index.html:190
+msgid "Close"
+msgstr ""
+
+#: templates/legal.html:6
+msgid "Legal information"
+msgstr ""
+
+#: templates/legal.html:14
+msgid ""
+"\n"
+"    The domain www.inviMarket.com is owned and administered by Moisés "
+"Hiraldo,\n"
+"    residing in:\n"
+"    "
+msgstr ""
+
+#: templates/legal.html:29
+msgid ""
+"\n"
+"  <h2>License</h2>\n"
+"\n"
+"  <p>\n"
+"    The source code is released under the GNU Affero General Public "
+"License.\n"
+"    You can download it here.\n"
+"    <br/><br/>\n"
+"    The website is licensed under a Creative Commons Attribution 4.0 "
+"International\n"
+"    License. That means you can:\n"
+"    <br/><br/>\n"
+"\n"
+"    <b>Share</b> — copy and redistribute the material in any medium or "
+"format.\n"
+"    <br/>\n"
+"    <b>Adapt</b> — remix, transform, and build upon the material for any "
+"purpose,\n"
+"    even commercially.\n"
+"    <br/><br/>\n"
+"    The licensor cannot revoke these freedoms as long as you follow the "
+"license\n"
+"    terms:\n"
+"    <br/><br/>\n"
+"\n"
+"    <b>Attribution</b> — You must give appropriate credit, provide a link to "
+"the license,\n"
+"    and indicate if changes were made. You may do so in any reasonable "
+"manner, but\n"
+"    not in any way that suggests the licensor endorses you or your use.\n"
+"  </p>\n"
+"  "
+msgstr ""
+
+#: templates/legal.html:58
+msgid ""
+"\n"
+"  <h2>Terms and Conditions</h2>\n"
+"\n"
+"  <p>These terms of use govern your use of our site. Please read these "
+"terms\n"
+"  in full before you use this website. If you do not accept these terms of "
+"use,\n"
+"  please do not use this website. Your continued use of this site confirms "
+"your\n"
+"  acceptance of these terms.</p>\n"
+"  <ul>\n"
+"  <li>\n"
+"  <h4>Website access and use</h4>\n"
+"  It is not necessary to register with us in order to use some parts of "
+"this\n"
+"  website. However, many areas of this Website will only be accessible only "
+"if\n"
+"  you have registered.<br/><br/>\n"
+"  This website may be used for your own private purposes and in accordance\n"
+"  with these terms of use.\n"
+"  </li>\n"
+"\n"
+"  <li>\n"
+"  <h4>Site uptime</h4>\n"
+"  All reasonable measures are taken by us to ensure that this website is\n"
+"  operational all day, every day. However, occasionally technical issues "
+"may\n"
+"  result in some downtime and accordingly we will not be liable if this "
+"website\n"
+"  is unavailable at any time. Where possible we always try to give advance\n"
+"  warning of maintenance issues that may result in website down time but we\n"
+"  shall not be obliged to provide such notice.\n"
+"  </li>\n"
+"\n"
+"  <li>\n"
+"  <h4>Visitor provided material</h4>\n"
+"  Any material that a visitor sends or posts to this website shall be "
+"considered\n"
+"  non-proprietary and non confidential. We shall be entitled to copy, "
+"disclose,\n"
+"  distribute or use for such other purpose as we deem appropriate all "
+"material\n"
+"  provided to us, with the exception of personal information, the use of "
+"which\n"
+"  is covered under our Privacy Policy.\n"
+"  <br/><br/>\n"
+"  Any site informaton provided using the edition page will be\n"
+"  licensed under a Creative Commons Attribution 4.0 International License.\n"
+"  When using the edition page or the trade proposal comments you shall not "
+"post any\n"
+"  material:\n"
+"    <ul>\n"
+"    <li>for which you have not obtained all necessary consents;</li>\n"
+"    <li>that is discriminatory, obscene, pornographic, defamatory, liable "
+"to\n"
+"    incite racial hatred, in breach of confidentiality or privacy, which "
+"may\n"
+"    cause annoyance or inconvenience to others, which encourages or "
+"constitutes\n"
+"    conduct that would be deemed a criminal offence, give rise to a civil\n"
+"    liability, or otherwise is contrary to the law in the United Kingdom;</"
+"li>\n"
+"    <li>which is harmful in nature including, and without limitation, "
+"computer\n"
+"    viruses, Trojan horses, corrupted data, or other potentially harmful\n"
+"    software or data.</li>\n"
+"    </ul>\n"
+"  </li>\n"
+"\n"
+"  <li>\n"
+"  <h4>Links to and from other websites</h4>\n"
+"  Throughout this website you can find links to third party websites. The\n"
+"  provision of a link to such a website does not mean that we endorse that\n"
+"  website.  If you visit any website via a link on this website you do so "
+"at\n"
+"  your own risk.<br/><br/>\n"
+"  Any party wishing to link to this website is entitled to do so provided "
+"that\n"
+"  the conditions below are observed:\n"
+"    <ul>\n"
+"    <li>you do not seek to imply that we are endorsing the services or "
+"products\n"
+"    of another party unless this has been agreed with us in writing;</li>\n"
+"    <li>you do not misrepresent your relationship with this website;</li>\n"
+"    <li>the website from which you link to this website does not contain\n"
+"    offensive or otherwise  controversial content or, content that "
+"infringes\n"
+"    any intellectual property rights or other rights of a third party.</li>\n"
+"    </ul>\n"
+"  </li>\n"
+"\n"
+"  <li>\n"
+"  <h4>Disclaimer</h4>\n"
+"  Whilst we do take all reasonable steps to make sure that the other sites "
+"information on\n"
+"  this website is up to date and accurate at all times we do not guarantee "
+"that\n"
+"  all material is accurate and, or up to date. All material contained on "
+"this\n"
+"  website is provided without any or warranty of any kind. You use the "
+"material\n"
+"  on this website at your own discretion.\n"
+"  </li>\n"
+"\n"
+"  <li>\n"
+"  <h4>Exclusion of liability</h4>\n"
+"  All the responsability for sending the invites lays on the users. We do "
+"not\n"
+"  accept liability neither for the breach of any trade proposal nor for\n"
+"  any loss or damage that you suffer as a result of using this website.\n"
+"  Nothing in these terms of use shall exclude or limit liability for death "
+"or\n"
+"  personal injury caused by negligence which cannot be excluded or under the "
+"law\n"
+"  of the United Kingdom.\n"
+"  </li>\n"
+"\n"
+"  <li>\n"
+"  <h4>Law and jurisdiction</h4>\n"
+"  These terms of use are governed by English law. Any dispute arising in\n"
+"  connection with these terms of use shall be subject to the exclusive\n"
+"  jurisdiction of the Courts of England and Wales.\n"
+"  </li>\n"
+"  </ul>\n"
+"  "
+msgstr ""
+
+#: templates/legal.html:158
+msgid ""
+"\n"
+"  <h2>Privacy and Cookies Policy</h2>\n"
+"\n"
+"  <p>This Policy explains what happens to any personal data that\n"
+"  you provide to us, or that we collect from you whilst you visit our site "
+"and\n"
+"  how we use cookies on this website.\n"
+"  <ul>\n"
+"\n"
+"  <li>\n"
+"  <h4>Information that we collect</h4>\n"
+"  In running and maintaining our website we may collect and process the "
+"following\n"
+"  data about you:\n"
+"    <ul>\n"
+"    <li>Information about your use of our site including details of your "
+"visits\n"
+"    such as pages viewed and the resources that you access. Such "
+"information\n"
+"    includes traffic data, location data and other communication data.</li>\n"
+"    <li>Information provided voluntarily by you. For example, when you "
+"register\n"
+"    for information or request an invite.</li>\n"
+"    <li>Information that you provide when you communicate with us by any "
+"means.</li>\n"
+"    </ul>\n"
+"  </li>\n"
+"\n"
+"  <li>\n"
+"  <h4>Use of Cookies</h4>\n"
+"  Cookies provide information regarding the computer used by a visitor. We "
+"may\n"
+"  use cookies where appropriate to gather information about your computer "
+"in\n"
+"  order to assist us in improving our website.<br/>\n"
+"  We may gather information about your general internet use by using the "
+"cookie.\n"
+"  Where used, these cookies are downloaded to your computer and stored on "
+"the\n"
+"  computer's hard drive. Such information will not identify you personally; "
+"it\n"
+"  is statistical data which does not identify any personal details\n"
+"  whatsoever.<br/>\n"
+"  Our advertisers may also use cookies, over which we have no control. Such\n"
+"  cookies (if used) would be downloaded once you click on advertisements on "
+"our\n"
+"  website.<br/>\n"
+"  You can adjust the settings on your computer to decline any cookies if "
+"you\n"
+"  wish. This can be done within the “settings” section of your computer.\n"
+"  </li>\n"
+"\n"
+"  <li>\n"
+"  <h4>Use of your information</h4>\n"
+"  We use the information that we collect from you to provide our services "
+"to\n"
+"  you. In addition to this we may use the information for one or more of "
+"the\n"
+"  following purposes:\n"
+"    <ul>\n"
+"    <li>To provide information to you that you request from us relating to "
+"our\n"
+"    products or services, such as email notifications.</li>\n"
+"    <li>To inform you of any changes to our website, services or legal\n"
+"    conditions.</li>\n"
+"    </ul>\n"
+"  </li>\n"
+"\n"
+"  <li>\n"
+"  <h4>Storing your personal data</h4>\n"
+"  In operating our website it may become necessary to transfer data that we\n"
+"  collect from you to locations outside of the European Union for processing "
+"and\n"
+"  storing. By providing your personal data to us, you agree to this "
+"transfer,\n"
+"  storing and processing. We do our utmost to ensure that all reasonable "
+"steps\n"
+"  are taken to make sure that your data is stored securely.<br/>\n"
+"  Unfortunately the sending of information via the internet is not totally "
+"secure\n"
+"  and on occasion such information can be intercepted. We cannot guarantee "
+"the\n"
+"  security of data that you choose to send us electronically, sending such\n"
+"  information is entirely at your own risk.\n"
+"  </li>\n"
+"\n"
+"  <li>\n"
+"  <h4>Disclosing your information</h4>\n"
+"  We will not disclose your personal information to any other party other "
+"than\n"
+"  in accordance with this Privacy Policy and in the circumstances detailed "
+"below:\n"
+"    <ul>\n"
+"    <li>In the event that we sell any or all of our business to the buyer.</"
+"li>\n"
+"    <li>Where we are legally required by law to disclose your personal\n"
+"    information.</li>\n"
+"    <li>To further fraud protection and reduce the risk of fraud.</li>\n"
+"    </ul>\n"
+"  </li>\n"
+"\n"
+"  <li>\n"
+"  <h4>Third party links</h4>\n"
+"  We include links to third parties on this website. Where we\n"
+"  provide a link it does not mean that we endorse or approve that site’s "
+"policy\n"
+"  towards visitor privacy. You should review their privacy policy before "
+"sending\n"
+"  them any personal data.\n"
+"  </li>\n"
+"\n"
+"  <li>\n"
+"  <h4>Access to information</h4>\n"
+"  In accordance with the Data Protection Act 1998 you have the right to "
+"access\n"
+"  any information that we hold relating to you. Please note that we reserve "
+"the\n"
+"  right to charge a fee of £10 to cover costs incurred by us in providing "
+"you\n"
+"  with the information.\n"
+"  </li>\n"
+"  </ul>\n"
+"  "
+msgstr ""
+
+#: templates/login.html:27
+msgid "Have you forgotten your password?"
+msgstr ""
+
+#: templates/login.html:29
+msgid "Click here"
+msgstr ""
+
+#: templates/login.html:38
+msgid ""
+"\n"
+"        It's a website where you can share and get invites or referral\n"
+"        links to other sites, as well as get information relative to\n"
+"        the invite/referral system of those sites.\n"
+"        "
+msgstr ""
+
+#: templates/login.html:44
+msgid "Don't have an account yet?"
+msgstr ""
+
+#: templates/login.html:45
+msgid "As a registered user, you could:"
+msgstr ""
+
+#: templates/login.html:48
+msgid ""
+"\n"
+"          Request and offer invites or referral links to your\n"
+"          favourites sites.\n"
+"          "
+msgstr ""
+
+#: templates/login.html:54
+msgid ""
+"\n"
+"          Find users interested in the same sites and share or trade\n"
+"          your invites.\n"
+"          "
+msgstr ""
+
+#: templates/login.html:60
+msgid ""
+"\n"
+"          All your user information will be stored in your profile.\n"
+"          Share all your referral links with your friends in one\n"
+"          click.\n"
+"          "
+msgstr ""
+
+#: templates/login.html:67
+msgid ""
+"\n"
+"          Edit new sites and modify the information of the existing\n"
+"          ones.\n"
+"          "
+msgstr ""
+
+#: templates/market.html:12
+msgid "Popular sites"
+msgstr ""
+
+#: templates/market.html:23
+msgid "Recent offers"
+msgstr ""
+
+#: templates/market.html:56
+msgid "Recent requests"
+msgstr ""
+
+#: templates/message.html:10
+msgid "Confirmation"
+msgstr ""
+
+#: templates/offer.html:8
+msgid "Offer to"
+msgstr ""
+
+#: templates/offer.html:28
+msgid "Select how many invites you would like to offer:"
+msgstr ""
+
+#: templates/offer.html:38
+msgid "Insert the complete referral URL, otherwise it won't be validated."
+msgstr ""
+
+#: templates/offer.html:40
+msgid ""
+"\n"
+"    The total number is the number of invites that will be availabe to be "
+"included in\n"
+"    trades (only one per trade).\n"
+"    "
+msgstr ""
+
+#: templates/offer.html:45
+msgid ""
+"\n"
+"    The ones you mark as 'to donate' can be requested by another users "
+"without\n"
+"    offering any invite in exchange (you will receive more rating points if "
+"you\n"
+"    donate an invite).\n"
+"    "
+msgstr ""
+
+#: templates/partners.html:18
+msgid "Reject"
+msgstr ""
+
+#: templates/partners.html:22
+msgid "Accept"
+msgstr ""
+
+#: templates/password_change.html:6
+msgid "Password change"
+msgstr ""
+
+#: templates/password_reset.html:6
+msgid "User recovery"
+msgstr ""
+
+#: templates/password_reset.html:15
+msgid ""
+"\n"
+"    You will receive and email with your username and a link to set a new\n"
+"    password if you don't remember it.\n"
+"    "
+msgstr ""
+
+#: templates/propose.html:36
+msgid "Select your requests"
+msgstr ""
+
+#: templates/propose.html:46
+msgid "Select your offers"
+msgstr ""
+
+#: templates/propose.html:54
+msgid "Donation available."
+msgstr ""
+
+#: templates/register.html:17
+msgid "I've read and accept the"
+msgstr ""
+
+#: templates/register.html:19
+msgid "terms and conditions of use"
+msgstr ""
+
+#: templates/register.html:24
+msgid ""
+"\n"
+"    The username must be unique and may contain only letters, numbers and\n"
+"    ./+/-/_ characters.<br/>\n"
+"    The email must be unique as well.\n"
+"    "
+msgstr ""
+
+#: templates/request.html:7
+msgid "Request to"
+msgstr ""
+
+#: templates/request.html:19
+msgid "No links available."
+msgstr ""
+
+#: templates/request.html:24
+msgid "Your request has been successfuly stored."
+msgstr ""
+
+#: templates/reset_confirm.html:6
+msgid "Password reset confirmation"
+msgstr ""
+
+#: templates/reset_confirm.html:16
+msgid "Invalid link."
+msgstr ""
+
+#: templates/site.html:38
+msgid "Active"
+msgstr ""
+
+#: templates/site.html:46
+msgid "Domain"
+msgstr ""
+
+#: templates/site.html:54
+msgid "No description available yet"
+msgstr ""
+
+#: templates/site.html:58
+msgid "Source:"
+msgstr ""
+
+#: templates/sites.html:12
+msgid "Filter by category"
+msgstr ""
+
+#: templates/sites.html:16
+msgid "Filter by type"
+msgstr ""
+
+#: templates/suggestions.html:8
+msgid ""
+"If you have any suggestions to improve\n"
+"    InviMarket, don't hesitate to contact us using our social networking\n"
+"    profiles on Twitter, Facebook or Google+. You can also send an email\n"
+"    explaining your ideas to suggestions[at]invimarket.com:\n"
+"    "
+msgstr ""
+
+#: templates/suggestions.html:17
+msgid "Name:"
+msgstr ""
+
+#: templates/suggestions.html:21
+msgid "Suggestions:"
+msgstr ""
+
+#: templates/suggestions.html:23
+msgid "Your suggestions..."
+msgstr ""
+
+#: templates/trade.html:8
+msgid "Trade details"
+msgstr ""
+
+#: templates/trade.html:17
+msgid "Modify"
+msgstr ""
+
+#: templates/trade.html:22
+msgid "Complain"
+msgstr ""
+
+#: templates/trade.html:34
+#, python-format
+msgid ""
+"\n"
+"      Send the invites to the following email addres:\n"
+"        %(trade.receptor)s@invimarket.com\n"
+"      "
+msgstr ""
+
+#: templates/trade.html:39
+#, python-format
+msgid ""
+"\n"
+"      Send the invites to the following email addres:\n"
+"      %(trade.proposer)s@invimarket.com\n"
+"      "
+msgstr ""
+
+#: templates/trade.html:46
+msgid "No commments."
+msgstr ""
+
+#: templates/trades.html:33
+msgid "Reply"
+msgstr ""
+
+#: templates/trades.html:38
+msgid "Send"
+msgstr ""
+
+#: templates/trades.html:66
+msgid "Status:"
+msgstr ""
+
+#: templates/trades.html:70
+msgid "Pending"
+msgstr ""
+
+#: templates/trading.html:16
+msgid "Filter by requests"
+msgstr ""
+
+#: templates/trading.html:21
+msgid "Filter by offers"
+msgstr ""
+
+#: urls.py:59
+msgid "Your edition have been submitted and will be reviewed by the admin."
+msgstr ""
+
+#: urls.py:67
+msgid "Your offer has been succesfuly stored."
+msgstr ""
+
+#: urls.py:70
+msgid "The offer has been deleted."
+msgstr ""
+
+#: urls.py:74
+msgid ""
+"The referral chain has been created, you can get the link on your profile "
+"page."
+msgstr ""
+
+#: urls.py:82
+msgid "Your trade proposal has been sended to the user."
+msgstr ""
+
+#: urls.py:87
+msgid "The trade proposal has been accepted."
+msgstr ""
+
+#: urls.py:90
+msgid "The trade proposal has been rejected."
+msgstr ""
+
+#: urls.py:103
+msgid "Your complaint has been submitted."
+msgstr ""
+
+#: views/add_partner.py:33
+msgid "The user is already your partner."
+msgstr ""
+
+#: views/add_partner.py:37
+msgid "The user has been successfuly added to your partners list."
+msgstr ""
+
+#: views/add_partner.py:65
+msgid "The partnership request has been sended to the user."
+msgstr ""
+
+#: views/complaint.py:36
+msgid "You have already submitted a complaint for this trade."
+msgstr ""
+
+#: views/complaint.py:38
+msgid "You have to wait seven days to make a complaint."
+msgstr ""
+
+#: views/complaint.py:40
+msgid "The complaint period has expired."
+msgstr ""
+
+#: views/config.py:32
+msgid "Your profile has been successfuly updated."
+msgstr ""
+
+#: views/del_partner.py:29
+msgid "Ther user is not your partner."
+msgstr ""
+
+#: views/del_partner.py:32
+msgid "The partnership proposal has been rejected."
+msgstr ""
+
+#: views/del_partner.py:36
+msgid "The user is no longer your partner."
+msgstr ""
+
+#: views/del_request.py:36
+msgid "The request has been deleted."
+msgstr ""
+
+#: views/del_request.py:38
+msgid "Some error has occurred. Reload and try again."
+msgstr ""
+
+#: views/join_chain.py:41
+msgid "Invalid password."
+msgstr ""
+
+#: views/join_chain.py:52
+msgid "You have already joined the referral chain."
+msgstr ""
+
+#: views/offer.py:71
+msgid "The referral link is not valid. Check it and try again."
+msgstr ""
+
+#: views/offer.py:107
+msgid "Some error occurred. Reload and try again"
+msgstr ""
+
+#: views/offer.py:109
+msgid "You have reached the maximum number of simultaneous offers."
+msgstr ""
+
+#: views/propose.py:54
+msgid "You have already made the user a trade proposal."
+msgstr ""
+
+#: views/propose.py:56
+msgid "You have reached the maximum number of pending proposals."
+msgstr ""
+
+#: views/propose.py:58
+msgid "The user have reached the maximum number of pending proposals."
+msgstr ""
+
+#: views/propose.py:115
+msgid "You have not selected any request or offer."
+msgstr ""
+
+#: views/propose.py:119
+msgid "Some requests/offers have changed. Reload andtry again."
+msgstr ""
+
+#: views/propose.py:122
+msgid "Some requests/offers have changed. Reload and try again."
+msgstr ""
+
+#: views/propose.py:139 views/propose.py:155
+msgid "Some offers/requests have changed. Reload and try again."
+msgstr ""
+
+#: views/propose.py:149
+msgid "Donations not available for the selected request."
+msgstr ""
+
+#: views/register.py:38
+msgid "You must read and accept the terms and conditions."
+msgstr ""
+
+#: views/request.py:51
+msgid "You have already requested an invite for this site."
+msgstr ""
+
+#: views/request.py:53
+msgid "You have reached the maximum number of simultaneous requests."
+msgstr ""
+
+#: views/sites.py:76 views/sites.py:109
+msgid "No results matched the query"
+msgstr ""
+
+#: views/sites.py:104
+msgid "The query is too long:"
+msgstr ""
+
+#: views/sites.py:111
+msgid "Showing results for"
+msgstr ""
+
+#: views/trade.py:48 views/trade.py:51 views/trade.py:114 views/trade.py:117
+msgid "Some requests/offers status have changed. Reload and try again."
+msgstr ""
+
+#: views/trades.py:61
+msgid "You don't have any trade."
+msgstr ""
+
+#: views/trading.py:165
+msgid "You have not made any request or offer yet."
+msgstr ""
+
+#: views/trading.py:180
+msgid "No results"
+msgstr ""
+
+#: views/user_login.py:46
+msgid "Your account has not been activated yet."
+msgstr ""
+
+#: views/user_login.py:48
+msgid "Your username and password didn't match. Please try again."
+msgstr ""
+
+#: views/user_login.py:52
+msgid "Username/email"
+msgstr ""
+

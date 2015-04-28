@@ -1,0 +1,8 @@
+{% extends "email/email.html" %}
+{% block main %}
+Hello {{ name }},</br>
+
+{{ user.first_name }} wants to be your partner. Click the following
+link to view the request <a href="https://{{ domain }}{% url 'partners' partner_id=user.id %}">
+https://{{ domain }}{% url 'partners' partner_id=user.id %}</a>
+{% endblock %}

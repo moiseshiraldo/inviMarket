@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+{% load staticfiles %}
+{% load i18n %}
+
+<html>
+
+<head>
+    <title>{% block title%}InviMarket{% endblock%}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+    minimum-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+    <link href='http://fonts.googleapis.com/css?family=Londrina+Sketch%7CUbuntu:5000%7CPlay%7COpen+Sans'
+          rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="{% static "js/global.js" %}"></script>
+    <script src="{% static "js/onClicks.js" %}"></script>
+    {% if not user.is_authenticated %}
+    <script src="{% static "js/cookies.js" %}"></script>
+    {% endif %}
+</head>
+
+<body>
+
+  <header>
+
+    <img src="{% static 'images/logo.svg' %}" id="logo" alt="I"/>
+    <img src="{% static 'images/sublogo.svg' %}" id="superLogo" alt="NVI"/>
+
+    <h1 class="slogan"> INVITING PEOPLE </h1>
+
+    <img src="{% static 'images/twitter.svg' %}" class="socialLink"
+         alt="Twitter"/>
+    <img src="{% static 'images/facebook.svg' %}" class="socialLink"
+         alt="Facebook"/>
+    <img src="{% static 'images/google-plus.svg' %}" class="socialLink"
+         alt="GooglePlus"/>
+
+    <div class="status-bar">
+      {% if user.is_authenticated %}
+      <span><a href="{% url 'logout' %}">{% trans "Logout" %}</a></span>
+      {% else %}
+      <span>
+        <a href="{% url 'login' %}">{% trans "Login" %}</a> |
+        <a href="{% url 'register' %}">{% trans "Register" %}</a>
+      </span>
+      {% endif %}
+    </div>
+
+    <nav>
+      <img src="{% static "images/menu-button.svg" %}" id="menu-button"
+        class="mobile" alt="Menu"/>
+      <ul class="menu">
+        <li><a href="{% url 'index' %}">Market</a></li>
+        {% if user.is_authenticated %}
+        <li class="menu-item">
+          <a href="{% url 'profile' %}">{% trans "Profile" %}</a>
+        </li>
+        <li class="menu-item">
+          <a href="{% url 'trading' %}">{% trans "Trading" %}</a>
+        </li>
+        {% endif %}
+        <li class="menu-item">
+          <a href="{% url 'sites' %}">{% trans "Sites" %}</a>
+        </li>
+      </ul>
+      <form action="/sites/" method="get">
+        <input type="search" name="q" placeholder="{% trans 'Site name...' %}">
+        <input type="submit" value="">
+      </form>
+      {% if user.is_authenticated %}
+      <img src="{% static 'images/bell.svg' %}"
+           title={% trans "Notifications" %}
+           id="bell" alt="Notifications"/>
+      {% if user.profile.count_notifications > 0 %}
+      <div id="notifications" class="notifications">
+        {{ user.profile.count_notifications }}
+        <img src="{% static "images/arrow.svg" %}" class="arrow"
+             alt="arrow"/>
+        <ul class="messages-list">
+          {% for notification in user.notification_set.all %}
+          <li><a href={{ notification.url }}>
+            {% if notification.code == 10 %}
+            <img class="envelop"
+                 src="{% static "images/in.svg" %}"
+                 alt="Trade proposal"/>
+            {% elif notification.code == 20 %}
+            <img class="handshake"
+                 src="{% static "images/handshake.svg" %}"
+                 alt="Partnership"/>
+            {% elif notification.code == 30 %}
+            <img class="envelop"
+                 src="{% static "images/out.svg" %}"
+                 alt="Accepted trade"/>
+            {% endif %}
+            {% if notification.sender.profile.avatar %}
+            <img class="avatar"
+                 src="{{notification.sender.profile.avatar.url}}"
+                 alt="Avatar"/>
+            {% else %}
+            <img class="avatar" src="{% static "images/user.svg" %}"
+                 alt="Avatar"/>
+            {% endif %}
+            <h3>{{ notification.sender.first_name }}</h3>
+            {{ notification.get_message }}
+            <br/>
+            <span class="date">
+              {{ notification.date|date:"d-M-Y" }}
+            </span>
+          </a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+      {% endif %}
+    </nav>
+
+  </header>
+
+  {% block main %}{% endblock %}
+  <footer>
+    <ul>
+      <li>About Us</li>
+      <li><a href="{% url 'legal' %}#license">
+        {% trans "License and source code" %}
+      </a></li>
+      <li><a href="{% url 'legal' %}#terms">
+        {% trans "Terms and conditions" %}
+      </a></li>
+      <li><a href="{% url 'legal' %}#privacy">
+        {% trans "Privacy policy" %}
+      </a></li>
+      <li><a href="{% url 'legal' %}">{% trans "Contact" %}</a></li>
+    </ul>
+    <ul>
+      <li>{% trans "Get involved" %}</li>
+      <li><a href="{% url 'editing' %}">{% trans "Editing" %}</a></li>
+      <li><a href="{% url 'edition' %}">{% trans "New sites" %}</a></li>
+      <li><a href="{% url 'suggestions' %}">
+        {% trans "Suggestions" %}
+      </a></li>
+    </ul>
+    <ul>
+      <li>{% trans "Connect" %}</li>
+      <li>{% trans "Twitter" %}</li>
+      <li>{% trans "Facebook" %}</li>
+      <li>{% trans "Google+" %}</li>
+    </ul>
+    <ul>
+      <li>Help</li>
+      <li><a href="{% url 'getstarted' %}">
+        {% trans "Get started" %}
+      </a></li>
+      <li><a href="{% url 'faq' %}">FAQ</a></li>
+      <li><a href="{% url 'glossary' %}">{% trans "Glossary" %}</a></li>
+      <li>Bugs</li>
+    </ul>
+    <div class="license">
+      <img src="{% static "images/logo.svg" %}" id="footlogo" alt="I"/>
+      <hr>
+      <div id="mobileFooter" class="mobile">
+        <a href="{% url 'legal' %}">Legal information</a> |
+        <a href="{% url 'edition' %}">New sites</a> |
+        <a href="{% url 'glossary' %}">Glossary</a> |
+        <a href="{% url 'faq' %}">FAQ</a>
+      </div>
+      <p>
+        <a rel="license"
+           href="http://creativecommons.org/licenses/by/4.0/">
+          <img alt="Creative Commons License" style="border-width:0"
+               src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+        </a>
+        <span>
+          This work is licensed under a
+          <a rel="license"
+             href="http://creativecommons.org/licenses/by/4.0/">
+            Creative Commons Attribution 4.0 International License
+          </a>.
+        </span>
+      </p>
+    </div>
+  </footer>
+
+  {% if not user.is_authenticated %}
+  <div class="pop-up">
+    <span>{% trans "This place uses" %}
+    <a href="{% url 'legal' %}#privacy">{% trans "cookies" %}</a>,
+    {% trans "and no animals were harmed in the development process." %}
+    </span>
+    <div class="closeButton">{% trans "Close" %}</div>
+  </div>
+  {% endif %}
+
+</body>
+
+</html>

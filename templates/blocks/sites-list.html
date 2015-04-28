@@ -1,0 +1,74 @@
+{% load staticfiles %}
+{% load i18n %}
+
+<section class="sitesList">
+
+  {% if requests %}
+  <div class="showButton">
+    <span class="mobile">Show</span>
+    <img alt="Requests" class="envelop" src="{% static "images/in.svg" %}"/>
+  </div>
+  <h5>{% trans "Requests" %}</h5>
+  <ul>
+    {% for request in requests %}
+    {% if trade or u == user or not request.website.protected or u in myPartners and user in hisPartners %}
+    <li>
+      <a class="siteLink" href="{% url 'sites' site_name=request.website.name %}">
+        <img alt="Logo" class="siteLogo" src="{{request.website.logo.url}}"/>
+      </a>
+      <span>{{ request.website }}</span>
+      {% if u == user %}
+      [ <a href="{% url 'del_request' site_id=request.website.id %}">{% trans "Delete" %}</a> ]
+      {% endif %}
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+
+  {% elif offers %}
+  <div class="showButton">
+    <span class="mobile">Show</span>
+    <img alt="Offers" class="envelop" src="{% static "images/out.svg" %}"/>
+  </div>
+  <h5>{% trans "Offers" %}</h5>
+  <ul>
+    {% for offer in offers %}
+    {% if trade or u == user or not offer.website.protected or u in myPartners and user in hisPartners %}
+    <li>
+      <a class="siteLink" href="{% url 'sites' site_name=offer.website.name %}">
+        <img alt="Logo" class="siteLogo" src="{{offer.website.logo.url}}"/>
+      </a>
+      <span>{{ offer.website }}</span>
+      {% if u == user %}
+      [ <a href="{% url 'offer' site_id=offer.website.pk %}">{% trans "Edit" %}</a> ]
+      {% endif %}
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+
+  {% elif links %}
+  <div class="showButton">
+    <span class="mobile">Show</span>
+    <img alt="Referral links" class="envelop" src="{% static "images/link.svg" %}"/>
+  </div>
+  <h5>{% trans "Referral links" %}</h5>
+  <ul>
+    {% for offer in links %}
+    <li>
+      <a class="siteLink" href="{% url 'sites' site_name=offer.website.name %}">
+        <img alt="Logo" class="siteLogo" src="{{offer.website.logo.url}}"/>
+      </a>
+      <span>{{ offer.website }}</span>
+      {% if u == user %}
+      [ <a href="{% url 'offer' site_id=offer.website.pk %}">{% trans "Edit" %}</a> |
+      <a href="{% url 'chain' site_id=offer.website.pk %}">{% trans "Chain" %}</a> ]
+      {% else %}
+      [ <a href="{{ offer.referral }}" target="_blank">{% trans "Use" %}</a> ]
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+</section>

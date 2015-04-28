@@ -1,0 +1,2210 @@
+
+/* -----------------------------------*/
+/* ---------->>> GLOBAL <<<-----------*/
+/* -----------------------------------*/
+
+body {
+  background-color: #E3E3E3;
+  width: 100%;
+  margin: 0;
+}
+
+header {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: -0.2em;
+  left: 0;
+  background-color: #E3E3E3;
+  margin: 0.2em 0 0;
+  padding: 0;
+  width: 99.8%;
+  height: 6em;
+}
+header[class="header404"] { top: 4em }
+
+nav {
+  display: block;
+  position: absolute;
+  top: 5.1em;
+  height: 2.5em;
+  width: 100%;
+  background: linear-gradient(CornFlowerBlue, LightSkyBlue);
+  background: -webkit-linear-gradient(CornFlowerBlue, LightSkyBlue);
+  background: -webkit-gradient(CornFlowerBlue, LightSkyBlue);
+  background: -moz-linear-gradient(CornFlowerBlue, LightSkyBlue);
+  background: -o-linear-gradient(CornFlowerBlue, LightSkyBlue);
+  background: -ms-linear-gradient(CornFlowerBlue, LightSkyBlue);
+  border: 1px solid black;
+  box-shadow: -0.2em 0.2em 0.6em;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  display: block;
+  position: relative;
+  z-index: 0;
+  background-color: White;
+  margin: 7.5em 0 0;
+  padding: 2em 0;
+}
+main[id="404"] {
+  margin-top: 12em;
+}
+#sites {
+  min-height: 40em;
+}
+
+section { display: block }
+
+.filter {
+  display: inline-block;
+  width: 16em;
+  height: 1em;
+  margin: 0 0 0 1em;
+}
+
+.content {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 920px;
+  margin: 0 0 0 1em;
+}
+
+article {
+  display: block;
+  margin: 0 3em 0.5em 3em;
+}
+
+footer {
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  background-color: #E3E3E3;
+  padding-top: 1em;
+}
+
+main[class="404"] {
+  background-color: DodgerBlue;
+}
+
+
+
+/* -----------------------------------*/
+/* -------->>> ADVERTISING <<<--------*/
+/* -----------------------------------*/
+
+.ad-header { color: DimGray
+}
+.sideAd {
+  display: inline-block;
+  margin: 2em 0 0 2em;
+  width: 25%;
+}
+
+#site .sideAd {
+  display: block;
+  float: right;
+  margin: 0 0 0 1em;
+}
+
+.topAd {
+  display: block;
+  margin: 0 0 1em 1em;
+}
+
+.aside-link-unit {
+  display: block;
+  width: 100%;
+  position: relative;
+  margin: 0 0 0 1.5em;
+}
+
+.bottom-link-unit {
+  display: block;
+  width: 70%;
+  max-width: 800px;
+  margin: 4em 0 2em 4em;
+}
+
+.tabletAd { display: none }
+
+
+
+
+/* -----------------------------------*/
+/* --------->>> TYPOGRAPHY <<<--------*/
+/* -----------------------------------*/
+
+body { font-family: 'Open Sans', sans-serif }
+
+.slogan {
+  position: relative;
+  color: Navy;
+  font-family: 'Londrina Sketch';
+  font-style: italic;
+  font-size: 2.5em;
+  margin-left: 8em;
+}
+
+.title404 {
+  font-size: 4em;
+  margin-left: 4.5em;
+  top: -0.8em;
+}
+
+.title500 {
+  font-size: 3.5em;
+  margin-left: 4em;
+  top: -0.5em;
+}
+
+h1, h2, h4 { font-family: 'Play', sans-serif }
+
+h1 {
+  font-size: 1.6em;
+  padding: 0 0 0 2em;
+}
+
+  h1 span {
+    font-size: 0.6em;
+    font-weight: normal;
+  }
+
+.centered-header {
+  font-size: 2em;
+  display: block;
+  padding: 0;
+  width: 8em;
+  margin: 1em auto 0.5em auto;
+}
+
+.article-header {
+  display: block;
+  border-bottom: 1px solid black;
+  padding: 0.2em 0;
+  margin: 1em 0;
+}
+
+h2 {
+  font-size: 1.4em;
+  padding: 0;
+}
+
+.recently-viewed h2 {
+  margin: 1em 1em 0 5em;
+  vertical-align: top;
+}
+
+h3 {
+  font-size: 1em;
+  margin: 0;
+}
+
+.inline-header { display: inline-block }
+.smallContainer h3 { font-size: 0.9em }
+
+h4 {
+  margin: 0 0 0.5em 1em;
+}
+
+  h4 span {
+    font-size: 0.7em;
+    font-weight: normal;
+    color: DodgerBlue;
+  }
+
+h5 {
+  font-family: 'Ubuntu', sans-serif;
+  position: relative;
+  width: 100%;
+  margin: 0.4em 0 1em 0.2em;
+  padding: 0 0 0.2em 0;
+  border-bottom: 1px solid Gainsboro;
+}
+
+h1 span .active { text-transform: uppercase }
+
+.status-bar span {
+  position: relative;
+  top: -0.45em;
+  margin: 0 1em;
+  color: White;
+  font-size: 0.8em;
+}
+
+.menu li {
+  color: Navy;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.2em;
+}
+
+nav form input, .profile, .help, .infobox dl, .source, footer { font-size: 0.8em }
+
+.notifications {
+  color: White;
+  font-family: 'Play', sans-serif;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.messages-list {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  color: Black;
+}
+
+.messages-list .date { color: Gray }
+
+.recently-viewed .site, form span, .infotext, article p, .faq ul { font-size: 0.9em }
+
+.infotext { margin: 0 30em 3em 4em }
+
+.showOptions {
+  color: DodgerBlue;
+  font-weight: bold;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.pagination .pageNumber {
+  color: DodgerBlue;
+  font-family: 'Play', sans-serif;
+}
+
+.site .info, .slider .info {
+  font-size: 0.9em;
+  text-align: right;
+  color: DimGray;
+}
+
+.recently-viewed .inline-header {
+  font-size: 1.2em;
+  color: White;
+}
+
+.profile { color: DimGray }
+.smallContainer .profile { font-size: 0.7em }
+
+.info span { font-weight: bold }
+
+.high { color: green }
+
+.medium { color: orange }
+
+.low { color: red }
+
+.sitesList .showButton span {
+  float: right;
+  font-size: 0.75em;
+  color: DodgerBlue;
+}
+
+form .helptext { display: none }
+
+.form .error { color: red }
+
+.help { color: DodgerBlue }
+
+#id_last_name { display: none }
+
+label[for="id_last_name"] { display: none }
+
+.source {
+  margin: 0 0 5em 0;
+  padding: 1em 0 0 2em;
+  border-top: 1px solid LightGray;
+  clear: both;
+}
+
+.infobox span {
+  position: relative;
+  display: block;
+  text-align: right;
+  top: 1em;
+  left: -1em;
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.form .errorlist {
+  list-style-type: none;
+  padding: 0;
+  margin: 1em 0 0 0;
+  font-size: 0.8em;
+  color: red;
+}
+
+.errorlist { text-align: center }
+
+.infobox dl dt { font-weight: bold }
+
+footer p {
+  position: relative;
+  top: -2.5em;
+  left: 2.5em;
+}
+
+.pop-up {
+  font-size: 1.2em;
+  color: White;
+}
+
+.faq-header {
+  color: DodgerBlue;
+  margin-left: -1em;
+  font-size: 1.2em;
+}
+
+.faqtext { margin: 0 0 2em 0}
+
+.faq ul {
+  margin: -1.5em 2em 0 1em;
+  padding: 0;
+  color: DodgerBlue;
+}
+
+.faq ul span { color: Black }
+
+
+
+/* -----------------------------------*/
+/* ---------->>> BLOCKS <<<-----------*/
+/* -----------------------------------*/
+
+.status-bar {
+  position: absolute;
+  z-index: 1;
+  top: 4.75em;
+  text-align: right;
+  padding: 0.2em 0;
+  margin: 0;
+  height: 0.7em;
+  width: 100%;
+  background-color: DimGray;
+  border: 1px solid black;
+}
+
+article p { margin: 0 0 1em 0 }
+
+.trade-filter { width: 14em }
+#trades .filter form { top: 15em }
+
+.searchInfo {
+  margin: 0 0 1em 0em;
+  width: 31.5em;
+  background-color: WhiteSmoke;
+  padding: 0.3em;
+  border-radius: 0.5em;
+}
+
+.wrapper {
+  position: relative;
+  height: 7em;
+  margin: 0;
+  padding: 0;
+  transform: translate3d(0, 0, 0);
+  transition: all .8s ease-in-out;
+  -webkit-transition: all .8s ease-in-out;
+  -moz-transition: all .8s ease-in-out;
+  o-transition: all .8s ease-in-out;
+}
+
+.container .wrapper { width: 180em }
+
+.smallContainer .wrapper { width: 90em }
+
+.container, .smallContainer {
+  display: inline-block;
+  height: 15em;
+  width: 32.1em;
+  margin: 0 2em;
+  overflow: hidden;
+}
+
+.smallContainer { width: 16.15em }
+
+.stepContainer {
+  display: inline-block;
+  padding: 0;
+  margin: 2em 0 0 2em;
+  width: 35em;
+  height: 19em;
+  border: 1px solid LightGray;
+  border-radius: 1em;
+  background: linear-gradient(0deg, White, WhiteSmoke);
+  background: -webkit-linear-gradient(0deg, White, WhiteSmoke);
+  background: -webkit-gradient(top right, top left, White, WhiteSmoke);
+  background: -moz-linear-gradient(0deg, White, WhiteSmoke);
+  background: -o-linear-gradient(0deg, White, WhiteSmoke);
+  background: -ms-linear-gradient(0deg, White, WhiteSmoke);
+  overflow: hidden;
+}
+
+.step {
+  display: inline-block;
+  margin: 0;
+  padding: 1em;
+  width: 50em;
+}
+
+.site, .form, .user, .slider, .chain, .message {
+  width: 30em;
+  border: 1px solid #FFC780;
+  border-radius: 0.5em;
+  padding: 1em;
+  background-color: Beige;
+  margin: 0 0 1em 0;
+}
+
+.inline-block {
+  display: inline-block;
+  width: auto;
+  vertical-align: top;
+}
+
+.indented-block { margin-left: 5em }
+
+.slider {
+  display: block;
+  float: left;
+  width: 30em;
+  height: 7em;
+  margin: 0;
+}
+
+.tradeSlider {
+  width: 14em;
+  height: 7em;
+}
+
+.message {
+  width: 40em;
+  margin: 0 0 1em 4em;
+}
+
+.recently-viewed {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  width: 100%;
+  padding: 0.2em 0 0 0;
+  background-color: DimGray;
+  margin: 2em 0 0 0;
+}
+
+  .recently-viewed .site {
+    display: inline-block;
+    width: 2.2em;
+    height: 2.2em;
+    margin: 0;
+    overflow: hidden;
+    transition: all .8s ease-in-out;
+  }
+
+  .recently-viewed .site:hover { width: 15em }
+
+    .recently-viewed .site .siteLink {
+      display: inline-block;
+      width: 15em;
+    }
+
+    .recently-viewed .site .outLink {
+      position: relative;
+      left: 4.4em;
+      top: -1.8em;
+    }
+
+.pagination { margin: 2em 0 4em 14em }
+
+.user .comments {
+  clear: both;
+  width: 25em;
+  padding: 0.5em 1em;
+  margin: 1em 0 0 0;
+  background: linear-gradient(-45deg, White, WhiteSmoke);
+  background: -webkit-linear-gradient(-45deg, White, WhiteSmoke);
+  background: -webkit-gradient(top left, bottom right, White, WhiteSmoke);
+  background: -moz-linear-gradient(-45deg, White, WhiteSmoke);
+  background: -o-linear-gradient(-45deg, White, WhiteSmoke);
+  background: -ms-linear-gradient(-45deg, White, WhiteSmoke);
+  border: 1px solid LightGray;
+  border-radius: 0.4em;
+  font-size: 0.8em;
+}
+
+.help {
+  margin: 1em 0 2em 8em;
+  width: 36em;
+}
+
+.sitesList {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0.5em;
+  margin: 1.5em 1em 0 0;
+  max-height: 14.1em;
+  overflow-y: auto;
+  background: linear-gradient(135deg, White, WhiteSmoke);
+  background: -webkit-linear-gradient(135deg, White, WhiteSmoke);
+  background: -webkit-gradient(bottom right, top left, White, WhiteSmoke);
+  background: -moz-linear-gradient(135deg, White, WhiteSmoke);
+  background: -o-linear-gradient(135deg, White, WhiteSmoke);
+  background: -ms-linear-gradient(135deg, White, WhiteSmoke);
+  border: 1px solid Gainsboro;
+  border-radius: 0.4em;
+}
+
+.sitesList li { width: 96% }
+
+.infobox {
+  position: relative;
+  float: left;
+  border: 1px solid #FFC780;
+  background-color: Beige;
+  margin: 0 1em 0.5em 0;
+  padding: 0;
+  width: 20em;
+}
+
+footer .license {
+  clear: both;
+  width: 85%;
+  margin: auto;
+  margin-top: 1em;
+}
+
+footer hr {
+  border-width: 1px 0;
+  border-color: #c1c1c1 #f9f9f9 #f9f9f9;
+  border-style: solid;
+  position: relative;
+  top: -2em;
+  left: 1.8em;
+}
+
+.pop-up {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  padding: 0.7em 2em;
+  bottom: 0;
+  background-color: Black;
+  opacity: 0.9;
+}
+
+.socialButtons {
+  text-align: right;
+  margin: -5.5em 6em 0 0;
+}
+#profile .socialButtons {
+  position: relative;
+  text-align: right;
+  margin: 0 0 0 -1em;
+  top: 3em;
+}
+
+ .socialButtons .fb-share-button {
+  position: relative;
+  top: -0.3em;
+}
+
+#site .socialButtons { top: 1em }
+
+.faq {
+  display: inline-block;
+  width: 30em;
+  margin: 0 4em 2em 4em;
+}
+
+
+
+/* -----------------------------------*/
+/* ---------->>> LISTS <<<------------*/
+/* -----------------------------------*/
+
+.menu {
+  z-index: 2;
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
+  margin: 1em 0 0 4em;
+  color: Navy;
+}
+
+  .menu li {
+    display: inline;
+    position: relative;
+    bottom: 0.15em;
+    padding: 0;
+  }
+
+  .menu404 .menu-item {
+    margin-left: 22em;
+    top: 0.02em;
+  }
+
+.notifications ul { margin: 0 }
+
+.notifications .messages-list {
+  display: none;
+  position: relative;
+  float: right;
+  left: 0.5em;
+  top: 1em;
+  list-style-type: none;
+  padding: 0;
+  width: 25em;
+  background-color: WhiteSmoke;
+  border: 1px solid LightGray;
+  border-radius: 0.2em;
+  box-shadow: 0.5em 0.5em 0.8em 0.05em DimGray;
+}
+
+  .messages-list li {
+    background-color: White;
+    width: 100%;
+    padding: 1em 0 0.5em 0;
+    margin: 0;
+    border-bottom: 1px solid WhiteSmoke;
+  }
+
+.step ul {
+  display: inline-block;
+  transition: left 0.8s ease-in-out;
+  -webkit-transition: left 0.8s ease-in-out;
+  -moz-transition: left 0.8s ease-in-out;
+  o-transition: left 0.8s ease-in-out;
+  position: relative;
+  margin: 0.5em 0 0 1em;
+  padding: 0;
+  left: 0;
+  list-style-type: decimal;
+  width: 14em;
+  font-size: 0.8em;
+}
+
+  .step ul li { margin: 0 0 0.5em 0 }
+
+    .step ul li span { color: DodgerBlue }
+
+.form ul {
+  list-style-type: none;
+  text-align: right;
+}
+
+#propose form ul, #complaint form ul {
+  text-align: left;
+  padding: 0;
+}
+
+#config form ul li { margin-bottom: 1em }
+
+.slideButtons {
+  position: relative;
+  text-align: center;
+  width: 10em;
+  margin: auto;
+  padding: 0;
+}
+
+  .slideButtons li {
+    display: inline;
+    float: left;
+    margin: 0.5em;
+    list-style: none;
+    cursor: pointer;
+    background-color: LightGray;
+    padding: 0.35em;
+    border-radius: 50%;
+    border: 1px solid DimGray;
+  }
+
+    .slideButtons li:hover { background-color: DodgerBlue }
+
+    .slideButtons li.active { background-color: Beige }
+
+.site .info, .slider .info {
+  margin: 2.5em 0 0;
+  padding: 0;
+}
+
+  .site .info li, .slider .info li {
+    margin-right: 1.9em;
+    display: inline;
+  }
+
+.chain-info, .form .chain-info {
+  padding: 0 0.5em;
+  text-align: left;
+}
+.chain-info li {
+  list-style-type: none;
+  margin: 0.2em 0;
+  font-size: 0.9em;
+}
+
+.profile {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0.8em;
+}
+
+.tradeSlider .profile {
+  display: block;
+  position: relative;
+  float: left;
+  margin: 0 3em 0.5em 0;
+}
+
+.sitesList ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#propose .sitesList { margin: 1.5em 0 1em 1em }
+
+  .sitesList li {
+    font-size: 0.8em;
+    margin: 0.2em 1em;
+  }
+
+    .sitesList li span { margin-left: 0.4em }
+
+  .form .sitesList ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+.inlineSitesList {
+  margin: 1em 0 0 0.6em;
+  padding: 0;
+  list-style-type: none;
+}
+
+  .inlineSitesList li {
+    display: inline;
+    padding: 0;
+    margin-left: -0.31em;
+  }
+
+.form .errorlist {
+  list-style-type: none;
+  padding: 0;
+  margin: 1em 0 0 0;
+  font-size: 0.8em;
+  color: red;
+}
+
+.filter ul {
+  list-style-type: none;
+  margin: 0.2em 0 1em 0;
+  padding: 0 0 0 0.5em;
+}
+
+  .filter .options>li, .filter .options>li { display: none}
+
+.infobox dl {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+  .infobox dl dt {
+    float: left;
+    padding-left: 0.5em;
+    width: 25%;
+    height: 1.5em;
+  }
+
+  .infobox dl dd { height: 1.5em }
+
+  .infobox .odd { background-color: NavajoWhite }
+
+#legal section ul {
+  list-style-type: decimal;
+  padding-left: 2em;
+}
+
+  #legal section ul li { margin-top: 1em }
+
+  #legal section ul ul { list-style-type: lower-latin }
+
+footer ul {
+  display: inline-block;
+  vertical-align: top;
+  list-style-type: none;
+  text-align: left;
+  margin-right: 5%;
+  text-shadow: 0.01em 0.01em 0.02em;
+}
+
+footer ul:first-child { margin-left: 20% }
+
+  footer ul li { margin-bottom: 0.2em }
+
+  footer ul li:first-child {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+
+#FAQ ul, #glossary ul { list-style-type: none }
+
+
+
+/* -----------------------------------*/
+/* ----------->>> FORMS <<<-----------*/
+/* -----------------------------------*/
+
+input, textarea, select, button {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 0.9em;
+  font-family: inherit;
+  outline: none;
+}
+  input:focus, textarea:focus, select:focus, button:focus { outline: none }
+
+nav form {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  margin: 0 0.5em;
+  padding: 0;
+  top: 1.1em;
+  z-index: 1;
+  height: 1.3em;
+  background-color: White;
+  border: 1px solid LightGray;
+  border-radius: 0.5em;
+}
+
+  nav form:hover { border-color: DimGray }
+
+  nav form:focus { border-color: #FFC780 }
+
+  nav form input[type="search"] {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    //-webkit-user-modify: read-write-plaintext-only;
+    //-webkit-appearance: none;
+    float: left;
+    padding: 0 0 0 0.4em;
+    margin: 0;
+    width: 8em;
+    height: 1.45em;
+    border-width: 0;
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+  }
+
+  nav form input[type="search"]:focus {
+    border: 1px solid #FFC780;
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    outline: none;
+  }
+
+.filter form {
+  position: fixed;
+  top: 18em;
+  z-index: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: inherit;
+  margin: 0;
+  padding: 1em 0 0 1em;
+  font-size: 0.9em;
+  background: linear-gradient(135deg, White, WhiteSmoke);
+  background: -webkit-linear-gradient(135deg, White, WhiteSmoke);
+  background: -webkit-gradient(bottom right, top left, White, WhiteSmoke);
+  background: -moz-linear-gradient(135deg, White, WhiteSmoke);
+  background: -o-linear-gradient(135deg, White, WhiteSmoke);
+  background: -ms-linear-gradient(135deg, White, WhiteSmoke);
+  border: 1px solid Gainsboro;
+  border-radius: 0.4em;
+}
+
+.form input, .form textarea {
+  border: 1px solid LightGray;
+  border-radius: 0.2em;
+  background-color: White;
+  margin: 0.1em 0 0.5em 0;
+  padding: 0.1em 0.1em 0.1em 0.4em;
+}
+
+.form input { width: 14em }
+.form textarea { width: 25em }
+
+  .form input:focus, .form textarea:focus {
+    border-color: DodgerBlue;
+  }
+
+.form input[type="Submit"], .form input[type="Reset"] {
+  width: auto;
+  font-family: 'Play', sans-serif;
+  font-size: 1em;
+  padding: 0.15em 0.3em;
+  border-radius: 0.4em;
+  border-color: LightGray;
+  background: linear-gradient(135deg, White, WhiteSmoke);
+  background: -webkit-linear-gradient(135deg, White, WhiteSmoke);
+  background: -webkit-gradient(bottom right, top left, White, WhiteSmoke);
+  background: -moz-linear-gradient(WhiteSmoke, LightGray);
+  background: -o-linear-gradient(135deg, White, WhiteSmoke);
+  background: -ms-linear-gradient(135deg, White, WhiteSmoke);
+}
+
+.form input[type="CheckBox"] { width: auto }
+
+  .form input[type="Submit"]:hover, .form input[type="Reset"]:hover {
+    border-color: DodgerBlue;
+  }
+
+.form input[name="referral"] { width: 20em }
+
+textarea[name=comments] { height: 5em }
+
+label { vertical-align: top }
+
+.float-input {
+  float: right;
+  margin-right: 1em;
+}
+
+#trade form {
+  width: 25em;
+  margin: 0 0 2em 6em;
+}
+
+#edition form ul {
+  padding: 0 0 0 1em;
+  text-align: left;
+}
+
+  #edition form label {
+    display: inline-block;
+    width: 6em;
+  }
+
+
+
+
+/* -----------------------------------*/
+/* ---------->>> IMAGES <<<-----------*/
+/* -----------------------------------*/
+
+header #logo {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  height: 9em;
+  width: 4.5em;
+}
+
+header #superLogo {
+  position: absolute;
+  z-index: 2;
+  top: 1.7em;
+  left: 3.5em;
+  height: 3em;
+  width: 6em;
+}
+
+header .socialLink {
+  position: relative;
+  float: right;
+  right: 1em;
+  top: -4.5em;
+  height: 2em;
+  width: 2em;
+  margin: 0.2em;
+  opacity: 0.6;
+}
+
+  header .socialLink:hover { opacity: 1 }
+
+nav #bell {
+  position: relative;
+  float: right;
+  z-index: 1;
+  top: 1em;
+  left: -1.5em;
+  height: 1.5em;
+}
+
+.notifications .arrow {
+  display: none;
+  position: relative;
+  float: right;
+  height: 1em;
+  top: 1.2em;
+  z-index: 2;
+}
+
+.comments .arrow {
+  position: relative;
+  float: left;
+  top: -1.4em;
+  height: 1em;
+}
+
+h1 .siteLogo {
+  position: relative;
+  top: 0.2em;
+  left: 0.2em;
+  width: 1.2em;
+}
+
+.step img {
+  float: left;
+  border-radius: 2em;
+  margin: 0 1em 0 0;
+  transition: all 0.5s ease-in-out;
+  vertical-align: top;
+  width: 18em;
+  box-shadow: 0.2em 0.2em 0.8em 0.05em DimGray;
+}
+
+  .step img:hover {
+    width: 29em;
+    border-radius: 0.5em;
+  }
+
+.downButton img { width: 6em }
+
+.addButton img, .delButton img {
+  position: relative;
+  float: right;
+  margin: 0 0 0 0.5em;
+  width: 1.5em;
+}
+
+.tradeSlider .envelop {
+  display: block;
+  width: 2em;
+  clear: left;
+  margin: 3.5em 0 0 3.5em;
+}
+
+.tradeSlider .siteLogo {
+  position: relative;
+  top: -2.5em;
+  left: 6em;
+  width: 2em;
+  margin: 0;
+}
+
+.site .siteLogo, .slider .siteLogo {
+  float: left;
+  margin-right: 1em;
+}
+
+.lock { width: 1em }
+
+.avatar {
+  float: left;
+  width: 3em;
+  margin: 0.2em 0.5em 0 0;
+  border-radius: 0.2em;
+}
+
+.notifications .avatar {
+  float: left;
+  width: 4em;
+  margin: 0 0.5em 0 1em;
+  border-radius: 0.2em;
+}
+
+.tradeSlider .avatar {
+  width: 2em;
+  margin: 0 0.5em 0 0;
+  float: left;
+}
+
+.user .handshake, .tradeSlider .handshake {
+  position: relative;
+  top: 0.4em;
+  width: 1.2em;
+}
+
+.notifications .handshake, .notifications .envelop {
+  width: 2em;
+  float: right;
+  margin: 0 1em 0 0;
+}
+
+.recently-viewed .site .siteLogo { width: 2.5em }
+
+.inlineSitesList .siteLogo {
+  width: 1.8em;
+  padding: 0.1em 0.2em;
+  border: 1px solid LightGray;
+}
+
+.inlineSitesList .envelop {
+  position: relative;
+  float: left;
+  top: 0.5em;
+  width: 1.8em;
+  margin-right: 0.5em;
+}
+
+.sitesList .siteLogo {
+  position: relative;
+  top: 0.4em;
+  width: 2em;
+}
+
+.sitesList .envelop {
+  position: relative;
+  float: right;
+  width: 1.3em;
+  margin: 0;
+}
+
+.form ul img {
+  position: relative;
+  top: 0.2em;
+  width: 1.5em;
+  margin-right: 0.3em;
+}
+
+.infobox .siteLogo {
+  position: relative;
+  float: left;
+  width: 1.8em;
+  margin: 0.5em;
+}
+
+.infobox dl img {
+  margin: 0.3em 0;
+  width: 0.8em;
+}
+
+footer #footlogo { height: 3em }
+
+
+
+/* -----------------------------------*/
+/* ------>>> LINKS & BUTTONS <<<------*/
+/* -----------------------------------*/
+
+.status-bar a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.status-bar a:visited { color: inherit }
+
+.status-bar a:hover { color: #FFC780 }
+
+.menu a {
+  display: inline-block;
+  padding: 0.15em 0.5em 0.1em;
+  border-radius: 0.1em;
+  margin: 0;
+}
+
+.menu a:link {
+  z-index: 1;
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu a:visited { color: inherit }
+
+.menu a:hover {
+  background: linear-gradient(#FFC780, Beige);
+  background: -webkit-linear-gradient(#FFC780, Beige);
+  background: -webkit-gradient(#FFC780, Beige);
+  background: -moz-linear-gradient(#FFC780, Beige);
+  background: -o-linear-gradient(#FFC780, Beige);
+  background: -ms-linear-gradient(#FFC780, Beige);
+}
+
+nav form input[type="submit"] {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: right;
+  width: 2.1em;
+  height: 1.7em;
+  background: url('/static/images/search.svg') center no-repeat;
+  background-size: 75% 75%;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+  nav form input[type="submit"]:hover {
+    background: url('/static/images/searchHover.svg') center no-repeat;
+    background-size: 75% 75%;
+  }
+
+.notifications {
+  position: relative;
+  float: right;
+  z-index: 2;
+  top: 2em;
+  left: 0.5em;
+  width: 0.8em;
+  height: 1.2em;
+  padding: 0.2em 0.3em;
+  background-color: Red;
+  border-radius: 2em;
+  cursor: pointer;
+}
+
+.messages-list a { display: block }
+
+.messages-list a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.messages-list a:visited { color: inherit }
+
+.messages-list li:hover {
+  color: DodgerBlue;
+  background: linear-gradient(135deg, White, WhiteSmoke);
+  background: -webkit-linear-gradient(135deg, White, WhiteSmoke);
+  background: -webkit-gradient(bottom right, top left, White, WhiteSmoke);
+  background: -moz-linear-gradient(135deg, White, WhiteSmoke);
+  background: -o-linear-gradient(135deg, White, WhiteSmoke);
+  background: -ms-linear-gradient(135deg, White, WhiteSmoke);
+}
+
+h1 a:link {
+  text-decoration: none;
+  color: DodgerBlue;
+}
+
+h1 a:visited { color: DodgerBlue }
+
+h1 a:hover { text-decoration: underline }
+
+.addButton, .delButton {
+  display: inline-block;
+  position: relative;
+  top: -0.2em;
+  background-color: DodgerBlue;
+  font-size: 0.6em;
+  padding: 0.2em 0.5em;
+  color: White;
+  border-radius: 0.2em;
+}
+
+.delButton { background-color: Red }
+
+  .addButton:link, .delButton:link { text-decoration: none}
+  .addButton:visited, .delButton:visited { color: White }
+  .addButton:hover, .delButton:hover { opacity: 0.9 }
+
+.profileLink:link, .siteLink:link {
+  text-decoration: none;
+  color: Black;
+}
+
+.profileLink:visited, .siteLink:visited{ color: Black }
+
+.profileLink:hover, .siteLink:hover {
+  color: DodgerBlue;
+  opacity: 0.9;
+}
+
+.downButton {
+  display: block;
+  width: 10em;
+  text-align: center;
+  margin: 4em auto 0 auto;
+}
+
+  .downButton:hover {
+    cursor: pointer;
+    color: DodgerBlue;
+  }
+
+.pagination .pagNavButton {
+  font-weight: bold;
+  border: 1px solid DarkGray;
+  padding: 0.1em 0.5em;
+  margin: 0 0.5em;
+  border-radius: 0.2em;
+  background: linear-gradient(DarkGray, LightGray);
+  background: -webkit-linear-gradient(DarkGray, LightGray);
+  background: -webkit-gradient(DarkGray, LightGray);
+  background: -moz-linear-gradient(DarkGray, LightGray);
+  background: -o-linear-gradient(DarkGray, LightGray);
+  background: -ms-linear-gradient(DarkGray, LightGray);
+}
+
+  .pagination .pagNavButton:link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .pagination .pagNavButton:visited { color: inherit }
+
+  .pagination .pagNavButton:hover { border-color: DodgerBlue }
+
+  .pagination .pageNumber:link { text-decoration: none }
+
+  .pagination .pageNumber:visited { color: DodgerBlue }
+
+  .pagination .pageNumber:hover { text-decoration: underline }
+
+.sitesList .showButton {
+  position: relative;
+  z-index: 1;
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+
+.sitesList li a:link {
+  text-decoration: none;
+  color: DodgerBlue;
+}
+
+.sitesList li a:visited { color: DodgerBlue }
+
+.sitesList li a:hover { text-decoration: underline }
+
+
+.button {
+  position: relative;
+  float: right;
+  margin: 0 0 0 0.5em;
+  padding: 0.4em 0.8em;
+  font-family: 'Ubuntu', sans-serif;
+  color: White;
+  font-size: 1em;
+  background-color: DodgerBlue;
+  border: none;
+  border-radius: 0.2em;
+}
+.site .button, .slider .button { top: -1.5em }
+.reqButton { background-color: SeaGreen }
+.offerButton { background-color: FireBrick }
+.complaintButton, .rejectButton { background-color: Red }
+.acceptButton { background-color: Green }
+
+  .button:link {
+    text-decoration: none;
+    color: White;
+  }
+
+  .button:visited { color: White }
+
+  .button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+
+.outLink{
+  margin-top: 0;
+  font-size: 0.8em;
+}
+
+.infobox span a:link {
+  text-decoration: none;
+  color: DodgerBlue;
+}
+
+.infobox span a:visited { color: DodgerBlue }
+
+.infobox span a:hover { text-decoration: underline }
+
+#config .form span a:link {
+  color: DodgerBlue;
+  text-decoration: none;
+}
+#config .form span a:visited { color: DodgerBlue }
+#config .form span a:hover { text-decoration: underline }
+
+footer a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer a:visited { color: inherit }
+
+footer a:hover { text-decoration: underline }
+
+.filter .submit { padding: 0.5em }
+
+.pop-up a:link {
+  text-decoration: none;
+  color: DodgerBlue;
+}
+
+.pop-up a:visited { color: DodgerBlue }
+
+.pop-up a:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.pop-up .closeButton {
+  float: right;
+  padding: 0.2em;
+  margin: 0 4em 0 0;
+  border-radius: 0.2em;
+  background-color: DodgerBlue;
+  cursor: pointer;
+}
+
+  .pop-up .closeButton:hover {
+    background-color: #FFC780;
+    opacity: 1;
+    color: Navy;
+  }
+
+
+
+/* -----------------------------------*/
+/* ----->>> RESPONSIVE DESIGN <<<-----*/
+/* -----------------------------------*/
+
+@media only screen and (min-width : 1440px) {
+
+.mobile { display: none }
+
+}
+
+
+
+@media only screen and (min-width : 960px) and (max-width : 1439px) {
+
+  .mobile { display: none }
+
+  .slogan {
+    margin-left: 8em;
+    font-size: 2.5em;
+  }
+
+  #legal section { margin: 0 10em 4em 4em }
+
+  #FAQ ul { margin: 0 10em 0 2em }
+
+}
+
+@media only screen and (min-width : 960px) and (max-width : 1279px) {
+
+  .stepContainer {
+    display: block;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  footer ul:first-child { margin-left: 10% }
+
+  .faq {
+    display: block;
+    margin: 2em 4em 2em 6em;
+  }
+
+  .infotext { margin-right: 15em }
+
+  .recently-viewed h2 { margin: 0 1em 0 5em }
+
+  .sideAd {
+    width: 12%;
+    margin-left: 1em;
+  }
+
+  #site .sideAd { width: 25% }
+
+}
+
+@media only screen and (min-width : 720px) and (max-width : 959px) {
+
+
+  .sideAd, .recently-viewed, .desktop { display: none }
+
+  #menu-button, .slideButton, #mobileFooter { display: none }
+
+  .slogan {
+    margin-left: 6em;
+    font-size: 2em;
+    top: 0.4em;
+  }
+
+  header .socialLink { top: -3em }
+
+  .faq {
+    display: block;
+    margin: 2em 4em 2em 6em;
+  }
+
+  .user { width: 28em }
+
+  .site { width: 25em }
+
+  .searchInfo { width: 26.5em }
+
+  .message { width: 35em }
+
+    .site .info li {
+      display: block;
+      text-align: left;
+      margin-left: 1em;
+    }
+
+    .site .siteLogo { width: 3.5em }
+
+    .site .button {
+      clear: both;
+      top: 0.5em;
+      width: 5em;
+      text-align: center;
+      margin: 0.5em 0 0 0;
+    }
+
+  .sitesList { width: 16em }
+
+    .sitesList ul { display: none }
+
+    .sitesList .showButton { cursor: pointer }
+
+    #propose .sitesList ul {
+      display: block;
+      text-align: left;
+    }
+
+    #propose textarea { width: 32em }
+
+  .filter {
+    font-size: 0.9em;
+    width: 14em;
+  }
+
+  .trade-filter { width: 11em }
+
+  .pagination { margin-left: 10em}
+
+  footer ul { margin-right: 4% }
+
+  footer ul:first-child { margin-left: 6% }
+
+  #legal section { margin: 0 5em 4em 3em }
+
+  .pop-up { font-size: 0.9em }
+
+  .infotext { margin-right: 4em }
+
+  .tabletAd {
+    display: inline-block;
+    position: relative;
+    top: 1em;
+    margin: 1em 0 0 2em;
+  }
+  .topAd, .bottomAd { margin-left: 0 }
+}
+
+
+
+@media only screen and (min-width : 480px) and (max-width : 719px) {
+
+  .recently-viewed, .sideAd, .slideButton, .aside-link-unit, .slogan { display: none }
+
+  header { width: 99.5% }
+
+  header .socialLink { top: 1.8em }
+
+  .menu li { width: 4.5em }
+
+  .menu li a {
+    padding-left: 0.2em;
+    padding-right: 0;
+    width: 4.3em;
+  }
+
+  .menu .menu-item {
+    display: none;
+    background-color: LightSkyBlue;
+    border-radius: 0;
+    box-shadow: -0.1em 0.1em 0.3em;
+  }
+
+  nav #menu-button {
+    width: 1.2em;
+    position: relative;
+    vertical-align: top;
+    left: 4em;
+    top: 1.2em;
+    z-index: 3;
+    cursor: pointer;
+  }
+
+  h3 { font-size: 0.9em }
+
+  .user { width: 16em }
+  #partners .user { width: 22em }
+
+  .site, .slider { width: 14.5em }
+
+  .inline-block {
+    width: auto;
+    max-width: 22em;
+  }
+  .indented-block { margin-left: 2em }
+
+    .site .info, .slider .info {
+      margin-top: 1em;
+      font-size: 0.7em;
+      width: 100%;
+    }
+
+      .site .info li, .slider .info li {
+        display: block;
+        text-align: left;
+        margin-left: 1em;
+        width: 100%;
+      }
+
+    .site .siteLogo, .slider .siteLogo { width: 2.5em }
+
+  .button { font-size: 0.75em }
+
+  .site .button, .slider .button {
+    clear: both;
+    top: 0.5em;
+    width: 5em;
+    text-align: center;
+    margin: 0.5em 0 0 0;
+  }
+
+  .sitesList { width: 16em }
+
+  #propose .sitesList { margin: 1em 0 0 4em; }
+
+    .sitesList ul { display: none }
+
+    .sitesList .showButton { cursor: pointer }
+
+    #propose .sitesList ul {
+        display: block;
+        text-align: left;
+    }
+
+    .inlineSitesList li { margin-left: -0.6em }
+
+  .inlineSitesList .siteLogo, .inlineSitesList .envelop { width: 1.5em }
+
+  .avatar {
+    width: 2.5em;
+  }
+
+  .profile {
+    font-size: 0.7em;
+  }
+
+  .outLink {
+    position: relative;
+    top: -0.4em;
+    font-size: 0.7em;
+  }
+
+  .searchInfo {
+    font-size: 0.9em;
+    width: 18em;
+  }
+
+  .message {
+    width: 26em;
+    margin-left: 1em;
+  }
+
+  .filter {
+    top: 15em;
+    margin-left: 0.5em;
+    width: 11em;
+  }
+
+    .filter form { font-size: 0.8em }
+
+    .filter ul { padding-left: 0.6em }
+
+  .trade-filter {
+    top: 15em;
+    width: 9em;
+    margin-left: 0.5em;
+  }
+
+    aside form { margin: 0.2em }
+
+  .form {
+    width: 25em;
+    max-width: 25em;
+    margin-left: 1em;
+  }
+
+    .form ul { text-align: left }
+    .form input { width: 20em }
+    .form label {
+      display: inline-block;
+      width: 15em;
+    }
+    .form label[for="id_last_name"] { display: none }
+
+    .form input[type="submit"] { margin-left: 14em }
+    .form .float-input { margin-right: 2em }
+
+  .help {
+    margin: 1em 0 2em 4em;
+    width: 30em;
+  }
+
+  article { margin: 0 1em 0.5em 1em }
+
+  footer ul { display: none }
+
+  .license span { display: none }
+
+  #mobileFooter {
+    position: relative;
+    top: -2.5em;
+    left: 3em;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    text-shadow: 0.01em 0.01em 0.02em;
+  }
+
+    #mobileFooter a:link {
+      text-decoration: none;
+      color: DodgerBlue;
+    }
+
+    #mobileFooter a:visited { color: DodgerBlue }
+
+    #mobileFooter a:hover { text-decoration: underline }
+
+  .wrapper { width: 90em }
+
+  .container, .smallContainer { width: 16.6em }
+
+  .pagination { margin-left: 6em }
+
+  #legal section { margin: 0 2em 4em 2em }
+
+  .pop-up { font-size: 0.9em }
+
+    .pop-up span {
+      float: left;
+      width: 70%;
+    }
+
+  .faq {
+    display: block;
+    margin: 2em;
+    width: 26em;
+  }
+
+  .infotext { margin: 0 2em 1em 2em }
+
+  .stepContainer {
+    margin: 2em 0 0 1em;
+    width: 26em;
+    height: 16em;
+  }
+
+  .stepContainer ul { font-size: 0.6em }
+
+  .stepContainer h3 { font-size: 0.8em }
+
+  .step img { width: 14em }
+
+    .step img:hover { width: 22em }
+
+  .topAd, .bottomAd { margin-left: 1em }
+  #site .topAd, #trading .topAd, #trades .topAd { margin-left: -8em }
+  #site .bottomAd, #trading .bottomAd, #trades .bottomAd { margin-left: -8em }
+  #site .sideAd { display: none }
+
+}
+
+
+
+@media only screen and (min-width : 1px) and (max-width : 479px) {
+
+  .sideAd, .tabletAd, .aside-link-unit, .recently-viewed, .slogan { display: none }
+
+  header .socialLink { top: 1.5em }
+
+  header #logo {
+    height: 8em;
+    width: 4em;
+  }
+
+  header #superLogo {
+    left: 3.2em;
+    top: 1.6em;
+    height: 2.5em;
+    width: 5em;
+  }
+
+  .status-bar {
+    top: 4.25em;
+    padding: 0.2em;
+    height: 0.55em;
+    width: 98%;
+  }
+
+    .status-bar span { top: -0.7em }
+
+  nav {
+    width: 99.8%;
+    top: 4.4em;
+    height: 2.5em;
+    box-shadow: -0.1em 0.1em 0.6em;
+  }
+
+  nav .menu { margin-left: 3em }
+
+  .menu li { bottom: 0.1em }
+
+  .menu li a {
+    padding: 0.15em 0.2em 0.25em;
+    width: 95%;
+    font-size: 0.9em;
+  }
+
+  .menu .menu-item {
+    display: none;
+    position: relative;
+    background-color: LightSkyBlue;
+    border-radius: 0;
+    box-shadow: -0.1em 0.1em 0.3em;
+  }
+
+    nav #menu-button {
+      width: 1.2em;
+      position: relative;
+      left: 2.5em;
+      top: 1.2em;
+      vertical-align: top;
+      z-index: 3;
+      cursor: pointer;
+    }
+
+    nav form {
+      position: absolute;
+      top: 1.05em;
+      left: 9em;
+    }
+
+    nav form input[type="search"] { width: 6.5em }
+
+  nav #bell{ left: -1em }
+
+  .notifications { left: 1em }
+
+  .messages-list {
+      width: 20em;
+      font-size: 0.8em;
+    }
+
+  main { margin-top: 6em }
+
+  h1 {
+    padding-left: 0.5em;
+    font-size: 1.2em;
+  }
+
+    h1 span { font-size: 0.6em }
+
+  #profile { text-align: center }
+
+  .user, .site, .form {
+    position: relative;
+    width: 14.5em;
+    text-align: left;
+  }
+
+  .form { width: 15em }
+
+  .indented-block { margin-left: 0.5em }
+  .inline-block {
+    width: auto;
+    max-width: 16em;
+  }
+
+  .avatar {
+    width: 2.5em;
+  }
+
+  .profile {
+    font-size: 0.6em;
+  }
+
+  .slider { width: 14.5em }
+
+    .site .info, .slider .info {
+      margin-top: 1em;
+      font-size: 0.7em;
+      width: 100%;
+    }
+
+      .site .info li, .slider .info li {
+        display: block;
+        text-align: left;
+        margin-left: 1em;
+        width: 100%;
+      }
+
+    .site .siteLogo, .slider .siteLogo { width: 2.5em }
+
+  .user .comments { width: 18em }
+
+  .inlineSitesList ul { padding: 0 }
+  .inlineSitesList li { margin-left: -0.6em }
+
+  .inlineSitesList .siteLogo, .inlineSitesList .envelop { width: 1.5em }
+
+  .outLink {
+    position: relative;
+    top: -0.4em;
+    font-size: 0.7em;
+  }
+
+  .button {
+    width: 5em;
+    text-align: center;
+    clear: both;
+    font-size: 0.7em;
+    font-weight: bold;
+    margin: 0.5em 0 0 0.5em;
+    border-radius: 0.1em;
+  }
+  .site .button, .slider .button { top: 0 }
+
+  #trade .button { clear: none }
+
+  #trading .button, #trades .button {
+    position: absolute;
+    bottom: 0.5em;
+    right: 1em;
+  }
+
+  .sitesList { width: 15em }
+
+    .sitesList ul { display: none }
+
+    .sitesList .showButton { cursor: pointer }
+
+  #propose .sitesList ul {
+    display: block;
+    text-align: left;
+  }
+
+  .sitesList img { width: 1.8em }
+
+  .searchInfo {
+    font-size: 0.9em;
+    margin: 0 0 1em 2em;
+    width: 18em;
+  }
+
+  .message {
+    font-size: 0.9em;
+    width: 18em;
+    margin-left: 1em;
+  }
+
+  .filter {
+    font-size: 0.8em;
+    width: 12.5em;
+  }
+
+  .filter form {
+    z-index: 1;
+    top: 10em;
+    left: -12em;
+    margin: 0.2em;
+    transition: left .8s ease-in-out;
+  }
+
+  .filter .slideButton {
+    height: 3em;
+    position: relative;
+    float: right;
+    left: 0.3em;
+    top: 1em;
+    color: DodgerBlue;
+    font-weight: bold;
+    border-right: 1px solid LightGray;
+    border-radius: 0.2em;
+    background-color: WhiteSmoke;
+    padding: 1.6em 0.2em 0.2em 0.2em;
+    margin: 0;
+ }
+
+   .filter .slideButton:hover { cursor: pointer }
+
+  .filter ul { padding-left: 0.6em }
+
+  trade-filter { width: 12.5em }
+
+  .help {
+    margin-left: 3em;
+    width: 20em;
+  }
+
+  .form ul {
+    text-align: left;
+    padding: 0;
+  }
+    .form input, .form textarea { width: 16em }
+    .form label {
+      display: inline-block;
+      width: 15em;
+    }
+    .form label[for="id_last_name"] { display: none }
+
+    .form input[type="submit"] { margin-left: 10em }
+    #edition input[type="submit"] { margin-right: 2em }
+
+    #login .form span {
+      display: block;
+      margin-top: 2.5em;
+      font-size: 0.8em;
+    }
+
+  #propose .sitesList { margin: 0 0 1em 0 }
+
+  article { margin: 0 1em 0.5em 1em }
+
+  .site-header {
+    margin-left: 0.5em;
+    width: 90%;
+  }
+
+  .infobox {
+    margin: 0 0 0.5em 0;
+    width: 18em;
+  }
+
+  .source {
+    margin-left: 2em;
+    font-size: 0.7em;
+  }
+
+  footer ul { display: none }
+
+  footer .license {
+    width: 80%;
+    margin-left: 1em;
+  }
+
+  .license span { display: none }
+
+  #mobileFooter {
+    position: relative;
+    top: -2.5em;
+    left: 3em;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    padding: 0;
+    text-shadow: 0.01em 0.01em 0.02em;
+  }
+
+    #mobileFooter a:link {
+      text-decoration: none;
+      color: DodgerBlue;
+    }
+
+    #mobileFooter a:visited { color: DodgerBlue }
+
+    #mobileFooter a:hover { text-decoration: underline }
+
+  .wrapper { width: 90em }
+
+  .container, .smallContainer {
+    width: 16.6em;
+    margin-left: 1em;
+    margin-right: 0;
+  }
+
+  .pagination { margin-left: 5em }
+
+  #legal section { margin: 0 2em 4em 1em }
+
+  .pop-up { font-size: 0.7em }
+
+    .pop-up span {
+      float: left;
+      width: 72%;
+    }
+
+  .infotext { margin: 0 2em 1em 2em }
+
+  .faq {
+    display: block;
+    margin: 2em;
+    width: 16em;
+  }
+
+  .stepContainer {
+    margin: 2em 0 0 1em;
+    width: 18em;
+    height: 16em;
+  }
+
+  .stepContainer ul {
+    font-size: 0.8em;
+    width: 19em;
+
+  }
+
+  .stepContainer h3 {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+  }
+
+  .step img { display: none }
+
+    .step img:hover { width: 22em }
+
+  .topAd, .bottomAd { margin-left: 0; border: 1px solid blue }
+  #sites .topAd, #trades .topAd, #trading .topAd {
+    margin-left: -1em;
+    width: 320px;
+  }
+  #sites .bottomAd, #trades .bottomAd, #trading .bottomAd {
+    margin-left: -1em;
+    width: 320px;
+  }
+  #site .sideAd { display: none }
+
+}
+
+
+@media only screen and  (max-height : 480px) {
+
+  .filter form {
+    position: absolute;
+    top: 8em;
+  }
+
+}

@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block main %}
+<main id="config">
+  <h1>{% trans "Profile" %}
+      {% include "blocks/profile-menu.html" with config="active" %}
+  </h1>
+  <form action="{% url 'config' %}" class="form inline-block indented-block"
+        method="post" enctype="multipart/form-data">{% csrf_token %}
+    {% if message %}
+    {% trans message %}
+    {% else %}
+    <ul>
+      {{ config_form.as_ul }}
+      <li><input type="submit" value="Save" /></li>
+    </ul>
+    {% endif %}
+    <span>
+      <a href="{% url 'password_change'%}">Change password</a> |
+      <a href="{% url 'del_profile'%}">Delete account</a>
+    </span>
+  </form>
+</main>
+{% endblock %}

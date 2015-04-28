@@ -1,0 +1,116 @@
+$(document).ready(function(){
+
+  // Show/hide notifications
+  $( "#notifications" ).click(function(event) {
+  $( "#notifications .messages-list" ).slideToggle();
+  $( "#notifications .arrow").slideToggle();
+  event.stopPropagation();
+  });
+
+  // Show/hide mobile menu
+  if (windowWidth < 720) {
+    $( "#menu-button").click(function(event) {
+      $( ".menu-item" ).slideToggle();
+      event.stopPropagation();
+    });
+  }
+
+  // Hide notifications and mobile menu when clicking outside
+  $(document).click(function() {
+    $( "#notifications .messages-list" ).slideUp();
+    $( "#notifications .arrow").slideUp();
+    if ( (windowWidth < 720) && $( ".menu-item" ).css("display") != "none" ) {
+      $( ".menu-item" ).slideUp();
+    }
+  });
+
+  // Stop click propagation
+  $(".messages-list").click(function(event) {
+    event.stopPropagation();
+  });
+
+  $(".mobile-menu").click(function(event) {
+    event.stopPropagation();
+  });
+
+  // Show/hide sites lists (<920px)
+  if (windowWidth < 920) {
+    $( ".showButton" ).click(function() {
+      $( this ).parents(".sitesList").children( "ul" ).slideToggle();
+      var label = $( this ).children( "span");
+      if ( label.text() == "Show" ) {
+        label.text("Hide")
+      } else {
+        label.text("Show")
+      }
+    });
+  }
+
+  // Slide aside filter forms (<480px)
+  if (windowWidth < 480) {
+    $( ".slideButton" ).click(function() {
+      if ( $( ".slideButton" ).text() == ">>" ) {
+        $( ".filter form" ).css("left", "-1em");
+        $( ".slideButton" ).text("<<");
+      } else {
+        $( ".filter form" ).css("left", "-12em");
+        $( ".slideButton" ).text(">>");
+      }
+    });
+  }
+
+  // Show/hide categories list in sites filter form
+  $( ".showOptions" ).click(function() {
+    if ( $( this ).text() == "+" ) {
+      $( this ).next().children("li").slideDown();
+      $( this ).text("-");
+    } else {
+      $( this ).next().children("li").slideUp();
+      $( this ).text("+");
+    }
+  });
+
+  // Show/hide types list in sites filter form
+  $( "#showTypes" ).click(function() {
+    if ( $( "#showTypes" ).text() == "+" ) {
+      $( ".types li" ).slideDown();
+      $( "#showTypes" ).text("-");
+    } else {
+      $( ".types li" ).slideUp();
+      $( "#showTypes" ).text("+");
+    }
+  });
+
+  // Slide up get started page
+  $( ".downButton" ).click(function() {
+      $( ".downButton" ).parent().slideUp(1000);
+      if ( $( ".downButton h2").data("next") == 'register' ) {
+        // Load register page
+        $( "#register" ).load("/register/ #register h1, .form, .help");
+      }
+      if ( $( ".downButton h2").data("next") == 'sites' ) {
+        // Load register page
+        $( "#sites" ).load("/sites/ #sites section, #sites aside, #sites .pagination");
+      }
+      else {
+        // Load javascript for sliders and market page
+        $.getScript("/static/js/sliders.js");
+        $( "#market" ).load("/ .container, .smallContainer", function(){
+          // Initialize sliders
+          var wrappers = $(".wrapper");
+          for (var i = 0; i < wrappers.length; i++) {
+            wrappers[i].links = $("#" + wrappers[i].id + " + .slideButtons li");
+            wrappers[i].links[0].classList.add("active");
+            wrappers[i].timer = startTimer(wrappers[i]);
+            for (var j = 0; j < wrappers[i].links.length; j++) {
+              var link = wrappers[i].links[j];
+              link.addEventListener('click', setClickedItem, false);
+              link.itemID = j;
+            }
+          }
+        });
+      }
+      $('html, body').animate({scrollTop:0}, 1000);
+  });
+
+});

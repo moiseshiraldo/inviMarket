@@ -1,0 +1,5 @@
+Hello {{ name }},
+
+You have received a new trade proposal from {{ proposer.first_name }}. Click
+the following link to check the details:
+https://{{ domain }}{% url 'trade' trade_id=trade.id %} 

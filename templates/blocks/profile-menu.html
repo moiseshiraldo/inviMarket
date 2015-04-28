@@ -1,0 +1,8 @@
+{% load i18n %}
+
+<span>
+  [ <a href="{% url 'profile' %}" class="{{ status }}">{% trans "Status" %}</a>
+  | <a href="{% url 'trades'%}" class="{{ trades }}" %}">{% trans "Trades" %}</a>
+  | <a href="{% url 'partners' %}" class="{{ partners }}">{% trans "Partners" %}</a>
+  | <a href="{% url 'config' %}" class="{{ config }}">{% trans "Config" %}</a> ]
+</span>

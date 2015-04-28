@@ -1,0 +1,60 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block main %}
+
+<main id="propose">
+
+  <h1>{% trans "Trade proposal" %}</h1>
+
+  <form action="{% url 'propose' receptor_id=receptor.id %}"
+        class="form inline-block indented-block" method="post">{% csrf_token %}
+    {% if error %}
+    <p>{% trans error %}</p>
+    {% else %}
+    {% if receptor.profile.avatar %}
+    <img alt="Avatar" class="avatar" src="{{receptor.profile.avatar.url}}"/>
+    {% else %}
+    <img alt="Avatar" class="avatar" src="{% static "images/user.svg" %}"/>
+    {% endif %}
+    <h3> {{ receptor }}</h3>
+    <ul class="profile">
+      <li>
+        <span>{% trans "Rating:" %}</span>
+        <b>{{ receptor.profile.get_rating }}</b>
+      </li>
+      <li>
+        <span>{% trans "Trades:" %}</span>
+        {{ receptor.profile.trades }}
+      </li>
+    </ul>
+    <div class="sitesList">
+      <div class="showButton">
+        <img alt="Requests" class="envelop"
+             src="{% static "images/in.svg" %}"/>
+      </div>
+      <h5>{% trans "Select your requests" %}</h5>
+      <table>
+        {{ request_form }}
+      </table>
+    </div>
+    <div class="sitesList">
+      <div class="showButton">
+        <img alt="Offers" class="envelop"
+             src="{% static "images/out.svg" %}"/>
+      </div>
+      <h5>{% trans "Select your offers" %}</h5>
+      <table>
+        {{ offer_form }}
+      </table>
+    </div>
+    {{ comments_form.as_p }}
+    <input class="float-input" type="submit" value="Propose" />
+    <br/><br/>
+    <span>* {% trans "Donation available." %}</span>
+    {% endif %}
+  </form>
+
+</main>
+
+{% endblock %}

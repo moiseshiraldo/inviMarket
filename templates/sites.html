@@ -1,0 +1,63 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block main %}
+
+
+<main id="sites">
+
+  <aside class="filter">
+    {% include "ads/asideLink.html" %}
+    <form action="{% url 'sites' %}" method="get">
+      <div class="mobile slideButton">&gt;&gt;</div>
+      {% trans "Filter by category" %} <span class="showOptions">+</span>
+      <ul class="options">
+        {{ category_form.as_ul }}
+      </ul>
+      {% trans "Filter by type" %} <span class="showOptions">+</span>
+      <ul class="options">
+        {{ type_form.as_ul }}
+      </ul>
+      <ul>
+        {{ order_form.as_ul }}
+        <li class="submit"><input type="submit" value="Update"/></li>
+        {% if query %}
+        <input type="hidden" name="q" value="{{ query }}" />
+        {% endif %}
+      </ul>
+    </form>
+  </aside>
+
+  <div class="content">
+    {% if not message and sites.object_list.count > 2 %}
+    {% include "ads/topAd.html" %}
+    {% endif %}
+    {% if message %}
+    <div class="searchInfo">
+      {% trans message %}
+      {% if query %}
+      <i>{{ query }}</i>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    {% for site in sites %}
+    {% include "blocks/site-block.html" with class="site" %}
+    {% endfor %}
+
+    {% include "blocks/pagination.html" with results=sites queries=queries %}
+
+    {% include "ads/bottomAd.html" %}
+  </div>
+
+  {% if sites.paginator.count %}
+  {% include "ads/sideAd.html" %}
+  {% endif %}
+
+  {% if recent_sites %}
+  {% include "blocks/recently-viewed.html" %}
+  {% endif %}
+
+</main>
+
+{% endblock %}

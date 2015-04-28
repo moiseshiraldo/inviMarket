@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+{% load i18n %}
+{% block main %}
+
+<main id="register">
+  <h1>{% trans "Register" %}</h1>
+    <form action="{% url 'register' %}"
+         class="form indented-block" method="post">{% csrf_token %}
+      {% if error %}
+      <span class="error"> {% trans error %} </span>
+      {% endif %}
+      <ul>
+        {{ form.as_ul }}
+        <li><input class="input" type="submit" value="Send" /></li>
+      </ul>
+      <input type="CheckBox" name="terms"/>
+      <span>{% trans "I've read and accept the" %}
+        <a href="{% url 'legal' %}#terms" target="_blank">
+          {% trans "terms and conditions of use" %}
+        </a>
+      </span>
+    </form>
+  <div class="help">
+    {% blocktrans %}
+    The username must be unique and may contain only letters, numbers and
+    ./+/-/_ characters.<br/>
+    The email must be unique as well.
+    {% endblocktrans %}
+  </div>
+</main>
+
+{% endblock %}
+

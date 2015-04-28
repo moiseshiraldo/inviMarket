@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+{% load staticfiles %}
+{% load i18n %}
+
+<html>
+
+<head>
+    <title>{% block title%}InviMarket{% endblock%}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+    minimum-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+    <link href='http://fonts.googleapis.com/css?family=Londrina+Sketch%7CUbuntu:5000%7CPlay%7COpen+Sans'
+          rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+  <header class="header404">
+
+    <img src="{% static 'images/logo.svg' %}" id="logo" alt="I"/>
+
+
+    <h1 class="slogan title404"> 404 Not Found </h1>
+
+
+
+    <div class="status-bar">
+
+    </div>
+
+    <nav>
+      <ul class="menu menu404">
+
+        <li class="menu-item">
+          {% trans "Search sites" %}
+        </li>
+      </ul>
+      <form action="/sites/" method="get">
+        <input type="search" name="q" placeholder="{% trans 'Site name...' %}">
+        <input type="submit" value="">
+      </form>
+    </nav>
+
+  </header>
+
+  <main id="404">
+  <h1> Sorry, the page doesn't exists. </h1>
+  <p class="message"> You can search sites using the above search form or
+      <a href="{% url 'index' %}">return to the homepage</a>.
+  </p>
+  </main>
+
+
+</body>
+
+</html>

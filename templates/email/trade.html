@@ -1,0 +1,12 @@
+{% extends "email/email.html" %}
+{% block main %}
+Hello {{ name }},</br>
+
+Your trade proposal to {{ receptor.first_name }} has been accepted. Click
+the following link to check the details
+<a href="https://{{ domain }}{% url 'trade' trade_id=trade.id %}">
+https://{{ domain }}{% url 'trade' trade_id=trade.id %}</a>
+and send the invites to the following email address:
+{{ receptor }}@inviMarket.com
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block main %}
+
+<main id="offer">
+
+  <h1>{% trans "Offer to" %} {{ site }}
+    <a class="siteLink" href="{% url 'sites' site_name=site.name %}">
+      {% if site.logo %}
+      <img class="siteLogo" src="{{site.logo.url}}"/>
+      {% endif %}
+    </a>
+  </h1>
+
+  <form method="post" class="form indented-block"
+        action="{% url 'offer' site_id=site.pk %}">{% csrf_token %}
+    {% if error %}
+    <span class="error">{% trans error %}</span>
+    {% endif %}
+    {% if site.category == 'RE' %}
+    <br/>
+    <ul>
+      {{ offer_form.as_ul }}
+      <li><input type="submit" value="Send" /></li>
+    </ul>
+    {% else %}
+    {% trans "Select how many invites you would like to offer:" %}
+    <ul>
+      {{ offer_form.as_ul }}
+      <li><input type="submit" value="Send" /></li>
+    </ul>
+    {% endif %}
+  </form>
+
+  <div class="help">
+    {% if site.category == 'RE' %}
+    {% trans "Insert the complete referral URL, otherwise it won't be validated." %}
+    {% else %}
+    {% blocktrans %}
+    The total number is the number of invites that will be availabe to be included in
+    trades (only one per trade).
+    {% endblocktrans %}
+    </br>
+    {% blocktrans %}
+    The ones you mark as 'to donate' can be requested by another users without
+    offering any invite in exchange (you will receive more rating points if you
+    donate an invite).
+    {% endblocktrans %}
+    {% endif %}
+  </div>
+
+</main>
+
+{% endblock %}

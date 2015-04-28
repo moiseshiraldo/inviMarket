@@ -1,0 +1,4 @@
+Hello {{ name }},
+
+Thanks for singing up. To activate your account, click this link
+within 48 hours https://{{ domain }}{% url 'confirm' uidb64=uidb64 key=key %}

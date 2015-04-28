@@ -1,0 +1,53 @@
+{% load staticfiles %}
+{% load i18n %}
+
+<section class="{{ class }}">
+  <a class="siteLink" href="{% url 'sites' site_name=site.name %}">
+    {% if site.logo %}
+    <img class="siteLogo" src="{{site.logo.url}}" alt="{{ site }} logo"/>
+    {% endif %}
+    <h3>
+      {{ site }}
+      {% if site.protected %}
+      <img class="lock" src="{% static "images/lock.png" %}"
+           alt="Protected"/>
+      {% endif %}
+    </h3>
+  </a>
+  <a class="outLink" href="{{ site.url }}" target="_blank">{{ site.url }}</a>
+  <a class="button offerButton" href="{% url 'offer' site_id=site.pk %}">
+    {% trans "Offer" %}
+  </a>
+  {% if site.category == 'RE' %}
+  <a class="button" href="{% url 'request' site_id=site.pk %}">
+    {% trans "Get Link" %}
+  </a>
+  {% else %}
+  <a class="button reqButton" href="{% url 'request' site_id=site.pk %}">
+    {% trans "Request" %}
+  </a>
+  {% endif %}
+  <ul class="info">
+    <li class="category">{{ site.get_category }}, {{ site.get_type }}</li>
+    <li>
+      {% trans "Popularity:" %}
+      {% if site.popularity >= 75 %}
+      <span class="high">{{ site.popularity }}%
+      {% elif site.popularity < 25 %}
+      <span class="low">{{ site.popularity }}%
+      {% else %}
+      <span class="medium">{{ site.popularity }}%
+      {% endif %}
+      </span>
+    </li>
+    {% if site.category == 'RE' %}
+    <li>{% trans "Links:" %} <span class="high">{{ site.offers }}</span></li>
+    {% else %}
+    <li>
+      {% trans "Ratio:" %}
+      <span class="low">
+        {{ site.requests }}</span>/<span class="high">{{ site.offers }}</span>
+    </li>
+    {% endif %}
+  </ul>
+</section>

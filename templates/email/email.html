@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{% load staticfiles %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>InviMarket notification email</title>
+</head>
+
+<body bgcolor="#E3E3E3">
+  <table width="600" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" align="center">
+    <tr>
+      <td>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="22%">
+              <a href="https://www.inviMarket.com" style="text-decoration: none !important" style="text-decoration: none" target="_blank">
+                <img src="{% static 'images/MailLogo.png' %}" width="90%" border="0"
+                  alt="inviMarket" style="font-family: Arial; color: Navy; font-style: italic; font-size: 30px; padding: 0.5em;"/>
+              </a>
+            </td>
+            <td width="70%">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td height="5" bgcolor="DimGray"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="10%">&nbsp;</td>
+            <td width="80%" align="left" valign="top">
+              <h3 font style="font-family: Arial, sans-serif;">Confirmation<h3>
+              <font style="font-family: Verdana, Geneva, sans-serif; font-size:12px; font-weight: lighter; line-height: 18px;">
+                {% block main %}{% endblock %}
+              </font>
+            </td>
+            <td width="10%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr bgcolor="E3E3E3">
+      <td>&nbsp;</td>
+    </tr>
+    <tr bgcolor="E3E3E3">
+      <td>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="13%" align="center">&nbsp;</td>
+            <td width="12%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><a href= "http://{{ domain }}{% url 'config' %}" style="color:DodgerBlue; text-decoration:none"><strong>UNSUBSCRIBE </strong></a></font></td>
+            <td width="2%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><strong>|</strong></font></td>
+            <td width="16%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><a href= "http://yourlink" style="color:DodgerBlue; text-decoration:none"><strong>PRIVACY POLICY </strong></a></font></td>
+            <td width="2%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><strong>|</strong></font></td>
+            <td width="6%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><a href= "http://yourlink" style="color:DodgerBlue; text-decoration:none"><strong>FAQ </strong></a></font></td>
+            <td width="2%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><strong>|</strong></font></td>
+            <td width="10%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><a href= "http://yourlink" style="color:DodgerBlue; text-decoration:none"><strong>CONTACT </strong></a></font></td>
+            <td width="12%">&nbsp;</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr bgcolor="E3E3E3">
+      <td>&nbsp;</td>
+    </tr>
+    <tr bgcolor="E3E3E3">
+      <td align="center">
+        <font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#231f20; font-size:10px">
+          <strong>This notification has been sent to the email address associated with your inviMarket account.</br>
+          This email message was auto-generated. Please do not respond.</br>
+          <a href= "http://yourlink" style="color:#010203; text-decoration:none">Contact: admin@inviMarket.net</a></strong>
+        </font>
+      </td>
+    </tr>
+    <tr bgcolor="E3E3E3">
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+</body>
+</html>

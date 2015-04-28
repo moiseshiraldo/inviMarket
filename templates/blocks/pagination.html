@@ -1,0 +1,43 @@
+<section class="pagination">
+
+  {% if results.has_previous %}
+  <a class="pagNavButton" href="?{{queries.urlencode}}&amp;page={{ results.previous_page_number }}">&lt;</a>
+  {% endif %}
+
+  {% if results.number != 1 %}
+  <a class="pageNumber" href="?{{queries.urlencode}}&amp;page=1">1</a>
+  {% endif %}
+
+  {% if results.number > 3 %}
+  ...
+  {% endif %}
+
+  {% if results.number > 2 and results.has_previous %}
+  <a class="pageNumber" href="?{{queries.urlencode}}&amp;page={{ results.previous_page_number }}">
+    {{ results.previous_page_number }}
+  </a>
+  {% endif %}
+
+  <span class="current">{{ results.number }}</span>
+
+  {% if results.has_next and results.next_page_number < results.paginator.num_pages  %}
+  <a class="pageNumber" href="?{{queries.urlencode}}&amp;page={{ results.next_page_number }}">
+    {{ results.next_page_number }}
+  </a>
+  {% endif %}
+
+  {% if results.next_page_number < results.paginator.num_pages %}
+  ...
+  {% endif %}
+
+  {% if results.number != results.paginator.num_pages %}
+  <a class="pageNumber" href="?{{queries.urlencode}}&amp;page={{ results.paginator.num_pages }}">
+    {{ results.paginator.num_pages }}
+  </a>
+  {% endif %}
+
+  {% if results.has_next %}
+  <a class="pagNavButton" href="?{{queries.urlencode}}&amp;page={{ results.next_page_number }}">&gt;</a>
+  {% endif %}
+
+</section>

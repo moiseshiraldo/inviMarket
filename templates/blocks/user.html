@@ -1,0 +1,30 @@
+{% load staticfiles %}
+{% load i18n %}
+
+{% if profileLink %}
+<a class="profileLink" href="{% url 'profile' user_id=u.pk %}">
+{% endif %}
+  {% if u.profile.avatar %}
+  <img class="avatar" alt="Avatar" src="{{u.profile.avatar.url}}"/>
+  {% else %}
+  <img class="avatar" alt="Avatar" src="{% static "images/user.svg" %}"/>
+  {% endif %}
+
+  <h3 class="inline-header">
+    {{ u.first_name }}
+    {% if add and u not in myPartners and u != user %}
+    <a class="addButton" href="{% url 'add_partner' partner_id=u.pk %}">
+      Add <img alt="Add user" src="{% static "images/adduser.svg" %}"/>
+    </a>
+    {% elif user in hisParnerts %}
+    <img alt="Partner" class="handshake" src="{% static "images/handshake.svg" %}"/>
+    {% endif %}
+  </h3>
+{% if profileLink %}
+</a>
+{% endif %}
+
+<ul class="profile">
+    <li><span>{% trans "Rating:" %}</span> <b>{{ u.profile.get_rating }}</b></li>
+    <li><span>{% trans "Trades:" %}</span> {{ u.profile.trades }}</li>
+  </ul>

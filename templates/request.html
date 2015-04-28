@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block main %}
+
+<main id="request">
+  <h1>{% trans "Request to" %} {{ site }}
+    <a class="siteLink" href="{% url 'sites' site_name=site.name %}">
+      {% if site.logo %}
+      <img class="siteLogo" src="{{site.logo.url}}"/>
+      {% endif %}
+    </a>
+  </h1>
+  <div class="message">
+    {% if site.category == 'RE' %}
+    {% if offer %}
+    {% trans "Use this link:" %} {{ offer.referral|urlize }}
+    {% else %}
+    {% trans "No links available." %}
+    {% endif %}
+    {% elif error %}
+    <p>{% trans error %}</p>
+    {% else %}
+    <p>{% trans "Your request has been successfuly stored." %}</p>
+    {% endif %}
+  </div>
+  {% include "ads/bottomAd.html" %}
+</main>
+
+{% endblock %}

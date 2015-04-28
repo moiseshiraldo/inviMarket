@@ -1,0 +1,46 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block main %}
+
+<main>
+  <section id="editing" class="infotext">
+    <h1>{% trans "Editing" %}</h1>
+    <p>
+      {% blocktrans %}
+      If you can't find the site you're looking for in our database,
+      you can submit it by filling up the new sites edition formulary.
+      {% endblocktrans %}
+    </p>
+    <p>
+      {% blocktrans %}
+      If you notice that the information of a site is wrong, outdated
+      or just missing, you can modify it by following the edit link
+      at the site page.
+      {% endblocktrans %}
+    </p>
+    <p>
+      {% blocktrans %}
+      For both actions you need to be a registered user. Once
+      submitted the information will be reviewed by the admin, until
+      we grow up in users and can implement a wiki-based system.
+      {% endblocktrans %}
+    </p>
+    <div class="downButton">
+      {% if user.is_authenticated %}
+      <h2>{% trans "Sites" %}</h2>
+      {% else%}
+      <h2>{% trans "Register" %}</h2>
+      {% endif %}
+      <img src="{% static "images/down.svg" %}" alt="Down"/>
+    </div>
+ </section>
+  {% if user.is_authenticated %}
+  <section id="sites">
+  {% else %}
+  <section id="register">
+  {% endif %}
+  </section>
+</main>
+
+{% endblock %}

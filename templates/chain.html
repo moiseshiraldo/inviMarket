@@ -1,0 +1,98 @@
+{% extends "index.html" %}
+{% load i18n %}
+{% block main %}
+
+<main id="chain">
+
+  {% if chain_form %}
+  <h1>{% trans "Chain creation to" %} {{ site }}
+    <a class="siteLink" href="{% url 'sites' site_name=site.name %}">
+      {% if site.logo %}
+      <img class="siteLogo" src="{{site.logo.url}}"/>
+      {% endif %}
+    </a>
+  </h1>
+  <form action="{% url 'chain' site_id=site.id %}"
+        class="form indented-block" method="post">{% csrf_token %}
+    {% if error %}
+    <p class="error">{{ error }}</p>
+    {% endif %}
+    <ul>
+        {{ chain_form.as_ul }}
+        <li><input type="submit" value={% trans "Create" %} /></li>
+    </ul>
+  </form>
+  <div class="help">
+    {% blocktrans %}
+    Leave the password fields blank if you want anyone with the link to be
+    able to access the referral chain.</br>
+    The referrals to jump field determines how many referrals will get a
+    member of the chain before jump to the next link.
+    {% endblocktrans %}
+  </div>
+
+  {% elif referral %}
+  <h1>{% trans "Referral link to" %} {{ chain.website }}
+    <a class="siteLink" href="{% url 'sites' site_name=chain.website.name %}">
+      {% if chain.website.logo %}
+      <img class="siteLogo" src="{{chain.website.logo.url}}"/>
+      {% endif %}
+    </a>
+  </h1>
+  <div class="message">
+    {% trans "Use this link:" %} {{ referral|urlize }}
+  </div>
+  <div class="help">
+    Once you are registered, make an offer to {{ chain.website }} with your
+    referral link and you will be automatically added to the chain.
+  </div>
+
+  {% elif password_form %}
+  <h1>{% trans "Referral chain to" %} {{ chain.website }}
+    <a class="siteLink" href="{% url 'sites' site_name=chain.website.name %}">
+      {% if chain.website.logo %}
+      <img class="siteLogo" src="{{chain.website.logo.url}}"/>
+      {% endif %}
+    </a>
+  </h1>
+  <form action="{{ chain.get_url }}"
+        class="form inline-block indented-block" method="post">{% csrf_token %}
+    {% if error %}
+    <p class="error">{{ error }}</p>
+    {% endif %}
+    <ul class="chain-info">
+      <li>Referrals to jump: {{ chain.jumps }}</li>
+      <li>Current number of links: {{ chain.link_set.all.count }}</li>
+    </ul>
+    <ul>
+      {{ password_form.as_ul }}
+      <li><input type="submit" value={% trans "Join" %} /></li>
+    </ul>
+  </form>
+
+  {% elif chain %}
+  <h1>{% trans "Referral chain to" %} {{ site }}
+    <a class="siteLink" href="{% url 'sites' site_name=site.name %}">
+      {% if site.logo %}
+      <img class="siteLogo" src="{{site.logo.url}}"/>
+      {% endif %}
+    </a>
+  </h1>
+  <section class="user inline-block indented-block">
+    <ul class="chain-info">
+      <li>Join link: {{ chain.get_url|urlize }}</li>
+      <li>Referrals to jump: {{ chain.jumps }}</li>
+      {% if chain.password and chain.owner == user %}
+      <li>Password: {{ chain.password }}</li>
+      {% endif %}
+      <li>Current number of links: {{ chain.link_set.all.count }}</li>
+    </ul>
+  </section>
+
+  {% include "ads/bottomLink.html" %}
+
+  {% endif %}
+
+</main>
+
+{% endblock %}

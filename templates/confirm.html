@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+{% load i18n %}
+{% block main %}
+
+<main>
+  <h1>Confirmation</h1>
+  <div class="message">
+    {% if confirm and confirm == True %}
+    <p>{% trans "Your account has been validated." %}
+    {% elif confirm == False %}
+    <p>{% trans "The activation key is incorrect or has expired." %}
+    {% else %}
+    <p>{% trans "A confirmation email has been sended to your email address." %}
+    {% endif %}
+    </p>
+  </div>
+</main>
+
+{% endblock %}

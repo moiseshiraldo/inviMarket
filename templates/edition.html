@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+{% load i18n %}
+{% block main %}
+
+<main id="edition">
+  <h1>{% trans "Site edition" %}</h1>
+  <form action="{% url 'edition' %}"
+        class="form inline-block indented-block" method="post">{% csrf_token %}
+    <ul>
+        {{ edit_form.as_ul }}
+        <li><input class="float-input" type="submit" value="Send" /></li>
+    </ul>
+  </form>
+  <div class="help">
+    {% blocktrans %}
+    The description field is not necessary and should only contain a brief
+    description of the site as well as information about the invite or
+    referral system.</br>
+    If you copy some information from an external site that allows it,
+    insert the link in the source field.</br>
+    Use the comments field for any additional comments to the admin.
+    {% endblocktrans %}
+  </div>
+</main>
+
+{% endblock %}

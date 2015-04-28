@@ -1,0 +1,42 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block main %}
+
+<main id="partners">
+
+  <div class="content">
+    <h1>{% trans "Profile" %}
+      {% include "blocks/profile-menu.html" with partners="active" %}
+    </h1>
+
+    {% for partner in partners %}
+    <section class="user indented-block">
+      {% if partner.user not in user.profile.partners.all %}
+      <a class="button rejectButton"
+         href="{% url 'del_partner' partner_id=partner.user.pk %}">
+        {% trans "Reject" %}
+      </a>
+      <a class="button acceptButton"
+         href="{% url 'add_partner' partner_id=partner.user.pk %}">
+        {% trans "Accept" %}
+      </a>
+      {% endif %}
+      {% include "blocks/user.html" with u=partner.user profileLink='True' %}
+      {% if partner.get_offers %}
+      {% include "blocks/inline-sites-list.html" with offers=partner.get_offers %}
+      {% endif %}
+      {% if partner.get_requests %}
+      {% include "blocks/inline-sites-list.html" with requests=partner.get_requests %}
+      {% endif %}
+    </section>
+    {% endfor %}
+
+    {% include "blocks/pagination.html" with results=partners %}
+    {% include "ads/bottomAd.html" %}
+  </div>
+
+  {% include "ads/sideAd.html" %}
+
+</main>
+{% endblock %}

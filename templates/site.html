@@ -1,0 +1,67 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block main %}
+
+<main id="site">
+
+  <script src="{% static "js/shareButtons.js" %}"></script>
+  {% include "ads/topAd.html" %}
+
+  <article>
+    <h1 class="article-header">
+      {{ site }}
+      <span>
+        [ <a href="{% url 'edition' site_id=site.pk  %}">
+        {% trans "Edit" %}</a> ]
+      </span>
+    </h1>
+    <aside class="infobox">
+      <img alt="Logo" class="siteLogo" src="{{site.logo.url}}"/>
+      <span>
+        <a href="{% url 'offer' site_id=site.pk %}">Offer</a> |
+        {% if site.category == 'RE' %}
+        <a href="{% url 'request' site_id=site.pk %}">Get link</a>
+        {% else %}
+        <a href="{% url 'request' site_id=site.pk %}">Request</a>
+        {% endif %}
+        {% if site.protected %}
+        <img alt="Protected" class="lock"
+             src="{% static "images/lock.png" %}"/>
+        {% endif %}
+      </span>
+      <dl>
+        <dt class="odd">URL</dt><dd class="odd">{{site.url|urlize}}</dd>
+        <dt>{% trans "Category" %}</dt><dd>{{site.get_category}}</dd>
+        <dt class="odd">{% trans "Type" %}</dt><dd class="odd">{{site.get_type}}</dd>
+        <dt>{% trans "Language" %}</dt><dd>{{site.get_lang}}</dd>
+        <dt class="odd">{% trans "Active" %}</dt><dd class="odd">
+          {% if site.active == True %}
+          <img alt="Yes" src="{% static "images/check.svg" %}"/>
+          {% else %}
+          <img alt="No" src="{% static "images/cross.svg" %}"/>
+          {% endif %}
+        </dd>
+        {% if site.email_domain %}
+        <dt>{% trans "Domain" %}</dt><dd><i>@{{ site.email_domain }}</i></dd>
+        {% endif %}
+      </dl>
+    </aside>
+    {% if description %}
+    {% include "ads/sideAd.html" %}
+    {{ description.text|linebreaks }}
+    {% else %}
+    <p> {% trans "No description available yet" %} </p>
+    {% endif %}
+    <section class="source">&nbsp;
+      {% if description%}
+      {% trans "Source:" %}{{ description.source|urlize }}
+      {% endif %}
+    </section>
+  </article>
+  {% include "blocks/social-buttons.html" with text="Check out this site" %}
+
+  {% include "ads/bottomLink.html" %}
+
+</main>
+{% endblock %}

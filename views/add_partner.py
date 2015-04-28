@@ -1,0 +1,69 @@
+# -*- coding: utf-8 -*-
+from django.shortcuts import render, get_object_or_404
+from inviMarket.models import User, Notification
+from django.template.loader import render_to_string
+from django.core.mail import send_mail
+from django.core.urlresolvers import reverse
+from django.conf import settings
+from django.contrib.auth.decorators import login_required
+from django.utils.translation import ugettext as _
+
+@login_required
+def add_partner(request, partner_id):
+    """
+    Add the :model:`auth.User` passed by argument to the partners list, and
+    send a notification to the user if necessary.
+
+    **Context**
+
+    ``message``
+      A string variable used to inform the user about the request.
+
+    **Template:**
+
+    :template:`inviMarket/addpartner.html`
+
+    """
+    user = request.user
+    partner = get_object_or_404(User.objects.select_related('profile'),
+                                pk=partner_id)
+    header = _("Partnership request")
+
+    if user.profile.partners.filter(pk=partner_id).exists():
+        message = _("The user is already your partner.")
+    # Check if replying a partnership request
+    elif partner.profile.partners.filter(pk=user.id).exists():
+        user.profile.partners.add(partner)
+        message = _("The user has been successfuly added to your partners "
+                    "list.")
+        user.notification_set.filter(code=20, sender=partner).delete()
+    else:
+        user.profile.partners.add(partner)
+        # Send a notification to the user
+        url = ('http://' + settings.DOMAIN +
+               reverse('partners',kwargs={'partner_id': user.pk}))
+        notification = Notification(user=partner, sender=user, code=20, url=url)
+        notification.save()
+        # Send a notification email as well
+        if partner.profile.notify:
+            text = render_to_string('email/partnership.txt', {
+                                    'name': partner.first_name,
+                                    'user': user,
+                                    'domain': settings.DOMAIN,
+                                    })
+            html = render_to_string('email/partnership.html', {
+                                    'name': partner.first_name,
+                                    'user': user,
+                                    'domain': settings.DOMAIN,
+                                    })
+            subject = "Partnership request"
+            send_mail(subject, text,
+                      "inviMarket <no-reply@inviMarket.com>",
+                      [partner.email],
+                      html_message=html,
+                      fail_silently=False)
+        message = _("The partnership request has been sended to the user.")
+    return render(request, 'message.html', {
+        'header': header,
+        'message': message,
+        })

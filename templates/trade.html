@@ -1,0 +1,80 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block main %}
+
+<main id="trade">
+
+  <h1>{% trans "Trade details" %}</h1>
+
+  <div class="user inline-block indented-block">
+    {% if error %}
+    {% trans error %}
+    {% else %}
+    {% if trade.accepted == False %}
+      <a class="button"
+         href="{% url 'propose' receptor_id=trade.proposer.id %}">
+        {% trans "Modify" %}
+      </a>
+    {% elif trade.age > sending_deadline and trade.age < complaint_deadline %}
+      <a class="button complaintButton"
+         href="{% url 'complaint' trade_id=trade.id %}">
+        {% trans "Complain" %}
+      </a>
+    {% endif %}
+    {% if user == trade.receptor %}
+    {% include "blocks/user.html" with u=trade.proposer profileLink='True' %}
+    {% else %}
+    {% include "blocks/user.html" with u=trade.receptor profileLink='True' %}
+    {% endif %}
+    <section class="comments">
+      <img src="{% static "images/arrow.svg" %}"
+           alt="arrow" class="arrow"/>
+      {% if trade.accepted == True and trade.proposer.id == user.id %}
+      {% blocktrans %}
+      Send the invites to the following email addres:
+        {{ trade.receptor }}@invimarket.com
+      {% endblocktrans %}
+      {% elif trade.accepted == True and trade.receptor.id == user.id %}
+      {% blocktrans %}
+      Send the invites to the following email addres:
+      {{ trade.proposer }}@invimarket.com
+      {% endblocktrans %}
+      {% elif trade.comments %}
+      {{ trade.comments }}
+      {% else %}
+      {% trans "No commments." %}
+      {% endif %}
+    </section>
+    {% if user == trade.proposer %}
+    {% if trade.get_proposer_requests %}
+    {% include "blocks/sites-list.html" with requests=trade.get_proposer_requests trade='True' %}
+    {% endif %}
+    {% if trade.get_proposer_offers %}
+    {% include "blocks/sites-list.html" with offers=trade.get_proposer_offers trade='True' %}
+    {% endif %}
+    {% else %}
+    {% if trade.get_receptor_requests %}
+    {% include "blocks/sites-list.html" with requests=trade.get_receptor_requests trade='True' %}
+    {% endif %}
+    {% if trade.get_receptor_offers %}
+    {% include "blocks/sites-list.html" with offers=trade.get_receptor_offers trade='True' %}
+    {% endif %}
+    {% endif %}
+    {% endif %}
+  </div>
+
+  {% if trade.accepted == False %}
+  <form action="{% url 'trade' trade_id=trade.id %}" method="post">{% csrf_token %}
+    <button class="button rejectButton" type="submit" name="Reject_proposal">
+      Reject
+    </button>
+    <button class="button acceptButton" type="submit" name="Accept_proposal">
+      Accept
+    </button>
+  </form>
+  {% endif %}
+
+</main>
+
+{% endblock %}

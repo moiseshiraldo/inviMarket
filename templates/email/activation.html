@@ -1,0 +1,6 @@
+{% extends "email/email.html" %}
+{% block main %}
+Hello {{ name }},</br>
+Thanks for singing up. To activate your account, click this link
+within 48 hours <a href="http://{{ domain }}{% url 'confirm' uidb64=uidb64 key=key %}">http://{{ domain }}{% url 'confirm' uidb64=uidb64 key=key %}</a>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+{% load i18n %}
+{% block main %}
+
+<main id="suggestions">
+  <h1>{% trans "Suggestions" %}</h1>
+  <p class="infotext">
+    {% blocktrans %}If you have any suggestions to improve
+    InviMarket, don't hesitate to contact us using our social networking
+    profiles on Twitter, Facebook or Google+. You can also send an email
+    explaining your ideas to suggestions[at]invimarket.com:
+    {% endblocktrans %}
+  </p>
+  <br/>
+  <form class="form indented-block" action="MAILTO:suggestions@invimarket.com"
+        method="post" enctype="text/plain">
+    {% trans "Name:" %}<br>
+    <input type="text" name="name"><br/>
+    E-mail:<br>
+    <input type="email" name="mail"><br/><br/>
+    {% trans "Suggestions:" %}<br>
+    <textarea maxlength="400" name="comments"
+    placeholder="{% trans "Your suggestions..." %}" rows="10"></textarea><br/><br/>
+    <input type="submit" value="Send">
+    <input type="reset" value="Reset">
+  </form>
+</main>
+
+{% endblock %}

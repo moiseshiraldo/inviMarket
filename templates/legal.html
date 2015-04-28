@@ -1,0 +1,254 @@
+{% extends "index.html" %}
+{% load i18n %}
+{% block main %}
+<main id="legal">
+
+<h1 class="indented-header">{% trans "Legal information" %}</h1>
+
+<section id="contact"
+class="infotext">
+
+  <h2>{% trans "Contact" %}</h2>
+
+  <p>
+    {% blocktrans %}
+    The domain www.inviMarket.com is owned and administered by Moisés Hiraldo,
+    residing in:
+    {% endblocktrans %}
+  </p>
+  34 Rounton Road<br/>
+  London<br/>
+  E3 4HB<br/><br/>
+
+  <b>{% trans "Contact" %}</b>: admin[at]invimarket.com
+
+</section>
+
+<section id="license" class="infotext">
+
+  {% blocktrans %}
+  <h2>License</h2>
+
+  <p>
+    The source code is released under the GNU Affero General Public License.
+    You can download it here.
+    <br/><br/>
+    The website is licensed under a Creative Commons Attribution 4.0 International
+    License. That means you can:
+    <br/><br/>
+
+    <b>Share</b> — copy and redistribute the material in any medium or format.
+    <br/>
+    <b>Adapt</b> — remix, transform, and build upon the material for any purpose,
+    even commercially.
+    <br/><br/>
+    The licensor cannot revoke these freedoms as long as you follow the license
+    terms:
+    <br/><br/>
+
+    <b>Attribution</b> — You must give appropriate credit, provide a link to the license,
+    and indicate if changes were made. You may do so in any reasonable manner, but
+    not in any way that suggests the licensor endorses you or your use.
+  </p>
+  {% endblocktrans %}
+</section>
+
+<section id="terms" class="infotext">
+
+  {% blocktrans %}
+  <h2>Terms and Conditions</h2>
+
+  <p>These terms of use govern your use of our site. Please read these terms
+  in full before you use this website. If you do not accept these terms of use,
+  please do not use this website. Your continued use of this site confirms your
+  acceptance of these terms.</p>
+  <ul>
+  <li>
+  <h4>Website access and use</h4>
+  It is not necessary to register with us in order to use some parts of this
+  website. However, many areas of this Website will only be accessible only if
+  you have registered.<br/><br/>
+  This website may be used for your own private purposes and in accordance
+  with these terms of use.
+  </li>
+
+  <li>
+  <h4>Site uptime</h4>
+  All reasonable measures are taken by us to ensure that this website is
+  operational all day, every day. However, occasionally technical issues may
+  result in some downtime and accordingly we will not be liable if this website
+  is unavailable at any time. Where possible we always try to give advance
+  warning of maintenance issues that may result in website down time but we
+  shall not be obliged to provide such notice.
+  </li>
+
+  <li>
+  <h4>Visitor provided material</h4>
+  Any material that a visitor sends or posts to this website shall be considered
+  non-proprietary and non confidential. We shall be entitled to copy, disclose,
+  distribute or use for such other purpose as we deem appropriate all material
+  provided to us, with the exception of personal information, the use of which
+  is covered under our Privacy Policy.
+  <br/><br/>
+  Any site informaton provided using the edition page will be
+  licensed under a Creative Commons Attribution 4.0 International License.
+  When using the edition page or the trade proposal comments you shall not post any
+  material:
+    <ul>
+    <li>for which you have not obtained all necessary consents;</li>
+    <li>that is discriminatory, obscene, pornographic, defamatory, liable to
+    incite racial hatred, in breach of confidentiality or privacy, which may
+    cause annoyance or inconvenience to others, which encourages or constitutes
+    conduct that would be deemed a criminal offence, give rise to a civil
+    liability, or otherwise is contrary to the law in the United Kingdom;</li>
+    <li>which is harmful in nature including, and without limitation, computer
+    viruses, Trojan horses, corrupted data, or other potentially harmful
+    software or data.</li>
+    </ul>
+  </li>
+
+  <li>
+  <h4>Links to and from other websites</h4>
+  Throughout this website you can find links to third party websites. The
+  provision of a link to such a website does not mean that we endorse that
+  website.  If you visit any website via a link on this website you do so at
+  your own risk.<br/><br/>
+  Any party wishing to link to this website is entitled to do so provided that
+  the conditions below are observed:
+    <ul>
+    <li>you do not seek to imply that we are endorsing the services or products
+    of another party unless this has been agreed with us in writing;</li>
+    <li>you do not misrepresent your relationship with this website;</li>
+    <li>the website from which you link to this website does not contain
+    offensive or otherwise  controversial content or, content that infringes
+    any intellectual property rights or other rights of a third party.</li>
+    </ul>
+  </li>
+
+  <li>
+  <h4>Disclaimer</h4>
+  Whilst we do take all reasonable steps to make sure that the other sites information on
+  this website is up to date and accurate at all times we do not guarantee that
+  all material is accurate and, or up to date. All material contained on this
+  website is provided without any or warranty of any kind. You use the material
+  on this website at your own discretion.
+  </li>
+
+  <li>
+  <h4>Exclusion of liability</h4>
+  All the responsability for sending the invites lays on the users. We do not
+  accept liability neither for the breach of any trade proposal nor for
+  any loss or damage that you suffer as a result of using this website.
+  Nothing in these terms of use shall exclude or limit liability for death or
+  personal injury caused by negligence which cannot be excluded or under the law
+  of the United Kingdom.
+  </li>
+
+  <li>
+  <h4>Law and jurisdiction</h4>
+  These terms of use are governed by English law. Any dispute arising in
+  connection with these terms of use shall be subject to the exclusive
+  jurisdiction of the Courts of England and Wales.
+  </li>
+  </ul>
+  {% endblocktrans %}
+</section>
+
+<section id="privacy" class="infotext">
+  {% blocktrans %}
+  <h2>Privacy and Cookies Policy</h2>
+
+  <p>This Policy explains what happens to any personal data that
+  you provide to us, or that we collect from you whilst you visit our site and
+  how we use cookies on this website.
+  <ul>
+
+  <li>
+  <h4>Information that we collect</h4>
+  In running and maintaining our website we may collect and process the following
+  data about you:
+    <ul>
+    <li>Information about your use of our site including details of your visits
+    such as pages viewed and the resources that you access. Such information
+    includes traffic data, location data and other communication data.</li>
+    <li>Information provided voluntarily by you. For example, when you register
+    for information or request an invite.</li>
+    <li>Information that you provide when you communicate with us by any means.</li>
+    </ul>
+  </li>
+
+  <li>
+  <h4>Use of Cookies</h4>
+  Cookies provide information regarding the computer used by a visitor. We may
+  use cookies where appropriate to gather information about your computer in
+  order to assist us in improving our website.<br/>
+  We may gather information about your general internet use by using the cookie.
+  Where used, these cookies are downloaded to your computer and stored on the
+  computer's hard drive. Such information will not identify you personally; it
+  is statistical data which does not identify any personal details
+  whatsoever.<br/>
+  Our advertisers may also use cookies, over which we have no control. Such
+  cookies (if used) would be downloaded once you click on advertisements on our
+  website.<br/>
+  You can adjust the settings on your computer to decline any cookies if you
+  wish. This can be done within the “settings” section of your computer.
+  </li>
+
+  <li>
+  <h4>Use of your information</h4>
+  We use the information that we collect from you to provide our services to
+  you. In addition to this we may use the information for one or more of the
+  following purposes:
+    <ul>
+    <li>To provide information to you that you request from us relating to our
+    products or services, such as email notifications.</li>
+    <li>To inform you of any changes to our website, services or legal
+    conditions.</li>
+    </ul>
+  </li>
+
+  <li>
+  <h4>Storing your personal data</h4>
+  In operating our website it may become necessary to transfer data that we
+  collect from you to locations outside of the European Union for processing and
+  storing. By providing your personal data to us, you agree to this transfer,
+  storing and processing. We do our utmost to ensure that all reasonable steps
+  are taken to make sure that your data is stored securely.<br/>
+  Unfortunately the sending of information via the internet is not totally secure
+  and on occasion such information can be intercepted. We cannot guarantee the
+  security of data that you choose to send us electronically, sending such
+  information is entirely at your own risk.
+  </li>
+
+  <li>
+  <h4>Disclosing your information</h4>
+  We will not disclose your personal information to any other party other than
+  in accordance with this Privacy Policy and in the circumstances detailed below:
+    <ul>
+    <li>In the event that we sell any or all of our business to the buyer.</li>
+    <li>Where we are legally required by law to disclose your personal
+    information.</li>
+    <li>To further fraud protection and reduce the risk of fraud.</li>
+    </ul>
+  </li>
+
+  <li>
+  <h4>Third party links</h4>
+  We include links to third parties on this website. Where we
+  provide a link it does not mean that we endorse or approve that site’s policy
+  towards visitor privacy. You should review their privacy policy before sending
+  them any personal data.
+  </li>
+
+  <li>
+  <h4>Access to information</h4>
+  In accordance with the Data Protection Act 1998 you have the right to access
+  any information that we hold relating to you. Please note that we reserve the
+  right to charge a fee of £10 to cover costs incurred by us in providing you
+  with the information.
+  </li>
+  </ul>
+  {% endblocktrans %}
+</section>
+</main>
+{% endblock %}

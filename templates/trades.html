@@ -1,0 +1,100 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block main %}
+
+<main id="trades">
+
+  <h1>{% trans "Profile" %}
+    {% include "blocks/profile-menu.html" with trades="active" %}
+  </h1>
+  <aside class="filter trade-filter">
+    <form action="{% url 'trades' %}" method="get">
+      <div class="mobile slideButton">&gt;&gt;</div>
+      <ul>
+        {{ trade_filter.as_ul }}
+        <li class="submit"><input type="submit" value="Update"/></li>
+      </ul>
+    </form>
+  </aside>
+
+  <div class="content">
+
+    {% if message %}
+    <div class="searchInfo">{% trans message %}</div>
+    {% endif %}
+
+    {% for trade in trades %}
+    <section class="user">
+      {% if trade.receptor.id == user.id and trade.accepted == False %}
+      <a class="button"
+         href="{% url 'trade' trade_id=trade.pk %}">
+        {% trans "Reply" %}
+      </a>
+      {% elif trade.accepted == True %}
+      <a class="button"
+         href="{% url 'trade' trade_id=trade.pk %}">
+        {% trans "Send" %}
+      </a>
+      {% endif %}
+      {% if user.id == trade.receptor.id %}
+      <a class="profileLink"
+         href="{% url 'profile' user_id=trade.proposer.pk %}">
+        {% if trade.proposer.profile.avatar %}
+        <img alt="avatar" class="avatar"
+             src="{{trade.proposer.profile.avatar.url}}"/>
+        {% else %}
+        <img class="avatar" src="{% static "images/user.svg" %}"/>
+        {% endif %}
+        <h3 class="inline-header">{{ trade.proposer.first_name }}</h3>
+      </a>
+      {% else %}
+      <a class="profileLink"
+         href="{% url 'profile' user_id=trade.receptor.pk %}">
+        {% if trade.receptor.profile.avatar %}
+        <img alt="avatar" class="avatar"
+             src="{{trade.receptor.profile.avatar.url}}"/>
+        {% else %}
+        <img alt="avatar" class="avatar" src="{% static "images/user.svg" %}"/>
+        {% endif %}
+        <h3 class="inline-header">{{ trade.receptor.first_name }}</h3>
+      </a>
+      {% endif %}
+      <ul class="profile">
+        <li>
+          <span>{% trans "Status:" %} </span>
+          {% if trade.accepted == True %}
+          {% trans "Accepted" %}
+          {% else %}
+          {% trans "Pending" %}
+          {% endif %}
+        </li>
+        <li><span>Date:</span> {{ trade.date|date:"d-M-Y" }}</li>
+      </ul>
+      {% if user.id == trade.proposer.id %}
+      {% if trade.get_proposer_requests.count %}
+      {% include "blocks/inline-sites-list.html" with requests=trade.get_proposer_requests trade='True' %}
+      {% endif %}
+      {% if trade.get_proposer_offers.count %}
+      {% include "blocks/inline-sites-list.html" with offers=trade.get_proposer_offers trade='True' %}
+      {% endif %}
+      {% else %}
+      {% if trade.get_receptor_requests.count %}
+      {% include "blocks/inline-sites-list.html" with requests=trade.get_receptor_requests trade='True' %}
+      {% endif %}
+      {% if trade.get_receptor_offers.count %}
+      {% include "blocks/inline-sites-list.html" with offers=trade.get_receptor_offers trade='True' %}
+      {% endif %}
+      {% endif %}
+    </section>
+    {% endfor %}
+
+    {% include "blocks/pagination.html" with results=trades %}
+    {% include "ads/bottomAd.html" %}
+  </div>
+
+  {% include "ads/sideAd.html" %}
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% if size == 'small' %}
+<ul class="slideButtons">
+  <li data-section="{{ wrapper }}" data-pos="0" data-mob="0"></li>
+  <li data-section="{{ wrapper }}" data-pos="-16.1em" data-mobPos="-16.6em"></li>
+  <li data-section="{{ wrapper }}" data-pos="-32.25em" data-mobPos="-33.25em"></li>
+  <li data-section="{{ wrapper }}" data-pos="-48.35em" data-mobPos="-49.85em"></li>
+  <li data-section="{{ wrapper }}" data-pos="-64.5em" data-mobPos="-66.5em"></li>
+</ul>
+{% else %}
+<ul class="slideButtons">
+  <li data-section="{{ wrapper }}" data-pos="0" data-mob="0"></li>
+  <li data-section="{{ wrapper }}" data-pos="-32.1em" data-mobPos="-16.6em"></li>
+  <li data-section="{{ wrapper }}" data-pos="-64.25em" data-mobPos="-33.25em"></li>
+  <li data-section="{{ wrapper }}" data-pos="-96.4em" data-mobPos="-49.85em"></li>
+  <li data-section="{{ wrapper }}" data-pos="-128.5em" data-mobPos="-66.5em"></li>
+</ul>
+{% endif %}

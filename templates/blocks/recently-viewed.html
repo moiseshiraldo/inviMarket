@@ -1,0 +1,21 @@
+{% load staticfiles %}
+{% load i18n %}
+
+<section class="recently-viewed desktop">
+    <h2 class="indented-header inline-header">{% trans "Recently viewed:" %}</h2>
+    {% for site in recent_sites %}
+    <div class="site">
+      <a class="siteLink" href="{% url 'sites' site_name=site.name %}">
+        <img class="siteLogo" src="{{site.logo.url}}" alt="{{ site }} logo"/>
+        <h3>
+          {{ site }}
+          {% if site.protected %}
+          <img class="lock" src="{% static "images/lock.png" %}"
+               alt="Protected"/>
+          {% endif %}
+        </h3>
+      </a>
+      <a class="outLink" href="{{ site.url }}" target="_blank">{{ site.url }}</a>
+    </div>
+    {% endfor %}
+</section>

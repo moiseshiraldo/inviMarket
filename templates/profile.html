@@ -1,0 +1,42 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block main %}
+
+<script src="{% static "js/shareButtons.js" %}"></script>
+
+<main id="profile">
+
+  <div class="content">
+    <h1>{% trans "Profile" %}
+      {% if u == user %}
+      {% include "blocks/profile-menu.html" with status="active" %}
+      {% endif %}
+    </h1>
+
+    <section class="user inline-block indented-block">
+      {% with myPartners=user.profile.partners.all hisPartners=u.profile.partners.all%}
+      {% include "blocks/user.html" with add="True" %}
+      {% if u.profile.get_requests.count %}
+      {% include "blocks/sites-list.html" with requests=u.profile.get_requests %}
+      {% endif %}
+      {% if u.profile.get_offers.count %}
+      {% include "blocks/sites-list.html" with offers=u.profile.get_offers %}
+      {% endif %}
+      {% if u.profile.get_reflinks.count %}
+      {% include "blocks/sites-list.html" with links=u.profile.get_reflinks %}
+      {% endif %}
+      {% if u == user %}
+      {% include "blocks/social-buttons.html" with text="Check out my profile" %}
+      {% endif %}
+      {% endwith %}
+    </section>
+  </div>
+
+  {% include "ads/sideAd.html" %}
+
+  {% include "ads/bottomLink.html" %}
+
+</main>
+
+{% endblock %}

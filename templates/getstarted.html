@@ -1,0 +1,148 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block main %}
+<main>
+  <section id="getstarted">
+
+    <h1>{% trans "Get started" %}</h1>
+
+    <div class="stepContainer">
+      <div class="step">
+        <img src="{% static "images/searchSites.png" %}"
+             alt="Search sites"/>
+        <h3>{% trans "Search sites" %}</h3>
+        <ul>
+          <li><span>
+            {% blocktrans %}
+            Go to the sites page or use the search box in the
+            navigation menu to search your favourites sites.
+            {% endblocktrans %}
+          </span></li>
+          <li><span>
+            {% blocktrans %}
+            Filter and order the results using the formulary on the
+            left side.
+            {% endblocktrans %}
+          </span></li>
+          <li><span>
+            {% blocktrans %}
+            Click on the site logo or name to get information about the invites
+            system of the site.
+            {% endblocktrans %}
+          </span></li>
+          <li><span>
+            {% blocktrans %}
+            Offer or request invites using the buttons at the top
+            right.
+            {% endblocktrans %}
+          </span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="stepContainer">
+      <div class="step">
+        <img src="{% static "images/searchSites.png" %}"
+             alt="Search invites"/>
+        <h3>{% trans "Search invites" %}</h3>
+        <ul>
+          <li><span>
+            {% blocktrans %}
+            Select the trading option in the navigation menu to go
+            to invites sarch page.
+            {% endblocktrans %}
+          </span></li>
+          <li><span>
+            {% blocktrans %}
+            You will be shown a list of users matching up with
+            your invites requests and offers.
+            {% endblocktrans %}
+          </span></li>
+          <li><span>
+            {% blocktrans %}
+            Refine the search using the formulary on the left
+            side.
+            {% endblocktrans %}
+          </span></li>
+          <li><span>
+            {% blocktrans %}
+            To request or trade invites, just click on the trade
+            button and select de invites your interested in.
+            {% endblocktrans %}
+          </span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="stepContainer">
+      <div class="step">
+        <img src="{% static "images/searchSites.png" %}"
+             alt="Your profile"/>
+        <h3>{% trans "Your profile" %}</h3>
+        <ul>
+          <li><span>
+            {% blocktrans %}
+            View and manage your current invite requests and offers,
+            friends list and invites trades.
+            {% endblocktrans %}
+          </span></li>
+          <li><span>
+            {% blocktrans %}
+            Share your profile in other social networks and let your
+            fiends know about your invite requests.
+            {% endblocktrans %}
+          </span></li>
+          <li><span>
+            {% blocktrans %}
+            All your referrals links are also visible in your
+            profile. Forget about share every single link, spam
+            them all with one!
+            {% endblocktrans %}
+          </span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="stepContainer">
+      <div class="step">
+        <img src="{% static "images/searchSites.png" %}"
+             alt="Site edition"/>
+        <h3>{% trans "Site edition" %}</h3>
+        <ul>
+          <li><span>
+              {% blocktrans %}
+              Can't find the site you're looking for in our database?
+              Submit it yourself filling up a simple form.
+              {% endblocktrans %}
+          </span></li>
+          <li><span>
+              {% blocktrans %}
+              You can also edit the existing sites if you notice
+              that some information is wrong.
+              {% endblocktrans %}
+          </span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="downButton">
+      {% if user.is_authenticated %}
+      <h2 data-next="market">Market</h2>
+      {% else%}
+      <h2 data-next="register">{% trans "Register" %}</h2>
+      {% endif %}
+      <img src="{% static "images/down.svg" %}" alt="Down"/>
+    </div>
+
+  </section>
+
+  {% if user.is_authenticated %}
+  <section id="market">
+  {% else %}
+  <section id="register">
+  {% endif %}
+  </section>
+
+</main>
+{% endblock %}
