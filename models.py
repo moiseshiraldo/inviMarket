@@ -4,13 +4,14 @@ from django.contrib.auth.models import User
 from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.utils import timezone
-import os
 from django.core.exceptions import ValidationError
 from django.utils.http import urlsafe_base64_encode
 from django.utils.encoding import force_bytes
 from django.utils.safestring import mark_safe
 from django.db import transaction
 from django.utils.translation import ugettext_lazy as _
+import os
+import datetime
 
 def avatar_file_name(instance, filename):
     img = 'avtr' + str(instance.user.id) + '.png'
@@ -27,7 +28,6 @@ def validate_image(img_object):
 LANG = (
     ('es', _('Spanish')),
     ('en', _('English')),
-    ('multi', _('Multi-language')),
 )
 
 class Profile(models.Model):
@@ -40,31 +40,32 @@ class Profile(models.Model):
     avatar = models.ImageField(upload_to=avatar_file_name,
                                validators=[validate_image],
                                null=True, blank=True)
-    rating = models.PositiveSmallIntegerField(default=0)
+    rating = models.PositiveSmallIntegerField(default=settings.BASE_RATING)
     trades = models.PositiveIntegerField(default=0)
     donations = models.PositiveIntegerField(default=0)
-    warnings = models.PositiveIntegerField(default=0)
     lang = models.CharField(max_length=5, choices=LANG, blank=True)
     activation_key = models.CharField(max_length=40)
     key_expires = models.DateTimeField(null=True)
-    last_visit = models.DateTimeField(auto_now_add=True)
+    last_visit = models.DateTimeField(default=timezone.now())
     notify = models.BooleanField(default=True)
     locked = models.BooleanField(default=False)
 
     def get_rating(self):
-        if self.rating < 10:
+        if self.rating == 0:
+            return mark_safe('<span class="low">Banned</span>')
+        elif self.rating < 10:
             return mark_safe('<span class="low">D</span>')
-        if self.rating < 25:
+        elif self.rating < 25:
             return mark_safe('<span class="low">D+</span>')
-        if self.rating < 35:
+        elif self.rating < 35:
             return mark_safe('<span class="medium">C</span>')
-        if self.rating < 50:
+        elif self.rating < 50:
             return mark_safe('<span class="medium">C+</span>')
-        if self.rating < 65:
+        elif self.rating < 65:
             return mark_safe('<span class="medium">B</span>')
-        if self.rating < 80:
+        elif self.rating < 80:
             return mark_safe('<span class="high">B+</span>')
-        if self.rating < 95:
+        elif self.rating < 95:
             return mark_safe('<span class="high">A</span>')
         else:
             return mark_safe('<span class="high">A+</span>')
@@ -120,13 +121,16 @@ class Website(models.Model):
     """
     name = models.CharField(max_length=20)
     author = models.ForeignKey(User, blank=True, null=True)
-    editors = models.ManyToManyField(User, related_name="edited_sites",
-                                     blank=True)
     url = models.URLField()
     logo = models.ImageField(upload_to='sites/', null=True, blank=True)
     refvalidator = models.CharField(max_length=200, blank=True)
     email_domain = models.CharField(max_length=200, blank=True)
-    lang = models.CharField(max_length=5, choices=LANG, blank=True)
+    SITE_LANG = (
+        ('es', _('Spanish')),
+        ('en', _('English')),
+        ('multi', _('Multi-language')),
+    )
+    lang = models.CharField(max_length=5, choices=SITE_LANG, blank=True)
     WTYPE = (
         ('FO', _('Forum')),
         ('TR', _('Tracker')),
@@ -155,7 +159,7 @@ class Website(models.Model):
     def get_type(self):
         return dict(self.WTYPE)[self.webType]
     def get_lang(self):
-        return dict(LANG)[self.lang]
+        return dict(self.SITE_LANG)[self.lang]
     def __unicode__(self):
         return self.name
 
@@ -177,7 +181,7 @@ class SiteEdition(models.Model):
     Stores a website edition proposal.
 
     """
-    user = models.ForeignKey(User)
+    user = models.ForeignKey(User, related_name="editions")
     site = models.ForeignKey(Website, blank=True, null=True)
     date = models.DateField(auto_now_add=True)
     name = models.CharField(max_length=20)
@@ -189,9 +193,10 @@ class SiteEdition(models.Model):
     category = models.CharField(max_length=3, choices=Website.CAT)
     active = models.BooleanField(default=True)
     comments = models.TextField(max_length=400, blank=True)
+    approved = models.BooleanField(default=False)
 
     def __unicode__(self):
-        return self.name
+        return "Edition proposal for %s" % self.name
 
 class Request(models.Model):
     """
@@ -222,6 +227,8 @@ class Offer(models.Model):
     referral = models.URLField(blank=True)
     weight = models.PositiveSmallIntegerField(default=0)
 
+    def age(self):
+        return (datetime.date.today() - self.date).days
     def __unicode__(self):
         return "%s's offer to %s" % (self.user, self.website)
 
@@ -245,6 +252,7 @@ class Chain (models.Model):
         return self.link_set.get(active=True)
     def get_last_link(self):
         return self.link_set.get(last_link=True)
+    @transaction.atomic
     def add_link(self, link):
         last = self.get_last_link()
         last.next_link = link

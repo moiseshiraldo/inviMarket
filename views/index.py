@@ -21,17 +21,22 @@ def index(request):
     ``requests``
       An object array containing five random requests.
 
+    ``recent_sites``
+      Recently viewed sites.
+
     **Template:**
 
     :template:`inviMarket/market.html`
 
     """
     user = request.user
+    # If first visit, redirect to the get started page
     first_visit = request.session.get('first_visit', None)
     if not user.is_authenticated() and first_visit != 'False':
         request.session['first_visit'] = 'False'
         return redirect('getstarted')
     lang = request.LANGUAGE_CODE
+    # Get most popular sites and filter by the user language
     popular = Website.objects.filter(lang__in=('multi', lang, )).order_by(
         '-popularity')[:5]
     offers = Offer.objects.exclude(number=0).order_by('?')[:5]
@@ -40,8 +45,8 @@ def index(request):
     # Get recentyly viewed sites
     recently_viewed = request.session.get('recently_viewed', list())
     if len(recently_viewed) > 0:
-      recent_sites = Website.objects.filter(reduce(lambda x, y: x | y,
-          [Q(pk=site_id) for site_id in recently_viewed]))
+        recent_sites = Website.objects.filter(reduce(lambda x, y: x | y,
+            [Q(pk=site_id) for site_id in recently_viewed]))
     else:
         recent_sites = None
     return render(request, 'market.html', {

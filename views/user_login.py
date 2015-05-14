@@ -14,6 +14,9 @@ def user_login(request, next=None):
     ``error``
       A string variable containing any error message.
 
+    ``form``
+      An instance of the login form.
+
     ``next``
       The URL the user will be redirected to.
 
@@ -33,6 +36,7 @@ def user_login(request, next=None):
         if user is not None:
             if user.is_active:
                 login(request, user)
+                # Set the user language
                 user_language = user.profile.lang
                 translation.activate(user_language)
                 if user_language:

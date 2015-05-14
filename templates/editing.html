@@ -28,9 +28,9 @@
     </p>
     <div class="downButton">
       {% if user.is_authenticated %}
-      <h2>{% trans "Sites" %}</h2>
+      <h2 data-next="sites">{% trans "Sites" %}</h2>
       {% else%}
-      <h2>{% trans "Register" %}</h2>
+      <h2 data-next="register">{% trans "Register" %}</h2>
       {% endif %}
       <img src="{% static "images/down.svg" %}" alt="Down"/>
     </div>

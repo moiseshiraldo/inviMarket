@@ -153,7 +153,12 @@
       </a></li>
       <li><a href="{% url 'faq' %}">FAQ</a></li>
       <li><a href="{% url 'glossary' %}">{% trans "Glossary" %}</a></li>
-      <li>Bugs</li>
+      <li>
+          <a href="https://github.com/moiseshiraldo/inviMarket/issues/"
+             target="_blank">
+            Bugs
+          </a>
+      </li>
     </ul>
     <div class="license">
       <img src="{% static "images/logo.svg" %}" id="footlogo" alt="I"/>
@@ -182,7 +187,7 @@
   </footer>
 
   {% if not user.is_authenticated %}
-  <div class="pop-up">
+  <div id="cookies" class="pop-up">
     <span>{% trans "This place uses" %}
     <a href="{% url 'legal' %}#privacy">{% trans "cookies" %}</a>,
     {% trans "and no animals were harmed in the development process." %}

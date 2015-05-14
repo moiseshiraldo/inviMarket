@@ -3,18 +3,28 @@ from inviMarket import views
 from django.contrib.auth import views as auth_views
 from django.views.generic import TemplateView
 from django.utils.translation import ugettext as _
+from inviMarket.decorators import cache_on_auth
+
 
 urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
-    url(r'^legal/$', TemplateView.as_view(template_name="legal.html"),
+    url(r'^legal/$',
+        cache_on_auth(4*3600)(TemplateView.as_view(template_name="legal.html")),
         name='legal'),
-    url(r'^faq/$', TemplateView.as_view(template_name="faq.html"), name='faq'),
-    url(r'^getstarted/$', TemplateView.as_view(template_name="getstarted.html"),
+    url(r'^faq/$',
+        cache_on_auth(4*3600)(TemplateView.as_view(template_name="faq.html")),
+        name='faq'),
+    url(r'^getstarted/$',
+        cache_on_auth(4*3600)(
+            TemplateView.as_view(template_name="getstarted.html")),
         name='getstarted'),
-    url(r'^glossary/$', TemplateView.as_view(template_name="glossary.html"),
+    url(r'^glossary/$',
+        cache_on_auth(4*3600)(
+            TemplateView.as_view(template_name="glossary.html")),
         name='glossary'),
     url(r'^suggestions/$',
-        TemplateView.as_view(template_name="suggestions.html"),
+        cache_on_auth(4*3600)(
+            TemplateView.as_view(template_name="suggestions.html")),
         name='suggestions'),
     url(r'^editing/$', TemplateView.as_view(template_name="editing.html"),
         name='editing'),

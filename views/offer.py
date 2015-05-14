@@ -24,9 +24,12 @@ def offer(request, site_id):
     ``site``
       The requested site.
 
+    ``offer_form``
+      An instance of the offer form.
+
     **Template:**
 
-    :template:`inviMarket/request.html`
+    :template:`inviMarket/offer.html`
 
     """
     site = get_object_or_404(Website, pk=site_id)

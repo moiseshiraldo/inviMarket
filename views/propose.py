@@ -27,7 +27,7 @@ def propose(request, receptor_id):
     ``offer_form``
       An instance of the trade form containing the offer choices.
 
-    ``offer_form``
+    ``comments_form``
       An instance of the comments form containing additional comments.
 
     ``error``
@@ -114,7 +114,7 @@ def propose(request, receptor_id):
                 if len(requests) == 0 and len(offers) == 0:
                     error = _("You have not selected any request or offer.")
                 else:
-                    # Lock users to minimize concurrency problems
+                    # Lock the users to minimize concurrency problems
                     if not proposer.profile.lock_perm():
                         error = _("Some requests/offers have changed. Reload "
                                   "andtry again.")

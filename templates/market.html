@@ -78,7 +78,7 @@
 
   {% include "ads/sideAd.html" with class="desktop" %}
 
-  {% if recent_sites %}
+  {% if request.session.recent_sites %}
   {% include "blocks/recently-viewed.html" %}
   {% endif %}
 

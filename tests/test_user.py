@@ -8,6 +8,7 @@ from django.utils.encoding import force_bytes
 import datetime
 from django.contrib.auth.models import User
 from inviMarket.models import Profile
+from django.core import management
 
 class RegisterTestCase(TestCase):
     def setUp(self):
@@ -90,6 +91,25 @@ class RegisterTestCase(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertFalse(response.context['confirm'])
         self.assertFalse(user.is_active)
+
+    def test_clean_users(self):
+        """Clean users with expired activation key"""
+        self.client.post('/register/', {
+            'username': 'test',
+            'first_name': 'Name',
+            'email': 'user@domain.com',
+            'password1': 'test',
+            'password2': 'test',
+            'terms': 'selected'
+            })
+        user = User.objects.get(username='test')
+        user.profile.key_expires = (user.profile.key_expires -
+                                    datetime.timedelta(4))
+        user.profile.save()
+        management.call_command('clean_users', verbosity=0)
+
+        # Check that the user has been deleted
+        self.assertFalse(User.objects.filter(username='test').exists())
 
     def test_activation(self):
         """User activation"""

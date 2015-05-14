@@ -19,18 +19,22 @@ def add_partner(request, partner_id):
     ``message``
       A string variable used to inform the user about the request.
 
+    ``header``
+      A string variable containing the message header.
+
     **Template:**
 
-    :template:`inviMarket/addpartner.html`
+    :template:`inviMarket/message.html`
 
     """
     user = request.user
     partner = get_object_or_404(User.objects.select_related('profile'),
                                 pk=partner_id)
     header = _("Partnership request")
-
     if user.profile.partners.filter(pk=partner_id).exists():
         message = _("The user is already your partner.")
+    elif user.profile.partners.count() >= settings.MAX_PARTNERS:
+        message = _("You have reached the maximum number of partners.")
     # Check if replying a partnership request
     elif partner.profile.partners.filter(pk=user.id).exists():
         user.profile.partners.add(partner)

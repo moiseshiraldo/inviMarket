@@ -24,6 +24,9 @@ def join_chain(request, cidb64, token):
     ``referral``
       The active referral link.
 
+    ``chain``
+      The related chain.
+
     **Template:**
 
     :template:`inviMarket/chain.html`
@@ -34,12 +37,14 @@ def join_chain(request, cidb64, token):
     user = request.user
     error = form = referral = None
     if request.method == 'POST':
+        # Check that the password is correct
         form = PasswordForm(request.POST)
         if form.is_valid():
             password = form.cleaned_data['password']
             if password != chain.password:
                 error = _("Invalid password.")
     elif chain.password:
+        # If the chain has a password, display the form
         form = PasswordForm()
         return render(request, 'chain.html', {
             'password_form': form,
@@ -48,15 +53,19 @@ def join_chain(request, cidb64, token):
     active_link = chain.get_active_link()
     try:
         link = Link.objects.get(user=user, chain=chain)
+        # Check if the usear has already joined the chain
         if link.previous_link.exists() or chain.owner == user:
             error = _("You have already joined the referral chain.")
     except ObjectDoesNotExist:
+        # Create the new link
         link = Link(user=user, chain=chain, counter=chain.jumps)
     if not error:
+        # Get the active referral link
         referral = active_link.user.offer_set.get(
             website=chain.website).referral
         link.chain = chain
         link.counter = chain.jumps
+        # Set the active link as the source of the new one
         link.source_link = active_link
         link.save()
     return render(request, 'chain.html', {

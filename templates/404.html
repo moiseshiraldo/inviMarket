@@ -50,7 +50,73 @@
       <a href="{% url 'index' %}">return to the homepage</a>.
   </p>
   </main>
-
+  <footer>
+    <ul>
+      <li>About Us</li>
+      <li><a href="{% url 'legal' %}#license">
+        {% trans "License and source code" %}
+      </a></li>
+      <li><a href="{% url 'legal' %}#terms">
+        {% trans "Terms and conditions" %}
+      </a></li>
+      <li><a href="{% url 'legal' %}#privacy">
+        {% trans "Privacy policy" %}
+      </a></li>
+      <li><a href="{% url 'legal' %}">{% trans "Contact" %}</a></li>
+    </ul>
+    <ul>
+      <li>{% trans "Get involved" %}</li>
+      <li><a href="{% url 'editing' %}">{% trans "Editing" %}</a></li>
+      <li><a href="{% url 'edition' %}">{% trans "New sites" %}</a></li>
+      <li><a href="{% url 'suggestions' %}">
+        {% trans "Suggestions" %}
+      </a></li>
+    </ul>
+    <ul>
+      <li>{% trans "Connect" %}</li>
+      <li>{% trans "Twitter" %}</li>
+      <li>{% trans "Facebook" %}</li>
+      <li>{% trans "Google+" %}</li>
+    </ul>
+    <ul>
+      <li>Help</li>
+      <li><a href="{% url 'getstarted' %}">
+        {% trans "Get started" %}
+      </a></li>
+      <li><a href="{% url 'faq' %}">FAQ</a></li>
+      <li><a href="{% url 'glossary' %}">{% trans "Glossary" %}</a></li>
+      <li>
+          <a href="https://github.com/moiseshiraldo/inviMarket/issues/"
+             target="_blank">
+            Bugs
+          </a>
+      </li>
+    </ul>
+    <div class="license">
+      <img src="{% static "images/logo.svg" %}" id="footlogo" alt="I"/>
+      <hr>
+      <div id="mobileFooter" class="mobile">
+        <a href="{% url 'legal' %}">Legal information</a> |
+        <a href="{% url 'edition' %}">New sites</a> |
+        <a href="{% url 'glossary' %}">Glossary</a> |
+        <a href="{% url 'faq' %}">FAQ</a>
+      </div>
+      <p>
+        <a rel="license"
+           href="http://creativecommons.org/licenses/by/4.0/">
+          <img alt="Creative Commons License" style="border-width:0"
+               src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+        </a>
+        <span>
+          This work is licensed under a
+          <a rel="license"
+             href="http://creativecommons.org/licenses/by/4.0/">
+            Creative Commons Attribution 4.0 International License
+          </a>.
+        </span>
+      </p>
+    </div>
+  </footer>
 
 </body>
 

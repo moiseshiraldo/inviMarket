@@ -73,7 +73,9 @@
       <h4 class="faq-header">{% trans "Can other users view my email address?" %}</h4>
       <p class="faqtext">
         {% blocktrans %}No, the invites are sended to an email addres
-        at the inviMarket domain, then forwarded to your email address.
+        at the inviMarket domain, then forwarded to your email address. All the
+        emails coming from a domain not listed in our sites database will be
+        rejected.
         {% endblocktrans %}
       </p>
     </li>
@@ -98,6 +100,17 @@
         {% blocktrans %}
         No, the username cannot be edited. You can create a new
         account, but can't migrate trades, rating and editions.
+        {% endblocktrans %}
+      </p>
+    </li>
+    <li>
+      <h4 class="faq-header">{% trans "Who is behind inviMarket?" %}</h4>
+      <p class="faqtext">
+        {% blocktrans %}
+        InviMarket is an ameteur project developed by
+        <a href="https://plus.google.com/112978057388954998834/about/" target="_blank">
+          Moisés Hiraldo</a>, not much
+        to say about him or his plan to dominate the world.
         {% endblocktrans %}
       </p>
     </li>

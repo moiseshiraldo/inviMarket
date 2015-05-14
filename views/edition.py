@@ -8,8 +8,8 @@ from django.contrib.auth.decorators import login_required
 @login_required
 def edition(request, site_id=None):
     """
-    Display the site edition form and store the proposal in the database. Related
-    to :model:`inviMarket.SiteEdition`.
+    Display the site edition form and store the proposal in the database.
+    Related to :model:`inviMarket.SiteEdition`.
 
     **Context**
 

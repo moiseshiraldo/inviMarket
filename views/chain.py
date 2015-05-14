@@ -18,6 +18,12 @@ def chain(request, site_id):
     ``chain_form``
       An instance of the chain creation form.
 
+    ``chain``
+      The current chain.
+
+    ``site``
+      The related website.
+
     **Template:**
 
     :template:`inviMarket/chain.html`
@@ -27,8 +33,10 @@ def chain(request, site_id):
     user = request.user
     chain_form = chain = None
     try:
+        # Get the current chain
         chain = Chain.objects.get(owner=user, website=site)
     except ObjectDoesNotExist:
+        # If it doesn't exist, store the new one or prepare the creation form
         if request.method == 'POST':
             chain_form = ChainForm(request.POST)
             if chain_form.is_valid():
@@ -39,6 +47,7 @@ def chain(request, site_id):
                 chain.url_hash = hashlib.sha1(
                     salt+user.username+site.name).hexdigest()
                 if user.offer_set.filter(website=site).exists():
+                    # Save the chain and create the first link
                     chain.save()
                     link = Link(user=user, chain=chain,
                         counter=chain.jumps, active=True, last_link=True)

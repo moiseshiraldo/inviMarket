@@ -6,7 +6,9 @@ from django.db.models import Q
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.core.exceptions import ObjectDoesNotExist
 from django.utils.translation import ugettext as _
+from inviMarket.decorators import cache_on_auth
 
+@cache_on_auth(60 * 60)
 def sites(request, site_name=None):
     """
     Display the forms for searching :model:`inviMarket.Website` and the results.
@@ -16,18 +18,18 @@ def sites(request, site_name=None):
     ``category_form``
       An instace of the filter by category form.
 
-      ``type_form``
+    ``type_form``
       An instace of the filter by type form.
 
-      ``order_form``
+    ``order_form``
       An instace of the order by form.
 
-      ``sites``
+    ``sites``
       The search results.
 
-      **Template:**
+    **Template:**
 
-      :template:`inviMarket/sites.html`
+    :template:`inviMarket/sites.html`
 
     """
     if site_name:
@@ -41,14 +43,15 @@ def sites(request, site_name=None):
             # Default None (English)
             description = None
         # Update recently viewed sites
-        recent_sites = request.session.get('recently_viewed', list())
-        if site.id in recent_sites:
-            recent_sites.remove(site.id)
-            request.session['recently_viewed'] = [site.id] + recent_sites
+        recent_sites = request.session.get('recent_sites', list())
+        r_site = {'name': site.name, 'logo_url': site.logo.url, 'url': site.url}
+        if r_site in recent_sites:
+            recent_sites.remove(r_site)
+            request.session['recent_sites'] = [r_site] + recent_sites
         elif len(recent_sites) > 4:
-            request.session['recently_viewed'] = [site.id] + recent_sites[:-1]
+            request.session['recent_sites'] = [r_site] + recent_sites[:-1]
         else:
-            request.session['recently_viewed'] = [site.id] + recent_sites
+            request.session['recent_sites'] = [r_site] + recent_sites
         return render(request, 'site.html', {
             'site': site,
             'description': description,
@@ -117,13 +120,6 @@ def sites(request, site_name=None):
         except EmptyPage:
             # If page is out of range, deliver last page of results.
             sites = paginator.page(paginator.num_pages)
-    # Get recentyly viewed sites
-    recently_viewed = request.session.get('recently_viewed', list())
-    if len(recently_viewed) > 0:
-        recent_sites = Website.objects.filter(reduce(lambda x, y: x | y,
-          [Q(pk=site_id) for site_id in recently_viewed]))
-    else:
-        recent_sites = None
     # Get all queries to keep them in different pages
     queries = request.GET.copy()
     if 'page' in queries:
@@ -132,7 +128,6 @@ def sites(request, site_name=None):
                                           'type_form': type_form,
                                           'order_form': order_form,
                                           'sites': sites,
-                                          'recent_sites': recent_sites,
                                           'message': message,
                                           'query': query,
                                           'queries': queries,

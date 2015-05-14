@@ -7,7 +7,7 @@ from django.utils.translation import ugettext as _
 @login_required
 def del_request(request, site_id):
     """
-    Delete the invite request passed as an argument, related to
+    Delete the invite request passed by argument, related to
     :model:`inviMarket.Request`.
 
     **Context**
@@ -35,5 +35,5 @@ def del_request(request, site_id):
         user.profile.unlock()
         message = _("The request has been deleted.")
     else:
-      message = _("Some error has occurred. Reload and try again.")
+        message = _("Some error has occurred. Reload and try again.")
     return render(request, 'message.html', {'message': message})

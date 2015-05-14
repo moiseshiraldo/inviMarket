@@ -13,6 +13,9 @@ def complaint(request, trade_id):
 
     **Context**
 
+    ``form``
+      An instance of the complaint form.
+
     ``trade``
       An instance of the trade the user is complaining about.
 
@@ -27,9 +30,7 @@ def complaint(request, trade_id):
     error = form = None
     user = request.user
     trade = get_object_or_404(
-        Trade.objects.select_related('receptor', 'proposer'),
-        pk=trade_id
-        )
+        Trade.objects.select_related('receptor', 'proposer'), pk=trade_id)
     # Check if the user can make the complaint
     if user != trade.proposer and user != trade.receptor:
         return redirect('index')
@@ -45,7 +46,7 @@ def complaint(request, trade_id):
             comments = form.cleaned_data['comments']
             complaint = Trade(user=user, trade=trade, comments=comments)
             complaint.save()
-            # Store a copy of the emails received by the user
+            # Store a copy of the emails received by the user in the database
             dirname = settings.MAILDIR + user.username
             mbox = mailbox.Maildir(dirname, factory=None, create=None)
             for message in mbox:

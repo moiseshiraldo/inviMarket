@@ -3,12 +3,12 @@
 
 <section class="recently-viewed desktop">
     <h2 class="indented-header inline-header">{% trans "Recently viewed:" %}</h2>
-    {% for site in recent_sites %}
+    {% for site in request.session.recent_sites %}
     <div class="site">
       <a class="siteLink" href="{% url 'sites' site_name=site.name %}">
-        <img class="siteLogo" src="{{site.logo.url}}" alt="{{ site }} logo"/>
+        <img class="siteLogo" src="{{site.logo_url}}" alt="{{ site.name }} logo"/>
         <h3>
-          {{ site }}
+          {{ site.name }}
           {% if site.protected %}
           <img class="lock" src="{% static "images/lock.png" %}"
                alt="Protected"/>

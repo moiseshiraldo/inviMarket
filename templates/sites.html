@@ -54,7 +54,7 @@
   {% include "ads/sideAd.html" %}
   {% endif %}
 
-  {% if recent_sites %}
+  {% if request.session.recent_sites %}
   {% include "blocks/recently-viewed.html" %}
   {% endif %}
 

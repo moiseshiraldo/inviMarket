@@ -104,8 +104,13 @@ def trade(request, trade_id):
                         'domain': settings.DOMAIN,
                         })
                     subject = "Accepted proposal"
-                    send_mail(subject, text, "inviMarket <no-reply@inviMarket.com>",
-                        [proposer.email], html_message=html, fail_silently=False)
+                    send_mail(
+                        subject, text,
+                        "inviMarket <no-reply@inviMarket.com>",
+                        [proposer.email],
+                        html_message=html,
+                        fail_silently=False
+                        )
                 proposer.profile.unlock()
                 receptor.profile.unlock()
                 return redirect('trade_accepted')
@@ -127,7 +132,8 @@ def trade(request, trade_id):
                 receptor.profile.unlock()
                 return redirect('trade_rejected')
     return render(request, 'trade.html', {
-        'trade': trade, 'error': error,
+        'trade': trade,
+        'error': error,
         'sending_deadline': settings.SENDING_DEADLINE,
         'complaint_deadline': settings.COMPLAINT_DEADLINE
         })

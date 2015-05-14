@@ -1,9 +1,9 @@
+# -*- coding: utf-8 -*-
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.models import User
 from django.utils.encoding import force_text
 from django.utils.http import urlsafe_base64_decode
 from django.utils import timezone
-#from django.core.files import File
 
 def confirm(request, uidb64=None, key=None):
     """

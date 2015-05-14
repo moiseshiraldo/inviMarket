@@ -217,11 +217,6 @@ class ConfigForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ("avatar", "first_name", "lang", "notify")
-        labels = {
-            'avatar': _('Change avatar'),
-            'lang': _('Language'),
-            'notify': _('Receive email notifications'),
-        }
 
     def save(self, commit=True):
         profile = super(ConfigForm, self).save(commit=True)
