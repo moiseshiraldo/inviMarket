@@ -17,7 +17,7 @@
     {% else %}
     <img alt="Avatar" class="avatar" src="{% static "images/user.svg" %}"/>
     {% endif %}
-    <h3> {{ receptor }}</h3>
+    <h3> {{ receptor.first_name }}</h3>
     <ul class="profile">
       <li>
         <span>{% trans "Rating:" %}</span>

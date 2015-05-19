@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-12 18:55+0100\n"
-"PO-Revision-Date: 2015-05-13 00:38+0100\n"
+"POT-Creation-Date: 2015-05-19 16:23+0100\n"
+"PO-Revision-Date: 2015-05-19 17:34+0100\n"
 "Last-Translator: Moises\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "Language: en_US\n"
@@ -30,7 +30,7 @@ msgid "This value may contain only letters, numbers and ./+/-/_ characters."
 msgstr ""
 "Este campo solo puede contener letras, números y los caracteres ./+/-/_ ."
 
-#: forms.py:26 forms.py:215
+#: forms.py:26 forms.py:208 forms.py:227
 msgid "Name"
 msgstr "Nombre"
 
@@ -38,31 +38,36 @@ msgstr "Nombre"
 msgid "This value may not start with, end with or contain two consecutive '.'"
 msgstr "Este campo no puede empezar, terminar o contener dos '.' consecutivos."
 
-#: forms.py:60
+#: forms.py:49
+#| msgid "A user with that email already exists."
+msgid "A user with that username already exists."
+msgstr "Ya existe un usuario con ese nombre de usuario."
+
+#: forms.py:58
 msgid "A user with that email already exists."
 msgstr "Ya existe un usuario con ese email."
 
-#: forms.py:96
+#: forms.py:94
 msgid "Popularity"
-msgstr "Popularidad."
+msgstr "Popularidad"
 
-#: forms.py:97 templates/site.html:35
+#: forms.py:95 forms.py:216 templates/site.html:35
 msgid "Category"
 msgstr "Categoría"
 
-#: forms.py:98 templates/site.html:36
+#: forms.py:96 forms.py:215 templates/site.html:36
 msgid "Type"
 msgstr "Tipo"
 
-#: forms.py:99
+#: forms.py:97
 msgid "Requested invites"
 msgstr "Invitaciones pedidas"
 
-#: forms.py:103
+#: forms.py:101
 msgid "Order by"
 msgstr "Ordenar por"
 
-#: forms.py:111
+#: forms.py:109
 msgid ""
 "The number of invites to donate can't be greater than the total offered "
 "number."
@@ -70,31 +75,62 @@ msgstr ""
 "El número de invitaciones para donar no puede ser mayor que el número total "
 "ofrecido."
 
-#: forms.py:129
+#: forms.py:127
 msgid "Referral link"
 msgstr "Enlace de referido"
 
-#: forms.py:170
+#: forms.py:168
 msgid "All"
 msgstr "Todo"
 
-#: forms.py:171
+#: forms.py:169
 msgid "Donations"
 msgstr "Donaciones"
 
-#: forms.py:189
+#: forms.py:187
 msgid "Received"
 msgstr "Recibido"
 
-#: forms.py:190
+#: forms.py:188
 msgid "Sent"
 msgstr "Enviado"
 
-#: forms.py:191 templates/trades.html:67
+#: forms.py:189 templates/trades.html:78
 msgid "Accepted"
 msgstr "Aceptado"
 
-#: forms.py:237 forms.py:257
+#: forms.py:210
+#| msgid "Referral link to"
+msgid "Referral validator"
+msgstr "Validador de referido"
+
+#: forms.py:211
+msgid "Mail domain"
+msgstr "Dominio de correo"
+
+#: forms.py:212
+msgid "Description"
+msgstr "Descripción"
+
+#: forms.py:213
+#| msgid "Source:"
+msgid "Source"
+msgstr "Fuente"
+
+#: forms.py:214 templates/site.html:37
+msgid "Language"
+msgstr "Idioma"
+
+#: forms.py:217 templates/site.html:38
+msgid "Active"
+msgstr "Activo"
+
+#: forms.py:218
+#| msgid "No commments."
+msgid "Comments"
+msgstr "Comentarios"
+
+#: forms.py:249 forms.py:269
 msgid "Password"
 msgstr "Contraseña"
 
@@ -102,75 +138,92 @@ msgstr "Contraseña"
 msgid "Max file size is 25KB"
 msgstr "El tamaño máximo del archivo es 25KB"
 
-#: models.py:29 models.py:129
+#: models.py:29 models.py:33
 msgid "Spanish"
 msgstr "Español"
 
-#: models.py:30 models.py:130
+#: models.py:30 models.py:34
 msgid "English"
 msgstr "Inglés"
 
-#: models.py:106 templates/propose.html:8
-msgid "Trade proposal"
-msgstr "Propuesta de intercambio"
-
-#: models.py:107 views/add_partner.py:33
-msgid "Partnership request"
-msgstr "Solicitud de asociación"
-
-#: models.py:108
-msgid "Proposal accepted"
-msgstr "Propuesta aceptada"
-
-#: models.py:131
+#: models.py:35
 msgid "Multi-language"
 msgstr "Varios idiomas"
 
-#: models.py:135
-msgid "Forum"
-msgstr "Foro"
+#: models.py:111 templates/propose.html:8
+msgid "Trade proposal"
+msgstr "Propuesta de intercambio"
 
-#: models.py:136
-msgid "Tracker"
-msgstr "Tracker"
+#: models.py:112 views/add_partner.py:33
+msgid "Partnership request"
+msgstr "Solicitud de asociación"
+
+#: models.py:113
+msgid "Proposal accepted"
+msgstr "Propuesta aceptada"
+
+#: models.py:114
+#| msgid "Site edition"
+msgid "Approved edition"
+msgstr "Edición aprobada"
+
+#: models.py:115 templates/trades.html:69
+#| msgid "Received"
+msgid "Received complaint"
+msgstr "Reclamación recibida"
 
 #: models.py:137
-msgid "Direct Download"
-msgstr "Descarga directa"
+msgid "Application"
+msgstr "Aplicación"
 
 #: models.py:138
-msgid "Streaming"
-msgstr "Streaming"
-
-#: models.py:139
 msgid "Cloud Service"
 msgstr "Servicio en la nube"
 
+#: models.py:139
+msgid "Direct Download"
+msgstr "Descarga directa"
+
 #: models.py:140
+msgid "Forum"
+msgstr "Foro"
+
+#: models.py:141
 msgid "Paid-To-Click"
 msgstr "Pago por click"
 
-#: models.py:141
+#: models.py:142
 msgid "Peer to peer"
 msgstr "Peer to peer"
 
-#: models.py:145
-msgid "Generic"
-msgstr "Genérico"
+#: models.py:143
+msgid "Streaming"
+msgstr "Streaming"
 
-#: models.py:146
-msgid "Multimedia"
-msgstr "Multimedia"
+#: models.py:144
+msgid "Tracker"
+msgstr "Tracker"
 
-#: models.py:147
-#, fuzzy
+#: models.py:148
 #| msgid "Commerce"
 msgid "E-commerce"
 msgstr "Comercio"
 
-#: models.py:148
+#: models.py:149
+msgid "Generic"
+msgstr "Genérico"
+
+#: models.py:150
+msgid "Multimedia"
+msgstr "Multimedia"
+
+#: models.py:151
 msgid "Referral"
 msgstr "Referidos"
+
+#: models.py:152
+msgid "Telecommunications"
+msgstr "Telecomunicaciones"
 
 #: templates/404.html:36 templates/getstarted.html:14
 msgid "Search sites"
@@ -180,62 +233,70 @@ msgstr "Buscar sitios"
 msgid "Site name..."
 msgstr "Nombre..."
 
-#: templates/404.html:57 templates/index.html:125
+#: templates/404.html:57 templates/index.html:139
 msgid "License and source code"
 msgstr "Licencia y código fuente"
 
-#: templates/404.html:60 templates/index.html:128
+#: templates/404.html:60 templates/index.html:142
 msgid "Terms and conditions"
 msgstr "Términos y condiciones"
 
-#: templates/404.html:63 templates/index.html:131
+#: templates/404.html:63 templates/index.html:145
 msgid "Privacy policy"
 msgstr "Política de privacidad"
 
-#: templates/404.html:65 templates/index.html:133 templates/legal.html:10
-#: templates/legal.html.py:22
+#: templates/404.html:65 templates/email/email.html:82
+#: templates/index.html:147 templates/legal.html:10 templates/legal.html.py:22
 msgid "Contact"
 msgstr "Contacto"
 
-#: templates/404.html:68 templates/index.html:136
+#: templates/404.html:68 templates/index.html:150
 msgid "Get involved"
 msgstr "Colabora"
 
-#: templates/404.html:69 templates/editing.html:8 templates/index.html:137
+#: templates/404.html:69 templates/editing.html:8 templates/index.html:151
 msgid "Editing"
 msgstr "Ediciones"
 
-#: templates/404.html:70 templates/index.html:138 templates/market.html:45
+#: templates/404.html:70 templates/index.html:152 templates/market.html:45
 msgid "New sites"
 msgstr "Nuevos sitios"
 
-#: templates/404.html:72 templates/index.html:140 templates/suggestions.html:6
+#: templates/404.html:72 templates/index.html:154 templates/suggestions.html:6
 msgid "Suggestions"
 msgstr "Sugerencias"
 
-#: templates/404.html:76 templates/index.html:144
+#: templates/404.html:76 templates/index.html:158
 msgid "Connect"
 msgstr "Conecta"
 
-#: templates/404.html:77 templates/index.html:145
+#: templates/404.html:77 templates/index.html:159
 msgid "Twitter"
 msgstr ""
 
-#: templates/404.html:78 templates/index.html:146
+#: templates/404.html:78 templates/index.html:160
 msgid "Facebook"
 msgstr ""
 
-#: templates/404.html:79 templates/index.html:147
+#: templates/404.html:79 templates/index.html:161
 msgid "Google+"
 msgstr ""
 
-#: templates/404.html:84 templates/getstarted.html:8 templates/index.html:152
+#: templates/404.html:84 templates/getstarted.html:8 templates/index.html:166
 msgid "Get started"
 msgstr "Comienza"
 
-#: templates/404.html:87 templates/index.html:155
+#: templates/404.html:87 templates/index.html:169
 msgid "Glossary"
 msgstr "Glosario"
+
+#: templates/500.html:38
+msgid "Ups, something has gone wrong."
+msgstr "Ups, algo ha ido mal."
+
+#: templates/500.html:39
+msgid "Look behind you, a three headed monkey!"
+msgstr "¡Mira detrás de ti, un mono de tres cabezas!"
 
 #: templates/blocks/profile-menu.html:4
 msgid "Status"
@@ -335,12 +396,11 @@ msgid ""
 "    member of the chain before jump to the next link.\n"
 "    "
 msgstr ""
-"\nDeja el campo contraseña en blanco si quieres que cualquier usuario con el "
-"enlace "
-"pueda acceder a la cadena de referidos</br>"
-"El campo referidos para saltar determina cuántos referidos obtendrá cada "
-"miembro de la "
-"cadena antes de saltar al siguiente enlace."
+"\n"
+"Deja el campo contraseña en blanco si quieres que cualquier usuario con el "
+"enlace pueda acceder a la cadena de referidos</br>El campo referidos para "
+"saltar determina cuántos referidos obtendrá cada miembro de la cadena antes "
+"de saltar al siguiente enlace."
 
 #: templates/chain.html:35
 msgid "Referral link to"
@@ -367,6 +427,30 @@ msgstr "Reclamación"
 msgid "Profile"
 msgstr "Perfil"
 
+#: templates/config.html:24
+#| msgid "Language"
+msgid "Language:"
+msgstr "Idioma:"
+
+#: templates/config.html:25
+#| msgid "Receive email notifications"
+msgid "Receive email notifications:"
+msgstr "Recibir notificaciones por email:"
+
+#: templates/config.html:26
+msgid "Save"
+msgstr ""
+
+#: templates/config.html:30
+#| msgid "Change avatar"
+msgid "Change password"
+msgstr "Cambiar contraseña"
+
+#: templates/config.html:31
+#| msgid "Delete"
+msgid "Delete account"
+msgstr "Eliminar cuenta"
+
 #: templates/confirm.html:9
 msgid "Your account has been validated."
 msgstr "Tu cuenta ha sido validada."
@@ -392,7 +476,8 @@ msgid ""
 "      below.\n"
 "      "
 msgstr ""
-"\nPor defecto estableceremos tu cuenta como inactiva y mantendremos toda tu "
+"\n"
+"Por defecto estableceremos tu cuenta como inactiva y mantendremos toda tu "
 "información, en caso de que quieras activarla de nuevo en el futuro. Si "
 "quieres borrar tu cuenta completamente, marca la opción indicada abajo."
 
@@ -401,7 +486,9 @@ msgid ""
 "\n"
 "      Delete all the information relative to my account.\n"
 "      "
-msgstr "\nBorrar toda la información relativa a mi cuenta."
+msgstr ""
+"\n"
+"Borrar toda la información relativa a mi cuenta."
 
 #: templates/editing.html:10
 msgid ""
@@ -410,8 +497,8 @@ msgid ""
 "      you can submit it by filling up the new sites edition formulary.\n"
 "      "
 msgstr ""
-"\nSi no puedes encontrar el sitio que estás buscando en nuestra base de "
-"datos, "
+"\n"
+"Si no puedes encontrar el sitio que estás buscando en nuestra base de datos, "
 "puedes crearlo tú mismo rellenando el formulario de nuevos sitios."
 
 #: templates/editing.html:16
@@ -422,9 +509,10 @@ msgid ""
 "      at the site page.\n"
 "      "
 msgstr ""
-"\nSi notas que la información de algún sitio es incorrecta o está "
-"desactualizada, puedes "
-"modificarla siguiendo el link editar en la página del sitio."
+"\n"
+"Si notas que la información de algún sitio es incorrecta o está "
+"desactualizada, puedes modificarla siguiendo el link editar en la página del "
+"sitio."
 
 #: templates/editing.html:23
 msgid ""
@@ -434,10 +522,10 @@ msgid ""
 "      we grow up in users and can implement a wiki-based system.\n"
 "      "
 msgstr ""
-"\nPara ambas acciones necesitas ser un usuario registrado. Una vez enviada, "
-"la infomarción será revisada por el administrador, hasta que el número de "
-"usuarios crezca y "
-"podamos implmentar un sistema de edición automático."
+"\n"
+"Para ambas acciones necesitas ser un usuario registrado. Una vez enviada, la "
+"infomarción será revisada por el administrador, hasta que el número de "
+"usuarios crezca y podamos implmentar un sistema de edición automático."
 
 #: templates/editing.html:31 templates/index.html:64
 msgid "Sites"
@@ -452,23 +540,265 @@ msgstr "Registrarse"
 msgid "Site edition"
 msgstr "Edición de sitios"
 
-#: templates/edition.html:15
+#: templates/edition.html:23
 msgid ""
 "\n"
-"    The description field is not necessary and should only contain a brief\n"
+"    <p>The 'description' field should only contain a brief\n"
 "    description of the site as well as information about the invite or\n"
-"    referral system.</br>\n"
-"    If you copy some information from an external site that allows it,\n"
-"    insert the link in the source field.</br>\n"
-"    Use the comments field for any additional comments to the admin.\n"
+"    referral system. If you copy some information from an external site that "
+"allows it,\n"
+"    insert the link in the 'source' field.</p>\n"
+"    <p>The 'referral validator' field is only applicable to referral sites, "
+"and should\n"
+"    contain a Python regular expression matching any referral link to the "
+"site\n"
+"    (leave it blank if you are not familiar with regular expressions).</p>\n"
+"    <p>The 'mail domain' field is the domain of the address on the MAIL FROM "
+"SMTP\n"
+"    command (inserted as the 'Return-Path' mail header, not to be confused\n"
+"    with the 'From' header).</p>\n"
+"    <p>Use the comments field for any additional comments to the admin.</p>\n"
 "    "
 msgstr ""
-"\nEl campo descripción no es obligatorio y debe contener sólo una breve "
-"descipción del sitio "
-"así como información sobre el sistema de invitaciones o referidos.</br> "
-"Si copias la información de una web externa que lo permita, inserta el link "
-"en el campo fuente.</br> "
-"Usa el campo comentarios para cualquier comentario adicional."
+
+#: templates/email/activation.html:4
+#, python-format
+msgid ""
+"\n"
+"Hello %(name)s,</br>\n"
+"Thanks for singing up. To activate your account, click this link\n"
+"within 48 hours:\n"
+msgstr ""
+"\n"
+"Hola %(name)s,</br>\n"
+"Gracias por registrarte. Para activar tu cuenta, haz click en este enlace "
+"antes de 48 horas:"
+
+#: templates/email/activation.txt:2
+#, python-format
+msgid ""
+"\n"
+"Hello %(name)s,\n"
+"\n"
+"Thanks for singing up. To activate your account, click this link\n"
+"within 48 hours:\n"
+msgstr ""
+"\n"
+"Hola %(name)s,</br>\n"
+"Gracias por registrarte. Para activar tu cuenta, haz click en este enlace "
+"antes de 48 horas:\n"
+
+#: templates/email/edition.html:4
+#, python-format
+msgid ""
+"\n"
+"Hello %(name)s,</br>\n"
+"\n"
+"Your edition proposal has been approved. Click\n"
+"the following link to check the site page:\n"
+msgstr ""
+"\n"
+"Hola %(name)s,</br>\n"
+"\n"
+"Tu propuesta de edición ha sido aprobada. Haz click en el siguient enlace "
+"para ver la página del sitio:\n"
+
+#: templates/email/edition.txt:2
+#, python-format
+msgid ""
+"\n"
+"Hello %(name)s,\n"
+"\n"
+"Your edition proposal has been approved. Click\n"
+"the following link to check the site page:\n"
+msgstr ""
+"\n"
+"Hola %(name)s,</br>\n"
+"\n"
+"Tu propuesta de edición ha sido aprobada. Haz click en el siguient enlace "
+"para ver la página del sitio:\n"
+
+#: templates/email/email.html:59
+msgid "UNSUBSCRIBE"
+msgstr "DARSE DE BAJA"
+
+#: templates/email/email.html:61
+msgid "PRIVACY POLICY"
+msgstr "PRIVACIDAD"
+
+#: templates/email/email.html:63
+msgid "FAQ"
+msgstr "FAQ"
+
+#: templates/email/email.html:65
+msgid "CONTACT"
+msgstr "CONTACTO"
+
+#: templates/email/email.html:78
+msgid ""
+"\n"
+"          This notification has been sent to the email address associated "
+"with your inviMarket account.</br>\n"
+"          This email message was auto-generated. Please do not respond.</"
+"br>\n"
+"          "
+msgstr ""
+"\n"
+"Esta notificación ha sido enviada a la dirección de correo asociada con tu "
+"cuenta "
+"en inviMarket</br>\n"
+"          Ese correo ha sido autogenerado. No responda, por favor.</"
+"br>\n"
+
+#: templates/email/partnership.html:4
+#, python-format
+msgid ""
+"\n"
+"Hello %(name)s,</br>\n"
+"\n"
+"%(user.first_name)s wants to be your partner. Click the following\n"
+"link to view the request:\n"
+msgstr ""
+"\n"
+"Hola %(name)s,</br>\n"
+"\n"
+"%(user.first_name)s quiere ser tu socio. Haz click en el siguiente enlace "
+"para ver la petición:\n"
+
+#: templates/email/partnership.txt:2
+#, python-format
+msgid ""
+"\n"
+"Hello %(name)s,\n"
+"\n"
+"%(user.first_name)s wants to be your partner. Click the following\n"
+"link to view the request:\n"
+msgstr ""
+"\n"
+"Hola %(name)s,</br>\n"
+"\n"
+"%(user.first_name)s quiere ser tu socio. Haz click en el siguiente enlace "
+"para ver la petición:\n"
+
+#: templates/email/password_reset.html:4 templates/email/password_reset.txt:2
+#, python-format
+msgid ""
+"\n"
+"Someone asked for password reset for email %(email)s. Follow the link "
+"below:\n"
+msgstr ""
+"\n"
+"Alguien ha pedido reiniciar la contraseña para el correo %(email)s. Sigue el "
+"siguiente "
+"enlace:\n"
+
+#: templates/email/password_reset.html:10 templates/email/password_reset.txt:7
+msgid "Your username, in case you've forgotten:"
+msgstr "Tu nombre de usuario, en caso de que lo hayas olvidado:"
+
+#: templates/email/proposal.html:4
+#, python-format
+msgid ""
+"\n"
+"Hello %(name)s,</br>\n"
+"\n"
+"You have received a new trade proposal from %(proposer.first_name)s. Click\n"
+"the following link to check the details:\n"
+msgstr ""
+"\n"
+"Hola %(name)s,</br>\n"
+"\n"
+"Has recibido una nueva propuesta de intercambio de %(proposer.first_name)s. "
+"Haz click\n"
+"en el siguiente enlace para ver los detalles:\n"
+
+#: templates/email/proposal.txt:2
+#, python-format
+msgid ""
+"\n"
+"Hello %(name)s,\n"
+"\n"
+"You have received a new trade proposal from %(proposer.first_name)s. Click\n"
+"the following link to check the details:\n"
+msgstr ""
+"\n"
+"Hola %(name)s,</br>\n"
+"\n"
+"Has recibido una nueva propuesta de intercambio de %(proposer.first_name)s. "
+"Haz click\n"
+"en el siguiente enlace para ver los detalles:\n"
+
+#: templates/email/trade.html:4
+#, python-format
+msgid ""
+"\n"
+"Hello %(name)s,</br>\n"
+"\n"
+"Your trade proposal to %(receptor.first_name)s has been accepted. Click\n"
+"the following link to check the details:\n"
+msgstr ""
+"\n"
+"Hola %(name)s,</br>\n"
+"\n"
+"Tu propuesta de intercambio para %(receptor.first_name)s ha sido aceptada. "
+"Haz click\n"
+"en el siguiente enlace para ver los detalles:\n"
+
+#: templates/email/trade.html:12 templates/email/trade.txt:10
+#| msgid ""
+#| "\n"
+#| "      Send the invites to the following email addres:\n"
+#| "      %(trade.proposer)s@invimarket.com\n"
+#| "      "
+msgid "and send the invites to the following email address:"
+msgstr ""
+"y envía las invitaciones a la siguiente dirección de correo electrónico:"
+
+#: templates/email/trade.txt:2
+#, python-format
+msgid ""
+"\n"
+"Hello %(name)s,\n"
+"\n"
+"Your trade proposal to %(receptor.first_name)s has been accepted. Click\n"
+"the following link to check the details:\n"
+msgstr ""
+"\n"
+"Hola %(name)s,</br>\n"
+"\n"
+"Tu propuesta de intercambio para %(receptor.first_name)s ha sido aceptada. "
+"Haz click\n"
+"en el siguiente enlace para ver los detalles:\n"
+
+#: templates/email/warning.html:4
+#, python-format
+msgid ""
+"\n"
+"Hello %(name)s,</br>\n"
+"\n"
+"You have received a warning due to unsent invites. Click\n"
+"the following link to check the trade details:\n"
+msgstr ""
+"\n"
+"Hola %(name)s,</br>\n"
+"\n"
+"Has recibido un warning debido a invitaciones no enviadas .Haz click\n"
+"en el siguiente enlace para comprobar los detalles del intercambio:\n"
+
+#: templates/email/warning.txt:2
+#, python-format
+msgid ""
+"\n"
+"Hello %(name)s,\n"
+"\n"
+"You have received a warning due to unsent invites. Click\n"
+"the following link to check the trade details:\n"
+msgstr ""
+"\n"
+"Hola %(name)s,</br>\n"
+"\n"
+"Has recibido un warning debido a invitaciones no enviadas .Haz click\n"
+"en el siguiente enlace para comprobar los detalles del intercambio:\n"
 
 #: templates/faq.html:6
 msgid "Frequently Asked Questions"
@@ -486,11 +816,10 @@ msgid ""
 "        relative to the invite/referral system of these sites.\n"
 "        "
 msgstr ""
-"\nInviMarket es una web donde puedes compartir y obtener invitaciones o "
-"enlaces "
-"de referido "
-"a otros sitios, así como información relativa al sistema de invitaciones o "
-"referidos de dichos sitios."
+"\n"
+"InviMarket es una web donde puedes compartir y obtener invitaciones o "
+"enlaces de referido a otros sitios, así como información relativa al sistema "
+"de invitaciones o referidos de dichos sitios."
 
 #: templates/faq.html:19
 msgid "What is not InviMarket?"
@@ -505,11 +834,10 @@ msgid ""
 "        information.\n"
 "        "
 msgstr ""
-"\nInviMarket no es una web donde se vendan o compren invitaciones. Cualquier "
-"uso de una terminología "
-"de mercado es una mera gamificación para animar a los usuarios a compartir "
-"invitaciones, enlaces "
-"de referido e información."
+"\n"
+"InviMarket no es una web donde se vendan o compren invitaciones. Cualquier "
+"uso de una terminología de mercado es una mera gamificación para animar a "
+"los usuarios a compartir invitaciones, enlaces de referido e información."
 
 #: templates/faq.html:30
 msgid "How does it work?"
@@ -525,12 +853,11 @@ msgid ""
 "        trades to them.\n"
 "        "
 msgstr ""
-"\nBusca sitios usando el formulario de búsqueda en el menú superior o en la "
-"página 'Sitios', "
-"y pide/ofrece invitaciones o enlaces de referido a los sitios que te "
-"interesen. En la página 'Intercambio' "
-"puedes encontrar usuarios interesados en las mismas invitaciones y proponer "
-"intercambios."
+"\n"
+"Busca sitios usando el formulario de búsqueda en el menú superior o en la "
+"página 'Sitios', y pide/ofrece invitaciones o enlaces de referido a los "
+"sitios que te interesen. En la página 'Intercambio' puedes encontrar "
+"usuarios interesados en las mismas invitaciones y proponer intercambios."
 
 #: templates/faq.html:42
 msgid "Do I have to register?"
@@ -544,7 +871,8 @@ msgid ""
 "        invites and edit sites information.\n"
 "        "
 msgstr ""
-"\nPuedes buscar sitios, ver su información y obtener enlaces de referido sin "
+"\n"
+"Puedes buscar sitios, ver su información y obtener enlaces de referido sin "
 "registrarte. Necesitas una cuenta para intercambiar invitaciones y editar "
 "sitios."
 
@@ -562,8 +890,9 @@ msgid ""
 "        we don't want to be an easy tool to break other sites rules.\n"
 "        "
 msgstr ""
-"\nSignifica que el sitio está protegido, por lo que no puedes ver una "
-"petición/oferta de invitación a ese sitio si el usuario no es tu amigo. El "
+"\n"
+"Significa que el sitio está protegido, por lo que no puedes ver una petición/"
+"oferta de invitación a ese sitio si el usuario no es tu amigo. El "
 "funcionamiento de muchos sitios depende de un uso correcto del sistema de "
 "invitaciones, y aunque la responsabilidad última recae sobre el usuario, no "
 "queremos ser una herramienta fácil para romper las normas de otras webs."
@@ -579,7 +908,8 @@ msgid ""
 "        details and send the invites to the specified email address.\n"
 "        "
 msgstr ""
-"\nVe a la sección 'Intercambios' de tu perfil, busca los detalles de la "
+"\n"
+"Ve a la sección 'Intercambios' de tu perfil, busca los detalles de la "
 "propuesta aceptada y envía las invitaciones a la dirección de correo "
 "electrónico especificada."
 
@@ -597,8 +927,8 @@ msgid ""
 "        rejected.\n"
 "        "
 msgstr ""
-"No, las invitaciones son enviadas a una dirección en el dominio inviMarket, y "
-"posteriormente reenviadas a tu dirección de correo. Todos los emails "
+"No, las invitaciones son enviadas a una dirección en el dominio inviMarket, "
+"y posteriormente reenviadas a tu dirección de correo. Todos los emails "
 "provenientes de dominios no listados en nuestra base de sitios serán "
 "rechazados."
 
@@ -617,7 +947,8 @@ msgid ""
 "        will be banned.\n"
 "        "
 msgstr ""
-"\nGuardamos una copia temporal de los emails. Si el usuario no ha enviado las "
+"\n"
+"Guardamos una copia temporal de los emails. Si el usuario no ha enviado las "
 "invitaciones en el plazo de una semana desde que la propuesta fue aceptada, "
 "puedes hacer una reclamación en la página de los detalles del intercambio y "
 "el usuario recibirá una advertencia. Cada advertencia desciende el rating de "
@@ -634,7 +965,8 @@ msgid ""
 "        account, but can't migrate trades, rating and editions.\n"
 "        "
 msgstr ""
-"\nNo, el nombre de usuario no se puede editar. Puedes crear una nueva cuenta, "
+"\n"
+"No, el nombre de usuario no se puede editar. Puedes crear una nueva cuenta, "
 "aunque no podrás migrar los intercambios, rating y ediciones."
 
 #: templates/faq.html:107
@@ -651,10 +983,28 @@ msgid ""
 "        to say about him or his plan to dominate the world.\n"
 "        "
 msgstr ""
-"\nInviMarket es un proyecto ameteur desarrollado por <a "
-"href=\"https://plus.google.com/112978057388954998834/about/\" "
-"target=\"_blank\">Moisés Hiraldo</a>, no hay mucho que decir sobre él o su "
-"plan para dominar el mundo."
+"\n"
+"InviMarket es un proyecto ameteur desarrollado por <a href=\"https://plus."
+"google.com/112978057388954998834/about/\" target=\"_blank\">Moisés Hiraldo</"
+"a>, no hay mucho que decir sobre él o su plan para dominar el mundo."
+
+#: templates/faq.html:118
+#| msgid "What is InviMarket?"
+msgid "What is InviMarket written in?"
+msgstr "¿En qué lenguaje esta escrito inviMarket?"
+
+#: templates/faq.html:120
+msgid ""
+"\n"
+"        Python, using the Django framework. You can see the source code\n"
+"        <a href=\"https://github.com/moiseshiraldo/inviMarket\" target="
+"\"_blank\">here</a>.\n"
+"        "
+msgstr ""
+"\n"
+"        Python, usando el framework Django. Puedes ver el código fuente\n"
+"        <a href=\"https://github.com/moiseshiraldo/inviMarket\" target="
+"\"_blank\">aquí</a>.\n"
 
 #: templates/getstarted.html:17
 msgid ""
@@ -663,7 +1013,8 @@ msgid ""
 "            navigation menu to search your favourites sites.\n"
 "            "
 msgstr ""
-"\nVe a la página 'Sitios' o usa el formulario de búsqueda en el menú superior "
+"\n"
+"Ve a la página 'Sitios' o usa el formulario de búsqueda en el menú superior "
 "para buscar tus sitios favoritos."
 
 #: templates/getstarted.html:23
@@ -673,7 +1024,8 @@ msgid ""
 "            left side.\n"
 "            "
 msgstr ""
-"\nFiltra y ordena los resultados usando el formulario en el lado izquierdo."
+"\n"
+"Filtra y ordena los resultados usando el formulario en el lado izquierdo."
 
 #: templates/getstarted.html:29
 msgid ""
@@ -683,7 +1035,8 @@ msgid ""
 "            system of the site.\n"
 "            "
 msgstr ""
-"\nHaz click en el logo o el nombre del sitio para saber más sobre el sistema "
+"\n"
+"Haz click en el logo o el nombre del sitio para saber más sobre el sistema "
 "de invitaciones."
 
 #: templates/getstarted.html:35
@@ -692,7 +1045,9 @@ msgid ""
 "            Offer or request invites using the buttons at the top\n"
 "            right.\n"
 "            "
-msgstr "\nOfrece o pide invitaciones usando los botones en la caja del sitio."
+msgstr ""
+"\n"
+"Ofrece o pide invitaciones usando los botones en la caja del sitio."
 
 #: templates/getstarted.html:48
 msgid "Search invites"
@@ -705,7 +1060,8 @@ msgid ""
 "            to invites sarch page.\n"
 "            "
 msgstr ""
-"\nSelecciona la opción 'Intercambio' en el menú de navegación para buscar "
+"\n"
+"Selecciona la opción 'Intercambio' en el menú de navegación para buscar "
 "invitaciones."
 
 #: templates/getstarted.html:57
@@ -715,7 +1071,8 @@ msgid ""
 "            your invites requests and offers.\n"
 "            "
 msgstr ""
-"\nSe mostrará una lista con los usuarios que coinciden con tus peticiones y "
+"\n"
+"Se mostrará una lista con los usuarios que coinciden con tus peticiones y "
 "ofertas de invitación."
 
 #: templates/getstarted.html:63
@@ -724,7 +1081,9 @@ msgid ""
 "            Refine the search using the formulary on the left\n"
 "            side.\n"
 "            "
-msgstr "\nRefina la búsqueda usando el formulario en el lado izquierdo."
+msgstr ""
+"\n"
+"Refina la búsqueda usando el formulario en el lado izquierdo."
 
 #: templates/getstarted.html:69
 msgid ""
@@ -733,7 +1092,8 @@ msgid ""
 "            button and select de invites your interested in.\n"
 "            "
 msgstr ""
-"\nPara pedir o intercambiar invitaciones, haz click en el botón 'Trueque' y "
+"\n"
+"Para pedir o intercambiar invitaciones, haz click en el botón 'Trueque' y "
 "selecciona las invitaciones que te interesan."
 
 #: templates/getstarted.html:82
@@ -747,7 +1107,8 @@ msgid ""
 "            friends list and invites trades.\n"
 "            "
 msgstr ""
-"\nGestiona tus peticiones y ofertas de invitación, lista de socios e "
+"\n"
+"Gestiona tus peticiones y ofertas de invitación, lista de socios e "
 "intercambios de invitación."
 
 #: templates/getstarted.html:91
@@ -757,7 +1118,8 @@ msgid ""
 "            fiends know about your invite requests.\n"
 "            "
 msgstr ""
-"\nComparte tu perfil en otras redes sociales y haz que tus amigos se enteren "
+"\n"
+"Comparte tu perfil en otras redes sociales y haz que tus amigos se enteren "
 "de tus peticiones de invitación."
 
 #: templates/getstarted.html:97
@@ -768,7 +1130,8 @@ msgid ""
 "            them all with one!\n"
 "            "
 msgstr ""
-"\nTodos tus enlaces de referido son también visibles en tu perfil. Se acabó "
+"\n"
+"Todos tus enlaces de referido son también visibles en tu perfil. Se acabó "
 "compartir cada link por separado, ¡compártelos todos con un click!"
 
 #: templates/getstarted.html:114
@@ -778,8 +1141,9 @@ msgid ""
 "              Submit it yourself filling up a simple form.\n"
 "              "
 msgstr ""
-"\n¿No puedes encontrar el sitio que buscas en nuestra base de datos? Créalo "
-"tú mismo rellenando un simple formulario."
+"\n"
+"¿No puedes encontrar el sitio que buscas en nuestra base de datos? Créalo tú "
+"mismo rellenando un simple formulario."
 
 #: templates/getstarted.html:120
 msgid ""
@@ -788,7 +1152,8 @@ msgid ""
 "              that some information is wrong.\n"
 "              "
 msgstr ""
-"\nTambién puedes editar los sitios existentes si notas que alguna información "
+"\n"
+"También puedes editar los sitios existentes si notas que alguna información "
 "no es correcta."
 
 #: templates/index.html:41
@@ -801,25 +1166,25 @@ msgstr "Iniciar sesión"
 
 #: templates/index.html:60
 msgid "Trading"
-msgstr "Intercambios"
+msgstr "Intercambio"
 
 #: templates/index.html:73
 msgid "Notifications"
 msgstr "Notificaciones"
 
-#: templates/index.html:191
+#: templates/index.html:205
 msgid "This place uses"
-msgstr ""
+msgstr "Este sitio usa"
 
-#: templates/index.html:192
+#: templates/index.html:206
 msgid "cookies"
-msgstr ""
+msgstr "cookies"
 
-#: templates/index.html:193
+#: templates/index.html:207
 msgid "and no animals were harmed in the development process."
-msgstr ""
+msgstr "y ningún animal resultó herido en el proceso de desarrollo."
 
-#: templates/index.html:195
+#: templates/index.html:209
 msgid "Close"
 msgstr "Cerrar"
 
@@ -835,7 +1200,8 @@ msgid ""
 "    residing in:\n"
 "    "
 msgstr ""
-"\nEl dominio www.invimarket.com pertenece y es administrado por Moisés "
+"\n"
+"El dominio www.invimarket.com pertenece y es administrado por Moisés "
 "Hiraldo, residente en:"
 
 #: templates/legal.html:28
@@ -890,16 +1256,13 @@ msgstr ""
 "   Eso significa que puedes:\n"
 "    <br/><br/>\n"
 "\n"
-"    <b>Compartir</b> — copiar y redistribuir el material en cualquier medio o "
-"formato."
-"    <br/>\n"
+"    <b>Compartir</b> — copiar y redistribuir el material en cualquier medio "
+"o formato.    <br/>\n"
 "    <b>Adaptar</b> — mezclar, transformar y construir sobre el material para "
-"cualquier propósito,"
-"    incluso comercial.\n"
+"cualquier propósito,    incluso comercial.\n"
 "    <br/><br/>\n"
 "    El licenciante no puede revocar estas libertades siempre que cumplas los "
-"términos de la licencia:"
-"    <br/><br/>\n"
+"términos de la licencia:    <br/><br/>\n"
 "\n"
 "    <b>Atribución</b> — Debes dar el crédito apropiado, con un enlace a la "
 "licencia,\n"
@@ -1051,6 +1414,141 @@ msgid ""
 "  </ul>\n"
 "  "
 msgstr ""
+"\n"
+"  <h2>Términos y condiciones</h2>\n"
+"\n"
+"  <p>Estos términos de uso rigen tu uso de nuestro sitio. Por favor, lee "
+"estos términos "
+"en profundidad antes de usar esta web. Si no aceptas estos términos de uso, "
+"no uses este "
+"sitio, por favor. Tu uso continuado del mismo confirma tu aceptación de estos "
+"términos.</p>\n"
+"  <ul>\n"
+"  <li>\n"
+"  <h4>Acceso y uso del sitio web</h4>\n"
+"   No es necesario registrarse para usar algunas partes de este sitio. Sin "
+"embargo, muchas áreas "
+"son únicamente accesibles si te has registrado.<br/><br/>\n"
+"  Ese sitio será utilizado para tu uso privado y en acuerdo con estos "
+"términos de uso.\n"
+"  </li>\n"
+"\n"
+"  <li>\n"
+"  <h4>Actividad del sitio</h4>\n"
+"  Se toman todas las medidas razonables para asegurar que este sitio web está "
+"operativo durante "
+"todo el día, cada día. Sin embargo, problemas técnicos ocasionales pueden "
+"resultar en períodos de inactividad y por lo tanto no nos hacemos "
+"responsables si el sitio no se encuentra disponible en "
+"algún momento. Cuando sea posible, siempre trataremos de avisar sobre "
+"problemas de mantenimiento que puedan ocasionar períodos de inactividad de la "
+"web, pero no estaremos obligados a proveer dichos avisos."
+"  </li>\n"
+"\n"
+"  <li>\n"
+"  <h4>Visitor provided material</h4>\n"
+"  Any material that a visitor sends or posts to this website shall be "
+"considered\n"
+"  non-proprietary and non confidential. We shall be entitled to copy, "
+"disclose,\n"
+"  distribute or use for such other purpose as we deem appropriate all "
+"material\n"
+"  provided to us, with the exception of personal information, the use of "
+"which\n"
+"  is covered under our Privacy Policy.\n"
+"  <br/><br/>\n"
+"  Any site informaton provided using the edition page will be\n"
+"  licensed under a Creative Commons Attribution 4.0 International License.\n"
+"  When using the edition page or the trade proposal comments you shall not "
+"post any\n"
+"  material:\n"
+"    <ul>\n"
+"    <li>for which you have not obtained all necessary consents;</li>\n"
+"    <li>that is discriminatory, obscene, pornographic, defamatory, liable "
+"to\n"
+"    incite racial hatred, in breach of confidentiality or privacy, which "
+"may\n"
+"    cause annoyance or inconvenience to others, which encourages or "
+"constitutes\n"
+"    conduct that would be deemed a criminal offence, give rise to a civil\n"
+"    liability, or otherwise is contrary to the law in the United Kingdom;</"
+"li>\n"
+"    <li>which is harmful in nature including, and without limitation, "
+"computer\n"
+"    viruses, Trojan horses, corrupted data, or other potentially harmful\n"
+"    software or data.</li>\n"
+"    </ul>\n"
+"  </li>\n"
+"\n"
+"  <li>\n"
+"  <h4>Links to and from other websites</h4>\n"
+"  Throughout this website you can find links to third party websites. The\n"
+"  provision of a link to such a website does not mean that we endorse that\n"
+"  website.  If you visit any website via a link on this website you do so "
+"at\n"
+"  your own risk.<br/><br/>\n"
+"  Any party wishing to link to this website is entitled to do so provided "
+"that\n"
+"  the conditions below are observed:\n"
+"    <ul>\n"
+"    <li>you do not seek to imply that we are endorsing the services or "
+"products\n"
+"    of another party unless this has been agreed with us in writing;</li>\n"
+"    <li>you do not misrepresent your relationship with this website;</li>\n"
+"    <li>the website from which you link to this website does not contain\n"
+"    offensive or otherwise  controversial content or, content that "
+"infringes\n"
+"    any intellectual property rights or other rights of a third party.</li>\n"
+"    </ul>\n"
+"  </li>\n"
+"\n"
+"  <li>\n"
+"  <h4>Disclaimer</h4>\n"
+"  Whilst we do take all reasonable steps to make sure that the other sites "
+"information on\n"
+"  this website is up to date and accurate at all times we do not guarantee "
+"that\n"
+"  all material is accurate and, or up to date. All material contained on "
+"this\n"
+"  website is provided without any or warranty of any kind. You use the "
+"material\n"
+"  on this website at your own discretion.\n"
+"  </li>\n"
+"\n"
+"  <li>\n"
+"  <h4>Trading invites</h4>\n"
+"  When you accept a trade proposal or one of your trade proposals is "
+"accepted by\n"
+"  another user, you are required to send the invites to the email address\n"
+"  especified in the trade details within one week. Otherwise, you will "
+"receive\n"
+"  a warning and your account will be banned after three of them.<br/><br/>\n"
+"  Any attempt to fake an invites trade with the purpose of increasing the "
+"user\n"
+"  rating will be penalized as well.\n"
+"  </li>\n"
+"\n"
+"  <li>\n"
+"  <h4>Exclusion of liability</h4>\n"
+"  All the responsability for sending the invites lays on the users. We do "
+"not\n"
+"  accept liability neither for the breach of any trade proposal nor for\n"
+"  any loss or damage that you suffer as a result of using this website.\n"
+"  <br/><br/>\n"
+"  Nothing in these terms of use shall exclude or limit liability for death "
+"or\n"
+"  personal injury caused by negligence which cannot be excluded or under the "
+"law\n"
+"  of the United Kingdom.\n"
+"  </li>\n"
+"\n"
+"  <li>\n"
+"  <h4>Law and jurisdiction</h4>\n"
+"  These terms of use are governed by English law. Any dispute arising in\n"
+"  connection with these terms of use shall be subject to the exclusive\n"
+"  jurisdiction of the Courts of England and Wales.\n"
+"  </li>\n"
+"  </ul>\n"
 
 #: templates/legal.html:169
 msgid ""
@@ -1195,10 +1693,10 @@ msgid ""
 "        the invite/referral system of those sites.\n"
 "        "
 msgstr ""
-"\nEs una web donde puedes compartir y obtener invitaciones o enlaces de "
-"referido a otros sitios, así "
-"como información relativa al sistema de invitaciones/referidos de dichos "
-"sitios."
+"\n"
+"Es una web donde puedes compartir y obtener invitaciones o enlaces de "
+"referido a otros sitios, así como información relativa al sistema de "
+"invitaciones/referidos de dichos sitios."
 
 #: templates/login.html:45
 msgid "Don't have an account yet?"
@@ -1215,7 +1713,8 @@ msgid ""
 "          favourites sites.\n"
 "          "
 msgstr ""
-"\nPedir y ofrecer invitaciones o enlaces de referido a tus sitios favoritos."
+"\n"
+"Pedir y ofrecer invitaciones o enlaces de referido a tus sitios favoritos."
 
 #: templates/login.html:55
 msgid ""
@@ -1224,7 +1723,8 @@ msgid ""
 "          your invites.\n"
 "          "
 msgstr ""
-"\nEncontrar usuarios interesados en los mismos sitios y compartir o "
+"\n"
+"Encontrar usuarios interesados en los mismos sitios y compartir o "
 "intercambiar tus invitaciones."
 
 #: templates/login.html:61
@@ -1235,7 +1735,8 @@ msgid ""
 "          click.\n"
 "          "
 msgstr ""
-"\nToda tu información de usuario es almacenada en tu perfil. Comparte tus "
+"\n"
+"Toda tu información de usuario es almacenada en tu perfil. Comparte tus "
 "enlaces de referido con tus amigos en un solo click."
 
 #: templates/login.html:68
@@ -1244,7 +1745,9 @@ msgid ""
 "          Edit new sites and modify the information of the existing\n"
 "          ones.\n"
 "          "
-msgstr "\nEditar nuevos sitios y modificar la información de los existentes."
+msgstr ""
+"\n"
+"Editar nuevos sitios y modificar la información de los existentes."
 
 #: templates/market.html:12
 msgid "Popular sites"
@@ -1282,9 +1785,9 @@ msgid ""
 "    trades (only one per trade).\n"
 "    "
 msgstr ""
-"\nEl número total es el número de invitaciones que estarán disponibles para "
-"ser incluidas en "
-"intercambios (solo una por intercambio)."
+"\n"
+"El número total es el número de invitaciones que estarán disponibles para "
+"ser incluidas en intercambios (solo una por intercambio)."
 
 #: templates/offer.html:45
 msgid ""
@@ -1296,10 +1799,10 @@ msgid ""
 "    donate an invite).\n"
 "    "
 msgstr ""
-"\nLas que marques como 'para donar' pueden ser solicitadas por otros usuarios "
-"sin "
-"ofrecer ninguna invitación a cambio (recibirás más puntos de rating si donas "
-"una invitación)."
+"\n"
+"Las que marques como 'para donar' pueden ser solicitadas por otros usuarios "
+"sin ofrecer ninguna invitación a cambio (recibirás más puntos de rating si "
+"donas una invitación)."
 
 #: templates/partners.html:18
 msgid "Reject"
@@ -1324,7 +1827,8 @@ msgid ""
 "    password if you don't remember it.\n"
 "    "
 msgstr ""
-"\nRecibirás un email con tu nombre de usuario y un link para establecer una "
+"\n"
+"Recibirás un email con tu nombre de usuario y un link para establecer una "
 "nueva contraseña si no la recuerdas."
 
 #: templates/propose.html:36
@@ -1341,11 +1845,11 @@ msgstr "Donación disponible."
 
 #: templates/register.html:17
 msgid "I've read and accept the"
-msgstr ""
+msgstr "He leído y acepto los"
 
 #: templates/register.html:19
 msgid "terms and conditions of use"
-msgstr ""
+msgstr "términos y condiciones de uso"
 
 #: templates/register.html:24
 msgid ""
@@ -1355,9 +1859,9 @@ msgid ""
 "    The email must be unique as well.\n"
 "    "
 msgstr ""
-"\nEl usuario debe ser único y puede contener solo letras, números y los "
-"caracteres ./+/-/_.<br/> "
-"El email también debe ser único."
+"\n"
+"El usuario debe ser único y puede contener solo letras, números y los "
+"caracteres ./+/-/_.<br/> El email también debe ser único."
 
 #: templates/request.html:7
 msgid "Request to"
@@ -1379,23 +1883,19 @@ msgstr "Confirmación de cambio de contraseña"
 msgid "Invalid link."
 msgstr "Enlace inválido."
 
-#: templates/site.html:37
-msgid "Language"
-msgstr "Idioma"
-
-#: templates/site.html:38
-msgid "Active"
-msgstr "Activo"
-
 #: templates/site.html:46
 msgid "Domain"
 msgstr "Dominio"
 
-#: templates/site.html:54
+#: templates/site.html:48
+msgid "Validator"
+msgstr "Validador"
+
+#: templates/site.html:56
 msgid "No description available yet"
 msgstr "Descripción no disponible aún."
 
-#: templates/site.html:58
+#: templates/site.html:60
 msgid "Source:"
 msgstr "Fuente:"
 
@@ -1444,27 +1944,21 @@ msgstr "Modificar"
 msgid "Complain"
 msgstr "Reclamar"
 
-#: templates/trade.html:34
-#, python-format
+#: templates/trade.html:34 templates/trade.html.py:39
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "      Send the invites to the following email addres:\n"
+#| "      %(trade.proposer)s@invimarket.com\n"
+#| "      "
 msgid ""
 "\n"
 "      Send the invites to the following email addres:\n"
-"        %(trade.receptor)s@invimarket.com\n"
 "      "
 msgstr ""
-"\nEnvía las invitaciones a la siguiente dirección de correo electrónico: %"
-"(trade.receptor)s@invimarket.com"
-
-#: templates/trade.html:39
-#, python-format
-msgid ""
 "\n"
-"      Send the invites to the following email addres:\n"
-"      %(trade.proposer)s@invimarket.com\n"
-"      "
-msgstr ""
-"\nEnvía las invitaciones a la siguiente dirección de correo electrónico: %"
-"(trade.proposer)s@invimarket.com"
+"Envía las invitaciones a la siguiente dirección de correo electrónico: "
+"%(trade.proposer)s@invimarket.com"
 
 #: templates/trade.html:46
 msgid "No commments."
@@ -1482,7 +1976,17 @@ msgstr "Enviar"
 msgid "Status:"
 msgstr "Estado:"
 
-#: templates/trades.html:69
+#: templates/trades.html:71
+#| msgid "Received"
+msgid "Received warning"
+msgstr "Warning recibido"
+
+#: templates/trades.html:73
+#| msgid "Complaint"
+msgid "Pending complaint"
+msgstr "Reclamación pendiente"
+
+#: templates/trades.html:80
 msgid "Pending"
 msgstr "Pendiente"
 
@@ -1511,8 +2015,8 @@ msgid ""
 "The referral chain has been created, you can get the link on your profile "
 "page."
 msgstr ""
-"La cadena de referidos ha sido creada, puedes obtener el link en tu página de "
-"perfil."
+"La cadena de referidos ha sido creada, puedes obtener el link en tu página "
+"de perfil."
 
 #: urls.py:92
 msgid "Your trade proposal has been sended to the user."
@@ -1534,11 +2038,16 @@ msgstr "Tu reclamación ha sido enviada."
 msgid "The user is already your partner."
 msgstr "El usuario ya era tu socio."
 
-#: views/add_partner.py:39
+#: views/add_partner.py:37
+#| msgid "You have reached the maximum number of simultaneous offers."
+msgid "You have reached the maximum number of partners."
+msgstr "Has alcanzado el número máximo de socios."
+
+#: views/add_partner.py:41
 msgid "The user has been successfuly added to your partners list."
 msgstr "El usuario ha sido añadido a tu lista de socios."
 
-#: views/add_partner.py:67
+#: views/add_partner.py:69
 msgid "The partnership request has been sended to the user."
 msgstr "La petición de asociación ha sido enviada al usuario."
 
@@ -1577,6 +2086,14 @@ msgstr "La petición ha sido eliminada."
 #: views/del_request.py:38
 msgid "Some error has occurred. Reload and try again."
 msgstr "Ha ocurrido un error, vuelve a intentarlo."
+
+#: views/edition.py:29
+msgid ""
+"You have another edition pending for review. We will do itas soon as "
+"possible, thank you for your patience."
+msgstr ""
+"Tienes otra edición pendiente de ser revisada. Lo haremos tan pronto "
+"como sea posible, gracias por tu paciencia."
 
 #: views/join_chain.py:45
 msgid "Invalid password."
@@ -1642,15 +2159,15 @@ msgstr "Ya has pedido una invitación para ese sitio."
 msgid "You have reached the maximum number of simultaneous requests."
 msgstr "Has alcanzado el número máximo de peticiones simultáneas."
 
-#: views/sites.py:82
+#: views/sites.py:88
 msgid "The query is too long:"
 msgstr "La consulta es muy larga:"
 
-#: views/sites.py:86
+#: views/sites.py:92
 msgid "Showing results for"
 msgstr "Resultados para"
 
-#: views/sites.py:88
+#: views/sites.py:94
 msgid "No results matched the query"
 msgstr "Ningún resultado para la consulta."
 
@@ -1683,8 +2200,30 @@ msgstr "Tu usuario y contraseña no concuerdan. Inténtalo de nuevo."
 msgid "Username/email"
 msgstr "Usuario/email"
 
-#~ msgid "Change avatar"
-#~ msgstr "Cambiar avatar"
+#~ msgid ""
+#~ "\n"
+#~ "    The description field is not necessary and should only contain a "
+#~ "brief\n"
+#~ "    description of the site as well as information about the invite or\n"
+#~ "    referral system.</br>\n"
+#~ "    If you copy some information from an external site that allows it,\n"
+#~ "    insert the link in the source field.</br>\n"
+#~ "    Use the comments field for any additional comments to the admin.\n"
+#~ "    "
+#~ msgstr ""
+#~ "\n"
+#~ "El campo descripción no es obligatorio y debe contener sólo una breve "
+#~ "descipción del sitio así como información sobre el sistema de "
+#~ "invitaciones o referidos.</br> Si copias la información de una web "
+#~ "externa que lo permita, inserta el link en el campo fuente.</br> Usa el "
+#~ "campo comentarios para cualquier comentario adicional."
 
-#~ msgid "Receive email notifications"
-#~ msgstr "Recibir notificaciones por email"
+#~ msgid ""
+#~ "\n"
+#~ "      Send the invites to the following email addres:\n"
+#~ "        %(trade.receptor)s@invimarket.com\n"
+#~ "      "
+#~ msgstr ""
+#~ "\n"
+#~ "Envía las invitaciones a la siguiente dirección de correo electrónico: "
+#~ "%(trade.receptor)s@invimarket.com"

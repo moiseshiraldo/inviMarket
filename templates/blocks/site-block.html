@@ -2,7 +2,7 @@
 {% load i18n %}
 
 <section class="{{ class }}">
-  <a class="siteLink" href="{% url 'sites' site_name=site.name %}">
+  <a class="siteLink" href="{% url 'sites' site_name=site.name|urlencode %}">
     {% if site.logo %}
     <img class="siteLogo" src="{{site.logo.url}}" alt="{{ site }} logo"/>
     {% endif %}

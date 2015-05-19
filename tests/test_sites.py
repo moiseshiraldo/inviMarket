@@ -4,6 +4,7 @@ from django.test import Client
 from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
 from inviMarket.models import Profile, Website, Offer
+from django.core import mail
 
 class SearchTestCase(TestCase):
     def setUp(self):
@@ -259,3 +260,55 @@ class RequestTestCase(TestCase):
         # Print results
         print( ("Alice's link probability %f" % p_alice) )
         print( ("Bob's link probability %f" % p_bob) )
+
+class EditionTestCase(TestCase):
+    def setUp(self):
+        alice = User.objects.create_user(username='alice', password='qwerty')
+        Profile.objects.create(user=alice, lang='en')
+        Website.objects.create(name='Forum', url='http://www.forum.com',
+            webType='FO', category='MMD')
+        self.client = Client()
+
+    def test_edit(self):
+        """Test site edition"""
+        site = Website.objects.get(name='Forum')
+        alice = User.objects.get(username="alice")
+        self.client.post(reverse('login'), {'username': 'alice',
+            'password': 'qwerty'})
+        response = self.client.post(reverse('edition',
+            kwargs={'site_id': site.id}), {
+                'name': 'New Forum',
+                'url': 'http://www.forum.com',
+                'webType': 'FO',
+                'category': 'MMD',
+                'lang': 'en',
+                })
+
+        # Check that the response is a redirection.
+        self.assertEqual(response.status_code, 302)
+        # Check the edition was stored
+        self.assertTrue(alice.editions.filter(name='New Forum').exists())
+
+    def test_approved_edition(self):
+        """Test edition approval"""
+        site = Website.objects.get(name='Forum')
+        alice = User.objects.get(username="alice")
+        self.client.post(reverse('login'), {'username': 'alice',
+            'password': 'qwerty'})
+        self.client.post(reverse('edition',
+            kwargs={'site_id': site.id}), {
+                'name': 'New Forum',
+                'url': 'http://www.forum.com',
+                'webType': 'FO',
+                'category': 'MMD',
+                'lang': 'en',
+                })
+        edition = alice.editions.get(site=site)
+        edition.approved = True
+        edition.save()
+
+        # Check email notification has been sent.
+        self.assertEqual(len(mail.outbox), 1)
+        self.assertEqual(mail.outbox[0].subject, 'Approved edition')
+        # Check the receptor has received a notification.
+        self.assertTrue(alice.notification_set.filter(code=40).exists())

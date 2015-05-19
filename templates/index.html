@@ -92,8 +92,16 @@
             <img class="envelop"
                  src="{% static "images/out.svg" %}"
                  alt="Accepted trade"/>
+            {% elif notification.code == 40 %}
+            <img class="envelop"
+                 src="{% static "images/edition.png" %}"
+                 alt="Approved edition"/>
             {% endif %}
-            {% if notification.sender.profile.avatar %}
+            {% if not notification.sender %}
+            <img class="avatar"
+                 src="{% static "images/logo.svg" %}"
+                 alt="Avatar"/>
+            {% elif notification.sender.profile.avatar %}
             <img class="avatar"
                  src="{{notification.sender.profile.avatar.url}}"
                  alt="Avatar"/>
@@ -101,7 +109,13 @@
             <img class="avatar" src="{% static "images/user.svg" %}"
                  alt="Avatar"/>
             {% endif %}
-            <h3>{{ notification.sender.first_name }}</h3>
+            <h3>
+            {% if notification.sender %}
+              {{ notification.sender.first_name }}
+            {% else %}
+              Admin
+            {% endif %}
+            </h3>
             {{ notification.get_message }}
             <br/>
             <span class="date">

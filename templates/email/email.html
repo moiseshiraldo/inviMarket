@@ -1,4 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{% load i18n %}
 {% load staticfiles %}
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -35,7 +36,6 @@
           <tr>
             <td width="10%">&nbsp;</td>
             <td width="80%" align="left" valign="top">
-              <h3 font style="font-family: Arial, sans-serif;">Confirmation<h3>
               <font style="font-family: Verdana, Geneva, sans-serif; font-size:12px; font-weight: lighter; line-height: 18px;">
                 {% block main %}{% endblock %}
               </font>
@@ -56,13 +56,13 @@
         <table width="100%" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td width="13%" align="center">&nbsp;</td>
-            <td width="12%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><a href="https://{{ domain }}{% url 'config' %}" style="color:DodgerBlue; text-decoration:none"><strong>UNSUBSCRIBE </strong></a></font></td>
+            <td width="12%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><a href="https://{{ domain }}{% url 'config' %}" style="color:DodgerBlue; text-decoration:none"><strong>{% trans "UNSUBSCRIBE" %}</strong></a></font></td>
             <td width="2%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><strong>|</strong></font></td>
-            <td width="16%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><a href="https://{{ domain }}{% url 'legal' %}#privacy" style="color:DodgerBlue; text-decoration:none"><strong>PRIVACY POLICY </strong></a></font></td>
+            <td width="16%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><a href="https://{{ domain }}{% url 'legal' %}#privacy" style="color:DodgerBlue; text-decoration:none"><strong>{% trans "PRIVACY POLICY" %}</strong></a></font></td>
             <td width="2%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><strong>|</strong></font></td>
-            <td width="6%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><a href="https://{{ domain }}{% url 'faq' %}" style="color:DodgerBlue; text-decoration:none"><strong>FAQ </strong></a></font></td>
+            <td width="6%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><a href="https://{{ domain }}{% url 'faq' %}" style="color:DodgerBlue; text-decoration:none"><strong>{% trans "FAQ" %}</strong></a></font></td>
             <td width="2%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><strong>|</strong></font></td>
-            <td width="10%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><a href="https://{{ domain }}{% url 'legal' %}#contact" style="color:DodgerBlue; text-decoration:none"><strong>CONTACT </strong></a></font></td>
+            <td width="10%" align="center"><font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#010203; font-size:9px; text-transform:uppercase"><a href="https://{{ domain }}{% url 'legal' %}#contact" style="color:DodgerBlue; text-decoration:none"><strong>{% trans "CONTACT" %}</strong></a></font></td>
             <td width="12%">&nbsp;</td>
           </tr>
         </table>
@@ -74,9 +74,12 @@
     <tr bgcolor="E3E3E3">
       <td align="center">
         <font style="font-family:'Myriad Pro', Helvetica, Arial, sans-serif; color:#231f20; font-size:10px">
-          <strong>This notification has been sent to the email address associated with your inviMarket account.</br>
+          <strong>
+          {% blocktrans %}
+          This notification has been sent to the email address associated with your inviMarket account.</br>
           This email message was auto-generated. Please do not respond.</br>
-          <a href= "http://yourlink" style="color:#010203; text-decoration:none">Contact: admin@inviMarket.net</a></strong>
+          {% endblocktrans %}
+          <a href= "http://yourlink" style="color:#010203; text-decoration:none">{% trans "Contact" %}: admin@invimarket.com</a></strong>
         </font>
       </td>
     </tr>

@@ -29,6 +29,11 @@ LANG = (
     ('es', _('Spanish')),
     ('en', _('English')),
 )
+SITE_LANG = (
+    ('es', _('Spanish')),
+    ('en', _('English')),
+    ('multi', _('Multi-language')),
+)
 
 class Profile(models.Model):
     """
@@ -105,7 +110,9 @@ class Notification(models.Model):
     MESSAGE = {
         10: _('Trade proposal'),
         20: _('Partnership request'),
-        30: _('Proposal accepted')
+        30: _('Proposal accepted'),
+        40: _('Approved edition'),
+        50: _('Received complaint'),
     }
 
     def get_message(self):
@@ -125,27 +132,24 @@ class Website(models.Model):
     logo = models.ImageField(upload_to='sites/', null=True, blank=True)
     refvalidator = models.CharField(max_length=200, blank=True)
     email_domain = models.CharField(max_length=200, blank=True)
-    SITE_LANG = (
-        ('es', _('Spanish')),
-        ('en', _('English')),
-        ('multi', _('Multi-language')),
-    )
     lang = models.CharField(max_length=5, choices=SITE_LANG, blank=True)
     WTYPE = (
-        ('FO', _('Forum')),
-        ('TR', _('Tracker')),
-        ('DD', _('Direct Download')),
-        ('ST', _('Streaming')),
+        ('APP', _('Application')),
         ('CS', _('Cloud Service')),
+        ('DD', _('Direct Download')),
+        ('FO', _('Forum')),
         ('PTC', _('Paid-To-Click')),
-        ('P2P', _('Peer to peer'))
+        ('P2P', _('Peer to peer')),
+        ('ST', _('Streaming')),
+        ('TR', _('Tracker')),
     )
     webType = models.CharField(max_length=3, choices=WTYPE)
     CAT = (
+        ('EC', _('E-commerce')),
         ('GEN', _('Generic')),
         ('MMD', _('Multimedia')),
-        ('COM', _('E-commerce')),
         ('RE', _('Referral')),
+        ('TEL', _('Telecommunications')),
     )
     category = models.CharField(max_length=3, choices=CAT)
     popularity = models.PositiveSmallIntegerField(default=0)
@@ -159,7 +163,7 @@ class Website(models.Model):
     def get_type(self):
         return dict(self.WTYPE)[self.webType]
     def get_lang(self):
-        return dict(self.SITE_LANG)[self.lang]
+        return dict(SITE_LANG)[self.lang]
     def __unicode__(self):
         return self.name
 
@@ -186,9 +190,11 @@ class SiteEdition(models.Model):
     date = models.DateField(auto_now_add=True)
     name = models.CharField(max_length=20)
     url = models.URLField()
+    refvalidator = models.CharField(max_length=200, blank=True)
+    email_domain = models.CharField(max_length=200, blank=True)
     description = models.TextField(max_length=5000, blank=True)
     source = models.URLField(blank=True, null=True)
-    lang = models.CharField(max_length=5, choices=LANG)
+    lang = models.CharField(max_length=5, choices=SITE_LANG)
     webType = models.CharField(max_length=3, choices=Website.WTYPE)
     category = models.CharField(max_length=3, choices=Website.CAT)
     active = models.BooleanField(default=True)

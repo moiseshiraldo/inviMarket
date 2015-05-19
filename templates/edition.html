@@ -4,21 +4,34 @@
 
 <main id="edition">
   <h1>{% trans "Site edition" %}</h1>
+  {% if site_id%}
+  <form action="{% url 'edition' site_id=site_id %}"
+  {% else %}
   <form action="{% url 'edition' %}"
+  {% endif %}
         class="form inline-block indented-block" method="post">{% csrf_token %}
+    {% if error %}
+    <p>{{ error }}</p>
+    {% else %}
     <ul>
         {{ edit_form.as_ul }}
         <li><input class="float-input" type="submit" value="Send" /></li>
     </ul>
+    {% endif %}
   </form>
   <div class="help">
     {% blocktrans %}
-    The description field is not necessary and should only contain a brief
+    <p>The 'description' field should only contain a brief
     description of the site as well as information about the invite or
-    referral system.</br>
-    If you copy some information from an external site that allows it,
-    insert the link in the source field.</br>
-    Use the comments field for any additional comments to the admin.
+    referral system. If you copy some information from an external site that allows it,
+    insert the link in the 'source' field.</p>
+    <p>The 'referral validator' field is only applicable to referral sites, and should
+    contain a Python regular expression matching any referral link to the site
+    (leave it blank if you are not familiar with regular expressions).</p>
+    <p>The 'mail domain' field is the domain of the address on the MAIL FROM SMTP
+    command (inserted as the 'Return-Path' mail header, not to be confused
+    with the 'From' header).</p>
+    <p>Use the comments field for any additional comments to the admin.</p>
     {% endblocktrans %}
   </div>
 </main>

@@ -1,0 +1,8 @@
+{% load i18n %}
+{% blocktrans %}
+Hello {{ name }},
+
+Your edition proposal has been approved. Click
+the following link to check the site page:
+{% endblocktrans %}
+https://{{ domain }}{% url 'sites' site_name=site_name %}  

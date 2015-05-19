@@ -13,7 +13,7 @@
     {% for request in requests %}
     {% if trade or u == user or not request.website.protected or u in myPartners and user in hisPartners %}
     <li>
-      <a class="siteLink" href="{% url 'sites' site_name=request.website.name %}">
+      <a class="siteLink" href="{% url 'sites' site_name=request.website.name|urlencode %}">
         <img alt="Logo" class="siteLogo" src="{{request.website.logo.url}}"/>
       </a>
       <span>{{ request.website }}</span>
@@ -35,7 +35,7 @@
     {% for offer in offers %}
     {% if trade or u == user or not offer.website.protected or u in myPartners and user in hisPartners %}
     <li>
-      <a class="siteLink" href="{% url 'sites' site_name=offer.website.name %}">
+      <a class="siteLink" href="{% url 'sites' site_name=offer.website.name|urlencode %}">
         <img alt="Logo" class="siteLogo" src="{{offer.website.logo.url}}"/>
       </a>
       <span>{{ offer.website }}</span>
@@ -56,7 +56,7 @@
   <ul>
     {% for offer in links %}
     <li>
-      <a class="siteLink" href="{% url 'sites' site_name=offer.website.name %}">
+      <a class="siteLink" href="{% url 'sites' site_name=offer.website.name|urlencode %}">
         <img alt="Logo" class="siteLogo" src="{{offer.website.logo.url}}"/>
       </a>
       <span>{{ offer.website }}</span>

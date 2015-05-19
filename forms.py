@@ -46,9 +46,7 @@ class RegisterForm(UserCreationForm):
             except User.DoesNotExist:
                 return username
             raise forms.ValidationError(
-                self.error_messages['duplicate_username'],
-                code='duplicate_username',
-            )
+                _('A user with that username already exists.'))
 
     def clean_email(self):
         # Checks that the email is not duplicate
@@ -204,8 +202,22 @@ class EditionForm(forms.ModelForm):
 
     class Meta:
         model = SiteEdition
-        fields = ("name", "url", "description", "source", "lang", "webType",
-                  "category", "active", "comments")
+        fields = ("name", "url", "refvalidator", "email_domain", "description",
+                  "source", "lang", "webType", "category", "active", "comments")
+        labels = {
+            'name': _('Name') + '*',
+            'url': 'URL' + '*',
+            'refvalidator': _('Referral validator'),
+            'email_domain': _('Mail domain'),
+            'description': _('Description'),
+            'source': _('Source'),
+            'lang': _('Language') + '*',
+            'webType': _('Type') + '*',
+            'category': _('Category') + '*',
+            'active': _('Active'),
+            'comments': _('Comments'),
+        }
+
 
 class ConfigForm(forms.ModelForm):
     """

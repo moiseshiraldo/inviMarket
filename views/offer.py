@@ -124,7 +124,7 @@ def offer(request, site_id):
             o = user.offer_set.get(website=site)
             offer_form = OfferForm(instance=o)
         else:
-            offer_form = OfferForm()
+            offer_form = OfferForm(initial={'number': 1, 'to_donate': 0})
         if site.category == 'RE':
             offer_form.fields['number'].widget = forms.HiddenInput()
             offer_form.fields['to_donate'].widget = forms.HiddenInput()

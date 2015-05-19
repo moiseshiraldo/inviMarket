@@ -21,14 +21,14 @@
     </h3>
     {{ config_form.avatar }}
     <ul>
-      <li><label>Language:</label> {{ config_form.lang }}</li>
-      <li><label>Receive email notifications:</label> {{ config_form.notify }}</li>
-      <li><input type="submit" value="Save" /></li>
+      <li><label>{% trans "Language:" %}</label> {{ config_form.lang }}</li>
+      <li><label>{% trans "Receive email notifications:" %}</label> {{ config_form.notify }}</li>
+      <li><input type="submit" value="{% trans "Save" %}" /></li>
     </ul>
     {% endif %}
     <span>
-      <a href="{% url 'password_change'%}">Change password</a> |
-      <a href="{% url 'del_profile'%}">Delete account</a>
+      <a href="{% url 'password_change'%}">{% trans "Change password" %}</a> |
+      <a href="{% url 'del_profile'%}">{% trans "Delete account" %}</a>
     </span>
   </form>
 </main>

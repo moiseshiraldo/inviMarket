@@ -44,6 +44,8 @@
         </dd>
         {% if site.email_domain %}
         <dt>{% trans "Domain" %}</dt><dd><i>@{{ site.email_domain }}</i></dd>
+        {% else %}
+        <dt>{% trans "Validator" %}</dt><dd><i>{{ site.refvalidator }}</i></dd>
         {% endif %}
       </dl>
     </aside>

@@ -63,7 +63,7 @@ urlpatterns = patterns('',
     url(r'^profile(?:/(?P<user_id>\d+))?/$', views.profile, name='profile'),
     url(r'^sites/edition(?:/(?P<site_id>\d+))?/$', views.edition,
         name='edition'),
-    url(r'^sites(?:/(?P<site_name>[0-9A-Za-z_\.]+))?/$', views.sites,
+    url(r'^sites(?:/(?P<site_name>[0-9A-Za-z_\.%]+))?/$', views.sites,
         name='sites'),
     url(r'^sites/edition/submitted/$', views.MessageView.as_view(
         message=_("Your edition have been submitted and will be reviewed by "
@@ -111,5 +111,5 @@ urlpatterns = patterns('',
         name='complaint'),
     url(r'^profile/trade/complaint/submitted/$', views.MessageView.as_view(
         message = _("Your complaint has been submitted.")
-        ), name='complaintsubmitted'),
+        ), name='complaint_submitted'),
 )

@@ -4,6 +4,8 @@ from inviMarket.forms import EditionForm
 from inviMarket.models import Website
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.decorators import login_required
+from django import forms
+from django.utils.translation import ugettext as _
 
 @login_required
 def edition(request, site_id=None):
@@ -21,10 +23,14 @@ def edition(request, site_id=None):
     :template:`inviMarket/edition.html`
 
     """
-    if request.method == 'POST':
+    user = request.user
+    error = None
+    if user.editions.filter(approved=False).exists():
+        error = _("You have another edition pending for review. We will do it"
+                  "as soon as possible, thank you for your patience.")
+    elif request.method == 'POST':
         edit_form = EditionForm(request.POST)
         if edit_form.is_valid():
-            user = request.user
             edition = edit_form.save(commit=False)
             edition.user = user
             if site_id:
@@ -42,11 +48,21 @@ def edition(request, site_id=None):
                 description = None
             edit_form = EditionForm(initial={'name': site.name,
                                              'url': site.url,
+                                             'refvalidator': site.refvalidator,
+                                             'email_domain': site.email_domain,
                                              'description': description,
                                              'webType': site.webType,
                                              'lang': request.LANGUAGE_CODE,
                                              'category': site.category,
                                              })
+            if site.category == 'RE':
+                edit_form.fields['email_domain'].widget = forms.HiddenInput()
+            else:
+                edit_form.fields['refvalidator'].widget = forms.HiddenInput()
         else:
             edit_form = EditionForm()
-    return render(request, 'edition.html', {'edit_form': edit_form})
+    return render(request, 'edition.html', {
+        'edit_form': edit_form,
+        'site_id': site_id,
+        'error': error,
+        })

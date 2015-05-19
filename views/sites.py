@@ -5,10 +5,13 @@ from inviMarket.models import Website
 from django.db.models import Q
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.core.exceptions import ObjectDoesNotExist
+from django.core.urlresolvers import reverse
+from django.conf import settings
+import urllib
 from django.utils.translation import ugettext as _
-from inviMarket.decorators import cache_on_auth
+#from inviMarket.decorators import cache_on_auth
 
-@cache_on_auth(60 * 60)
+#@cache_on_auth(60 * 60)
 def sites(request, site_name=None):
     """
     Display the forms for searching :model:`inviMarket.Website` and the results.
@@ -34,7 +37,10 @@ def sites(request, site_name=None):
     """
     if site_name:
         # Requesting a specific site page
-        site = get_object_or_404(Website, name=site_name)
+        site = get_object_or_404(Website, name=urllib.unquote(site_name))
+        url = ('https://' + settings.DOMAIN +
+               reverse('sites', kwargs={'site_name': site.name }))
+        request.user.notification_set.filter(url=url).delete()
         lang = request.LANGUAGE_CODE
         try:
             # Get description in the user language

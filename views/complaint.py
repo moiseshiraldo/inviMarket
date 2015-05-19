@@ -44,11 +44,16 @@ def complaint(request, trade_id):
         form = CommentsForm(request.POST)
         if form.is_valid():
             comments = form.cleaned_data['comments']
-            complaint = Trade(user=user, trade=trade, comments=comments)
+            if user == trade.receptor:
+                receptor = trade.proposer
+            else:
+                receptor = trade.receptor
+            complaint = Complaint(user=user, trade=trade,
+                receptor=receptor, comments=comments)
             complaint.save()
             # Store a copy of the emails received by the user in the database
             dirname = settings.MAILDIR + user.username
-            mbox = mailbox.Maildir(dirname, factory=None, create=None)
+            mbox = mailbox.Maildir(dirname, factory=None)
             for message in mbox:
                 for part in message.walk():
                     if part.get_content_type() == 'text/plain':
@@ -60,7 +65,7 @@ def complaint(request, trade_id):
                 email = Email(complaint=complaint, from_address=message['from'],
                               subject=message['subject'], text=text)
                 email.save()
-            return redirect('complaint_submited')
+            return redirect('complaint_submitted')
     else:
         form = CommentsForm()
     return render(request, 'complaint.html', {

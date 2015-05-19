@@ -261,7 +261,7 @@ class ProposeTestCase(TestCase):
             "maximum number of pending proposals.")
 
     def test_send_proposal(self):
-        """Request a unavailable donation"""
+        """Test trade proposal"""
         alice = User.objects.get(username='alice')
         bob = User.objects.get(username='bob')
         alice.profile.partners.add(bob)
@@ -290,7 +290,7 @@ class ProposeTestCase(TestCase):
             alice.proposed_trades.get(receptor=bob).offers.count(), 1)
 
     def test_reject_proposal(self):
-        """Request a unavailable donation"""
+        """Rejecting proposal test"""
         alice = User.objects.get(username='alice')
         bob = User.objects.get(username='bob')
         alice.profile.partners.add(bob)
@@ -317,7 +317,7 @@ class ProposeTestCase(TestCase):
         self.assertFalse(bob.notification_set.filter(sender=alice).exists())
 
     def test_accept_proposal(self):
-        """Request a unavailable donation"""
+        """Accepting proposal test"""
         alice = User.objects.get(username='alice')
         bob = User.objects.get(username='bob')
         alice.profile.partners.add(bob)
@@ -335,7 +335,7 @@ class ProposeTestCase(TestCase):
             'password': 'qwerty'})
         trade = alice.proposed_trades.get(receptor=bob)
         response = self.client.post(reverse('trade',
-            kwargs={'trade_id': trade.id}), {'Accept_proposal': 'Reject'})
+            kwargs={'trade_id': trade.id}), {'Accept_proposal': 'Accept'})
 
         # Check that the response is a redirection.
         self.assertEqual(response.status_code, 302)
@@ -368,6 +368,42 @@ class ProposeTestCase(TestCase):
         # Check that the trade has been deleted
         self.assertFalse (alice.proposed_trades.exists())
         self.assertFalse(bob.notification_set.filter(sender=alice).exists())
+
+    def test_accepted_complaint(self):
+        """Complaint making test"""
+        alice = User.objects.get(username='alice')
+        bob = User.objects.get(username='bob')
+        alice.profile.partners.add(bob)
+        bob.profile.partners.add(alice)
+        tracker = Website.objects.get(name='Tracker')
+        forum = Website.objects.get(name='Forum')
+        self.client.post(reverse('login'), {'username': 'alice',
+          'password': 'qwerty'})
+        self.client.post(reverse('propose', kwargs={'receptor_id': bob.id}), {
+            'request-sites': [str(tracker.id)],
+            'offer-sites': [str(forum.id)]
+            })
+        self.client.logout()
+        self.client.post(reverse('login'), {'username': 'bob',
+            'password': 'qwerty'})
+        trade = alice.proposed_trades.get(receptor=bob)
+        self.client.post(reverse('trade',
+            kwargs={'trade_id': trade.id}), {'Accept_proposal': 'Accept'})
+        date = timezone.now() - datetime.timedelta(settings.SENDING_DEADLINE+1)
+        alice.proposed_trades.filter(receptor=bob).update(date=date)
+        response = self.client.post(reverse('complaint',
+            kwargs={'trade_id': trade.id}))
+        complaint = bob.complaint_set.get(receptor=alice)
+        complaint.accepted = True
+        complaint.save()
+
+        # Check that the response is a redirection.
+        self.assertEqual(response.status_code, 302)
+        # Check that the email has been sent.
+        self.assertEqual(len(mail.outbox), 3)
+        self.assertEqual(mail.outbox[2].subject, 'Received warning')
+        # Check the receptor has received a notification
+        self.assertTrue(alice.notification_set.filter(code=50).exists())
 
 class ChainTestCase(TestCase):
     def setUp(self):
@@ -426,7 +462,7 @@ class ChainTestCase(TestCase):
         self.assertEqual(response.context['error'], "Invalid password.")
 
     def test_join_chain(self):
-        """Join chain with a wrong password"""
+        """Joining chain test"""
         alice = User.objects.get(username='alice')
         bob = User.objects.get(username='bob')
         refsite = Website.objects.get(name='Refsite')

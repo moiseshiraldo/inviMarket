@@ -33,13 +33,13 @@
       {% if trade.accepted == True and trade.proposer.id == user.id %}
       {% blocktrans %}
       Send the invites to the following email addres:
-        {{ trade.receptor }}@invimarket.com
       {% endblocktrans %}
+        {{ trade.receptor }}@invimarket.com
       {% elif trade.accepted == True and trade.receptor.id == user.id %}
       {% blocktrans %}
       Send the invites to the following email addres:
-      {{ trade.proposer }}@invimarket.com
       {% endblocktrans %}
+      {{ trade.proposer }}@invimarket.com
       {% elif trade.comments %}
       {{ trade.comments }}
       {% else %}

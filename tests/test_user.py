@@ -147,7 +147,7 @@ class LoginTestCase(TestCase):
 
         # Check that the response is a redirection
         self.assertEqual(response.status_code, 302)
-        self.assertEqual(self.client.session['_auth_user_id'], alice.pk)
+        self.assertEqual(self.client.session['_auth_user_id'], str(alice.pk))
 
     def test_email_login(self):
         """Successful login with email"""
@@ -157,7 +157,7 @@ class LoginTestCase(TestCase):
 
         # Check that the response is a redirection
         self.assertEqual(response.status_code, 302)
-        self.assertEqual(self.client.session['_auth_user_id'], alice.pk)
+        self.assertEqual(self.client.session['_auth_user_id'], str(alice.pk))
 
 
 class PartnerTestCase(TestCase):

@@ -40,10 +40,17 @@ class WebsiteAdmin(admin.ModelAdmin):
 class ChainAdmin(admin.ModelAdmin):
     inlines = (LinkInline,)
 
+class EmailInline(admin.TabularInline):
+    model = Email
+    verbose_name_plurals = 'Emails'
+
+class ComplaintAdmin(admin.ModelAdmin):
+    inlines = (EmailInline,)
+
 admin.site.unregister(User)
 admin.site.register(User, UserAdmin)
 admin.site.register(Website, WebsiteAdmin)
 admin.site.register(Chain, ChainAdmin)
 admin.site.register(SiteEdition)
 admin.site.register(Trade)
-admin.site.register(Complaint)
+admin.site.register(Complaint, ComplaintAdmin)

@@ -63,10 +63,22 @@
       <ul class="profile">
         <li>
           <span>{% trans "Status:" %} </span>
+          {% if trade.complaint_set.all %}
+          {% for complaint in trade.complaint_set.all %}
+          {% if complaint.receptor == user and complaint.accepted == False %}
+          <span class="medium">{% trans "Received complaint" %}</span>
+          {% elif complaint.receptor == user and complaint.accepted == True %}
+          <span class="low">{% trans "Received warning" %}</span>
+          {% else %}
+          <span class="medium">{% trans "Pending complaint" %}</span>
+          {% endif %}
+          {% endfor %}
+          {% else %}
           {% if trade.accepted == True %}
           {% trans "Accepted" %}
           {% else %}
           {% trans "Pending" %}
+          {% endif %}
           {% endif %}
         </li>
         <li><span>Date:</span> {{ trade.date|date:"d-M-Y" }}</li>
