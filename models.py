@@ -126,12 +126,12 @@ class Website(models.Model):
     Stores a website and its basic information.
 
     """
-    name = models.CharField(max_length=20)
+    name = models.CharField(max_length=20, unique=True, db_index=True)
     author = models.ForeignKey(User, blank=True, null=True)
     url = models.URLField()
     logo = models.ImageField(upload_to='sites/', null=True, blank=True)
     refvalidator = models.CharField(max_length=200, blank=True)
-    email_domain = models.CharField(max_length=200, blank=True)
+    email_domain = models.CharField(max_length=200, blank=True, db_index=True)
     lang = models.CharField(max_length=5, choices=SITE_LANG, blank=True)
     WTYPE = (
         ('APP', _('Application')),

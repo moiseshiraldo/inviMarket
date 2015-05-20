@@ -21,3 +21,4 @@ from config import config
 from del_profile import del_profile
 from complaint import complaint
 from message import MessageView
+from sitemaps import StaticViewSitemap, WebsiteSitemap

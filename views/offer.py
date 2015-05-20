@@ -78,8 +78,11 @@ def offer(request, site_id):
                 number = offer_form.cleaned_data['number']
                 to_donate = offer_form.cleaned_data['to_donate']
                 total_offers = user.offer_set.exclude(number=0).count()
+                if not site.email_domain:
+                    error = _("The 'mail domain' information is not available"
+                              "yet for this site.")
                 # Check if modifying an existing offer
-                if user.offer_set.filter(website=site).exists():
+                elif user.offer_set.filter(website=site).exists():
                     o = user.offer_set.get(website=site)
                     # Lock the user to minimize concurrency problems
                     if user.profile.lock_perm():

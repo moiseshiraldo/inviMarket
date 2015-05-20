@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /profile/*
+Disallow: /register/confirm/*
+Disallow: /sites/edition/*
+Disallow: /request/*
+Disallow: /offer/*
+Disallow: /chain/*
+Disallow: /propose/*
+Disallow: /csrf_error/
+Sitemap: https://www.invimarket.com/sitemap.xml
+
+User-agent: Mediapartners-Google
+Disallow:

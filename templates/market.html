@@ -29,7 +29,7 @@
           <img class="envelop" src="{% static "images/out.svg" %}"
                alt="Offer"/>
           <a class="siteLink"
-             href="{% url 'sites' site_name=offer.website.name %}">
+             href="{% url 'sites' site_name=offer.website.name|urlencode %}">
             <img class="siteLogo" src="{{offer.website.logo.url}}"
                  alt="{{ ofer.website }} logo"/>
           </a>
@@ -62,7 +62,7 @@
           <img class="envelop" src="{% static "images/in.svg" %}"
                alt="Request"/>
           <a class="siteLink"
-             href="{% url 'sites' site_name=request.website.name %}">
+             href="{% url 'sites' site_name=request.website.name|urlencode %}">
             <img class="siteLogo" src="{{request.website.logo.url}}"
                  alt="{{ site }} logo"/>
           </a>

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render, redirect
 from inviMarket.models import Website, Offer, Request
-from django.db.models import Q
+from django.core.cache import cache
 
 def index(request):
     """
@@ -21,9 +21,6 @@ def index(request):
     ``requests``
       An object array containing five random requests.
 
-    ``recent_sites``
-      Recently viewed sites.
-
     **Template:**
 
     :template:`inviMarket/market.html`
@@ -36,23 +33,28 @@ def index(request):
         request.session['first_visit'] = 'False'
         return redirect('getstarted')
     lang = request.LANGUAGE_CODE
+    cached = cache.get_many(['popular', 'offers', 'new', 'requests'])
     # Get most popular sites and filter by the user language
-    popular = Website.objects.filter(lang__in=('multi', lang, )).order_by(
-        '-popularity')[:5]
-    offers = Offer.objects.exclude(number=0).order_by('?')[:5]
-    new = Website.objects.filter(lang__in=('multi', lang, ))[:5]
-    requests = Request.objects.filter(traded=False).order_by('?')
-    # Get recentyly viewed sites
-    recently_viewed = request.session.get('recently_viewed', list())
-    if len(recently_viewed) > 0:
-        recent_sites = Website.objects.filter(reduce(lambda x, y: x | y,
-            [Q(pk=site_id) for site_id in recently_viewed]))
-    else:
-        recent_sites = None
+    popular_sites = cached.get('popular')
+    if not popular_sites:
+        popular_sites = Website.objects.filter(
+            lang__in=('multi', lang, )).order_by('-popularity')[:5]
+        cache.set('popular', popular_sites, 60*60)
+    recent_offers = cached.get('offers')
+    if not recent_offers:
+        recent_offers = Offer.objects.exclude(number=0).order_by('?')[:5]
+        cache.set('offers', recent_offers, 60*60)
+    new_sites = cached.get('new')
+    if not new_sites:
+        new_sites = Website.objects.filter(lang__in=('multi', lang, ))[:5]
+        cache.set('new', new_sites, 60*60)
+    recent_requests = cached.get('recent_requests')
+    if not recent_requests:
+        recent_requests = Request.objects.filter(traded=False).order_by('?')
+        cache.set('requests', recent_requests, 60*60)
     return render(request, 'market.html', {
-        'popular': popular,
-        'offers': offers,
-        'new': new,
-        'requests': requests,
-        'recent_sites': recent_sites,
+        'popular': popular_sites,
+        'offers': recent_offers,
+        'new': new_sites,
+        'requests': recent_requests,
         })

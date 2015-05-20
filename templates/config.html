@@ -25,11 +25,11 @@
       <li><label>{% trans "Receive email notifications:" %}</label> {{ config_form.notify }}</li>
       <li><input type="submit" value="{% trans "Save" %}" /></li>
     </ul>
-    {% endif %}
     <span>
       <a href="{% url 'password_change'%}">{% trans "Change password" %}</a> |
       <a href="{% url 'del_profile'%}">{% trans "Delete account" %}</a>
     </span>
+    {% endif %}
   </form>
 </main>
 {% endblock %}

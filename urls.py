@@ -4,7 +4,12 @@ from django.contrib.auth import views as auth_views
 from django.views.generic import TemplateView
 from django.utils.translation import ugettext as _
 from inviMarket.decorators import cache_on_auth
+from django.contrib.sitemaps.views import sitemap
 
+sitemaps = {
+    'static': views.StaticViewSitemap,
+    'sites': views.WebsiteSitemap,
+}
 
 urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
@@ -39,24 +44,24 @@ urlpatterns = patterns('',
         {'template_name': 'message.html',
         'extra_context': {'message': "Your password has been changed."}},
         name='password_change_done'),
-    url(r'^password/reset/$', auth_views.password_reset, {
+    url(r'^profile/password/reset/$', auth_views.password_reset, {
         'template_name': 'password_reset.html',
         'post_reset_redirect': 'reset_sent',
         'email_template_name': 'email/password_reset.txt',
         'html_email_template_name': 'email/password_reset.html'
         }, name='password_reset'),
-    url(r'^password/reset/sent/$', auth_views.password_reset_done, {
+    url(r'^profile/password/reset/sent/$', auth_views.password_reset_done, {
         'template_name': 'message.html',
         'extra_context': {'message': "The password reset link have been sended "
           "to your email address"}
         }, name='reset_sent'),
-    url(r'^password/reset/(?P<uidb64>[0-9A-Za-z_\-]+)/'
+    url(r'^profile/password/reset/(?P<uidb64>[0-9A-Za-z_\-]+)/'
         '(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
         auth_views.password_reset_confirm, {
           'template_name': 'reset_confirm.html',
           'post_reset_redirect': 'reset_done',
         }, name='reset_confirm'),
-    url(r'^password/reset/done/$', auth_views.password_reset_complete, {
+    url(r'^profile/password/reset/done/$', auth_views.password_reset_complete, {
         'template_name': 'reset_done.html',
         'extra_context': {'message': "Your password has been changed."}
         }, name='reset_done'),
@@ -112,4 +117,6 @@ urlpatterns = patterns('',
     url(r'^profile/trade/complaint/submitted/$', views.MessageView.as_view(
         message = _("Your complaint has been submitted.")
         ), name='complaint_submitted'),
+    url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
+        name='django.contrib.sitemaps.views.sitemap')
 )

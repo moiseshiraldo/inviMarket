@@ -6,7 +6,7 @@
 <main id="offer">
 
   <h1>{% trans "Offer to" %} {{ site }}
-    <a class="siteLink" href="{% url 'sites' site_name=site.name %}">
+    <a class="siteLink" href="{% url 'sites' site_name=site.name|urlencode %}">
       {% if site.logo %}
       <img class="siteLogo" src="{{site.logo.url}}"/>
       {% endif %}
