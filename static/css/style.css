@@ -22,6 +22,7 @@ header {
   height: 6em;
 }
 header[class="header404"] { top: 4em }
+header[class="header500"] { top: 8em }
 
 nav {
   display: block;
@@ -49,10 +50,13 @@ main {
   margin: 7.5em 0 0;
   padding: 2em 0;
 }
-main[id="404"] {
-  margin-top: 12em;
+main[id="404"] { margin-top: 12em }
+main[id="500"] { margin-top: 16em }
+
+main[id="sites"] {
+  min-height: 45em;
 }
-#sites {
+main[id="market"], main[id="trading"], main[id="trades"] {
   min-height: 40em;
 }
 
@@ -85,11 +89,6 @@ footer {
   background-color: #E3E3E3;
   padding-top: 1em;
 }
-
-main[class="404"] {
-  background-color: DodgerBlue;
-}
-
 
 
 /* -----------------------------------*/
@@ -275,7 +274,7 @@ nav form input, .profile, .help, .infobox dl, .source, footer { font-size: 0.8em
 }
 
 .site .info, .slider .info {
-  font-size: 0.9em;
+  font-size: 0.8em;
   text-align: right;
   color: DimGray;
 }
@@ -390,7 +389,6 @@ footer p {
 article p { margin: 0 0 1em 0 }
 
 .trade-filter { width: 14em }
-#trades .filter form { top: 15em }
 
 .searchInfo {
   margin: 0 0 1em 0em;
@@ -493,7 +491,7 @@ article p { margin: 0 0 1em 0 }
   width: 100%;
   padding: 0.2em 0 0 0;
   background-color: DimGray;
-  margin: 2em 0 0 0;
+  margin: 4em 0 0 0;
 }
 
   .recently-viewed .site {
@@ -734,8 +732,10 @@ footer hr {
   padding: 0;
 }
 
+.slider .info { margin-top: 3.5em }
+
   .site .info li, .slider .info li {
-    margin-right: 1.9em;
+    margin-left: 6%;
     display: inline;
   }
 
@@ -949,6 +949,12 @@ nav form {
 
 .form input { width: 14em }
 .form textarea { width: 25em }
+.form input[name="avatar"] {
+  width: 20em;
+  padding: 0em;
+  display: block;
+  margin: 0 0 2em 3.9em;
+}
 
   .form input:focus, .form textarea:focus {
     border-color: DodgerBlue;
@@ -1102,17 +1108,18 @@ h1 .siteLogo {
   margin: 3.5em 0 0 3.5em;
 }
 
+.site .siteLogo, .slider .siteLogo {
+  width: 4em;
+  float: left;
+  margin-right: 1em;
+}
+
 .tradeSlider .siteLogo {
   position: relative;
   top: -2.5em;
   left: 6em;
   width: 2em;
   margin: 0;
-}
-
-.site .siteLogo, .slider .siteLogo {
-  float: left;
-  margin-right: 1em;
 }
 
 .lock { width: 1em }
@@ -1127,6 +1134,7 @@ h1 .siteLogo {
 .notifications .avatar {
   float: left;
   width: 4em;
+  max-height: 5em;
   margin: 0 0.5em 0 1em;
   border-radius: 0.2em;
 }
@@ -1499,6 +1507,17 @@ footer a:hover { text-decoration: underline }
     font-size: 2.5em;
   }
 
+  .title404 {
+    font-size: 4em;
+    margin-left: 5em;
+  }
+
+  .title500 {
+    font-size: 3.5em;
+    margin-left: 2em;
+  }
+
+
   #legal section { margin: 0 10em 4em 4em }
 
   #FAQ ul { margin: 0 10em 0 2em }
@@ -1506,6 +1525,10 @@ footer a:hover { text-decoration: underline }
 }
 
 @media only screen and (min-width : 960px) and (max-width : 1279px) {
+
+  .title404 { margin-left: 3em }
+
+  .menu404 .menu-item { margin-left: 16em }
 
   .stepContainer {
     display: block;
@@ -1546,6 +1569,20 @@ footer a:hover { text-decoration: underline }
     font-size: 2em;
     top: 0.4em;
   }
+
+  .title404 {
+    font-size: 4em;
+    top: -0.6em;
+    margin-left: 1em;
+  }
+
+  .title500 {
+    font-size: 3em;
+    top: -0.3em;
+    margin-left: 0.5em;
+  }
+
+  .menu404 .menu-item { margin-left: 10em }
 
   header .socialLink { top: -3em }
 
@@ -1629,6 +1666,7 @@ footer a:hover { text-decoration: underline }
 
   header .socialLink { top: 1.8em }
 
+
   .menu li { width: 4.5em }
 
   .menu li a {
@@ -1652,6 +1690,27 @@ footer a:hover { text-decoration: underline }
     top: 1.2em;
     z-index: 3;
     cursor: pointer;
+  }
+
+  .title404 {
+    display: block;
+    font-size: 3.6em;
+    margin-left: 0;
+  }
+
+  .title500 {
+    display: block;
+    font-size: 2.2em;
+    top: 0em;
+    margin-left: 0;
+  }
+
+  .menu404 .menu-item {
+    display: block;
+    margin-left: 6em;
+    background: none;
+    box-shadow: none;
+    width: auto;
   }
 
   h3 { font-size: 0.9em }
@@ -1922,6 +1981,21 @@ footer a:hover { text-decoration: underline }
       width: 20em;
       font-size: 0.8em;
     }
+
+  .title404 {
+    display: block;
+    font-size: 2.5em;
+    margin-left: 1em;
+    top: -0.2em;
+  }
+
+  .title500 {
+    display: block;
+    font-size: 2.5em;
+    margin-left: 1.2em;
+    top: -1.4em;
+  }
+
 
   main { margin-top: 6em }
 
