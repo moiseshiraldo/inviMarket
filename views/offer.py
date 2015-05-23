@@ -79,7 +79,7 @@ def offer(request, site_id):
                 to_donate = offer_form.cleaned_data['to_donate']
                 total_offers = user.offer_set.exclude(number=0).count()
                 if not site.email_domain:
-                    error = _("The 'mail domain' information is not available"
+                    error = _("The 'mail domain' information is not available "
                               "yet for this site.")
                 # Check if modifying an existing offer
                 elif user.offer_set.filter(website=site).exists():

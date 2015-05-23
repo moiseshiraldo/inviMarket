@@ -102,7 +102,7 @@ class Notification(models.Model):
 
     """
     user = models.ForeignKey(User)
-    sender = models.ForeignKey(User, null=True,
+    sender = models.ForeignKey(User, null=True, blank=True,
                                related_name='sent_notification')
     code = models.PositiveSmallIntegerField(default=0)
     url = models.URLField()
@@ -112,7 +112,7 @@ class Notification(models.Model):
         20: _('Partnership request'),
         30: _('Proposal accepted'),
         40: _('Approved edition'),
-        50: _('Received complaint'),
+        50: _('Received warning'),
     }
 
     def get_message(self):

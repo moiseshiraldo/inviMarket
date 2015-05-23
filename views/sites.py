@@ -41,7 +41,8 @@ def sites(request, site_name=None):
         site = get_object_or_404(Website, name=urllib.unquote(site_name))
         url = ('https://' + settings.DOMAIN +
                reverse('sites', kwargs={'site_name': urlquote(site.name) }))
-        request.user.notification_set.filter(url=url).delete()
+        if request.user.is_authenticated():
+            request.user.notification_set.filter(url=url).delete()
         lang = request.LANGUAGE_CODE
         try:
             # Get description in the user language

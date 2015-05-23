@@ -55,9 +55,13 @@ main[id="500"] { margin-top: 16em }
 
 main[id="sites"] {
   min-height: 45em;
+  height: auto !important;
+  height: 45em;
 }
 main[id="market"], main[id="trading"], main[id="trades"] {
   min-height: 40em;
+  height: auto !important;
+  height: 40em;
 }
 
 section { display: block }
@@ -1151,7 +1155,7 @@ h1 .siteLogo {
   width: 1.2em;
 }
 
-.notifications .handshake, .notifications .envelop {
+.notifications .icon {
   width: 2em;
   float: right;
   margin: 0 1em 0 0;
@@ -1270,8 +1274,9 @@ nav form input[type="submit"] {
   float: right;
   z-index: 2;
   top: 2em;
-  left: 0.5em;
-  width: 0.8em;
+  left: 0.6em;
+  text-align: center;
+  width: 1em;
   height: 1.2em;
   padding: 0.2em 0.3em;
   background-color: Red;

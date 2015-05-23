@@ -27,7 +27,9 @@
       {% include "blocks/sites-list.html" with links=u.profile.get_reflinks %}
       {% endif %}
       {% if u == user %}
-      {% include "blocks/social-buttons.html" with text="Check out my profile" %}
+      {% with user_id=user.id|stringformat:"s" %}
+      {% include "blocks/social-buttons.html" with text="Check out my profile" url=request.path|add:user_id %}
+      {% endwith %}
       {% endif %}
       {% endwith %}
     </section>

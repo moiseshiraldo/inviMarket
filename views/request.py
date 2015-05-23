@@ -48,7 +48,7 @@ def request(request, site_id):
         return redirect('login')
     # If not a referral site and no errors, store the request
     elif not site.email_domain:
-        error = _("The 'mail domain' information is not available yet for this"
+        error = _("The 'mail domain' information is not available yet for this "
                   "site.")
     elif user.request_set.filter(website=site_id).exists():
         error = _("You have already requested an invite for this site.")

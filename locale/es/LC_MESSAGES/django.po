@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-20 21:29+0100\n"
-"PO-Revision-Date: 2015-05-21 00:32+0100\n"
+"POT-Creation-Date: 2015-05-23 22:54+0100\n"
+"PO-Revision-Date: 2015-05-23 22:56+0100\n"
 "Last-Translator: Moises\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "Language: en_US\n"
@@ -162,9 +162,9 @@ msgstr "Propuesta aceptada"
 msgid "Approved edition"
 msgstr "Edición aprobada"
 
-#: models.py:115 templates/trades.html:69
-msgid "Received complaint"
-msgstr "Reclamación recibida"
+#: models.py:115 templates/trades.html:71
+msgid "Received warning"
+msgstr "Warning recibido"
 
 #: models.py:137
 msgid "Application"
@@ -222,64 +222,64 @@ msgstr "Telecomunicaciones"
 msgid "Search sites"
 msgstr "Buscar sitios"
 
-#: templates/404.html:40 templates/index.html:68
+#: templates/404.html:40 templates/index.html:85
 msgid "Site name..."
 msgstr "Nombre..."
 
-#: templates/404.html:57 templates/index.html:139
+#: templates/404.html:57 templates/index.html:160
 msgid "License and source code"
 msgstr "Licencia y código fuente"
 
-#: templates/404.html:60 templates/index.html:142
+#: templates/404.html:60 templates/index.html:163
 msgid "Terms and conditions"
 msgstr "Términos y condiciones"
 
-#: templates/404.html:63 templates/index.html:145
+#: templates/404.html:63 templates/index.html:166
 msgid "Privacy policy"
 msgstr "Política de privacidad"
 
 #: templates/404.html:65 templates/email/email.html:82
-#: templates/index.html:147 templates/legal.html:10 templates/legal.html.py:22
+#: templates/index.html:168 templates/legal.html:10 templates/legal.html.py:22
 msgid "Contact"
 msgstr "Contacto"
 
-#: templates/404.html:68 templates/index.html:150
+#: templates/404.html:68 templates/index.html:171
 msgid "Get involved"
 msgstr "Colabora"
 
-#: templates/404.html:69 templates/editing.html:8 templates/index.html:151
+#: templates/404.html:69 templates/editing.html:8 templates/index.html:172
 msgid "Editing"
 msgstr "Ediciones"
 
-#: templates/404.html:70 templates/index.html:152 templates/market.html:45
+#: templates/404.html:70 templates/index.html:173 templates/market.html:45
 msgid "New sites"
 msgstr "Nuevos sitios"
 
-#: templates/404.html:72 templates/index.html:154 templates/suggestions.html:6
+#: templates/404.html:72 templates/index.html:175 templates/suggestions.html:6
 msgid "Suggestions"
 msgstr "Sugerencias"
 
-#: templates/404.html:76 templates/index.html:158
+#: templates/404.html:76 templates/index.html:179
 msgid "Connect"
 msgstr "Conecta"
 
-#: templates/404.html:77 templates/index.html:159
+#: templates/404.html:77 templates/index.html:180
 msgid "Twitter"
 msgstr ""
 
-#: templates/404.html:78 templates/index.html:160
+#: templates/404.html:78 templates/index.html:181
 msgid "Facebook"
 msgstr ""
 
-#: templates/404.html:79 templates/index.html:161
+#: templates/404.html:79 templates/index.html:182
 msgid "Google+"
 msgstr ""
 
-#: templates/404.html:84 templates/getstarted.html:8 templates/index.html:166
+#: templates/404.html:84 templates/getstarted.html:8 templates/index.html:187
 msgid "Get started"
 msgstr "Comienza"
 
-#: templates/404.html:87 templates/index.html:169
+#: templates/404.html:87 templates/index.html:190
 msgid "Glossary"
 msgstr "Glosario"
 
@@ -416,7 +416,7 @@ msgstr "Unirse"
 msgid "Complaint"
 msgstr "Reclamación"
 
-#: templates/config.html:6 templates/index.html:57 templates/partners.html:9
+#: templates/config.html:6 templates/index.html:74 templates/partners.html:9
 #: templates/profile.html:11 templates/trades.html:8
 msgid "Profile"
 msgstr "Perfil"
@@ -517,12 +517,12 @@ msgstr ""
 "infomarción será revisada por el administrador, hasta que el número de "
 "usuarios crezca y podamos implmentar un sistema de edición automático. "
 
-#: templates/editing.html:31 templates/index.html:64
+#: templates/editing.html:31 templates/index.html:81
 msgid "Sites"
 msgstr "Sitios"
 
 #: templates/editing.html:33 templates/getstarted.html:139
-#: templates/index.html:45 templates/login.html:77 templates/register.html:6
+#: templates/index.html:62 templates/login.html:77 templates/register.html:6
 msgid "Register"
 msgstr "Registrarse"
 
@@ -552,18 +552,16 @@ msgid ""
 msgstr ""
 "\n"
 "    <p>El campo 'descripción' debe contener solo una breve descripción del "
-"sitio, así como "
-"información sobre el sistema de invitaciones o referidos. Si copias "
-"información de un sitio externo "
-"que lo permita, inserta el link en el campo 'Fuente'.</p>\n"
+"sitio, así como información sobre el sistema de invitaciones o referidos. Si "
+"copias información de un sitio externo que lo permita, inserta el link en el "
+"campo 'Fuente'.</p>\n"
 "    <p>El campo 'validador de referido' es solamente aplicable a sitios de "
-"referidos, y debe contener "
-"una expresión regular en Python que reconozca cualquier enlace de referido al "
-"sitio (deja el campo "
-"en blanco si no estás familiarizado con expresiones regulares).</p>\n"
-"    <p>El campo 'dominio de correo' es el dominio de la dirección usada en el "
-"comando MAIL FROM de SMTP (insertada como la cabecera de correo "
-"'Return-Path', no confundir con la cabecera 'From').</p>\n"
+"referidos, y debe contener una expresión regular en Python que reconozca "
+"cualquier enlace de referido al sitio (deja el campo en blanco si no estás "
+"familiarizado con expresiones regulares).</p>\n"
+"    <p>El campo 'dominio de correo' es el dominio de la dirección usada en "
+"el comando MAIL FROM de SMTP (insertada como la cabecera de correo 'Return-"
+"Path', no confundir con la cabecera 'From').</p>\n"
 "    <p>Usa el campo 'comentarios' para cualquier comentario adicional.</p>\n"
 "    "
 
@@ -843,11 +841,19 @@ msgid "How does it work?"
 msgstr "¿Cómo funciona?"
 
 #: templates/faq.html:32
+#| msgid ""
+#| "\n"
+#| "        Search sites by using the search form in the top menu or the\n"
+#| "        the 'Sites' page, and request/offer invites or referral links to\n"
+#| "        the ones your interested in. In the Trading page you can find\n"
+#| "        users that match up with your requests/offers and propose\n"
+#| "        trades to them.\n"
+#| "        "
 msgid ""
 "\n"
 "        Search sites by using the search form in the top menu or the\n"
 "        the 'Sites' page, and request/offer invites or referral links to\n"
-"        the ones your interested in. In the Trading page you can find\n"
+"        the ones your interested in. In the 'Trading' page you can find\n"
 "        users that match up with your requests/offers and propose\n"
 "        trades to them.\n"
 "        "
@@ -917,18 +923,28 @@ msgid "Can other users view my email address?"
 msgstr "¿Pueden otros usuarios ver mi dirección de correo electrónico?"
 
 #: templates/faq.html:75
+#| msgid ""
+#| "No, the invites are sended to an email addres\n"
+#| "        at the inviMarket domain, then forwarded to your email address. "
+#| "All the\n"
+#| "        emails coming from a domain not listed in our sites database will "
+#| "be\n"
+#| "        rejected.\n"
+#| "        "
 msgid ""
 "No, the invites are sended to an email addres\n"
 "        at the inviMarket domain, then forwarded to your email address. All "
 "the\n"
-"        emails coming from a domain not listed in our sites database will "
-"be\n"
-"        rejected.\n"
+"        emails coming from a domain not listed in our sites database "
+"('domain'\n"
+"        on the site information page) will be rejected.\n"
 "        "
 msgstr ""
 "No, las invitaciones son enviadas a una dirección en el dominio inviMarket, "
 "y posteriormente reenviadas a tu dirección de correo. Todos los emails "
-"provenientes de dominios no listados en nuestra base de sitios serán "
+"provenientes de dominios no listados en nuestra base de datos ('dominio' en "
+"la página de "
+"información del sitio) serán "
 "rechazados."
 
 #: templates/faq.html:84
@@ -1013,8 +1029,8 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"Ve a la página 'Sitios' o usa el formulario de búsqueda en el menú superior "
-"para buscar tus sitios favoritos. "
+"Ve a la página 'Sitios' o usa la caja de búsqueda del menú superior para "
+"buscar tus sitios favoritos. "
 
 #: templates/getstarted.html:23
 msgid ""
@@ -1035,8 +1051,8 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"Haz click en el logo o el nombre del sitio para saber más sobre el sistema "
-"de invitaciones. "
+"Haz click en el logo/nombre del sitio para saber más sobre el sistema de "
+"invitaciones. "
 
 #: templates/getstarted.html:35
 msgid ""
@@ -1053,11 +1069,6 @@ msgid "Search invites"
 msgstr "Busca invitaciones"
 
 #: templates/getstarted.html:51
-#| msgid ""
-#| "\n"
-#| "            Select the trading option in the navigation menu to go\n"
-#| "            to invites sarch page.\n"
-#| "            "
 msgid ""
 "\n"
 "            Select the trading option in the navigation menu to go\n"
@@ -1065,8 +1076,7 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"Selecciona la opción 'Intercambio' en el menú de navegación para buscar "
-"invitaciones. "
+"Selecciona 'Intercambio' en el menú superior para buscar invitaciones. "
 
 #: templates/getstarted.html:57
 msgid ""
@@ -1076,8 +1086,8 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"Se mostrará una lista con los usuarios que coinciden con tus peticiones y "
-"ofertas de invitación. "
+"Se mostrará una lista con usuarios relativos a tus peticiones y ofertas de "
+"invitación. "
 
 #: templates/getstarted.html:63
 msgid ""
@@ -1097,19 +1107,13 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"Para pedir o intercambiar invitaciones, haz click en el botón 'Trueque' y "
-"selecciona las invitaciones que te interesan. "
+"Para pedir o intercambiar invitaciones, haz click en el botón 'Trueque'. "
 
 #: templates/getstarted.html:82
 msgid "Your profile"
 msgstr "Tu perfil"
 
 #: templates/getstarted.html:85
-#| msgid ""
-#| "\n"
-#| "            View and manage your current invite requests and offers,\n"
-#| "            friends list and invites trades.\n"
-#| "            "
 msgid ""
 "\n"
 "            View and manage your current invite requests/offers,\n"
@@ -1128,8 +1132,8 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"Comparte tu perfil en otras redes sociales y haz que tus amigos se enteren "
-"de tus peticiones de invitación. "
+"Comparte tu perfil en otras redes sociales y haz que tus amigos conozcan de "
+"tus peticiones de invitación. "
 
 #: templates/getstarted.html:97
 msgid ""
@@ -1140,8 +1144,8 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"Todos tus enlaces de referido son también visibles en tu perfil. Se acabó "
-"compartir cada link por separado, ¡compártelos todos con un click! "
+"Tus enlaces de referido son visibles en tu perfil. Se acabó compartir cada "
+"link por separado, ¡compártelos todos con un click! "
 
 #: templates/getstarted.html:114
 msgid ""
@@ -1166,11 +1170,6 @@ msgstr ""
 "no es correcta. "
 
 #: templates/getstarted.html:126
-#| msgid ""
-#| "\n"
-#| "              You can also edit the existing sites if you notice\n"
-#| "              that some information is wrong.\n"
-#| "              "
 msgid ""
 "\n"
 "              If you don't have the information, share the site page in "
@@ -1179,38 +1178,38 @@ msgid ""
 "              "
 msgstr ""
 "\n"
-"Si no dispones de la información, comparte la página del sitio en otras redes "
-"sociales. "
+"Si no dispones de la información, comparte la página del sitio en otras "
+"redes sociales. "
 
-#: templates/index.html:41
+#: templates/index.html:58
 msgid "Logout"
 msgstr "Salir"
 
-#: templates/index.html:44 templates/login.html:9
+#: templates/index.html:61 templates/login.html:9
 msgid "Login"
 msgstr "Iniciar sesión"
 
-#: templates/index.html:60
+#: templates/index.html:77
 msgid "Trading"
 msgstr "Intercambio"
 
-#: templates/index.html:73
+#: templates/index.html:90
 msgid "Notifications"
 msgstr "Notificaciones"
 
-#: templates/index.html:205
+#: templates/index.html:226
 msgid "This place uses"
 msgstr "Este sitio usa"
 
-#: templates/index.html:206
+#: templates/index.html:227
 msgid "cookies"
 msgstr "cookies"
 
-#: templates/index.html:207
+#: templates/index.html:228
 msgid "and no animals were harmed in the development process."
 msgstr "y ningún animal resultó herido en el proceso de desarrollo."
 
-#: templates/index.html:209
+#: templates/index.html:230
 msgid "Close"
 msgstr "Cerrar"
 
@@ -1265,6 +1264,19 @@ msgid ""
 "manner, but\n"
 "    not in any way that suggests the licensor endorses you or your use.\n"
 "  </p>\n"
+"  <p>Most of the icons were created by our sophisticated graphic design "
+"team\n"
+"  (me using <a href=\"https://www.calligra.org/karbon/\" target=\"_blank"
+"\">Karbon</a>).\n"
+"  I got the cool ones from\n"
+"  <a href=\"http://fairheadcreative.com/\" target=\"_blank\">Fairhed "
+"Creative</a>,\n"
+"  <a href=\"http://designmodo.com/\" target=\"_blank\">DesignModo</a>,\n"
+"  <a href=\"https://www.wikipedia.org/\" target=\"_blank\">Wikipedia</a> "
+"and\n"
+"  <a href=\"https://commons.wikimedia.org/\" target=\"_blank\">Wikimedia "
+"Commons</a>.\n"
+"  </p>\n"
 "  "
 msgstr ""
 "\n"
@@ -1278,7 +1290,7 @@ msgstr ""
 "\">aquí</a>.\n"
 "    <br/><br/>\n"
 "    El contenido web está licenciado bajo una Licencia Creative Commons "
-"Atribución 4.0 Internacionall\n"
+"Atribución 4.0 Internacional.\n"
 "   Eso significa que puedes:\n"
 "    <br/><br/>\n"
 "\n"
@@ -1296,9 +1308,21 @@ msgstr ""
 "razonable, pero\n"
 "    de ninguna manera sugerir que el licenciante aprueba tu uso.\n"
 "  </p>\n"
+"  <p>La mayoría de los iconos han sido creados por nuestro sofisticado "
+"equipo de diseño gráfico  (yo usando <a href=\"https://www.calligra.org/"
+"karbon/\" target=\"_blank\">Karbon</a>).\n"
+"  Los elegantes los tomé prestados de\n"
+"  <a href=\"http://fairheadcreative.com/\" target=\"_blank\">Fairhed "
+"Creative</a>,\n"
+"  <a href=\"http://designmodo.com/\" target=\"_blank\">DesignModo</a>,\n"
+"  <a href=\"https://www.wikipedia.org/\" target=\"_blank\">Wikipedia</a> "
+"and\n"
+"  <a href=\"https://commons.wikimedia.org/\" target=\"_blank\">Wikimedia "
+"Commons</a>.\n"
+"  </p>\n"
 "  "
 
-#: templates/legal.html:58
+#: templates/legal.html:67
 msgid ""
 "\n"
 "  <h2>Terms and Conditions</h2>\n"
@@ -1325,12 +1349,11 @@ msgid ""
 "  <li>\n"
 "  <h4>Site uptime</h4>\n"
 "  All reasonable measures are taken by us to ensure that this website is\n"
-"  operational all day, every day. However, occasionally technical issues "
-"may\n"
-"  result in some downtime and accordingly we will not be liable if this "
-"website\n"
+"  operational all day, every day. However, occasionally technical issues or\n"
+"  disturbances in the Force in some downtime may\n"
+"  result and accordingly we will not be liable if this website\n"
 "  is unavailable at any time. Where possible we always try to give advance\n"
-"  warning of maintenance issues that may result in website down time but we\n"
+"  warning of maintenance issues that may result in website downtime but we\n"
 "  shall not be obliged to provide such notice.\n"
 "  </li>\n"
 "\n"
@@ -1458,122 +1481,97 @@ msgstr ""
 "  </li>\n"
 "\n"
 "  <li>\n"
-"  <h4>Actividad del sitio</h4>\n"
+"  <h4>Operatividad del sitio</h4>\n"
 "  Se toman todas las medidas razonables para asegurar que este sitio web "
 "está operativo durante todo el día, cada día. Sin embargo, problemas "
-"técnicos ocasionales pueden resultar en períodos de inactividad y por lo "
-"tanto no nos hacemos responsables si el sitio no se encuentra disponible en "
-"algún momento. Cuando sea posible, siempre trataremos de avisar sobre "
-"problemas de mantenimiento que puedan ocasionar períodos de inactividad de "
-"la web, pero no estaremos obligados a proveer dichos avisos.  </li>\n"
+"técnicos ocasionales o perturbaciones en la Fuerza en períodos de "
+"inactividad resultar pueden, y por lo tanto no nos hacemos responsables si "
+"el sitio no se encuentra disponible en algún momento. Cuando sea posible, "
+"siempre trataremos de avisar sobre problemas de mantenimiento que puedan "
+"ocasionar períodos de inactividad de la web, pero no estaremos obligados a "
+"proveer dichos avisos.  </li>\n"
 "\n"
 "  <li>\n"
-"  <h4>Visitor provided material</h4>\n"
-"  Any material that a visitor sends or posts to this website shall be "
-"considered\n"
-"  non-proprietary and non confidential. We shall be entitled to copy, "
-"disclose,\n"
-"  distribute or use for such other purpose as we deem appropriate all "
-"material\n"
-"  provided to us, with the exception of personal information, the use of "
-"which\n"
-"  is covered under our Privacy Policy.\n"
-"  <br/><br/>\n"
-"  Any site informaton provided using the edition page will be\n"
-"  licensed under a Creative Commons Attribution 4.0 International License.\n"
-"  When using the edition page or the trade proposal comments you shall not "
-"post any\n"
-"  material:\n"
-"    <ul>\n"
-"    <li>for which you have not obtained all necessary consents;</li>\n"
-"    <li>that is discriminatory, obscene, pornographic, defamatory, liable "
-"to\n"
-"    incite racial hatred, in breach of confidentiality or privacy, which "
-"may\n"
-"    cause annoyance or inconvenience to others, which encourages or "
-"constitutes\n"
-"    conduct that would be deemed a criminal offence, give rise to a civil\n"
-"    liability, or otherwise is contrary to the law in the United Kingdom;</"
-"li>\n"
-"    <li>which is harmful in nature including, and without limitation, "
-"computer\n"
-"    viruses, Trojan horses, corrupted data, or other potentially harmful\n"
-"    software or data.</li>\n"
+"  <h4>Material provisto por el visitante</h4>\n"
+"  Cualquier material que el visitante envía o postee en esta web será "
+"considerado no propietario y no confidencial. Estaremos autorizados a "
+"copiar, revelar, distribuir o usarl para cualquier otro propósito que "
+"consideremos oportuno el material que se nos provea, con la excepción de "
+"información personal, cuyo uso está cubierto en nuestra Política de "
+"Privacidad.  <br/><br/>\n"
+"  Cualquier información de otros sitios provista usando la página de edición "
+"será licenciada bajo una Licencia Creative Commons Atribución 4.0 "
+"Internacional. En el uso de la página de edición o los comentarios de "
+"propuestas de intercambio, no deberás postear ningún material:    <ul>\n"
+"    <li>para el que no hayas obtenido el consentimiento necesario;</li>\n"
+"    <li>que sea difamatoriao, obsceno, pornográfico, discriminatorio, "
+"propenso a incitar el odio racial, comprometa la confidencialidad o "
+"privacidad, pueda causar molestia o inconveniente a terceros, aliente o "
+"constituya una conducta que pudiera ser considerada un delito de ofensa, dé "
+"lugar a una responsabilidad civil, o de cualquier otra manera sea contrario "
+"a la ley en el Reino Unido;</li>\n"
+"    <li>que sea perjudicial en su naturaleza, e incluyendo, sin límites, "
+"virus informáticos, troyanos, material corrompido, o cualquier dato o "
+"software potencialmente dañino.</li>\n"
 "    </ul>\n"
 "  </li>\n"
 "\n"
 "  <li>\n"
-"  <h4>Links to and from other websites</h4>\n"
-"  Throughout this website you can find links to third party websites. The\n"
-"  provision of a link to such a website does not mean that we endorse that\n"
-"  website.  If you visit any website via a link on this website you do so "
-"at\n"
-"  your own risk.<br/><br/>\n"
-"  Any party wishing to link to this website is entitled to do so provided "
-"that\n"
-"  the conditions below are observed:\n"
+"  <h4>Links a y de otros sitios webs</h4>\n"
+"  En este sitio encontrarás links a páginas web de terceros. La provisión de "
+"un link a tales sitios web no significa que desde nuestro sitio se aprueba "
+"dicha web. Si visitas cualquier sitio web desde un link en esta web lo haces "
+"bajo tu propio riesgo.<br/><br/>\n"
+"  Cualquier tercero que desee enlazar esta web está en su derecho a hacerlo "
+"siempre que las siguientes condiciones se cumplan:\n"
 "    <ul>\n"
-"    <li>you do not seek to imply that we are endorsing the services or "
-"products\n"
-"    of another party unless this has been agreed with us in writing;</li>\n"
-"    <li>you do not misrepresent your relationship with this website;</li>\n"
-"    <li>the website from which you link to this website does not contain\n"
-"    offensive or otherwise  controversial content or, content that "
-"infringes\n"
-"    any intellectual property rights or other rights of a third party.</li>\n"
+"    <li>no se da a entender que aprobamos los servicios o productos de "
+"terceros salvo que haya sido acordado previamente por escrito;</li>\n"
+"    <li>se falsifica la relación con este sitio web;</li>\n"
+"    <li>el sitio web desde el que se enlaza no contiene material ofensivo o "
+"de cualquier manera controvertido, contenido que infringe cualquier derecho "
+"de propiedad intelectual u otros derechos de terceros.</li>\n"
 "    </ul>\n"
 "  </li>\n"
 "\n"
 "  <li>\n"
-"  <h4>Disclaimer</h4>\n"
-"  Whilst we do take all reasonable steps to make sure that the other sites "
-"information on\n"
-"  this website is up to date and accurate at all times we do not guarantee "
-"that\n"
-"  all material is accurate and, or up to date. All material contained on "
-"this\n"
-"  website is provided without any or warranty of any kind. You use the "
-"material\n"
-"  on this website at your own discretion.\n"
+"  <h4>Advertencia</h4>\n"
+"  A pesar de que hacemos todo lo razonable para asegurar que la información "
+"de otros sitios que puedes encontrar en esta web es precisa y está "
+"actualizada, en ningún momento garantizamos que así sea. Todo material "
+"contenido en este sitio es provisto sin ningún tipo de garantía. Su uso "
+"correo bajo tu propia discreción.\n"
 "  </li>\n"
 "\n"
 "  <li>\n"
-"  <h4>Trading invites</h4>\n"
-"  When you accept a trade proposal or one of your trade proposals is "
-"accepted by\n"
-"  another user, you are required to send the invites to the email address\n"
-"  especified in the trade details within one week. Otherwise, you will "
-"receive\n"
-"  a warning and your account will be banned after three of them.<br/><br/>\n"
-"  Any attempt to fake an invites trade with the purpose of increasing the "
-"user\n"
-"  rating will be penalized as well.\n"
+"  <h4>Intercambio de invitaciones</h4>\n"
+"  Cuando aceptas una propuesta de intercambio o una de tus propuestas es "
+"aceptada por otro usuario, se requiere que envíes las invitaciones a la "
+"dirección de correo electrónico especificada en los detalles del intercambio "
+"en el período de una semana. Si no es así, recibirás un warning y tu cuenta "
+"será baneada tras tres de ellos.<br/><br/>\n"
+"  Caulquier intento de simular un intercambio de invitaciones con el "
+"objetivo de incrementar el rating de usuario, será igualmente penalizado.\n"
 "  </li>\n"
 "\n"
 "  <li>\n"
-"  <h4>Exclusion of liability</h4>\n"
-"  All the responsability for sending the invites lays on the users. We do "
-"not\n"
-"  accept liability neither for the breach of any trade proposal nor for\n"
-"  any loss or damage that you suffer as a result of using this website.\n"
+"  <h4>Exclusión de responsabilidad</h4>\n"
+"  Toda la responsabilidad del envío de invitaciones recae en el usuario. No "
+"aceptamos ninguna responsabilidad ni por el incumpliemiento de cualquier "
+"propuesta de intercambio ni por cualquier pérdida o daño que sufras como "
+"resultado de usar este sitio web. \n"
 "  <br/><br/>\n"
-"  Nothing in these terms of use shall exclude or limit liability for death "
-"or\n"
-"  personal injury caused by negligence which cannot be excluded or under the "
-"law\n"
-"  of the United Kingdom.\n"
 "  </li>\n"
 "\n"
 "  <li>\n"
-"  <h4>Law and jurisdiction</h4>\n"
-"  These terms of use are governed by English law. Any dispute arising in\n"
-"  connection with these terms of use shall be subject to the exclusive\n"
-"  jurisdiction of the Courts of England and Wales.\n"
-"  </li>\n"
+"  <h4>Ley y jurisdicción</h4>\n"
+"  Estos términos de uso quedan sujetos a la ley inglesa. Cualquier disputa "
+"que surja en realción con estos términos de uso será objeto de la "
+"jurisdicción exclusiva de los Tribunales de Inglaterra y Gales.  </li>\n"
 "  </ul>\n"
 "  "
 
-#: templates/legal.html:169
+#: templates/legal.html:179
 msgid ""
 "\n"
 "  <h2>Privacy and Cookies Policy</h2>\n"
@@ -1612,12 +1610,13 @@ msgid ""
 "  order to assist us in improving our website.<br/><br/>\n"
 "  We may gather information about your general internet use by using the "
 "cookie.\n"
-"  Where used, these cookies are downloaded to your computer and stored on "
-"the\n"
-"  computer's hard drive. Such information will not identify you personally; "
-"it\n"
-"  is statistical data which does not identify any personal details\n"
-"  whatsoever.<br/><br/>\n"
+"  Where used, a cookie containing a session ID is downloaded to your "
+"computer\n"
+"  and stored on the computer's hard drive. Such information will not "
+"identify\n"
+"  you personally; it is statistical data which does not identify any "
+"personal\n"
+"  details whatsoever.<br/><br/>\n"
 "  Our advertisers may also use cookies, over which we have no control. Such\n"
 "  cookies (if used) would be downloaded once you click on advertisements on "
 "our\n"
@@ -1699,6 +1698,106 @@ msgid ""
 "  </ul>\n"
 "  "
 msgstr ""
+"\n"
+"  <h2>Política de Privacidad y Cookies</h2>\n"
+"\n"
+"  <p>Esta Política explica qué le sucede a cualquier dato personal que nos "
+"provees, o que recogemos durante tu visita a este sitio, y cómo usamos las "
+"cookies en esta web.  <ul>\n"
+"\n"
+"  <li>\n"
+"  <h4>Información que recogemos</h4>\n"
+"  Durante el funcionamiento y mantenimiento de este sitio, puede que "
+"recojamos y procesemos los siguientes datos sobre ti:\n"
+"    <ul>\n"
+"    <li>Información sobre tu uso del sitio, incluyendo detalles de tus "
+"visitas como las páginas vistas o los contenidos a los que accedes. Tal "
+"información incluye datos de tráfico, localización y otras comunicaciones.</"
+"li>\n"
+"    <li>Información provista voluntariamente por ti. Por ejemplo, cuando te "
+"registras o pides una invitación.</li>\n"
+"    <li>Información que provees cuando te comunicas con nosotros de "
+"cualquier manera.</li>\n"
+"    </ul>\n"
+"  </li>\n"
+"\n"
+"  <li>\n"
+"  <h4>Uso de Cookies</h4>\n"
+"  Las cookies ofrecen información relativa al ordenador usado por el "
+"visitante. Usaremos cookies donde sea apropiado para recoger información "
+"sobre tu ordenador con el fin de ayudarnos a mejorar el sitio.<br/><br/>\n"
+"  Puede que recojamos información sobre tu uso general de internet "
+"utilizando cookies. Cuando sean usadas, una cookie con una ID de sesión será "
+"descargada en tu ordenador y almacenada en el disco duro. Tal información no "
+"te identificará personalmente: se trata de datos estadísticos que no "
+"identifican ningún detalle personal.<br/><br/>\n"
+"  Nuestros anunciantes tambien pueden usar cookies, sobre las que no tenemos "
+"control. Tales cookies (si se usan) serán descargadas una vez que hagas "
+"click en anuncios en nuestro sitio.<br/><br/>\n"
+"  Puedes configurar tu navegador, en la sección de preferencias, para "
+"rechazar el uso de cookies si lo deseas,\n"
+"  </li>\n"
+"\n"
+"  <li>\n"
+"  <h4>Uso de tu información</h4>\n"
+"  Usamos la información que recogemos sobre ti para ofrecerte nuestros "
+"servicios. Además podemos usar dicha información para alguno o más de los "
+"siguientes propósitos:\n"
+"    <ul>\n"
+"    <li>Para ofrecerte información solicitada por ti relacionada con "
+"nuestros productos o servicios, como notificaciones por correo electrónico.</"
+"li>\n"
+"    <li>Para informarte de cualquier cambio en nuestro sitio, servicios, o "
+"condiciones legales.</li>\n"
+"    </ul>\n"
+"  </li>\n"
+"\n"
+"  <li>\n"
+"  <h4>Almacenamiento de tu información personal</h4>\n"
+"  Durante la administración de nuestro sitio web podría resultar necesario "
+"transferir datos que recogemos sobre ti a localizaciones fuera de la Unión "
+"Europea para procesamiento y almacenamiento. Proporcionándonos tus datos "
+"personales, consientes esta transferencia, almacenamiento y proceso. Hacemos "
+"todo lo posible para asegurar que se toman  todas las medidas razonables "
+"para que tus datos se almacenen de forma segura.<br/><br/>\n"
+"  Desafortunadamente el envío de información a través de Internet no es "
+"completamente seguro y en ocasiones dicha información puede ser "
+"interceptada. No podemos garantizar la seguridad de los datos de decides "
+"enviarnos electrónicamente, el envío de tal información corre completamente "
+"bajo tu propio riesgo.\n"
+"  </li>\n"
+"\n"
+"  <li>\n"
+"  <h4>Revelación de tu información</h4>\n"
+"  No revelaremos ninguna información personal a ningún tercero que no sea en "
+"acuerdo con esta Política de Privacidad y en las circunstancias detalladas a "
+"continuación:\n"
+"    <ul>\n"
+"    <li>En el caso de que vendamos parte o la totalidad de nuestro negocio.</"
+"li>\n"
+"    <li>Cuando revelar tu información personal sea requerido por ley.</li>\n"
+"    <li>Para promover la protección contra el fraude y reducir el riesgo de "
+"fraude.</li>\n"
+"    </ul>\n"
+"  </li>\n"
+"\n"
+"  <li>\n"
+"  <h4>Enlaces a terceros</h4>\n"
+"  En esta web incluímos enlaces a otros sitios. Cuando proporcionamos un "
+"enlace no significa que aprobemos la política de privacidad de ese sitio. "
+"Deberías revisar su política de privacidad antes de enviar cualquier dato "
+"personal.\n"
+"  </li>\n"
+"\n"
+"  <li>\n"
+"  <h4>Acceso a la información</h4>\n"
+"  De acuerdo con el Acta de Protección de Datos de 1998 tienes el derecho a "
+"acceder a cualquier información que retenemos relativa a ti. Ten en cuenta "
+"que nos reservamos el derecho de cobrar un pago de 10€ para cubrir los "
+"costos incurridos en proporcionarte la información.\n"
+"  </li>\n"
+"  </ul>\n"
+"  "
 
 #: templates/login.html:28
 msgid "Have you forgotten your password?"
@@ -1968,11 +2067,6 @@ msgid "Complain"
 msgstr "Reclamar"
 
 #: templates/trade.html:34 templates/trade.html.py:39
-#| msgid ""
-#| "\n"
-#| "      Send the invites to the following email addres:\n"
-#| "      %(trade.proposer)s@invimarket.com\n"
-#| "      "
 msgid ""
 "\n"
 "      Send the invites to the following email addres:\n"
@@ -1998,9 +2092,9 @@ msgstr "Enviar"
 msgid "Status:"
 msgstr "Estado:"
 
-#: templates/trades.html:71
-msgid "Received warning"
-msgstr "Warning recibido"
+#: templates/trades.html:69
+msgid "Received complaint"
+msgstr "Reclamación recibida"
 
 #: templates/trades.html:73
 msgid "Pending complaint"
@@ -2018,19 +2112,19 @@ msgstr "Filtrar por peticiones"
 msgid "Filter by offers"
 msgstr "Filtrar por ofertas"
 
-#: urls.py:69
+#: urls.py:74
 msgid "Your edition have been submitted and will be reviewed by the admin."
 msgstr "Tu edición ha sido enviada y será revisada por el administrador."
 
-#: urls.py:77
+#: urls.py:82
 msgid "Your offer has been succesfuly stored."
 msgstr "Tu oferta se ha almacenado correctamente."
 
-#: urls.py:80
+#: urls.py:85
 msgid "The offer has been deleted."
 msgstr "La oferta ha sido eliminada."
 
-#: urls.py:84
+#: urls.py:89
 msgid ""
 "The referral chain has been created, you can get the link on your profile "
 "page."
@@ -2038,19 +2132,19 @@ msgstr ""
 "La cadena de referidos ha sido creada, puedes obtener el link en tu página "
 "de perfil."
 
-#: urls.py:92
+#: urls.py:97
 msgid "Your trade proposal has been sended to the user."
 msgstr "Tu propuesta de intercambio ha sido enviada al usuario."
 
-#: urls.py:97
+#: urls.py:102
 msgid "The trade proposal has been accepted."
 msgstr "La propuesta de intercambio ha sido aceptada."
 
-#: urls.py:100
+#: urls.py:105
 msgid "The trade proposal has been rejected."
 msgstr "La propuesta de intercambio ha sido rechazada."
 
-#: urls.py:113
+#: urls.py:118
 msgid "Your complaint has been submitted."
 msgstr "Tu reclamación ha sido enviada."
 
@@ -2126,9 +2220,9 @@ msgstr "Ya te habías unido a la cadena de referidos."
 msgid "The referral link is not valid. Check it and try again."
 msgstr "El enlace de referido no es válido. Compruébalo en inténtalo de nuevo."
 
-#: views/offer.py:82
-#| msgid "Donations not available for the selected request."
-msgid "The 'mail domain' information is not availableyet for this site."
+#: views/offer.py:82 views/request.py:51
+#| msgid "The 'mail domain' information is not availableyet for this site."
+msgid "The 'mail domain' information is not available yet for this site."
 msgstr ""
 "La información 'dominio de correo' no esta aún disponible para este sitio."
 
@@ -2176,10 +2270,6 @@ msgstr "Donación no disponible para la petición seleccionada."
 msgid "You must read and accept the terms and conditions."
 msgstr "Debes leer y aceptar los términos y condiciones."
 
-#: views/request.py:51
-msgid "The 'mail domain' information is not available yet for thissite."
-msgstr ""
-
 #: views/request.py:54
 msgid "You have already requested an invite for this site."
 msgstr "Ya has pedido una invitación para ese sitio."
@@ -2188,15 +2278,15 @@ msgstr "Ya has pedido una invitación para ese sitio."
 msgid "You have reached the maximum number of simultaneous requests."
 msgstr "Has alcanzado el número máximo de peticiones simultáneas."
 
-#: views/sites.py:89
+#: views/sites.py:90
 msgid "The query is too long:"
 msgstr "La consulta es muy larga:"
 
-#: views/sites.py:93
+#: views/sites.py:94
 msgid "Showing results for"
 msgstr "Resultados para"
 
-#: views/sites.py:95
+#: views/sites.py:96
 msgid "No results matched the query"
 msgstr "Ningún resultado para la consulta."
 
