@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
-from inviMarket.models import SiteEdition, Complaint, Notification
 from django.dispatch import receiver
 from django.db.models.signals import pre_save
 from django.template.loader import render_to_string
 from django.core.mail import send_mail
 from django.core.urlresolvers import reverse
 from django.conf import settings
+
+from inviMarket.models import SiteEdition, Complaint, Notification
 
 @receiver(pre_save, sender=SiteEdition)
 def approved_edition(sender, instance, **kwargs):

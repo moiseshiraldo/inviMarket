@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 from django.core.management.base import BaseCommand
-from inviMarket.models import User
 from django.conf import settings
 from django.utils import timezone
+
+from inviMarket.models import User
 
 class Command(BaseCommand):
     help = 'Calculate and update the rating of every user'

@@ -1,10 +1,11 @@
 from django.conf.urls import patterns, url
-from inviMarket import views
 from django.contrib.auth import views as auth_views
 from django.views.generic import TemplateView
 from django.utils.translation import ugettext as _
-from inviMarket.decorators import cache_on_auth
 from django.contrib.sitemaps.views import sitemap
+
+from inviMarket import views
+from inviMarket.decorators import cache_on_auth
 
 sitemaps = {
     'static': views.StaticViewSitemap,

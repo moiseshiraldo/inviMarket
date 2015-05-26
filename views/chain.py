@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render, get_object_or_404, redirect
-from inviMarket.forms import ChainForm
-from inviMarket.models import Website, Chain, Link
-import hashlib, random
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist
+
+import hashlib, random
+
+from inviMarket.forms import ChainForm
+from inviMarket.models import Website, Chain, Link
 
 @login_required
 def chain(request, site_id):

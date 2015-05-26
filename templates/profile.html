@@ -27,8 +27,9 @@
       {% include "blocks/sites-list.html" with links=u.profile.get_reflinks %}
       {% endif %}
       {% if u == user %}
+      {% trans "Check out my profile" as text %}
       {% with user_id=user.id|stringformat:"s" %}
-      {% include "blocks/social-buttons.html" with text="Check out my profile" url=request.path|add:user_id %}
+      {% include "blocks/social-buttons.html" with text=text url="https://"|add:request.get_host|add:request.path|add:user_id %}
       {% endwith %}
       {% endif %}
       {% endwith %}

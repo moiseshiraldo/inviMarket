@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render, redirect
-from inviMarket.models import Website, Offer, Request
 from django.core.cache import cache
+
+from inviMarket.models import Website, Offer, Request
 
 def index(request):
     """

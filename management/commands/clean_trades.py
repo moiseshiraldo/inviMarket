@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 from django.core.management.base import BaseCommand
-from inviMarket.models import Trade
 from django.conf import settings
+
+from inviMarket.models import Trade
 
 class Command(BaseCommand):
     help = 'Calculate and update the rating of every user'

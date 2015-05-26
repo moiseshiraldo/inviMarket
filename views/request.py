@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render, get_object_or_404, redirect
-from inviMarket.models import Website, Request
+from django.utils.translation import ugettext as _
 from django.db.models import Sum
 from django.conf import settings
+
 import random
-from django.utils.translation import ugettext as _
+
+from inviMarket.models import Website, Request
 
 
 def request(request, site_id):

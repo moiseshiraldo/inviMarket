@@ -1,15 +1,17 @@
 # -*- encoding: utf-8 -*-
 from django.db import models
+from django.db import transaction
 from django.contrib.auth.models import User
 from django.conf import settings
 from django.core.urlresolvers import reverse
-from django.utils import timezone
 from django.core.exceptions import ValidationError
+
+from django.utils import timezone
 from django.utils.http import urlsafe_base64_encode
 from django.utils.encoding import force_bytes
 from django.utils.safestring import mark_safe
-from django.db import transaction
 from django.utils.translation import ugettext_lazy as _
+
 import os
 import datetime
 
@@ -51,7 +53,7 @@ class Profile(models.Model):
     lang = models.CharField(max_length=5, choices=LANG, blank=True)
     activation_key = models.CharField(max_length=40)
     key_expires = models.DateTimeField(null=True)
-    last_visit = models.DateTimeField(default=timezone.now())
+    last_visit = models.DateTimeField(blank=True, null=True)
     notify = models.BooleanField(default=True)
     locked = models.BooleanField(default=False)
 

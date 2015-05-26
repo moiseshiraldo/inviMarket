@@ -34,7 +34,7 @@
       {% elif trade.accepted == True %}
       <a class="button"
          href="{% url 'trade' trade_id=trade.pk %}">
-        {% trans "Send" %}
+        {% trans "Details" %}
       </a>
       {% endif %}
       {% if user.id == trade.receptor.id %}

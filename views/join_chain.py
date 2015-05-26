@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render, get_object_or_404
-from inviMarket.models import Chain, Link
-from inviMarket.forms import PasswordForm
 from django.core.exceptions import ObjectDoesNotExist
 from django.utils.encoding import force_text
 from django.utils.http import urlsafe_base64_decode
 from django.contrib.auth.decorators import login_required
 from django.utils.translation import ugettext as _
+
+from inviMarket.models import Chain, Link
+from inviMarket.forms import PasswordForm
 
 @login_required
 def join_chain(request, cidb64, token):

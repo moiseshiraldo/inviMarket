@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 from django.core.management.base import BaseCommand
-from inviMarket.models import Offer
 from django.db.models import F
+
+from inviMarket.models import Offer
 
 class Command(BaseCommand):
     help = 'Calculate and update the weight of every referral offer'

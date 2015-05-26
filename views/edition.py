@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render, get_object_or_404, redirect
-from inviMarket.forms import EditionForm
-from inviMarket.models import Website
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.decorators import login_required
 from django import forms
 from django.utils.translation import ugettext as _
+
+from inviMarket.forms import EditionForm
+from inviMarket.models import Website
 
 @login_required
 def edition(request, site_id=None):

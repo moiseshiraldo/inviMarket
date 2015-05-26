@@ -1,16 +1,17 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render, get_object_or_404, redirect
 from django.core.urlresolvers import reverse
-from inviMarket.forms import TradeForm, CommentsForm
-from inviMarket.models import Trade, Notification
+from django.core.mail import send_mail
+from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
 from django.utils.safestring import mark_safe
-from django.template.loader import render_to_string
-from django.core.mail import send_mail
-from django.core.exceptions import ObjectDoesNotExist
 from django.utils.translation import ugettext as _
+from django.template.loader import render_to_string
+
+from inviMarket.forms import TradeForm, CommentsForm
+from inviMarket.models import Trade, Notification
 
 @login_required
 def propose(request, receptor_id):

@@ -1,6 +1,7 @@
 {% extends "index.html" %}
 {% load staticfiles %}
 {% load i18n %}
+{% block title%}InviMarket: {{ site }}{% endblock%}
 {% block main %}
 
 <main id="site">
@@ -42,10 +43,10 @@
           <img alt="No" src="{% static "images/cross.svg" %}"/>
           {% endif %}
         </dd>
-        {% if site.email_domain %}
-        <dt>{% trans "Domain" %}</dt><dd><i>@{{ site.email_domain }}</i></dd>
-        {% else %}
+        {% if site.category == 'RE' %}
         <dt>{% trans "Validator" %}</dt><dd><i>{{ site.refvalidator }}</i></dd>
+        {% else %}
+        <dt>{% trans "Domain" %}</dt><dd><i>@{{ site.email_domain }}</i></dd>
         {% endif %}
       </dl>
     </aside>
@@ -61,7 +62,8 @@
       {% endif %}
     </section>
   </article>
-  {% include "blocks/social-buttons.html" with text="Check out this site" url=request.path %}
+  {% trans "Check out this site" as text %}
+  {% include "blocks/social-buttons.html" with text=text url="https://"|add:request.get_host|add:request.path %}
 
   {% include "ads/bottomLink.html" %}
 

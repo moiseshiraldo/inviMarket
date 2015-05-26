@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render, redirect, get_object_or_404
-from inviMarket.models import Trade, Complaint, Email
-from inviMarket.forms import CommentsForm
 from django.conf import settings
 from django.utils.translation import ugettext as _
+
 import mailbox
+
+from inviMarket.models import Trade, Complaint, Email
+from inviMarket.forms import CommentsForm
 
 def complaint(request, trade_id):
     """

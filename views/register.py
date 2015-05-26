@@ -1,15 +1,20 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render, redirect
-from inviMarket.models import Profile
-from inviMarket.forms import RegisterForm
+
 from django.template.loader import render_to_string
 from django.core.mail import send_mail
 from django.conf import settings
 from django.utils.http import urlsafe_base64_encode
 from django.utils.encoding import force_bytes
-import hashlib, datetime, random
 from django.utils import timezone
 from django.utils.translation import ugettext as _
+
+import hashlib
+import datetime
+import random
+
+from inviMarket.models import Profile
+from inviMarket.forms import RegisterForm
 
 def register(request):
     """

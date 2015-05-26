@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-23 22:54+0100\n"
-"PO-Revision-Date: 2015-05-23 22:56+0100\n"
+"POT-Creation-Date: 2015-05-26 18:37+0100\n"
+"PO-Revision-Date: 2015-05-26 18:37+0100\n"
 "Last-Translator: Moises\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "Language: en_US\n"
@@ -50,11 +50,11 @@ msgstr "Ya existe un usuario con ese email."
 msgid "Popularity"
 msgstr "Popularidad"
 
-#: forms.py:95 forms.py:216 templates/site.html:35
+#: forms.py:95 forms.py:216 templates/site.html:36
 msgid "Category"
 msgstr "Categoría"
 
-#: forms.py:96 forms.py:215 templates/site.html:36
+#: forms.py:96 forms.py:215 templates/site.html:37
 msgid "Type"
 msgstr "Tipo"
 
@@ -86,6 +86,10 @@ msgstr "Todo"
 msgid "Donations"
 msgstr "Donaciones"
 
+#: forms.py:171
+msgid "Show"
+msgstr "Mostrar"
+
 #: forms.py:187
 msgid "Received"
 msgstr "Recibido"
@@ -97,6 +101,10 @@ msgstr "Enviado"
 #: forms.py:189 templates/trades.html:78
 msgid "Accepted"
 msgstr "Aceptado"
+
+#: forms.py:193 templates/blocks/profile-menu.html:4
+msgid "Status"
+msgstr "Estado"
 
 #: forms.py:210
 msgid "Referral validator"
@@ -114,11 +122,11 @@ msgstr "Descripción"
 msgid "Source"
 msgstr "Fuente"
 
-#: forms.py:214 templates/site.html:37
+#: forms.py:214 templates/site.html:38
 msgid "Language"
 msgstr "Idioma"
 
-#: forms.py:217 templates/site.html:38
+#: forms.py:217 templates/site.html:39
 msgid "Active"
 msgstr "Activo"
 
@@ -291,10 +299,6 @@ msgstr "Ups, algo ha ido mal."
 msgid "Look behind you, a three headed monkey!"
 msgstr "¡Mira detrás de ti, un mono de tres cabezas!"
 
-#: templates/blocks/profile-menu.html:4
-msgid "Status"
-msgstr "Estado"
-
 #: templates/blocks/profile-menu.html:5
 msgid "Trades"
 msgstr "Intercambios"
@@ -348,7 +352,7 @@ msgid "Offers"
 msgstr "Ofertas"
 
 #: templates/blocks/sites-list.html:43 templates/blocks/sites-list.html:64
-#: templates/site.html:16
+#: templates/site.html:17
 msgid "Edit"
 msgstr "Editar"
 
@@ -363,6 +367,16 @@ msgstr "Cadena"
 #: templates/blocks/sites-list.html:67
 msgid "Use"
 msgstr "Usar"
+
+#: templates/blocks/social-buttons.html:5
+#| msgid "What is InviMarket?"
+msgid "at #inviMarket"
+msgstr "en #inviMarket"
+
+#: templates/blocks/social-buttons.html:17
+#| msgid "What is InviMarket?"
+msgid "at inviMarket!"
+msgstr "en inviMarket!"
 
 #: templates/blocks/user.html:28 templates/propose.html:23
 msgid "Rating:"
@@ -841,14 +855,6 @@ msgid "How does it work?"
 msgstr "¿Cómo funciona?"
 
 #: templates/faq.html:32
-#| msgid ""
-#| "\n"
-#| "        Search sites by using the search form in the top menu or the\n"
-#| "        the 'Sites' page, and request/offer invites or referral links to\n"
-#| "        the ones your interested in. In the Trading page you can find\n"
-#| "        users that match up with your requests/offers and propose\n"
-#| "        trades to them.\n"
-#| "        "
 msgid ""
 "\n"
 "        Search sites by using the search form in the top menu or the\n"
@@ -923,14 +929,6 @@ msgid "Can other users view my email address?"
 msgstr "¿Pueden otros usuarios ver mi dirección de correo electrónico?"
 
 #: templates/faq.html:75
-#| msgid ""
-#| "No, the invites are sended to an email addres\n"
-#| "        at the inviMarket domain, then forwarded to your email address. "
-#| "All the\n"
-#| "        emails coming from a domain not listed in our sites database will "
-#| "be\n"
-#| "        rejected.\n"
-#| "        "
 msgid ""
 "No, the invites are sended to an email addres\n"
 "        at the inviMarket domain, then forwarded to your email address. All "
@@ -943,9 +941,7 @@ msgstr ""
 "No, las invitaciones son enviadas a una dirección en el dominio inviMarket, "
 "y posteriormente reenviadas a tu dirección de correo. Todos los emails "
 "provenientes de dominios no listados en nuestra base de datos ('dominio' en "
-"la página de "
-"información del sitio) serán "
-"rechazados."
+"la página de información del sitio) serán rechazados."
 
 #: templates/faq.html:84
 msgid "What if the other user don't send the invites?"
@@ -1953,6 +1949,10 @@ msgstr ""
 "Recibirás un email con tu nombre de usuario y un link para establecer una "
 "nueva contraseña si no la recuerdas."
 
+#: templates/profile.html:30
+msgid "Check out my profile"
+msgstr "Mira mi perfil"
+
 #: templates/propose.html:36
 msgid "Select your requests"
 msgstr "Selecciona tus peticiones"
@@ -2005,21 +2005,25 @@ msgstr "Confirmación de cambio de contraseña"
 msgid "Invalid link."
 msgstr "Enlace inválido."
 
-#: templates/site.html:46
-msgid "Domain"
-msgstr "Dominio"
-
-#: templates/site.html:48
+#: templates/site.html:47
 msgid "Validator"
 msgstr "Validador"
 
-#: templates/site.html:56
+#: templates/site.html:49
+msgid "Domain"
+msgstr "Dominio"
+
+#: templates/site.html:57
 msgid "No description available yet"
 msgstr "Descripción no disponible aún."
 
-#: templates/site.html:60
+#: templates/site.html:61
 msgid "Source:"
 msgstr "Fuente:"
+
+#: templates/site.html:65
+msgid "Check out this site"
+msgstr "Mira este sitio"
 
 #: templates/sites.html:13
 msgid "Filter by category"
@@ -2085,8 +2089,9 @@ msgid "Reply"
 msgstr "Responder"
 
 #: templates/trades.html:37
-msgid "Send"
-msgstr "Enviar"
+#| msgid "Trade details"
+msgid "Details"
+msgstr "Detalles"
 
 #: templates/trades.html:65
 msgid "Status:"
@@ -2221,7 +2226,6 @@ msgid "The referral link is not valid. Check it and try again."
 msgstr "El enlace de referido no es válido. Compruébalo en inténtalo de nuevo."
 
 #: views/offer.py:82 views/request.py:51
-#| msgid "The 'mail domain' information is not availableyet for this site."
 msgid "The 'mail domain' information is not available yet for this site."
 msgstr ""
 "La información 'dominio de correo' no esta aún disponible para este sitio."
@@ -2318,6 +2322,9 @@ msgstr "Tu usuario y contraseña no concuerdan. Inténtalo de nuevo."
 #: views/user_login.py:56
 msgid "Username/email"
 msgstr "Usuario/email"
+
+#~ msgid "Send"
+#~ msgstr "Enviar"
 
 #~ msgid ""
 #~ "\n"

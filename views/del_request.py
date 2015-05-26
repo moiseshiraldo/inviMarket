@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render, get_object_or_404
-from inviMarket.models import Request
 from django.contrib.auth.decorators import login_required
 from django.utils.translation import ugettext as _
+
+from inviMarket.models import Request
 
 @login_required
 def del_request(request, site_id):

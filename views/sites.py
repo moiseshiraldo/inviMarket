@@ -1,15 +1,17 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render, get_object_or_404
-from inviMarket.forms import CategoryForm, TypeForm, OrderByForm
-from inviMarket.models import Website
 from django.db.models import Q
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.core.exceptions import ObjectDoesNotExist
 from django.core.urlresolvers import reverse
 from django.conf import settings
 from django.utils.http import urlquote
-import urllib
 from django.utils.translation import ugettext as _
+
+import urllib
+
+from inviMarket.forms import CategoryForm, TypeForm, OrderByForm
+from inviMarket.models import Website
 from inviMarket.decorators import cache_on_auth
 
 @cache_on_auth(60 * 60)
@@ -118,7 +120,7 @@ def sites(request, site_name=None):
                 lang = request.LANGUAGE_CODE
                 sites = Website.objects.filter(
                     lang__in=('multi', lang, )).order_by('-popularity')
-        paginator = Paginator(sites, 4)
+        paginator = Paginator(sites, 8)
         page = request.GET.get('page')
         try:
             sites = paginator.page(page)

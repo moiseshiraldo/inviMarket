@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render, get_object_or_404
-from inviMarket.models import User, Notification
 from django.template.loader import render_to_string
 from django.core.mail import send_mail
 from django.core.urlresolvers import reverse
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.utils.translation import ugettext as _
+
+from inviMarket.models import User, Notification
 
 @login_required
 def add_partner(request, partner_id):

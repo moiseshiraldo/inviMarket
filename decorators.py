@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from functools import wraps
+
 from django.views.decorators.cache import cache_page
 from django.utils.decorators import available_attrs
 

@@ -1,10 +1,11 @@
 from django.contrib.auth.models import User
-from inviMarket.models import Profile, Website, SiteEdition, Offer, Chain
-from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.core.validators import MaxValueValidator, MinValueValidator
-from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
+from django.conf import settings
+from django import forms
+
+from inviMarket.models import Profile, Website, SiteEdition, Offer, Chain
 
 class RegisterForm(UserCreationForm):
     """
@@ -168,7 +169,7 @@ class ShowDonationsForm(forms.Form):
         ('ALL', _('All')),
         ('DON', _('Donations')),
     )
-    show = forms.ChoiceField(choices=CHOICES, required=False)
+    show = forms.ChoiceField(choices=CHOICES, required=False, label=_('Show'))
 
 class CommentsForm(forms.Form):
     """
@@ -190,7 +191,7 @@ class TradeFilter(forms.Form):
     )
     status = forms.MultipleChoiceField(choices=CHOICES,
                                        widget = forms.CheckboxSelectMultiple(),
-                                       label='Status',
+                                       label=_('Status'),
                                        required=False,
                                        )
 

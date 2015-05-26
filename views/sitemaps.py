@@ -2,6 +2,7 @@
 from django.contrib import sitemaps
 from django.core.urlresolvers import reverse
 from django.utils.http import urlquote
+
 from inviMarket.models import Website
 
 class StaticViewSitemap(sitemaps.Sitemap):
@@ -9,8 +10,7 @@ class StaticViewSitemap(sitemaps.Sitemap):
 
     def items(self):
         return ['index', 'legal', 'faq', 'getstarted', 'glossary',
-                'suggestions', 'editing', 'register', 'login', 'sites',
-                'edition' ]
+                'suggestions', 'editing', 'register', 'login', 'sites']
 
     def location(self, item):
         return reverse(item)

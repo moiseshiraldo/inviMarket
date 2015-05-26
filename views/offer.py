@@ -1,14 +1,16 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render, get_object_or_404, redirect
-from inviMarket.models import Website
-from inviMarket.forms import OfferForm
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
 from django import forms
 from django.utils import timezone
+from django.utils.translation import ugettext as _
+
 import datetime
 import re
-from django.utils.translation import ugettext as _
+
+from inviMarket.models import Website
+from inviMarket.forms import OfferForm
 
 @login_required
 def offer(request, site_id):

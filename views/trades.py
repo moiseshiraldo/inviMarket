@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render
-from inviMarket.forms import TradeFilter
-from inviMarket.models import Trade
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.utils.translation import ugettext as _
+
+from inviMarket.forms import TradeFilter
+from inviMarket.models import Trade
 
 @login_required
 def trades(request):

@@ -1,7 +1,8 @@
+{% load i18n %}
 <div class="socialButtons">
-  <a class="twitter-share-button" count="none" href="https://twitter.com/share"
+  <a class="twitter-share-button" href="https://twitter.com/share"
     data-url="{{ url }}"
-    data-text="{{ text }} at #inviMarket"
+    data-text="{{ text }} {% trans "at #inviMarket" %}"
     data-count="none">
     Tweet</a>
   <div class="g-plus" data-action="share"
@@ -13,7 +14,7 @@
     data-layout="button">
   </div>
   <a href="whatsapp://send"
-    data-text="{{ text }} at inviMarket!"
+    data-text="{{ text }} {% trans "at inviMarket!" %}"
     data-url="{{ url }}"
     data-href="" class="wa_btn wa_btn_s" style="display:none">Share</a>
 </div>

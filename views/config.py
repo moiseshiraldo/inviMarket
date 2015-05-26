@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render
-from inviMarket.forms import ConfigForm
 from django.contrib.auth.decorators import login_required
 from django.utils.translation import ugettext as _
+
+from inviMarket.forms import ConfigForm
 
 @login_required
 def config(request):
