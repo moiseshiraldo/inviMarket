@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-26 18:37+0100\n"
-"PO-Revision-Date: 2015-05-26 18:37+0100\n"
+"POT-Creation-Date: 2015-05-27 16:14+0100\n"
+"PO-Revision-Date: 2015-05-27 16:20+0100\n"
 "Last-Translator: Moises\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "Language: en_US\n"
@@ -17,56 +17,56 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: forms.py:15
+#: forms.py:16
 msgid "Username"
 msgstr "Usuario"
 
-#: forms.py:18
+#: forms.py:19
 msgid "Required. 30 characters or fewer. Letters, digits and ./+/-/_ only."
 msgstr "Obligatorio. 30 caracteres o menos. Solo letras, dígitos y ./+/-/_."
 
-#: forms.py:21
+#: forms.py:22
 msgid "This value may contain only letters, numbers and ./+/-/_ characters."
 msgstr ""
 "Este campo solo puede contener letras, números y los caracteres ./+/-/_ ."
 
-#: forms.py:26 forms.py:208 forms.py:227
+#: forms.py:27 forms.py:209 forms.py:228
 msgid "Name"
 msgstr "Nombre"
 
-#: forms.py:39
+#: forms.py:40
 msgid "This value may not start with, end with or contain two consecutive '.'"
 msgstr "Este campo no puede empezar, terminar o contener dos '.' consecutivos."
 
-#: forms.py:49
+#: forms.py:50
 msgid "A user with that username already exists."
 msgstr "Ya existe un usuario con ese nombre de usuario."
 
-#: forms.py:58
+#: forms.py:59
 msgid "A user with that email already exists."
 msgstr "Ya existe un usuario con ese email."
 
-#: forms.py:94
+#: forms.py:95
 msgid "Popularity"
 msgstr "Popularidad"
 
-#: forms.py:95 forms.py:216 templates/site.html:36
+#: forms.py:96 forms.py:217 templates/site.html:36
 msgid "Category"
 msgstr "Categoría"
 
-#: forms.py:96 forms.py:215 templates/site.html:37
+#: forms.py:97 forms.py:216 templates/site.html:37
 msgid "Type"
 msgstr "Tipo"
 
-#: forms.py:97
+#: forms.py:98
 msgid "Requested invites"
 msgstr "Invitaciones pedidas"
 
-#: forms.py:101
+#: forms.py:102
 msgid "Order by"
 msgstr "Ordenar por"
 
-#: forms.py:109
+#: forms.py:110
 msgid ""
 "The number of invites to donate can't be greater than the total offered "
 "number."
@@ -74,220 +74,222 @@ msgstr ""
 "El número de invitaciones para donar no puede ser mayor que el número total "
 "ofrecido."
 
-#: forms.py:127
+#: forms.py:128
 msgid "Referral link"
 msgstr "Enlace de referido"
 
-#: forms.py:168
+#: forms.py:169
 msgid "All"
 msgstr "Todo"
 
-#: forms.py:169
+#: forms.py:170
 msgid "Donations"
 msgstr "Donaciones"
 
-#: forms.py:171
+#: forms.py:172
 msgid "Show"
 msgstr "Mostrar"
 
-#: forms.py:187
+#: forms.py:188
 msgid "Received"
 msgstr "Recibido"
 
-#: forms.py:188
+#: forms.py:189
 msgid "Sent"
 msgstr "Enviado"
 
-#: forms.py:189 templates/trades.html:78
+#: forms.py:190 templates/trades.html:79
 msgid "Accepted"
 msgstr "Aceptado"
 
-#: forms.py:193 templates/blocks/profile-menu.html:4
+#: forms.py:194 templates/blocks/profile-menu.html:4
 msgid "Status"
 msgstr "Estado"
 
-#: forms.py:210
+#: forms.py:211
 msgid "Referral validator"
 msgstr "Validador de referido"
 
-#: forms.py:211
+#: forms.py:212
 msgid "Mail domain"
 msgstr "Dominio de correo"
 
-#: forms.py:212
+#: forms.py:213
 msgid "Description"
 msgstr "Descripción"
 
-#: forms.py:213
+#: forms.py:214
 msgid "Source"
 msgstr "Fuente"
 
-#: forms.py:214 templates/site.html:38
+#: forms.py:215 templates/site.html:38
 msgid "Language"
 msgstr "Idioma"
 
-#: forms.py:217 templates/site.html:39
+#: forms.py:218 templates/site.html:39
 msgid "Active"
 msgstr "Activo"
 
-#: forms.py:218
+#: forms.py:219
 msgid "Comments"
 msgstr "Comentarios"
 
-#: forms.py:249 forms.py:269
+#: forms.py:250 forms.py:270
 msgid "Password"
 msgstr "Contraseña"
 
-#: models.py:26
+#: models.py:28
 msgid "Max file size is 25KB"
 msgstr "El tamaño máximo del archivo es 25KB"
 
-#: models.py:29 models.py:33
+#: models.py:31 models.py:35
 msgid "Spanish"
 msgstr "Español"
 
-#: models.py:30 models.py:34
+#: models.py:32 models.py:36
 msgid "English"
 msgstr "Inglés"
 
-#: models.py:35
+#: models.py:37
 msgid "Multi-language"
 msgstr "Varios idiomas"
 
-#: models.py:111 templates/propose.html:8
+#: models.py:113 templates/propose.html:4 templates/propose.html.py:9
 msgid "Trade proposal"
 msgstr "Propuesta de intercambio"
 
-#: models.py:112 views/add_partner.py:33
+#: models.py:114 views/add_partner.py:34
 msgid "Partnership request"
 msgstr "Solicitud de asociación"
 
-#: models.py:113
+#: models.py:115
 msgid "Proposal accepted"
 msgstr "Propuesta aceptada"
 
-#: models.py:114
+#: models.py:116
 msgid "Approved edition"
 msgstr "Edición aprobada"
 
-#: models.py:115 templates/trades.html:71
+#: models.py:117 templates/trades.html:72
 msgid "Received warning"
 msgstr "Warning recibido"
 
-#: models.py:137
+#: models.py:139
 msgid "Application"
 msgstr "Aplicación"
 
-#: models.py:138
+#: models.py:140
 msgid "Cloud Service"
 msgstr "Servicio en la nube"
 
-#: models.py:139
+#: models.py:141
 msgid "Direct Download"
 msgstr "Descarga directa"
 
-#: models.py:140
+#: models.py:142
 msgid "Forum"
 msgstr "Foro"
 
-#: models.py:141
+#: models.py:143
 msgid "Paid-To-Click"
 msgstr "Pago por click"
 
-#: models.py:142
+#: models.py:144
 msgid "Peer to peer"
 msgstr "Peer to peer"
 
-#: models.py:143
+#: models.py:145
 msgid "Streaming"
 msgstr "Streaming"
 
-#: models.py:144
+#: models.py:146
 msgid "Tracker"
 msgstr "Tracker"
 
-#: models.py:148
+#: models.py:150
 msgid "E-commerce"
 msgstr "Comercio"
 
-#: models.py:149
+#: models.py:151
 msgid "Generic"
 msgstr "Genérico"
 
-#: models.py:150
+#: models.py:152
 msgid "Multimedia"
 msgstr "Multimedia"
 
-#: models.py:151
+#: models.py:153
 msgid "Referral"
 msgstr "Referidos"
 
-#: models.py:152
+#: models.py:154
 msgid "Telecommunications"
 msgstr "Telecomunicaciones"
 
-#: templates/404.html:36 templates/getstarted.html:14
+#: templates/404.html:36 templates/getstarted.html:21
 msgid "Search sites"
 msgstr "Buscar sitios"
 
-#: templates/404.html:40 templates/index.html:85
+#: templates/404.html:40 templates/index.html:89
 msgid "Site name..."
 msgstr "Nombre..."
 
-#: templates/404.html:57 templates/index.html:160
+#: templates/404.html:57 templates/index.html:164
 msgid "License and source code"
 msgstr "Licencia y código fuente"
 
-#: templates/404.html:60 templates/index.html:163
+#: templates/404.html:60 templates/index.html:167
 msgid "Terms and conditions"
 msgstr "Términos y condiciones"
 
-#: templates/404.html:63 templates/index.html:166
+#: templates/404.html:63 templates/index.html:170
 msgid "Privacy policy"
 msgstr "Política de privacidad"
 
 #: templates/404.html:65 templates/email/email.html:82
-#: templates/index.html:168 templates/legal.html:10 templates/legal.html.py:22
+#: templates/index.html:172 templates/legal.html:11 templates/legal.html.py:23
 msgid "Contact"
 msgstr "Contacto"
 
-#: templates/404.html:68 templates/index.html:171
+#: templates/404.html:68 templates/index.html:175
 msgid "Get involved"
 msgstr "Colabora"
 
-#: templates/404.html:69 templates/editing.html:8 templates/index.html:172
+#: templates/404.html:69 templates/editing.html:14 templates/index.html:176
 msgid "Editing"
 msgstr "Ediciones"
 
-#: templates/404.html:70 templates/index.html:173 templates/market.html:45
+#: templates/404.html:70 templates/index.html:177 templates/market.html:50
 msgid "New sites"
 msgstr "Nuevos sitios"
 
-#: templates/404.html:72 templates/index.html:175 templates/suggestions.html:6
+#: templates/404.html:72 templates/index.html:179 templates/suggestions.html:3
+#: templates/suggestions.html.py:12
 msgid "Suggestions"
 msgstr "Sugerencias"
 
-#: templates/404.html:76 templates/index.html:179
+#: templates/404.html:76 templates/index.html:183
 msgid "Connect"
 msgstr "Conecta"
 
-#: templates/404.html:77 templates/index.html:180
+#: templates/404.html:77 templates/index.html:184
 msgid "Twitter"
 msgstr ""
 
-#: templates/404.html:78 templates/index.html:181
+#: templates/404.html:78 templates/index.html:185
 msgid "Facebook"
 msgstr ""
 
-#: templates/404.html:79 templates/index.html:182
+#: templates/404.html:79 templates/index.html:186
 msgid "Google+"
 msgstr ""
 
-#: templates/404.html:84 templates/getstarted.html:8 templates/index.html:187
+#: templates/404.html:84 templates/getstarted.html:4
+#: templates/getstarted.html.py:15 templates/index.html:191
 msgid "Get started"
 msgstr "Comienza"
 
-#: templates/404.html:87 templates/index.html:190
+#: templates/404.html:87 templates/glossary.html:3 templates/index.html:194
 msgid "Glossary"
 msgstr "Glosario"
 
@@ -299,11 +301,11 @@ msgstr "Ups, algo ha ido mal."
 msgid "Look behind you, a three headed monkey!"
 msgstr "¡Mira detrás de ti, un mono de tres cabezas!"
 
-#: templates/blocks/profile-menu.html:5
+#: templates/blocks/profile-menu.html:5 templates/trades.html:4
 msgid "Trades"
 msgstr "Intercambios"
 
-#: templates/blocks/profile-menu.html:6
+#: templates/blocks/profile-menu.html:6 templates/partners.html:4
 msgid "Partners"
 msgstr "Socios"
 
@@ -315,7 +317,7 @@ msgstr "Config"
 msgid "Recently viewed:"
 msgstr "Visto recientemente:"
 
-#: templates/blocks/site-block.html:19
+#: templates/blocks/site-block.html:19 templates/offer.html:4
 msgid "Offer"
 msgstr "Ofrecer"
 
@@ -323,7 +325,7 @@ msgstr "Ofrecer"
 msgid "Get Link"
 msgstr "Referido"
 
-#: templates/blocks/site-block.html:27
+#: templates/blocks/site-block.html:27 templates/request.html:4
 msgid "Request"
 msgstr "Pedir"
 
@@ -369,32 +371,35 @@ msgid "Use"
 msgstr "Usar"
 
 #: templates/blocks/social-buttons.html:5
-#| msgid "What is InviMarket?"
 msgid "at #inviMarket"
 msgstr "en #inviMarket"
 
 #: templates/blocks/social-buttons.html:17
-#| msgid "What is InviMarket?"
 msgid "at inviMarket!"
 msgstr "en inviMarket!"
 
-#: templates/blocks/user.html:28 templates/propose.html:23
+#: templates/blocks/user.html:28 templates/propose.html:24
 msgid "Rating:"
 msgstr "Rating:"
 
-#: templates/blocks/user.html:29 templates/propose.html:27
+#: templates/blocks/user.html:29 templates/propose.html:28
 msgid "Trades:"
 msgstr "Intercambios:"
 
-#: templates/chain.html:8
+#: templates/chain.html:3
+#| msgid "Referral chain to"
+msgid "Referral chain"
+msgstr "Cadena de referidos"
+
+#: templates/chain.html:9
 msgid "Chain creation to"
 msgstr "Cadena de referidos para"
 
-#: templates/chain.html:22
+#: templates/chain.html:23
 msgid "Create"
 msgstr "Crear"
 
-#: templates/chain.html:26
+#: templates/chain.html:27
 msgid ""
 "\n"
 "    Leave the password fields blank if you want anyone with the link to be\n"
@@ -410,68 +415,84 @@ msgstr ""
 "de saltar al siguiente enlace.\n"
 "    "
 
-#: templates/chain.html:35
+#: templates/chain.html:36
 msgid "Referral link to"
 msgstr "Enlace de referido para"
 
-#: templates/chain.html:43 templates/request.html:17
+#: templates/chain.html:44 templates/request.html:18
 msgid "Use this link:"
 msgstr "Usa este enlace:"
 
-#: templates/chain.html:51 templates/chain.html.py:74
+#: templates/chain.html:52 templates/chain.html.py:75
 msgid "Referral chain to"
 msgstr "Cadena de referidos para"
 
-#: templates/chain.html:69
+#: templates/chain.html:70
 msgid "Join"
 msgstr "Unirse"
 
-#: templates/complaint.html:8
+#: templates/complaint.html:4 templates/complaint.html.py:9
 msgid "Complaint"
 msgstr "Reclamación"
 
-#: templates/config.html:6 templates/index.html:74 templates/partners.html:9
-#: templates/profile.html:11 templates/trades.html:8
+#: templates/config.html:4
+#| msgid "Confirmation"
+msgid "Configuration"
+msgstr "Configuración"
+
+#: templates/config.html:7 templates/index.html:78 templates/partners.html:10
+#: templates/profile.html:4 templates/profile.html.py:12
+#: templates/trades.html:9
 msgid "Profile"
 msgstr "Perfil"
 
-#: templates/config.html:24
+#: templates/config.html:25
 msgid "Language:"
 msgstr "Idioma:"
 
-#: templates/config.html:25
+#: templates/config.html:26
 msgid "Receive email notifications:"
 msgstr "Recibir notificaciones por email:"
 
-#: templates/config.html:26
+#: templates/config.html:27
 msgid "Save"
 msgstr "Guardar"
 
-#: templates/config.html:29
+#: templates/config.html:30
 msgid "Change password"
 msgstr "Cambiar contraseña"
 
-#: templates/config.html:30
+#: templates/config.html:31
 msgid "Delete account"
 msgstr "Eliminar cuenta"
 
-#: templates/confirm.html:9
+#: templates/confirm.html:3 templates/message.html:7
+#: templates/message.html.py:17 templates/reset_confirm.html:3
+msgid "Confirmation"
+msgstr "Confirmación"
+
+#: templates/confirm.html:10
 msgid "Your account has been validated."
 msgstr "Tu cuenta ha sido validada."
 
-#: templates/confirm.html:11
+#: templates/confirm.html:12
 msgid "The activation key is incorrect or has expired."
 msgstr "La clave de activación es incorrecta o ha expirado."
 
-#: templates/confirm.html:13
+#: templates/confirm.html:14
 msgid "A confirmation email has been sended to your email address."
 msgstr "Se ha enviado un email de confirmación a tu dirección de correo."
 
-#: templates/del_profile.html:6
+#: templates/del_profile.html:3
+#| msgid "Profile deletion"
+msgid "Account deletion"
+msgstr "Eliminar cuenta"
+
+#: templates/del_profile.html:7
 msgid "Profile deletion"
 msgstr "Eliminar cuenta"
 
-#: templates/del_profile.html:10
+#: templates/del_profile.html:11
 msgid ""
 "\n"
 "      By default we will set your account as inactive and keep all your\n"
@@ -485,7 +506,7 @@ msgstr ""
 "información, en caso de que quieras activarla de nuevo en el futuro. Si "
 "quieres borrar tu cuenta completamente, marca la opción indicada abajo. "
 
-#: templates/del_profile.html:19
+#: templates/del_profile.html:20
 msgid ""
 "\n"
 "      Delete all the information relative to my account.\n"
@@ -494,7 +515,22 @@ msgstr ""
 "\n"
 "Borrar toda la información relativa a mi cuenta. "
 
-#: templates/editing.html:10
+#: templates/editing.html:4
+#| msgid "Editing"
+msgid "Editing sites"
+msgstr "Edición de sitios"
+
+#: templates/editing.html:6
+msgid ""
+"\n"
+"Create new sites and edit the information about the invites or referral "
+"system.\n"
+msgstr ""
+"\n"
+"Crea nuevos sitios y edita la información sobre el sistema de invitaciones o "
+"referidos.\n"
+
+#: templates/editing.html:16
 msgid ""
 "\n"
 "      If you can't find the site you're looking for in our database,\n"
@@ -505,7 +541,7 @@ msgstr ""
 "Si no puedes encontrar el sitio que estás buscando en nuestra base de datos, "
 "puedes crearlo tú mismo rellenando el formulario de nuevos sitios. "
 
-#: templates/editing.html:16
+#: templates/editing.html:22
 msgid ""
 "\n"
 "      If you notice that the information of a site is wrong, outdated\n"
@@ -518,7 +554,7 @@ msgstr ""
 "desactualizada, puedes modificarla siguiendo el link editar en la página del "
 "sitio. "
 
-#: templates/editing.html:23
+#: templates/editing.html:29
 msgid ""
 "\n"
 "      For both actions you need to be a registered user. Once\n"
@@ -531,20 +567,21 @@ msgstr ""
 "infomarción será revisada por el administrador, hasta que el número de "
 "usuarios crezca y podamos implmentar un sistema de edición automático. "
 
-#: templates/editing.html:31 templates/index.html:81
+#: templates/editing.html:37 templates/index.html:85
 msgid "Sites"
 msgstr "Sitios"
 
-#: templates/editing.html:33 templates/getstarted.html:139
-#: templates/index.html:62 templates/login.html:77 templates/register.html:6
+#: templates/editing.html:39 templates/getstarted.html:146
+#: templates/index.html:66 templates/login.html:78 templates/register.html:7
 msgid "Register"
 msgstr "Registrarse"
 
-#: templates/edition.html:6 templates/getstarted.html:111
+#: templates/edition.html:3 templates/edition.html.py:7
+#: templates/getstarted.html:118
 msgid "Site edition"
 msgstr "Edición de sitios"
 
-#: templates/edition.html:23
+#: templates/edition.html:24
 msgid ""
 "\n"
 "    <p>The 'description' field should only contain a brief\n"
@@ -811,15 +848,20 @@ msgstr ""
 "Has recibido un warning debido a invitaciones no enviadas .Haz click\n"
 "en el siguiente enlace para comprobar los detalles del intercambio:\n"
 
-#: templates/faq.html:6
+#: templates/faq.html:3
+#| msgid "Frequently Asked Questions"
+msgid "Frequently asked questions"
+msgstr "Preguntas frecuentes"
+
+#: templates/faq.html:7
 msgid "Frequently Asked Questions"
 msgstr "Preguntas frecuentes"
 
-#: templates/faq.html:9 templates/login.html:37
+#: templates/faq.html:10 templates/login.html:38
 msgid "What is InviMarket?"
 msgstr "¿Qué es InviMarket?"
 
-#: templates/faq.html:11
+#: templates/faq.html:12
 msgid ""
 "\n"
 "        InviMarket is a website where you can share and get invites\n"
@@ -832,11 +874,11 @@ msgstr ""
 "enlaces de referido a otros sitios, así como información relativa al sistema "
 "de invitaciones o referidos de dichos sitios. "
 
-#: templates/faq.html:19
+#: templates/faq.html:20
 msgid "What is not InviMarket?"
 msgstr "¿Qué no es InviMarket?"
 
-#: templates/faq.html:21
+#: templates/faq.html:22
 msgid ""
 "\n"
 "        InviMarket is not a website where you can sell or buy invites.\n"
@@ -850,11 +892,11 @@ msgstr ""
 "uso de una terminología de mercado es una mera gamificación para animar a "
 "los usuarios a compartir invitaciones, enlaces de referido e información. "
 
-#: templates/faq.html:30
+#: templates/faq.html:31
 msgid "How does it work?"
 msgstr "¿Cómo funciona?"
 
-#: templates/faq.html:32
+#: templates/faq.html:33
 msgid ""
 "\n"
 "        Search sites by using the search form in the top menu or the\n"
@@ -870,11 +912,11 @@ msgstr ""
 "sitios que te interesen. En la página 'Intercambio' puedes encontrar "
 "usuarios interesados en las mismas invitaciones y proponer intercambios. "
 
-#: templates/faq.html:42
+#: templates/faq.html:43
 msgid "Do I have to register?"
 msgstr "¿Tengo que registrarme?"
 
-#: templates/faq.html:44
+#: templates/faq.html:45
 msgid ""
 "\n"
 "        You can search sites, view their information and get random\n"
@@ -887,11 +929,11 @@ msgstr ""
 "registrarte. Necesitas una cuenta para intercambiar invitaciones y editar "
 "sitios. "
 
-#: templates/faq.html:52
+#: templates/faq.html:53
 msgid "What does the lock icon mean?"
 msgstr "¿Qué significa el icono del candado?"
 
-#: templates/faq.html:54
+#: templates/faq.html:55
 msgid ""
 "\n"
 "        It means the site is protected, so you can't view an invite\n"
@@ -908,11 +950,11 @@ msgstr ""
 "invitaciones, y aunque la responsabilidad última recae sobre el usuario, no "
 "queremos ser una herramienta fácil para romper las normas de otras webs. "
 
-#: templates/faq.html:64
+#: templates/faq.html:65
 msgid "I have an accepted trade proposal, what now?"
 msgstr "Tengo una propuesta de intercambio aceptada, ¿qué hago ahora?"
 
-#: templates/faq.html:66
+#: templates/faq.html:67
 msgid ""
 "\n"
 "        Go to the Trades section on your profile, check the trade\n"
@@ -924,11 +966,11 @@ msgstr ""
 "propuesta aceptada y envía las invitaciones a la dirección de correo "
 "electrónico especificada. "
 
-#: templates/faq.html:73
+#: templates/faq.html:74
 msgid "Can other users view my email address?"
 msgstr "¿Pueden otros usuarios ver mi dirección de correo electrónico?"
 
-#: templates/faq.html:75
+#: templates/faq.html:76
 msgid ""
 "No, the invites are sended to an email addres\n"
 "        at the inviMarket domain, then forwarded to your email address. All "
@@ -943,11 +985,11 @@ msgstr ""
 "provenientes de dominios no listados en nuestra base de datos ('dominio' en "
 "la página de información del sitio) serán rechazados."
 
-#: templates/faq.html:84
+#: templates/faq.html:85
 msgid "What if the other user don't send the invites?"
 msgstr "¿Qué pasa si el otro usuario no envía las invitaciones?"
 
-#: templates/faq.html:87
+#: templates/faq.html:88
 msgid ""
 "\n"
 "        We keep a temporary copy of the emails. If the user haven't sent\n"
@@ -965,11 +1007,11 @@ msgstr ""
 "el usuario recibirá una advertencia. Cada advertencia desciende el rating de "
 "usuario, y tras tres advertencias la cuenta será baneada. "
 
-#: templates/faq.html:98
+#: templates/faq.html:99
 msgid "Can I change my username?"
 msgstr "¿Puedo cambiar mi nombre de usuario?"
 
-#: templates/faq.html:100
+#: templates/faq.html:101
 msgid ""
 "\n"
 "        No, the username cannot be edited. You can create a new\n"
@@ -980,11 +1022,11 @@ msgstr ""
 "No, el nombre de usuario no se puede editar. Puedes crear una nueva cuenta, "
 "aunque no podrás migrar los intercambios, rating y ediciones. "
 
-#: templates/faq.html:107
+#: templates/faq.html:108
 msgid "Who is behind inviMarket?"
 msgstr "¿Quién está detrás de inviMarket?"
 
-#: templates/faq.html:109
+#: templates/faq.html:110
 msgid ""
 "\n"
 "        InviMarket is an ameteur project developed by\n"
@@ -999,11 +1041,11 @@ msgstr ""
 "google.com/112978057388954998834/about/\" target=\"_blank\">Moisés Hiraldo</"
 "a>, no hay mucho que decir sobre él o su plan para dominar el mundo. "
 
-#: templates/faq.html:118
+#: templates/faq.html:119
 msgid "What is InviMarket written in?"
 msgstr "¿En qué lenguaje esta escrito inviMarket?"
 
-#: templates/faq.html:120
+#: templates/faq.html:121
 msgid ""
 "\n"
 "        Python, using the Django framework. You can see the source code\n"
@@ -1017,7 +1059,18 @@ msgstr ""
 "\"_blank\">aquí</a>.\n"
 "        "
 
-#: templates/getstarted.html:17
+#: templates/getstarted.html:6
+msgid ""
+"\n"
+"Search your favourite sites. Get information about the invite or referral "
+"system.\n"
+"Request, offer invites and share referral links.\n"
+msgstr ""
+"\n"
+"Busca tus sitios favoritos. Obtén información sobre el sistema de "
+"invitaciones o referidos. Pide u ofrece invitaciones o enlaces de referido.\n"
+
+#: templates/getstarted.html:24
 msgid ""
 "\n"
 "            Go to the sites page or use the search box in the\n"
@@ -1028,7 +1081,7 @@ msgstr ""
 "Ve a la página 'Sitios' o usa la caja de búsqueda del menú superior para "
 "buscar tus sitios favoritos. "
 
-#: templates/getstarted.html:23
+#: templates/getstarted.html:30
 msgid ""
 "\n"
 "            Filter and order the results using the formulary on the\n"
@@ -1038,7 +1091,7 @@ msgstr ""
 "\n"
 "Filtra y ordena los resultados usando el formulario en el lado izquierdo. "
 
-#: templates/getstarted.html:29
+#: templates/getstarted.html:36
 msgid ""
 "\n"
 "            Click on the site logo or name to get information about the "
@@ -1050,7 +1103,7 @@ msgstr ""
 "Haz click en el logo/nombre del sitio para saber más sobre el sistema de "
 "invitaciones. "
 
-#: templates/getstarted.html:35
+#: templates/getstarted.html:42
 msgid ""
 "\n"
 "            Offer or request invites using the buttons at the top\n"
@@ -1060,11 +1113,11 @@ msgstr ""
 "\n"
 "Ofrece o pide invitaciones usando los botones en la caja del sitio. "
 
-#: templates/getstarted.html:48
+#: templates/getstarted.html:55
 msgid "Search invites"
 msgstr "Busca invitaciones"
 
-#: templates/getstarted.html:51
+#: templates/getstarted.html:58
 msgid ""
 "\n"
 "            Select the trading option in the navigation menu to go\n"
@@ -1074,7 +1127,7 @@ msgstr ""
 "\n"
 "Selecciona 'Intercambio' en el menú superior para buscar invitaciones. "
 
-#: templates/getstarted.html:57
+#: templates/getstarted.html:64
 msgid ""
 "\n"
 "            You will be shown a list of users matching up with\n"
@@ -1085,7 +1138,7 @@ msgstr ""
 "Se mostrará una lista con usuarios relativos a tus peticiones y ofertas de "
 "invitación. "
 
-#: templates/getstarted.html:63
+#: templates/getstarted.html:70
 msgid ""
 "\n"
 "            Refine the search using the formulary on the left\n"
@@ -1095,7 +1148,7 @@ msgstr ""
 "\n"
 "Refina la búsqueda usando el formulario en el lado izquierdo. "
 
-#: templates/getstarted.html:69
+#: templates/getstarted.html:76
 msgid ""
 "\n"
 "            To request or trade invites, just click on the trade\n"
@@ -1105,11 +1158,11 @@ msgstr ""
 "\n"
 "Para pedir o intercambiar invitaciones, haz click en el botón 'Trueque'. "
 
-#: templates/getstarted.html:82
+#: templates/getstarted.html:89
 msgid "Your profile"
 msgstr "Tu perfil"
 
-#: templates/getstarted.html:85
+#: templates/getstarted.html:92
 msgid ""
 "\n"
 "            View and manage your current invite requests/offers,\n"
@@ -1120,7 +1173,7 @@ msgstr ""
 "Gestiona tus peticiones/ofertas de invitación, lista de socios e "
 "intercambios. "
 
-#: templates/getstarted.html:91
+#: templates/getstarted.html:98
 msgid ""
 "\n"
 "            Share your profile in other social networks and let your\n"
@@ -1131,7 +1184,7 @@ msgstr ""
 "Comparte tu perfil en otras redes sociales y haz que tus amigos conozcan de "
 "tus peticiones de invitación. "
 
-#: templates/getstarted.html:97
+#: templates/getstarted.html:104
 msgid ""
 "\n"
 "            All your referrals links are also visible in your\n"
@@ -1143,7 +1196,7 @@ msgstr ""
 "Tus enlaces de referido son visibles en tu perfil. Se acabó compartir cada "
 "link por separado, ¡compártelos todos con un click! "
 
-#: templates/getstarted.html:114
+#: templates/getstarted.html:121
 msgid ""
 "\n"
 "              Can't find the site you're looking for in our database?\n"
@@ -1154,7 +1207,7 @@ msgstr ""
 "¿No puedes encontrar el sitio que buscas en nuestra base de datos? Créalo tú "
 "mismo rellenando un simple formulario. "
 
-#: templates/getstarted.html:120
+#: templates/getstarted.html:127
 msgid ""
 "\n"
 "              You can also edit the existing sites if you notice\n"
@@ -1165,7 +1218,7 @@ msgstr ""
 "También puedes editar los sitios existentes si notas que alguna información "
 "no es correcta. "
 
-#: templates/getstarted.html:126
+#: templates/getstarted.html:133
 msgid ""
 "\n"
 "              If you don't have the information, share the site page in "
@@ -1177,43 +1230,43 @@ msgstr ""
 "Si no dispones de la información, comparte la página del sitio en otras "
 "redes sociales. "
 
-#: templates/index.html:58
+#: templates/index.html:62
 msgid "Logout"
 msgstr "Salir"
 
-#: templates/index.html:61 templates/login.html:9
+#: templates/index.html:65 templates/login.html:4 templates/login.html.py:10
 msgid "Login"
 msgstr "Iniciar sesión"
 
-#: templates/index.html:77
+#: templates/index.html:81
 msgid "Trading"
 msgstr "Intercambio"
 
-#: templates/index.html:90
+#: templates/index.html:94
 msgid "Notifications"
 msgstr "Notificaciones"
 
-#: templates/index.html:226
+#: templates/index.html:230
 msgid "This place uses"
 msgstr "Este sitio usa"
 
-#: templates/index.html:227
+#: templates/index.html:231
 msgid "cookies"
 msgstr "cookies"
 
-#: templates/index.html:228
+#: templates/index.html:232
 msgid "and no animals were harmed in the development process."
 msgstr "y ningún animal resultó herido en el proceso de desarrollo."
 
-#: templates/index.html:230
+#: templates/index.html:234
 msgid "Close"
 msgstr "Cerrar"
 
-#: templates/legal.html:6
+#: templates/legal.html:3 templates/legal.html.py:7
 msgid "Legal information"
 msgstr "Información legal"
 
-#: templates/legal.html:13
+#: templates/legal.html:14
 msgid ""
 "\n"
 "    The domain www.inviMarket.com is owned and administered by Moisés "
@@ -1225,7 +1278,7 @@ msgstr ""
 "El dominio www.invimarket.com pertenece y es administrado por Moisés "
 "Hiraldo, residente en:"
 
-#: templates/legal.html:28
+#: templates/legal.html:29
 msgid ""
 "\n"
 "  <h2>License</h2>\n"
@@ -1318,7 +1371,7 @@ msgstr ""
 "  </p>\n"
 "  "
 
-#: templates/legal.html:67
+#: templates/legal.html:68
 msgid ""
 "\n"
 "  <h2>Terms and Conditions</h2>\n"
@@ -1567,7 +1620,7 @@ msgstr ""
 "  </ul>\n"
 "  "
 
-#: templates/legal.html:179
+#: templates/legal.html:180
 msgid ""
 "\n"
 "  <h2>Privacy and Cookies Policy</h2>\n"
@@ -1795,15 +1848,15 @@ msgstr ""
 "  </ul>\n"
 "  "
 
-#: templates/login.html:28
+#: templates/login.html:29
 msgid "Have you forgotten your password?"
 msgstr "¿Has olvidado tu contraseña?"
 
-#: templates/login.html:30
+#: templates/login.html:31
 msgid "Click here"
 msgstr "Haz click aquí"
 
-#: templates/login.html:39
+#: templates/login.html:40
 msgid ""
 "\n"
 "        It's a website where you can share and get invites or referral\n"
@@ -1816,15 +1869,15 @@ msgstr ""
 "referido a otros sitios, así como información relativa al sistema de "
 "invitaciones/referidos de dichos sitios."
 
-#: templates/login.html:45
+#: templates/login.html:46
 msgid "Don't have an account yet?"
 msgstr "¿Aún no tienes una cuenta?"
 
-#: templates/login.html:46
+#: templates/login.html:47
 msgid "As a registered user, you could:"
 msgstr "Como usuario registrado, podrías:"
 
-#: templates/login.html:49
+#: templates/login.html:50
 msgid ""
 "\n"
 "          Request and offer invites or referral links to your\n"
@@ -1834,7 +1887,7 @@ msgstr ""
 "\n"
 "Pedir y ofrecer invitaciones o enlaces de referido a tus sitios favoritos."
 
-#: templates/login.html:55
+#: templates/login.html:56
 msgid ""
 "\n"
 "          Find users interested in the same sites and share or trade\n"
@@ -1845,7 +1898,7 @@ msgstr ""
 "Encontrar usuarios interesados en los mismos sitios y compartir o "
 "intercambiar tus invitaciones."
 
-#: templates/login.html:61
+#: templates/login.html:62
 msgid ""
 "\n"
 "          All your user information will be stored in your profile.\n"
@@ -1857,7 +1910,7 @@ msgstr ""
 "Toda tu información de usuario es almacenada en tu perfil. Comparte tus "
 "enlaces de referido con tus amigos en un solo click."
 
-#: templates/login.html:68
+#: templates/login.html:69
 msgid ""
 "\n"
 "          Edit new sites and modify the information of the existing\n"
@@ -1867,35 +1920,41 @@ msgstr ""
 "\n"
 "Editar nuevos sitios y modificar la información de los existentes."
 
-#: templates/market.html:12
+#: templates/market.html:5
+msgid ""
+"\n"
+"Discover the most popular sites. Get, share, trade invites and referral "
+"links.\n"
+msgstr ""
+"\n"
+"Descubre los sitios más populares. Comparte e intercambia invitaciones y "
+"enlaces de referido.\n"
+
+#: templates/market.html:17
 msgid "Popular sites"
 msgstr "Sitios populares"
 
-#: templates/market.html:23
+#: templates/market.html:28
 msgid "Recent offers"
 msgstr "Ofertas recientes"
 
-#: templates/market.html:56
+#: templates/market.html:61
 msgid "Recent requests"
 msgstr "Peticiones recientes"
 
-#: templates/message.html:10
-msgid "Confirmation"
-msgstr "Confirmación"
-
-#: templates/offer.html:8
+#: templates/offer.html:9
 msgid "Offer to"
 msgstr "Oferta para"
 
-#: templates/offer.html:28
+#: templates/offer.html:29
 msgid "Select how many invites you would like to offer:"
 msgstr "Selecciona cuántas invitaciones te gustaría ofrecer:"
 
-#: templates/offer.html:38
+#: templates/offer.html:39
 msgid "Insert the complete referral URL, otherwise it won't be validated."
 msgstr "Inserta la URL de referido completa, o el enlace no será validado."
 
-#: templates/offer.html:40
+#: templates/offer.html:41
 msgid ""
 "\n"
 "    The total number is the number of invites that will be availabe to be "
@@ -1907,7 +1966,7 @@ msgstr ""
 "El número total es el número de invitaciones que estarán disponibles para "
 "ser incluidas en intercambios (solo una por intercambio)."
 
-#: templates/offer.html:45
+#: templates/offer.html:46
 msgid ""
 "\n"
 "    The ones you mark as 'to donate' can be requested by another users "
@@ -1922,23 +1981,23 @@ msgstr ""
 "sin ofrecer ninguna invitación a cambio (recibirás más puntos de rating si "
 "donas una invitación)."
 
-#: templates/partners.html:18
+#: templates/partners.html:19
 msgid "Reject"
 msgstr "Rechazar"
 
-#: templates/partners.html:22
+#: templates/partners.html:23
 msgid "Accept"
 msgstr "Aceptar"
 
-#: templates/password_change.html:6
+#: templates/password_change.html:3 templates/password_change.html.py:7
 msgid "Password change"
 msgstr "Cambio de contraseña"
 
-#: templates/password_reset.html:6
+#: templates/password_reset.html:3 templates/password_reset.html.py:7
 msgid "User recovery"
 msgstr "Recuperación de usuario"
 
-#: templates/password_reset.html:15
+#: templates/password_reset.html:16
 msgid ""
 "\n"
 "    You will receive and email with your username and a link to set a new\n"
@@ -1949,31 +2008,36 @@ msgstr ""
 "Recibirás un email con tu nombre de usuario y un link para establecer una "
 "nueva contraseña si no la recuerdas."
 
-#: templates/profile.html:30
+#: templates/profile.html:31
 msgid "Check out my profile"
 msgstr "Mira mi perfil"
 
-#: templates/propose.html:36
+#: templates/propose.html:37
 msgid "Select your requests"
 msgstr "Selecciona tus peticiones"
 
-#: templates/propose.html:46
+#: templates/propose.html:47
 msgid "Select your offers"
 msgstr "Selecciona tus ofertas"
 
-#: templates/propose.html:54
+#: templates/propose.html:55
 msgid "Donation available."
 msgstr "Donación disponible."
 
-#: templates/register.html:17
+#: templates/register.html:3
+#| msgid "Register"
+msgid "Registration"
+msgstr "Registro"
+
+#: templates/register.html:18
 msgid "I've read and accept the"
 msgstr "He leído y acepto los"
 
-#: templates/register.html:19
+#: templates/register.html:20
 msgid "terms and conditions of use"
 msgstr "términos y condiciones de uso"
 
-#: templates/register.html:24
+#: templates/register.html:25
 msgid ""
 "\n"
 "    The username must be unique and may contain only letters, numbers and\n"
@@ -1985,23 +2049,23 @@ msgstr ""
 "El usuario debe ser único y puede contener solo letras, números y los "
 "caracteres ./+/-/_.<br/> El email también debe ser único."
 
-#: templates/request.html:7
+#: templates/request.html:8
 msgid "Request to"
 msgstr "Petición para"
 
-#: templates/request.html:19
+#: templates/request.html:20
 msgid "No links available."
 msgstr "No hay enlaces disponibles."
 
-#: templates/request.html:24
+#: templates/request.html:25
 msgid "Your request has been successfuly stored."
 msgstr "Tu petición se ha almacenado correctamente."
 
-#: templates/reset_confirm.html:6
+#: templates/reset_confirm.html:7
 msgid "Password reset confirmation"
 msgstr "Confirmación de cambio de contraseña"
 
-#: templates/reset_confirm.html:16
+#: templates/reset_confirm.html:17
 msgid "Invalid link."
 msgstr "Enlace inválido."
 
@@ -2025,15 +2089,38 @@ msgstr "Fuente:"
 msgid "Check out this site"
 msgstr "Mira este sitio"
 
-#: templates/sites.html:13
+#: templates/sites.html:4
+msgid "Sites search"
+msgstr "Buscar sitios"
+
+#: templates/sites.html:6
+msgid ""
+"\n"
+"Search your favourite sites by name, filter by type and category and "
+"quickly\n"
+"request or offer invites.\n"
+msgstr ""
+"\n"
+"Busca tus sitios favoritos por nombre, filtra por tipo y categoría y pide u "
+"ofrece invitaciones rápidamente.\n"
+
+#: templates/sites.html:20
 msgid "Filter by category"
 msgstr "Filtrar por categoría"
 
-#: templates/sites.html:17
+#: templates/sites.html:24
 msgid "Filter by type"
 msgstr "Filtrar por tipo"
 
-#: templates/suggestions.html:8
+#: templates/suggestions.html:5
+msgid ""
+"\n"
+"Help us to improve inviMarket. We want to hear your suggestions!\n"
+msgstr ""
+"\n"
+"Ayúdanos a mejorar InviMarket. ¡Queremos escuchar tus sugerencias!\n"
+
+#: templates/suggestions.html:14
 msgid ""
 "If you have any suggestions to improve\n"
 "    InviMarket, don't hesitate to contact us using our social networking\n"
@@ -2046,31 +2133,31 @@ msgstr ""
 "También puedes enviar un correo electrónico explicando tus ideas a "
 "suggestions[at]invimarket.com:"
 
-#: templates/suggestions.html:17
+#: templates/suggestions.html:23
 msgid "Name:"
 msgstr "Nombre:"
 
-#: templates/suggestions.html:21
+#: templates/suggestions.html:27
 msgid "Suggestions:"
 msgstr "Sugerencias:"
 
-#: templates/suggestions.html:23
+#: templates/suggestions.html:29
 msgid "Your suggestions..."
 msgstr "Tus sugerencias:"
 
-#: templates/trade.html:8
+#: templates/trade.html:4 templates/trade.html.py:9
 msgid "Trade details"
 msgstr "Detalles del intercambio"
 
-#: templates/trade.html:17
+#: templates/trade.html:18
 msgid "Modify"
 msgstr "Modificar"
 
-#: templates/trade.html:22
+#: templates/trade.html:23
 msgid "Complain"
 msgstr "Reclamar"
 
-#: templates/trade.html:34 templates/trade.html.py:39
+#: templates/trade.html:35 templates/trade.html.py:40
 msgid ""
 "\n"
 "      Send the invites to the following email addres:\n"
@@ -2080,56 +2167,60 @@ msgstr ""
 "Envía las invitaciones a la siguiente dirección de correo electrónico: "
 "%(trade.proposer)s@invimarket.com"
 
-#: templates/trade.html:46
+#: templates/trade.html:47
 msgid "No commments."
 msgstr "Sin comentarios."
 
-#: templates/trades.html:32
+#: templates/trades.html:33
 msgid "Reply"
 msgstr "Responder"
 
-#: templates/trades.html:37
-#| msgid "Trade details"
+#: templates/trades.html:38
 msgid "Details"
 msgstr "Detalles"
 
-#: templates/trades.html:65
+#: templates/trades.html:66
 msgid "Status:"
 msgstr "Estado:"
 
-#: templates/trades.html:69
+#: templates/trades.html:70
 msgid "Received complaint"
 msgstr "Reclamación recibida"
 
-#: templates/trades.html:73
+#: templates/trades.html:74
 msgid "Pending complaint"
 msgstr "Reclamación pendiente"
 
-#: templates/trades.html:80
+#: templates/trades.html:81
 msgid "Pending"
 msgstr "Pendiente"
 
-#: templates/trading.html:17
+#: templates/trading.html:4
+#| msgid "Trading"
+msgid "Trading search"
+msgstr "Buscar intercambios"
+
+#: templates/trading.html:18
 msgid "Filter by requests"
 msgstr "Filtrar por peticiones"
 
-#: templates/trading.html:22
+#: templates/trading.html:23
 msgid "Filter by offers"
 msgstr "Filtrar por ofertas"
 
-#: urls.py:74
+#: urls.py:75
 msgid "Your edition have been submitted and will be reviewed by the admin."
 msgstr "Tu edición ha sido enviada y será revisada por el administrador."
 
-#: urls.py:82
+#: urls.py:83
 msgid "Your offer has been succesfuly stored."
 msgstr "Tu oferta se ha almacenado correctamente."
 
-#: urls.py:85
+#: urls.py:86
 msgid "The offer has been deleted."
 msgstr "La oferta ha sido eliminada."
 
-#: urls.py:89
+#: urls.py:90
 msgid ""
 "The referral chain has been created, you can get the link on your profile "
 "page."
@@ -2137,75 +2228,75 @@ msgstr ""
 "La cadena de referidos ha sido creada, puedes obtener el link en tu página "
 "de perfil."
 
-#: urls.py:97
+#: urls.py:98
 msgid "Your trade proposal has been sended to the user."
 msgstr "Tu propuesta de intercambio ha sido enviada al usuario."
 
-#: urls.py:102
+#: urls.py:103
 msgid "The trade proposal has been accepted."
 msgstr "La propuesta de intercambio ha sido aceptada."
 
-#: urls.py:105
+#: urls.py:106
 msgid "The trade proposal has been rejected."
 msgstr "La propuesta de intercambio ha sido rechazada."
 
-#: urls.py:118
+#: urls.py:119
 msgid "Your complaint has been submitted."
 msgstr "Tu reclamación ha sido enviada."
 
-#: views/add_partner.py:35
+#: views/add_partner.py:36
 msgid "The user is already your partner."
 msgstr "El usuario ya era tu socio."
 
-#: views/add_partner.py:37
+#: views/add_partner.py:38
 msgid "You have reached the maximum number of partners."
 msgstr "Has alcanzado el número máximo de socios."
 
-#: views/add_partner.py:41
+#: views/add_partner.py:42
 msgid "The user has been successfuly added to your partners list."
 msgstr "El usuario ha sido añadido a tu lista de socios."
 
-#: views/add_partner.py:69
+#: views/add_partner.py:70
 msgid "The partnership request has been sended to the user."
 msgstr "La petición de asociación ha sido enviada al usuario."
 
-#: views/complaint.py:38
+#: views/complaint.py:40
 msgid "You have already submitted a complaint for this trade."
 msgstr "Ya has enviado una reclamación para este intercambio."
 
-#: views/complaint.py:40
+#: views/complaint.py:42
 msgid "You have to wait seven days to make a complaint."
 msgstr "Debes esperar siete días para realizar una reclamación."
 
-#: views/complaint.py:42
+#: views/complaint.py:44
 msgid "The complaint period has expired."
 msgstr "El período de reclamación ha expirado."
 
-#: views/config.py:32
+#: views/config.py:33
 msgid "Your profile has been successfuly updated."
 msgstr "Tu perfil ha sido actualizado."
 
-#: views/del_partner.py:25
+#: views/del_partner.py:26
 msgid "Ther user is not your partner."
 msgstr "El usuario ya no es tu socio."
 
-#: views/del_partner.py:28
+#: views/del_partner.py:29
 msgid "The partnership proposal has been rejected."
 msgstr "La solicitud de asociación ha sido rechazada."
 
-#: views/del_partner.py:32
+#: views/del_partner.py:33
 msgid "The user is no longer your partner."
 msgstr "El usuario ya no es tu socio."
 
-#: views/del_request.py:36
+#: views/del_request.py:37
 msgid "The request has been deleted."
 msgstr "La petición ha sido eliminada."
 
-#: views/del_request.py:38
+#: views/del_request.py:39
 msgid "Some error has occurred. Reload and try again."
 msgstr "Ha ocurrido un error, vuelve a intentarlo."
 
-#: views/edition.py:29
+#: views/edition.py:30
 msgid ""
 "You have another edition pending for review. We will do itas soon as "
 "possible, thank you for your patience."
@@ -2213,101 +2304,101 @@ msgstr ""
 "Tienes otra edición pendiente de ser revisada. Lo haremos tan pronto como "
 "sea posible, gracias por tu paciencia."
 
-#: views/join_chain.py:45
+#: views/join_chain.py:46
 msgid "Invalid password."
 msgstr "Contraseña incorrecta."
 
-#: views/join_chain.py:58
+#: views/join_chain.py:59
 msgid "You have already joined the referral chain."
 msgstr "Ya te habías unido a la cadena de referidos."
 
-#: views/offer.py:74
+#: views/offer.py:76
 msgid "The referral link is not valid. Check it and try again."
 msgstr "El enlace de referido no es válido. Compruébalo en inténtalo de nuevo."
 
-#: views/offer.py:82 views/request.py:51
+#: views/offer.py:84 views/request.py:53
 msgid "The 'mail domain' information is not available yet for this site."
 msgstr ""
 "La información 'dominio de correo' no esta aún disponible para este sitio."
 
-#: views/offer.py:113
+#: views/offer.py:115
 msgid "Some error occurred. Reload and try again"
 msgstr "Ha ocurrido un error, inténtalo de nuevo."
 
-#: views/offer.py:115
+#: views/offer.py:117
 msgid "You have reached the maximum number of simultaneous offers."
 msgstr "Has alcanzado el número máximo de ofertas simultáneas."
 
-#: views/propose.py:54
+#: views/propose.py:55
 msgid "You have already made the user a trade proposal."
 msgstr "Ya has enviado una propuesta de intercambio al usuario."
 
-#: views/propose.py:56
+#: views/propose.py:57
 msgid "You have reached the maximum number of pending proposals."
 msgstr "Has alcanzado el número máximo de popuestas pendientes."
 
-#: views/propose.py:58
+#: views/propose.py:59
 msgid "The user have reached the maximum number of pending proposals."
 msgstr "El usuario ha alcanzado el número máximo de propuestas pendientes."
 
-#: views/propose.py:115
+#: views/propose.py:116
 msgid "You have not selected any request or offer."
 msgstr "No has seleccionado ninguna petición u oferta."
 
-#: views/propose.py:119
+#: views/propose.py:120
 msgid "Some requests/offers have changed. Reload andtry again."
 msgstr "Algunas peticiones/offertas han cambiado, vuelve a intentarlo."
 
-#: views/propose.py:122
+#: views/propose.py:123
 msgid "Some requests/offers have changed. Reload and try again."
 msgstr "Algunas peticiones/offertas han cambiado, vuelve a intentarlo."
 
-#: views/propose.py:139 views/propose.py:155
+#: views/propose.py:140 views/propose.py:156
 msgid "Some offers/requests have changed. Reload and try again."
 msgstr "Algunas peticiones/offertas han cambiado, vuelve a intentarlo."
 
-#: views/propose.py:149
+#: views/propose.py:150
 msgid "Donations not available for the selected request."
 msgstr "Donación no disponible para la petición seleccionada."
 
-#: views/register.py:38
+#: views/register.py:43
 msgid "You must read and accept the terms and conditions."
 msgstr "Debes leer y aceptar los términos y condiciones."
 
-#: views/request.py:54
+#: views/request.py:56
 msgid "You have already requested an invite for this site."
 msgstr "Ya has pedido una invitación para ese sitio."
 
-#: views/request.py:56
+#: views/request.py:58
 msgid "You have reached the maximum number of simultaneous requests."
 msgstr "Has alcanzado el número máximo de peticiones simultáneas."
 
-#: views/sites.py:90
+#: views/sites.py:92
 msgid "The query is too long:"
 msgstr "La consulta es muy larga:"
 
-#: views/sites.py:94
+#: views/sites.py:96
 msgid "Showing results for"
 msgstr "Resultados para"
 
-#: views/sites.py:96
+#: views/sites.py:98
 msgid "No results matched the query"
 msgstr "Ningún resultado para la consulta."
 
-#: views/trade.py:48 views/trade.py:51 views/trade.py:119 views/trade.py:122
+#: views/trade.py:49 views/trade.py:52 views/trade.py:120 views/trade.py:123
 msgid "Some requests/offers status have changed. Reload and try again."
 msgstr ""
 "El estado de algunas peticiones/ofertas ha cambiado. Inŧéntalo de nuevo."
 
-#: views/trades.py:61
+#: views/trades.py:62
 msgid "You don't have any trade."
 msgstr "No tienes ningún intercambio."
 
-#: views/trading.py:129
+#: views/trading.py:130
 msgid "You have not made any request or offer yet."
 msgstr "Todavía no has hecho ninguna petición u oferta de invitación."
 
-#: views/trading.py:144
+#: views/trading.py:145
 msgid "No results"
 msgstr "Sin resultados"
 

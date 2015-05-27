@@ -31,7 +31,10 @@ class Command(BaseCommand):
             site.save()
         for site in sites:
             site.requests = site.request_set.filter(traded=False).count()
-            site.offers = site.n_offers
+            if site.n_offers:
+                site.offers = site.n_offers
+            else:
+                site.offers = 0
             site_views = int(page_views.get('InviMarket: ' + site.name, 0))
         total = sites.aggregate(
                         offers=Max('n_offers'),
