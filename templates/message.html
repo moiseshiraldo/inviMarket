@@ -1,5 +1,12 @@
 {% extends "index.html" %}
 {% load i18n %}
+{% block title %}
+{% if header %}
+{% trans header %}
+{% else %}
+{% trans "Confirmation" %}
+{% endif %}
+{% endblock%}
 {% block main %}
 
 <main>

@@ -47,7 +47,8 @@ def index(request):
         cache.set('offers', recent_offers, 60*60)
     new_sites = cached.get('new')
     if not new_sites:
-        new_sites = Website.objects.filter(lang__in=('multi', lang, ))[:5]
+        new_sites = Website.objects.filter(
+            lang__in=('multi', lang, )).order_by('-id')[:5]
         cache.set('new', new_sites, 60*60)
     recent_requests = cached.get('recent_requests')
     if not recent_requests:

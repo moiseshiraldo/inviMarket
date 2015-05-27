@@ -2,10 +2,11 @@
 {% load staticfiles %}
 {% load i18n %}
 
-<html>
+<html lang="{{ request.LANGUAGE_CODE }}">
 
 <head>
-  <title>{% block title%}InviMarket{% endblock%}</title>
+  <title>{% block title %}InviMarket{% endblock %}</title>
+  <meta name="description" content="{% block description %}{% endblock %}">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1,
   minimum-scale=1">
@@ -50,8 +51,11 @@
          alt="Twitter"/>
     <img src="{% static 'images/facebook.svg' %}" class="socialLink"
          alt="Facebook"/>
-    <img src="{% static 'images/google-plus.svg' %}" class="socialLink"
+    <a href="//plus.google.com/u/0/101061894721800038155?prsrc=3"
+       rel="publisher" target="_blank">
+      <img src="{% static 'images/google-plus.svg' %}" class="socialLink"
          alt="GooglePlus"/>
+    </a>
 
     <div class="status-bar">
       {% if user.is_authenticated %}

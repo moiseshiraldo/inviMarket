@@ -1,14 +1,24 @@
 User-agent: *
 Disallow: /admin/*
 Disallow: /profile/*
+Disallow: */profile/*
 Disallow: /register/confirm/*
+Disallow: */register/confirm/
 Disallow: /sites/edition/*
+Disallow: */sites/edition/*
 Disallow: /request/*
+Disallow: */request/*
 Disallow: /offer/*
+Disallow: */offer/*
+Disallow: /trading/*
+Disallow: */trading/*
 Disallow: /chain/*
+Disallow: */chain/*
 Disallow: /propose/*
+Disallow: */propose/*
 Disallow: /csrf_error/
 Sitemap: https://www.invimarket.com/sitemap.xml
+Sitemap: https://www.invimarket.com/es/sitemap.xml
 
 User-agent: Mediapartners-Google
 Disallow:
