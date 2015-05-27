@@ -27,15 +27,21 @@ class Command(BaseCommand):
             else:
                 user.profile.trades = trades
                 user.profile.donations = donations
-                months = (timezone.now() - user.profile.last_visit).months
-                user.profile.rating = (
+                days = (timezone.now() - user.profile.last_visit).days
+                rating = (
                     settings.BASE_RATING
                     + 4*donations
                     + 2*trades
                     + 2*sites
                     + editions
-                    - 5*user.profile.warnings
-                    - 2*months)
+                    - 5*warnings
+                    - 4*days/30)
+                if rating > 100:
+                    user.profile.rating = 100
+                elif rating < 0:
+                    user.profile.rating = 0
+                else:
+                    user.profile.rating = rating
                 user.profile.save()
 
         self.stdout.write('User ratings successfully updated')

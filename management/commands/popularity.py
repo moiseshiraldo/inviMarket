@@ -41,9 +41,9 @@ class Command(BaseCommand):
                         requests=Max('requests'),
                         )
         for site in sites:
-            site.popularity = (site.n_offers*100/(3*total['offers'])
+            site.popularity = (site.offers*100/(3*total['offers'])
                                + site.requests*100/(3*total['requests'])
-                               + site_views*100/3*max_views)
+                               + site_views*100/(3*max_views))
             site.save()
 
         self.stdout.write('Sites popularities successfully updated')

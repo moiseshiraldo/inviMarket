@@ -23,4 +23,4 @@ class Command(BaseCommand):
                     if message.get_date() < time.mktime(keep_time.timetuple()):
                         mbox.remove(key)
 
-        self.stdout.write('Users cleaning completed')
+        self.stdout.write('Emails cleaning completed')

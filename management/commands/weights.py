@@ -8,7 +8,10 @@ class Command(BaseCommand):
     help = 'Calculate and update the weight of every referral offer'
 
     def handle(self, *args, **options):
-        Offer.objects.filter(number=0, to_donate=1).update(
-            weight=F('user__rating')+F('age')/100)
+        offers = Offer.objects.filter(number=0, to_donate=1).annotate(
+            rating=F('user__profile__rating')).iterator()
+        for offer in offers:
+            offer.weight = offer.rating + offer.age()/100
+            offer.save()
 
         self.stdout.write('Weights successfuly updated.')
