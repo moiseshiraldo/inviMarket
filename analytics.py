@@ -63,7 +63,7 @@ def get_first_profile_id(service):
 
     return None
 
-def get_analytics(metric_id, dimension_id):
+def get_analytics(metric_id, dimension_id, start_date):
     # Define the auth scopes to request.
     scope = ['https://www.googleapis.com/auth/analytics.readonly']
 
@@ -79,7 +79,7 @@ def get_analytics(metric_id, dimension_id):
 
     return service.data().ga().get(
         ids='ga:' + profile_id,
-        start_date='7daysAgo',
+        start_date= start_date,
         end_date='today',
         metrics='ga:' + metric_id,
         dimensions='ga:' + dimension_id).execute()

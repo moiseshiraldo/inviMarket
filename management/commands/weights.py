@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.core.management.base import BaseCommand
 from django.db.models import F
+from django.utils import timezone
 
 from inviMarket.models import Offer
 
@@ -14,4 +15,6 @@ class Command(BaseCommand):
             offer.weight = offer.rating + offer.age()/100
             offer.save()
 
-        self.stdout.write('Weights successfuly updated.')
+        self.stdout.write(
+          '{:%b %d %H:%M:%S} Link weights successfuly updated'.format(
+              timezone.now()))

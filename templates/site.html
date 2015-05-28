@@ -20,11 +20,11 @@
     <aside class="infobox">
       <img alt="Logo" class="siteLogo" src="{{site.logo.url}}"/>
       <span>
-        <a href="{% url 'offer' site_id=site.pk %}">Offer</a> |
+        <a href="{% url 'offer' site_id=site.pk %}">{% trans "Offer" %}</a> |
         {% if site.category == 'RE' %}
-        <a href="{% url 'request' site_id=site.pk %}">Get link</a>
+        <a href="{% url 'request' site_id=site.pk %}">{% trans "Get link" %}</a>
         {% else %}
-        <a href="{% url 'request' site_id=site.pk %}">Request</a>
+        <a href="{% url 'request' site_id=site.pk %}">{% trans "Request" %}</a>
         {% endif %}
         {% if site.protected %}
         <img alt="Protected" class="lock"
@@ -57,7 +57,7 @@
     <p> {% trans "No description available yet" %} </p>
     {% endif %}
     <section class="source">&nbsp;
-      {% if description%}
+      {% if description.source %}
       {% trans "Source:" %} {{ description.source|urlize }}
       {% endif %}
     </section>

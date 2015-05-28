@@ -44,4 +44,6 @@ class Command(BaseCommand):
                     user.profile.rating = rating
                 user.profile.save()
 
-        self.stdout.write('User ratings successfully updated')
+        self.stdout.write(
+          '{:%b %d %H:%M:%S} User ratings successfully updated'.format(
+            timezone.now()))

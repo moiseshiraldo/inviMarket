@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.core.management.base import BaseCommand
 from django.conf import settings
+from django.utils import timezone
 
 from inviMarket.models import Trade
 
@@ -18,4 +19,6 @@ class Command(BaseCommand):
                         sender=trade.proposer).delete()
                     trade.receptor.profile.unlock()
 
-        self.stdout.write('Expired trades cleaned')
+        self.stdout.write(
+          '{:%b %d %H:%M:%S} Expired trades cleaned'.format(
+            timezone.now()))

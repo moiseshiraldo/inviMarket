@@ -23,4 +23,6 @@ class Command(BaseCommand):
                     if message.get_date() < time.mktime(keep_time.timetuple()):
                         mbox.remove(key)
 
-        self.stdout.write('Emails cleaning completed')
+        self.stdout.write(
+          '{:%b %d %H:%M:%S} Emails cleaning completed'.format(
+            timezone.now()))

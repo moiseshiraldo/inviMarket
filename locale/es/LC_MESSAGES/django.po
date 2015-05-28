@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-27 16:14+0100\n"
-"PO-Revision-Date: 2015-05-27 16:20+0100\n"
+"POT-Creation-Date: 2015-05-28 18:05+0100\n"
+"PO-Revision-Date: 2015-05-28 18:08+0100\n"
 "Last-Translator: Moises\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "Language: en_US\n"
@@ -230,66 +230,66 @@ msgstr "Telecomunicaciones"
 msgid "Search sites"
 msgstr "Buscar sitios"
 
-#: templates/404.html:40 templates/index.html:89
+#: templates/404.html:40 templates/index.html:91
 msgid "Site name..."
 msgstr "Nombre..."
 
-#: templates/404.html:57 templates/index.html:164
+#: templates/404.html:57 templates/index.html:166
 msgid "License and source code"
 msgstr "Licencia y código fuente"
 
-#: templates/404.html:60 templates/index.html:167
+#: templates/404.html:60 templates/index.html:169
 msgid "Terms and conditions"
 msgstr "Términos y condiciones"
 
-#: templates/404.html:63 templates/index.html:170
+#: templates/404.html:63 templates/index.html:172
 msgid "Privacy policy"
 msgstr "Política de privacidad"
 
 #: templates/404.html:65 templates/email/email.html:82
-#: templates/index.html:172 templates/legal.html:11 templates/legal.html.py:23
+#: templates/index.html:174 templates/legal.html:11 templates/legal.html.py:23
 msgid "Contact"
 msgstr "Contacto"
 
-#: templates/404.html:68 templates/index.html:175
+#: templates/404.html:68 templates/index.html:177
 msgid "Get involved"
 msgstr "Colabora"
 
-#: templates/404.html:69 templates/editing.html:14 templates/index.html:176
+#: templates/404.html:69 templates/editing.html:14 templates/index.html:178
 msgid "Editing"
 msgstr "Ediciones"
 
-#: templates/404.html:70 templates/index.html:177 templates/market.html:50
+#: templates/404.html:70 templates/index.html:179 templates/market.html:50
 msgid "New sites"
 msgstr "Nuevos sitios"
 
-#: templates/404.html:72 templates/index.html:179 templates/suggestions.html:3
+#: templates/404.html:72 templates/index.html:181 templates/suggestions.html:3
 #: templates/suggestions.html.py:12
 msgid "Suggestions"
 msgstr "Sugerencias"
 
-#: templates/404.html:76 templates/index.html:183
+#: templates/404.html:76 templates/index.html:185
 msgid "Connect"
 msgstr "Conecta"
 
-#: templates/404.html:77 templates/index.html:184
+#: templates/404.html:77 templates/index.html:186
 msgid "Twitter"
 msgstr ""
 
-#: templates/404.html:78 templates/index.html:185
+#: templates/404.html:78 templates/index.html:187
 msgid "Facebook"
 msgstr ""
 
-#: templates/404.html:79 templates/index.html:186
+#: templates/404.html:79 templates/index.html:188
 msgid "Google+"
 msgstr ""
 
 #: templates/404.html:84 templates/getstarted.html:4
-#: templates/getstarted.html.py:15 templates/index.html:191
+#: templates/getstarted.html.py:15 templates/index.html:193
 msgid "Get started"
 msgstr "Comienza"
 
-#: templates/404.html:87 templates/glossary.html:3 templates/index.html:194
+#: templates/404.html:87 templates/glossary.html:3 templates/index.html:196
 msgid "Glossary"
 msgstr "Glosario"
 
@@ -318,6 +318,7 @@ msgid "Recently viewed:"
 msgstr "Visto recientemente:"
 
 #: templates/blocks/site-block.html:19 templates/offer.html:4
+#: templates/site.html:23
 msgid "Offer"
 msgstr "Ofrecer"
 
@@ -326,6 +327,7 @@ msgid "Get Link"
 msgstr "Referido"
 
 #: templates/blocks/site-block.html:27 templates/request.html:4
+#: templates/site.html:27
 msgid "Request"
 msgstr "Pedir"
 
@@ -387,7 +389,6 @@ msgid "Trades:"
 msgstr "Intercambios:"
 
 #: templates/chain.html:3
-#| msgid "Referral chain to"
 msgid "Referral chain"
 msgstr "Cadena de referidos"
 
@@ -436,11 +437,10 @@ msgid "Complaint"
 msgstr "Reclamación"
 
 #: templates/config.html:4
-#| msgid "Confirmation"
 msgid "Configuration"
 msgstr "Configuración"
 
-#: templates/config.html:7 templates/index.html:78 templates/partners.html:10
+#: templates/config.html:7 templates/index.html:80 templates/partners.html:10
 #: templates/profile.html:4 templates/profile.html.py:12
 #: templates/trades.html:9
 msgid "Profile"
@@ -484,7 +484,6 @@ msgid "A confirmation email has been sended to your email address."
 msgstr "Se ha enviado un email de confirmación a tu dirección de correo."
 
 #: templates/del_profile.html:3
-#| msgid "Profile deletion"
 msgid "Account deletion"
 msgstr "Eliminar cuenta"
 
@@ -516,7 +515,6 @@ msgstr ""
 "Borrar toda la información relativa a mi cuenta. "
 
 #: templates/editing.html:4
-#| msgid "Editing"
 msgid "Editing sites"
 msgstr "Edición de sitios"
 
@@ -567,12 +565,12 @@ msgstr ""
 "infomarción será revisada por el administrador, hasta que el número de "
 "usuarios crezca y podamos implmentar un sistema de edición automático. "
 
-#: templates/editing.html:37 templates/index.html:85
+#: templates/editing.html:37 templates/index.html:87
 msgid "Sites"
 msgstr "Sitios"
 
 #: templates/editing.html:39 templates/getstarted.html:146
-#: templates/index.html:66 templates/login.html:78 templates/register.html:7
+#: templates/index.html:68 templates/login.html:78 templates/register.html:7
 msgid "Register"
 msgstr "Registrarse"
 
@@ -849,7 +847,6 @@ msgstr ""
 "en el siguiente enlace para comprobar los detalles del intercambio:\n"
 
 #: templates/faq.html:3
-#| msgid "Frequently Asked Questions"
 msgid "Frequently asked questions"
 msgstr "Preguntas frecuentes"
 
@@ -1230,35 +1227,35 @@ msgstr ""
 "Si no dispones de la información, comparte la página del sitio en otras "
 "redes sociales. "
 
-#: templates/index.html:62
+#: templates/index.html:64
 msgid "Logout"
 msgstr "Salir"
 
-#: templates/index.html:65 templates/login.html:4 templates/login.html.py:10
+#: templates/index.html:67 templates/login.html:4 templates/login.html.py:10
 msgid "Login"
 msgstr "Iniciar sesión"
 
-#: templates/index.html:81
+#: templates/index.html:83
 msgid "Trading"
 msgstr "Intercambio"
 
-#: templates/index.html:94
+#: templates/index.html:96
 msgid "Notifications"
 msgstr "Notificaciones"
 
-#: templates/index.html:230
+#: templates/index.html:232
 msgid "This place uses"
 msgstr "Este sitio usa"
 
-#: templates/index.html:231
+#: templates/index.html:233
 msgid "cookies"
 msgstr "cookies"
 
-#: templates/index.html:232
+#: templates/index.html:234
 msgid "and no animals were harmed in the development process."
 msgstr "y ningún animal resultó herido en el proceso de desarrollo."
 
-#: templates/index.html:234
+#: templates/index.html:236
 msgid "Close"
 msgstr "Cerrar"
 
@@ -2025,7 +2022,6 @@ msgid "Donation available."
 msgstr "Donación disponible."
 
 #: templates/register.html:3
-#| msgid "Register"
 msgid "Registration"
 msgstr "Registro"
 
@@ -2068,6 +2064,11 @@ msgstr "Confirmación de cambio de contraseña"
 #: templates/reset_confirm.html:17
 msgid "Invalid link."
 msgstr "Enlace inválido."
+
+#: templates/site.html:25
+#| msgid "Get Link"
+msgid "Get link"
+msgstr "Referido"
 
 #: templates/site.html:47
 msgid "Validator"
@@ -2196,7 +2197,6 @@ msgid "Pending"
 msgstr "Pendiente"
 
 #: templates/trading.html:4
-#| msgid "Trading"
 msgid "Trading search"
 msgstr "Buscar intercambios"
 

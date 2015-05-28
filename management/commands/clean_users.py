@@ -16,4 +16,6 @@ class Command(BaseCommand):
                 user.profile.delete()
                 user.delete()
 
-        self.stdout.write('Users cleaning completed')
+        self.stdout.write(
+          '{:%b %d %H:%M:%S} Users cleaning completed'.format(
+            timezone.now()))

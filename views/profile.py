@@ -21,7 +21,7 @@ def profile(request, user_id=None):
     """
     if user_id is not None:
         user = get_object_or_404(User.objects.select_related('profile'),
-            pk=user_id)
+            pk=user_id, is_active=True)
     else:
         user = request.user
     return render(request, 'profile.html', {'u': user})

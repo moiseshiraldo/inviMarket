@@ -30,7 +30,7 @@ def add_partner(request, partner_id):
     """
     user = request.user
     partner = get_object_or_404(User.objects.select_related('profile'),
-                                pk=partner_id)
+                                pk=partner_id, is_active=True)
     header = _("Partnership request")
     if user.profile.partners.filter(pk=partner_id).exists():
         message = _("The user is already your partner.")

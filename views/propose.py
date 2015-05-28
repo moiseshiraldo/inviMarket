@@ -42,7 +42,8 @@ def propose(request, receptor_id):
     request_form = offer_form = comments_form = error = None
     proposer = request.user
     receptor = get_object_or_404(
-        User.objects.prefetch_related('profile__partners'), pk=receptor_id)
+        User.objects.prefetch_related('profile__partners'),
+        pk=receptor_id, is_active=True)
     # Count proposer's pending proposals
     proposer_trades = proposer.proposed_trades.filter(accepted=False).count()
     proposer_trades += proposer.received_trades.filter(accepted=False).count()

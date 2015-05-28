@@ -51,8 +51,10 @@
       <img src="{% static 'images/twitter.svg' %}" class="socialLink"
            alt="Twitter"/>
     </a>
-    <img src="{% static 'images/facebook.svg' %}" class="socialLink"
-         alt="Facebook"/>
+    <a href="https://www.facebook.com/InviMarket" target="_blank">
+      <img src="{% static 'images/facebook.svg' %}" class="socialLink"
+           alt="Facebook"/>
+    </a>
     <a href="//plus.google.com/u/0/101061894721800038155?prsrc=3"
        rel="publisher" target="_blank">
       <img src="{% static 'images/google-plus.svg' %}" class="socialLink"
@@ -183,9 +185,22 @@
     </ul>
     <ul>
       <li>{% trans "Connect" %}</li>
-      <li>{% trans "Twitter" %}</li>
-      <li>{% trans "Facebook" %}</li>
-      <li>{% trans "Google+" %}</li>
+      <li>
+        <a href="https://twitter.com/invimarket" target="_blank">
+          {% trans "Twitter" %}
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/InviMarket" target="_blank">
+          {% trans "Facebook" %}
+        </a>
+      </li>
+      <li>
+        <a href="//plus.google.com/u/0/101061894721800038155?prsrc=3"
+           rel="publisher" target="_blank">
+          {% trans "Google+" %}
+        </a>
+      </li>
     </ul>
     <ul>
       <li>Help</li>

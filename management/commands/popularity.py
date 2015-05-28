@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.core.management.base import BaseCommand
 from django.db.models import Count, Sum, Max
+from django.utils import timezone
 
 from inviMarket.models import Website
 from inviMarket.analytics import get_analytics
@@ -15,7 +16,7 @@ class Command(BaseCommand):
         sites = Website.objects.filter(active=True).exclude(
             category='RE').annotate(n_offers=Sum('offer__number'))
         page_views = dict(get_analytics(metric_id='pageviews',
-            dimension_id='pageTitle').get('rows'))
+            dimension_id='pageTitle', start_date='30daysAgo').get('rows'))
         for key in page_views.keys():
             if not 'InviMarket: ' in key:
                 del page_views[key]
@@ -46,4 +47,6 @@ class Command(BaseCommand):
                                + site_views*100/(3*max_views))
             site.save()
 
-        self.stdout.write('Sites popularities successfully updated')
+        self.stdout.write(
+          '{:%b %d %H:%M:%S} Site popularities successfully updated'.format(
+            timezone.now()))
