@@ -1,5 +1,6 @@
 {% extends "email/email.html" %}
 {% load i18n %}
+{% block header %}{% trans "Partnership request" %}{% endblock %}
 {% block main %}
 {% blocktrans %}
 Hello {{ name }},</br>

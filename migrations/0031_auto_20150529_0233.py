@@ -1,0 +1,24 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+from django.db import models, migrations
+
+
+class Migration(migrations.Migration):
+
+    dependencies = [
+        ('inviMarket', '0030_auto_20150526_1731'),
+    ]
+
+    operations = [
+        migrations.AlterField(
+            model_name='profile',
+            name='key_expires',
+            field=models.DateTimeField(null=True, blank=True),
+        ),
+        migrations.AlterField(
+            model_name='profile',
+            name='last_visit',
+            field=models.DateTimeField(null=True, blank=True),
+        ),
+    ]

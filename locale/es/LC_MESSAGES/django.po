@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-28 18:05+0100\n"
-"PO-Revision-Date: 2015-05-28 18:08+0100\n"
+"POT-Creation-Date: 2015-05-31 13:22+0100\n"
+"PO-Revision-Date: 2015-05-31 13:23+0100\n"
 "Last-Translator: Moises\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "Language: en_US\n"
@@ -154,11 +154,12 @@ msgstr "Inglés"
 msgid "Multi-language"
 msgstr "Varios idiomas"
 
-#: models.py:113 templates/propose.html:4 templates/propose.html.py:9
+#: models.py:113 templates/email/proposal.html:3 templates/propose.html:4
+#: templates/propose.html.py:9
 msgid "Trade proposal"
 msgstr "Propuesta de intercambio"
 
-#: models.py:114 views/add_partner.py:34
+#: models.py:114 templates/email/partnership.html:3 views/add_partner.py:34
 msgid "Partnership request"
 msgstr "Solicitud de asociación"
 
@@ -166,11 +167,11 @@ msgstr "Solicitud de asociación"
 msgid "Proposal accepted"
 msgstr "Propuesta aceptada"
 
-#: models.py:116
+#: models.py:116 templates/email/edition.html:3
 msgid "Approved edition"
 msgstr "Edición aprobada"
 
-#: models.py:117 templates/trades.html:72
+#: models.py:117 templates/email/warning.html:3 templates/trades.html:72
 msgid "Received warning"
 msgstr "Warning recibido"
 
@@ -226,78 +227,80 @@ msgstr "Referidos"
 msgid "Telecommunications"
 msgstr "Telecomunicaciones"
 
-#: templates/404.html:36 templates/getstarted.html:21
+#: templates/404.html:24 templates/getstarted.html:21
 msgid "Search sites"
 msgstr "Buscar sitios"
 
-#: templates/404.html:40 templates/index.html:91
+#: templates/404.html:28 templates/index.html:93
 msgid "Site name..."
 msgstr "Nombre..."
 
-#: templates/404.html:57 templates/index.html:166
+#: templates/404.html:43 templates/index.html:168
 msgid "License and source code"
 msgstr "Licencia y código fuente"
 
-#: templates/404.html:60 templates/index.html:169
+#: templates/404.html:46 templates/index.html:171
 msgid "Terms and conditions"
 msgstr "Términos y condiciones"
 
-#: templates/404.html:63 templates/index.html:172
+#: templates/404.html:49 templates/index.html:174
 msgid "Privacy policy"
 msgstr "Política de privacidad"
 
-#: templates/404.html:65 templates/email/email.html:82
-#: templates/index.html:174 templates/legal.html:11 templates/legal.html.py:23
+#: templates/404.html:51 templates/email/email.html:83
+#: templates/index.html:176 templates/legal.html:11 templates/legal.html.py:23
 msgid "Contact"
 msgstr "Contacto"
 
-#: templates/404.html:68 templates/index.html:177
+#: templates/404.html:54 templates/index.html:179
 msgid "Get involved"
 msgstr "Colabora"
 
-#: templates/404.html:69 templates/editing.html:14 templates/index.html:178
+#: templates/404.html:55 templates/editing.html:14 templates/index.html:180
 msgid "Editing"
 msgstr "Ediciones"
 
-#: templates/404.html:70 templates/index.html:179 templates/market.html:50
+#: templates/404.html:56 templates/index.html:181 templates/index.html.py:224
+#: templates/market.html:50
 msgid "New sites"
 msgstr "Nuevos sitios"
 
-#: templates/404.html:72 templates/index.html:181 templates/suggestions.html:3
+#: templates/404.html:58 templates/index.html:183 templates/suggestions.html:3
 #: templates/suggestions.html.py:12
 msgid "Suggestions"
 msgstr "Sugerencias"
 
-#: templates/404.html:76 templates/index.html:185
+#: templates/404.html:62 templates/index.html:187
 msgid "Connect"
 msgstr "Conecta"
 
-#: templates/404.html:77 templates/index.html:186
+#: templates/404.html:63 templates/index.html:190
 msgid "Twitter"
 msgstr ""
 
-#: templates/404.html:78 templates/index.html:187
+#: templates/404.html:64 templates/index.html:195
 msgid "Facebook"
 msgstr ""
 
-#: templates/404.html:79 templates/index.html:188
+#: templates/404.html:65 templates/index.html:201
 msgid "Google+"
 msgstr ""
 
-#: templates/404.html:84 templates/getstarted.html:4
-#: templates/getstarted.html.py:15 templates/index.html:193
+#: templates/404.html:70 templates/getstarted.html:4
+#: templates/getstarted.html.py:15 templates/index.html:208
 msgid "Get started"
 msgstr "Comienza"
 
-#: templates/404.html:87 templates/glossary.html:3 templates/index.html:196
+#: templates/404.html:73 templates/glossary.html:3 templates/index.html:211
+#: templates/index.html.py:225
 msgid "Glossary"
 msgstr "Glosario"
 
-#: templates/500.html:38
+#: templates/500.html:26
 msgid "Ups, something has gone wrong."
 msgstr "Ups, algo ha ido mal."
 
-#: templates/500.html:39
+#: templates/500.html:27
 msgid "Look behind you, a three headed monkey!"
 msgstr "¡Mira detrás de ti, un mono de tres cabezas!"
 
@@ -440,7 +443,7 @@ msgstr "Reclamación"
 msgid "Configuration"
 msgstr "Configuración"
 
-#: templates/config.html:7 templates/index.html:80 templates/partners.html:10
+#: templates/config.html:7 templates/index.html:82 templates/partners.html:10
 #: templates/profile.html:4 templates/profile.html.py:12
 #: templates/trades.html:9
 msgid "Profile"
@@ -565,12 +568,12 @@ msgstr ""
 "infomarción será revisada por el administrador, hasta que el número de "
 "usuarios crezca y podamos implmentar un sistema de edición automático. "
 
-#: templates/editing.html:37 templates/index.html:87
+#: templates/editing.html:37 templates/index.html:89
 msgid "Sites"
 msgstr "Sitios"
 
 #: templates/editing.html:39 templates/getstarted.html:146
-#: templates/index.html:68 templates/login.html:78 templates/register.html:7
+#: templates/index.html:70 templates/login.html:78 templates/register.html:7
 msgid "Register"
 msgstr "Registrarse"
 
@@ -614,7 +617,11 @@ msgstr ""
 "    <p>Usa el campo 'comentarios' para cualquier comentario adicional.</p>\n"
 "    "
 
-#: templates/email/activation.html:4
+#: templates/email/activation.html:3
+msgid "Account activation"
+msgstr "Activar cuenta"
+
+#: templates/email/activation.html:5
 #, python-format
 msgid ""
 "\n"
@@ -641,7 +648,7 @@ msgstr ""
 "Gracias por registrarte. Para activar tu cuenta, haz click en este enlace "
 "antes de 48 horas:\n"
 
-#: templates/email/edition.html:4
+#: templates/email/edition.html:5
 #, python-format
 msgid ""
 "\n"
@@ -671,23 +678,23 @@ msgstr ""
 "Tu propuesta de edición ha sido aprobada. Haz click en el siguient enlace "
 "para ver la página del sitio:\n"
 
-#: templates/email/email.html:59
+#: templates/email/email.html:60
 msgid "UNSUBSCRIBE"
 msgstr "DARSE DE BAJA"
 
-#: templates/email/email.html:61
+#: templates/email/email.html:62
 msgid "PRIVACY POLICY"
 msgstr "PRIVACIDAD"
 
-#: templates/email/email.html:63
+#: templates/email/email.html:64 templates/index.html:226
 msgid "FAQ"
 msgstr "FAQ"
 
-#: templates/email/email.html:65
+#: templates/email/email.html:66
 msgid "CONTACT"
 msgstr "CONTACTO"
 
-#: templates/email/email.html:78
+#: templates/email/email.html:79
 msgid ""
 "\n"
 "          This notification has been sent to the email address associated "
@@ -702,7 +709,7 @@ msgstr ""
 "          Ese correo ha sido autogenerado. No responda, por favor.</br>\n"
 "          "
 
-#: templates/email/partnership.html:4
+#: templates/email/partnership.html:5
 #, python-format
 msgid ""
 "\n"
@@ -732,7 +739,11 @@ msgstr ""
 "%(user.first_name)s quiere ser tu socio. Haz click en el siguiente enlace "
 "para ver la petición:\n"
 
-#: templates/email/password_reset.html:4 templates/email/password_reset.txt:2
+#: templates/email/password_reset.html:3
+msgid "Password reset"
+msgstr "Reinicar contraseña"
+
+#: templates/email/password_reset.html:5 templates/email/password_reset.txt:2
 #, python-format
 msgid ""
 "\n"
@@ -743,11 +754,11 @@ msgstr ""
 "Alguien ha pedido reiniciar la contraseña para el correo %(email)s. Sigue el "
 "siguiente enlace:\n"
 
-#: templates/email/password_reset.html:10 templates/email/password_reset.txt:7
+#: templates/email/password_reset.html:11 templates/email/password_reset.txt:7
 msgid "Your username, in case you've forgotten:"
 msgstr "Tu nombre de usuario, en caso de que lo hayas olvidado:"
 
-#: templates/email/proposal.html:4
+#: templates/email/proposal.html:5
 #, python-format
 msgid ""
 "\n"
@@ -779,7 +790,11 @@ msgstr ""
 "Haz click\n"
 "en el siguiente enlace para ver los detalles:\n"
 
-#: templates/email/trade.html:4
+#: templates/email/trade.html:3
+msgid "Accepted proposal"
+msgstr "Propuesta aceptada"
+
+#: templates/email/trade.html:5
 #, python-format
 msgid ""
 "\n"
@@ -795,7 +810,7 @@ msgstr ""
 "Haz click\n"
 "en el siguiente enlace para ver los detalles:\n"
 
-#: templates/email/trade.html:12 templates/email/trade.txt:10
+#: templates/email/trade.html:13 templates/email/trade.txt:10
 msgid "and send the invites to the following email address:"
 msgstr ""
 "y envía las invitaciones a la siguiente dirección de correo electrónico:"
@@ -816,7 +831,7 @@ msgstr ""
 "Haz click\n"
 "en el siguiente enlace para ver los detalles:\n"
 
-#: templates/email/warning.html:4
+#: templates/email/warning.html:5
 #, python-format
 msgid ""
 "\n"
@@ -1227,41 +1242,344 @@ msgstr ""
 "Si no dispones de la información, comparte la página del sitio en otras "
 "redes sociales. "
 
-#: templates/index.html:64
+#: templates/glossary.html:7
+#| msgid ""
+#| "\n"
+#| "  <h1>Glossary</h1>\n"
+#| "\n"
+#| "  <section id=\"C\" class=\"infotext\">\n"
+#| "    <h2>C</h2>\n"
+#| "    <ul>\n"
+#| "     <li>\n"
+#| "       <h4 class=\"faq-header\">Complaint</h4>\n"
+#| "       <p>The act of requesting the admin to review a trade due to "
+#| "unsent\n"
+#| "       invites.</p>\n"
+#| "      </li>\n"
+#| "    </ul>\n"
+#| "  </section>\n"
+#| "\n"
+#| "  <section id=\"O\" class=\"infotext\">\n"
+#| "    <h2>O</h2>\n"
+#| "    <ul>\n"
+#| "     <li>\n"
+#| "       <h4 class=\"faq-header\">Offer</h4>\n"
+#| "       <p>The act of offering an invite to a specific website. </p>\n"
+#| "      </li>\n"
+#| "    </ul>\n"
+#| "  </section>\n"
+#| "\n"
+#| "  <section id=\"P\" class=\"infotext\">\n"
+#| "    <h2>P</h2>\n"
+#| "    <ul>\n"
+#| "      <li>\n"
+#| "        <h4 class=\"faq-header\">Partner</h4>\n"
+#| "        <p>A user you can trust to send and receive invites.</p>\n"
+#| "      </li>\n"
+#| "      <li>\n"
+#| "        <h4 class=\"faq-header\">Popularity</h4>\n"
+#| "        <p>An evaluation of the users interest in a site, based on the\n"
+#| "        number of requests, offers and visits.</p>\n"
+#| "      </li>\n"
+#| "    </ul>\n"
+#| "  </section>\n"
+#| "\n"
+#| "  <section id=\"R\" class=\"infotext\">\n"
+#| "    <h2>R</h2>\n"
+#| "    <ul>\n"
+#| "      <li>\n"
+#| "        <h4 class=\"faq-header\">Rating</h4>\n"
+#| "        <p>An evaluation of the user activity based on positive actions,\n"
+#| "        such as donating invites or updating sites information. The "
+#| "rating\n"
+#| "        is calculated with the following formula:<br/><br/>\n"
+#| "        <i>Rating</i> = 4×<i>donations</i> + 2×<i>trades</i> + "
+#| "2×<i>sites</i>\n"
+#| "        + <i>editions</i> − 5×<i>warnings</i> − 2×<i>inactivity</i>\n"
+#| "        <br/><br/>\n"
+#| "        Where <i>inactivity</i> represents the number of months since "
+#| "the\n"
+#| "        user's last visit.</p>\n"
+#| "      </li>\n"
+#| "      <li>\n"
+#| "        <h4 class=\"faq-header\">Referral chain</h4>\n"
+#| "        <p>A chain of users where a new user sign up for the target site\n"
+#| "        using the referral link of the last one.</p>\n"
+#| "      </li>\n"
+#| "      <li>\n"
+#| "        <h4 class=\"faq-header\">Referral link</h4>\n"
+#| "        <p>A link to register in a site, which gives the referral, and\n"
+#| "        sometimes the new registered user as well, some sort of reward.</"
+#| "p>\n"
+#| "      </li>\n"
+#| "      <li>\n"
+#| "        <h4 class=\"faq-header\">Request</h4>\n"
+#| "        <p>The act of asking for an invite to a specific website.</p>\n"
+#| "      </li>\n"
+#| "    </ul>\n"
+#| "  </section>\n"
+#| "\n"
+#| "  <section id=\"T\" class=\"infotext\">\n"
+#| "    <h2>T</h2>\n"
+#| "    <ul>\n"
+#| "      <li>\n"
+#| "        <h4 class=\"faq-header\">Trade</h4>\n"
+#| "        <p>An exchange of invites between two users or a donation from\n"
+#| "        one to another.</p>\n"
+#| "      </li>\n"
+#| "    </ul>\n"
+#| "  </section>\n"
+#| "\n"
+#| "  <section id=\"W\" class=\"infotext\">\n"
+#| "    <h2>W</h2>\n"
+#| "    <ul>\n"
+#| "      <li>\n"
+#| "        <h4 class=\"faq-header\">Warning</h4>\n"
+#| "        <p>A notice given to an user due to an accepted or automatic\n"
+#| "        complaint when the invites have not been sent. After three "
+#| "warnings\n"
+#| "        the user will be banned.</p>\n"
+#| "      </li>\n"
+#| "    </ul>\n"
+#| "  </section>\n"
+#| "  "
+msgid ""
+"\n"
+"  <h1>Glossary</h1>\n"
+"\n"
+"  <section id=\"C\" class=\"infotext\">\n"
+"    <h2>C</h2>\n"
+"    <ul>\n"
+"     <li>\n"
+"       <h4 class=\"faq-header\">Complaint</h4>\n"
+"       <p>The act of requesting the admin to review a trade due to unsent\n"
+"       invites.</p>\n"
+"      </li>\n"
+"    </ul>\n"
+"  </section>\n"
+"\n"
+"  <section id=\"O\" class=\"infotext\">\n"
+"    <h2>O</h2>\n"
+"    <ul>\n"
+"     <li>\n"
+"       <h4 class=\"faq-header\">Offer</h4>\n"
+"       <p>The act of offering an invite to a specific website. </p>\n"
+"      </li>\n"
+"    </ul>\n"
+"  </section>\n"
+"\n"
+"  <section id=\"P\" class=\"infotext\">\n"
+"    <h2>P</h2>\n"
+"    <ul>\n"
+"      <li>\n"
+"        <h4 class=\"faq-header\">Partner</h4>\n"
+"        <p>A user you can trust to send and receive invites.</p>\n"
+"      </li>\n"
+"      <li>\n"
+"        <h4 class=\"faq-header\">Popularity</h4>\n"
+"        <p>An evaluation of the users interest in a site, based on the\n"
+"        number of requests, offers and visits.</p>\n"
+"      </li>\n"
+"    </ul>\n"
+"  </section>\n"
+"\n"
+"  <section id=\"R\" class=\"infotext\">\n"
+"    <h2>R</h2>\n"
+"    <ul>\n"
+"      <li>\n"
+"        <h4 class=\"faq-header\">Rating</h4>\n"
+"        <p>An evaluation of the user activity based on his interactiones "
+"with\n"
+"        the site, such as donating invites or updating sites information. "
+"The\n"
+"        rating is calculated with the following formula:<br/><br/>\n"
+"        <i>Rating</i> = 4×<i>donations</i> + 2×<i>trades</i> + 2×<i>sites</"
+"i>\n"
+"        + <i>editions</i> − 5×<i>warnings</i> − <i>inactivity</i>\n"
+"        <br/><br/>\n"
+"        Where <i>inactivity</i> represents the number of weeks since the\n"
+"        user's last visit.</p>\n"
+"      </li>\n"
+"      <li>\n"
+"        <h4 class=\"faq-header\">Referral chain</h4>\n"
+"        <p>A chain of users where a new user sign up for the target site\n"
+"        using the referral link of the last one.</p>\n"
+"      </li>\n"
+"      <li>\n"
+"        <h4 class=\"faq-header\">Referral link</h4>\n"
+"        <p>A link to register in a site, which gives the referral, and\n"
+"        sometimes the new registered user as well, some sort of reward.</p>\n"
+"      </li>\n"
+"      <li>\n"
+"        <h4 class=\"faq-header\">Request</h4>\n"
+"        <p>The act of asking for an invite to a specific website.</p>\n"
+"      </li>\n"
+"    </ul>\n"
+"  </section>\n"
+"\n"
+"  <section id=\"T\" class=\"infotext\">\n"
+"    <h2>T</h2>\n"
+"    <ul>\n"
+"      <li>\n"
+"        <h4 class=\"faq-header\">Trade</h4>\n"
+"        <p>An exchange of invites between two users or a donation from\n"
+"        one to another.</p>\n"
+"      </li>\n"
+"    </ul>\n"
+"  </section>\n"
+"\n"
+"  <section id=\"W\" class=\"infotext\">\n"
+"    <h2>W</h2>\n"
+"    <ul>\n"
+"      <li>\n"
+"        <h4 class=\"faq-header\">Warning</h4>\n"
+"        <p>A notice given to an user due to an accepted or automatic\n"
+"        complaint when the invites have not been sent. After three warnings\n"
+"        the user will be banned.</p>\n"
+"      </li>\n"
+"    </ul>\n"
+"  </section>\n"
+"  "
+msgstr ""
+"\n"
+"  <h1>Glossary</h1>\n"
+"\n"
+"<section id=\"C\" class=\"infotext\">\n"
+"    <h2>C</h2>\n"
+"    <ul>\n"
+"      <li>\n"
+"        <h4 class=\"faq-header\">Cadena de referidos</h4>\n"
+"        <p>Una cadena de usuarios en la que un nuevo usuario se registra en "
+"el sitio objetivo usando el enlace de referido del último miembro añadido a "
+"la cadena.</p>\n"
+"      </li>\n"
+"    </ul>\n"
+"  </section>\n"
+"<section id=\"E\" class=\"infotext\">\n"
+"    <h2>E</h2>\n"
+"    <ul>\n"
+"      <li>\n"
+"        <h4 class=\"faq-header\">Enlace de referido</h4>\n"
+"        <p>Enlace para registrarse en un sitio, que proporciona al referido, "
+"y en ocasiones también al nuevo usuario registrado, algún tipo de recompensa,"
+"</p>\n"
+"      </li>\n"
+"    </ul>\n"
+"  </section>\n"
+"  <section id=\"I\" class=\"infotext\">\n"
+"    <h2>I</h2>\n"
+"    <ul>\n"
+"      <li>\n"
+"        <h4 class=\"faq-header\">Intercambio</h4>\n"
+"        <p>Un trueque de invitaciones entre dos usuarios, o una donación de "
+"uno a otro.</p>\n"
+"      </li>\n"
+"    </ul>\n"
+"  </section>\n"
+"<section id=\"O\" class=\"infotext\">\n"
+"    <h2>O</h2>\n"
+"    <ul>\n"
+"     <li>\n"
+"       <h4 class=\"faq-header\">Oferta</h4>\n"
+"       <p>Acto de pedir una invitación a un sitio web específico. </p>\n"
+"      </li>\n"
+"    </ul>\n"
+"  </section>\n"
+"<section id=\"P\" class=\"infotext\">\n"
+"    <h2>P</h2>\n"
+"    <ul>\n"
+"      <li>\n"
+"        <h4 class=\"faq-header\">Petición</h4>\n"
+"        <p>Acto de solicitar una invitación para un sitio web específico.</"
+"p>\n"
+"      </li>\n"
+"      <li>\n"
+"        <h4 class=\"faq-header\">Popularidad</h4>\n"
+"        <p>Evaluación del interés de los usuarios en un sitio, basada en el "
+"números de peticiones, ofertas y visitas.</p>\n"
+"      </li>\n"
+"    </ul>\n"
+"  </section><section id=\"R\" class=\"infotext\">\n"
+"    <h2>R</h2>\n"
+"    <ul>\n"
+"      <li>\n"
+"        <h4 class=\"faq-header\">Rating</h4>\n"
+"        <p>Evaluación del usuario basada en sus interacciones con el sitio,\n"
+"        como donar una invitación o actualizar la información de un sitio. "
+"El rating se calcula con la siguiente fórmula:<br/><br/>\n"
+"        <i>Rating</i> = 4×<i>donaciones</i> + 2×<i>intercambios</i> + "
+"2×<i>sitios</i>\n"
+"        + <i>ediciones</i> − 5×<i>warnings</i> − <i>inactividad</i>\n"
+"        <br/><br/>\n"
+"        Donde <i>inactividad</i> representa el número de semanas desde la "
+"última visita del usuario.</p>\n"
+"      </li>\n"
+"     <li>\n"
+"       <h4 class=\"faq-header\">Reclamación</h4>\n"
+"       <p>El acto de pedir al administrador que revise un intercamio debido "
+"a invitaciones no enviadas.\n"
+"       invites.</p>\n"
+"      </li>\n"
+"    </ul>\n"
+"  </section>\n"
+"<section id=\"S\" class=\"infotext\">\n"
+"    <h2>S</h2>\n"
+"    <ul>\n"
+"      <li>\n"
+"        <h4 class=\"faq-header\">Socio</h4>\n"
+"        <p>Usuario en el que puedes confiar para enviar y recibir "
+"invitaciones.</p>\n"
+"      </li>\n"
+"    </ul>\n"
+"  </section>\n"
+"  <section id=\"W\" class=\"infotext\">\n"
+"    <h2>W</h2>\n"
+"    <ul>\n"
+"      <li>\n"
+"        <h4 class=\"faq-header\">Warning</h4>\n"
+"        <p>Una avisto dado a un usuario debido a una reclamación aceptada o "
+"automática, cuando las invitaciones no han sido enviadas. Después de tres "
+"warnings, el usuario será bloqueado.</p>\n"
+"      </li>\n"
+"    </ul>\n"
+"  </section>\n"
+"  "
+
+#: templates/index.html:66
 msgid "Logout"
 msgstr "Salir"
 
-#: templates/index.html:67 templates/login.html:4 templates/login.html.py:10
+#: templates/index.html:69 templates/login.html:4 templates/login.html.py:10
 msgid "Login"
 msgstr "Iniciar sesión"
 
-#: templates/index.html:83
+#: templates/index.html:85
 msgid "Trading"
 msgstr "Intercambio"
 
-#: templates/index.html:96
+#: templates/index.html:98
 msgid "Notifications"
 msgstr "Notificaciones"
 
-#: templates/index.html:232
+#: templates/index.html:223 templates/legal.html:3 templates/legal.html.py:7
+msgid "Legal information"
+msgstr "Información legal"
+
+#: templates/index.html:247
 msgid "This place uses"
 msgstr "Este sitio usa"
 
-#: templates/index.html:233
+#: templates/index.html:248
 msgid "cookies"
 msgstr "cookies"
 
-#: templates/index.html:234
+#: templates/index.html:249
 msgid "and no animals were harmed in the development process."
 msgstr "y ningún animal resultó herido en el proceso de desarrollo."
 
-#: templates/index.html:236
+#: templates/index.html:251
 msgid "Close"
 msgstr "Cerrar"
-
-#: templates/legal.html:3 templates/legal.html.py:7
-msgid "Legal information"
-msgstr "Información legal"
 
 #: templates/legal.html:14
 msgid ""
@@ -2038,12 +2356,14 @@ msgid ""
 "\n"
 "    The username must be unique and may contain only letters, numbers and\n"
 "    ./+/-/_ characters.<br/>\n"
-"    The email must be unique as well.\n"
+"    The email must be unique as well. A validatoin link to activate your\n"
+"    account will be sent to the provided address.\n"
 "    "
 msgstr ""
 "\n"
 "El usuario debe ser único y puede contener solo letras, números y los "
-"caracteres ./+/-/_.<br/> El email también debe ser único."
+"caracteres ./+/-/_.<br/> El email también debe ser único. Se enviará un "
+"enlace de validación para activar la cuenta a la dirección proporcionada."
 
 #: templates/request.html:8
 msgid "Request to"
@@ -2066,7 +2386,6 @@ msgid "Invalid link."
 msgstr "Enlace inválido."
 
 #: templates/site.html:25
-#| msgid "Get Link"
 msgid "Get link"
 msgstr "Referido"
 
@@ -2329,35 +2648,35 @@ msgstr "Ha ocurrido un error, inténtalo de nuevo."
 msgid "You have reached the maximum number of simultaneous offers."
 msgstr "Has alcanzado el número máximo de ofertas simultáneas."
 
-#: views/propose.py:55
+#: views/propose.py:56
 msgid "You have already made the user a trade proposal."
 msgstr "Ya has enviado una propuesta de intercambio al usuario."
 
-#: views/propose.py:57
+#: views/propose.py:58
 msgid "You have reached the maximum number of pending proposals."
 msgstr "Has alcanzado el número máximo de popuestas pendientes."
 
-#: views/propose.py:59
+#: views/propose.py:60
 msgid "The user have reached the maximum number of pending proposals."
 msgstr "El usuario ha alcanzado el número máximo de propuestas pendientes."
 
-#: views/propose.py:116
+#: views/propose.py:117
 msgid "You have not selected any request or offer."
 msgstr "No has seleccionado ninguna petición u oferta."
 
-#: views/propose.py:120
+#: views/propose.py:121
 msgid "Some requests/offers have changed. Reload andtry again."
 msgstr "Algunas peticiones/offertas han cambiado, vuelve a intentarlo."
 
-#: views/propose.py:123
+#: views/propose.py:124
 msgid "Some requests/offers have changed. Reload and try again."
 msgstr "Algunas peticiones/offertas han cambiado, vuelve a intentarlo."
 
-#: views/propose.py:140 views/propose.py:156
+#: views/propose.py:141 views/propose.py:157
 msgid "Some offers/requests have changed. Reload and try again."
 msgstr "Algunas peticiones/offertas han cambiado, vuelve a intentarlo."
 
-#: views/propose.py:150
+#: views/propose.py:151
 msgid "Donations not available for the selected request."
 msgstr "Donación no disponible para la petición seleccionada."
 

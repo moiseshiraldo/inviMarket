@@ -1,5 +1,6 @@
 {% extends "email/email.html" %}
 {% load i18n %}
+{% block header %}{% trans "Approved edition" %}{% endblock %}
 {% block main %}
 {% blocktrans %}
 Hello {{ name }},</br>

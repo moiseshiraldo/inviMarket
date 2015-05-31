@@ -10,8 +10,8 @@
   {% include "ads/topAd.html" %}
   {% endif %}
 
-  {% if request_filter or offer_filter %}
   <aside class="filter trade-filter">
+    {% if request_filter or offer_filter %}
     {% include "ads/asideLink.html" %}
     <form action="{% url 'trading' %}" method="get">
       <div class="mobile slideButton">&gt;&gt;</div>
@@ -28,8 +28,8 @@
         <li class="submit"><input type="submit" value="Update"/></li>
       </ul>
     </form>
+    {% endif %}
   </aside>
-  {% endif %}
 
   <div class="content">
     {% if message %}

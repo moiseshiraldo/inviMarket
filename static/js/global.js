@@ -23,17 +23,19 @@ $(window).scroll(function(){
       $("header").css({position: "absolute", top: "0em"});
     }
   }
-  if (y_scroll > 150) {
+  // Scroll filter form
+  if (y_scroll > 12*0.9*16) { // 15em * 0.9 (font-size) * 16 px/em
     $(".filter form").css("top", "5em");
     }
   else {
-    position = 259 - y_scroll;
+    position = 18*0.9*16 - y_scroll;
     $(".filter form").css("top", position + "px");
   }
 });
 
-  if ( $( "#site h1" ).text().indexOf("Forocoches") >= 0 ) {
-      $( "#site" ).css("cursor", "url('/static/images/roto2.png'), auto");
-  }
+// Roto2 cursor
+if ( $( "#site h1" ).text().indexOf("ForoCoches") >= 0 ) {
+  $( "#site" ).css("cursor", "url('/static/images/roto2.png'), auto");
+}
 
 });

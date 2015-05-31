@@ -35,7 +35,7 @@ class Command(BaseCommand):
                     + 2*sites
                     + editions
                     - 5*warnings
-                    - 4*days/30)
+                    - days/7)
                 if rating > 100:
                     user.profile.rating = 100
                 elif rating < 0:

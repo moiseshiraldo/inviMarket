@@ -4,7 +4,7 @@
 {% block main %}
 
 <main id="glossary">
-
+  {% blocktrans %}
   <h1>Glossary</h1>
 
   <section id="C" class="infotext">
@@ -48,13 +48,13 @@
     <ul>
       <li>
         <h4 class="faq-header">Rating</h4>
-        <p>An evaluation of the user activity based on positive actions,
-        such as donating invites or updating sites information. The rating
-        is calculated with the following formula:<br/><br/>
+        <p>An evaluation of the user activity based on his interactiones with
+        the site, such as donating invites or updating sites information. The
+        rating is calculated with the following formula:<br/><br/>
         <i>Rating</i> = 4×<i>donations</i> + 2×<i>trades</i> + 2×<i>sites</i>
-        + <i>editions</i> − 5×<i>warnings</i> − 2×<i>inactivity</i>
+        + <i>editions</i> − 5×<i>warnings</i> − <i>inactivity</i>
         <br/><br/>
-        Where <i>inactivity</i> represents the number of months since the
+        Where <i>inactivity</i> represents the number of weeks since the
         user's last visit.</p>
       </li>
       <li>
@@ -96,7 +96,7 @@
       </li>
     </ul>
   </section>
-
+  {% endblocktrans %}
 </main>
 
 {% endblock %}

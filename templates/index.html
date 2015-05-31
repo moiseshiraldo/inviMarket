@@ -220,10 +220,10 @@
       <img src="{% static "images/logo.svg" %}" id="footlogo" alt="I"/>
       <hr>
       <div id="mobileFooter" class="mobile">
-        <a href="{% url 'legal' %}">Legal information</a> |
-        <a href="{% url 'edition' %}">New sites</a> |
-        <a href="{% url 'glossary' %}">Glossary</a> |
-        <a href="{% url 'faq' %}">FAQ</a>
+        <a href="{% url 'legal' %}">{% trans "Legal information" %}</a> |
+        <a href="{% url 'edition' %}">{% trans "New sites" %}</a> |
+        <a href="{% url 'glossary' %}">{% trans "Glossary" %}</a> |
+        <a href="{% url 'faq' %}">{% trans "FAQ" %}</a>
       </div>
       <p>
         <a rel="license"

@@ -90,7 +90,7 @@ $(document).ready(function(){
       }
       if ( $( ".downButton h2").data("next") == 'sites' ) {
         // Load register page
-        $( "#sites" ).load("/sites/ #sites section, #sites aside, #sites .pagination");
+        $( "#sites" ).load("/sites/ #sites .content, #sites aside");
       }
       else {
         // Load javascript for sliders and market page

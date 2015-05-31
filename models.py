@@ -52,7 +52,7 @@ class Profile(models.Model):
     donations = models.PositiveIntegerField(default=0)
     lang = models.CharField(max_length=5, choices=LANG, blank=True)
     activation_key = models.CharField(max_length=40)
-    key_expires = models.DateTimeField(null=True)
+    key_expires = models.DateTimeField(null=True, blank=True)
     last_visit = models.DateTimeField(blank=True, null=True)
     notify = models.BooleanField(default=True)
     locked = models.BooleanField(default=False)
