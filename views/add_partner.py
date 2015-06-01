@@ -65,7 +65,7 @@ def add_partner(request, partner_id):
                                         'user': user,
                                         'domain': settings.DOMAIN,
                                         })
-                subject = "Partnership request"
+                subject = _("Partnership request")
                 send_mail(subject, text,
                           "inviMarket <no-reply@inviMarket.com>",
                           [partner.email],

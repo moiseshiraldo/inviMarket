@@ -9,7 +9,7 @@ class Command(BaseCommand):
     help = 'Calculate and update the rating of every user'
 
     def handle(self, *args, **options):
-        for user in User.objects.filter(is_active=True):
+        for user in User.objects.filter(is_active=True, is_staff=False):
             proposed_trades = user.proposed_trades.filter(accepted=True)
             received_trades = user.received_trades.filter(accepted=True)
             trades = proposed_trades.filter(donation=False).count()

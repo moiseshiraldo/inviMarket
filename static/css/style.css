@@ -660,6 +660,7 @@ footer hr {
   left: 0.5em;
   top: 1em;
   list-style-type: none;
+  text-align: left;
   padding: 0;
   width: 25em;
   background-color: WhiteSmoke;

@@ -108,7 +108,7 @@ def trade(request, trade_id):
                             'trade': trade,
                             'domain': settings.DOMAIN,
                             })
-                        subject = "Accepted proposal"
+                        subject = _("Accepted proposal")
                         send_mail(
                             subject, text,
                             "inviMarket <no-reply@inviMarket.com>",

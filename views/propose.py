@@ -203,7 +203,7 @@ def propose(request, receptor_id):
                                          'proposer': proposer,
                                          'trade': trade,
                                          'domain': settings.DOMAIN})
-                                    subject = "Trade proposal"
+                                    subject = _("Trade proposal")
                                     send_mail(subject, text,
                                         "inviMarket <no-reply@inviMarket.com>",
                                         [receptor.email],

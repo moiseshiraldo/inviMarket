@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-01 19:18+0100\n"
+"POT-Creation-Date: 2015-06-01 23:12+0100\n"
 "PO-Revision-Date: 2015-06-01 19:21+0100\n"
 "Last-Translator: Moises\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -155,11 +155,12 @@ msgid "Multi-language"
 msgstr "Varios idiomas"
 
 #: models.py:113 templates/email/proposal.html:3 templates/propose.html:4
-#: templates/propose.html.py:9
+#: templates/propose.html.py:9 views/propose.py:206
 msgid "Trade proposal"
 msgstr "Propuesta de intercambio"
 
-#: models.py:114 templates/email/partnership.html:3 views/add_partner.py:34
+#: models.py:114 templates/email/partnership.html:3 views/add_partner.py:35
+#: views/add_partner.py:68
 msgid "Partnership request"
 msgstr "Solicitud de asociación"
 
@@ -790,7 +791,7 @@ msgstr ""
 "Haz click\n"
 "en el siguiente enlace para ver los detalles:\n"
 
-#: templates/email/trade.html:3
+#: templates/email/trade.html:3 views/trade.py:111
 msgid "Accepted proposal"
 msgstr "Propuesta aceptada"
 
@@ -874,12 +875,6 @@ msgid "What is InviMarket?"
 msgstr "¿Qué es InviMarket?"
 
 #: templates/faq.html:12
-#| msgid ""
-#| "\n"
-#| "        InviMarket is a website where you can share and get invites\n"
-#| "        or referral links to other sites, as well as get information\n"
-#| "        relative to the invite/referral system of these sites.\n"
-#| "        "
 msgid ""
 "\n"
 "        InviMarket is a website where you can share and get invites\n"
@@ -2482,19 +2477,19 @@ msgstr "La propuesta de intercambio ha sido rechazada."
 msgid "Your complaint has been submitted."
 msgstr "Tu reclamación ha sido enviada."
 
-#: views/add_partner.py:36
+#: views/add_partner.py:37
 msgid "The user is already your partner."
 msgstr "El usuario ya era tu socio."
 
-#: views/add_partner.py:38
+#: views/add_partner.py:39
 msgid "You have reached the maximum number of partners."
 msgstr "Has alcanzado el número máximo de socios."
 
-#: views/add_partner.py:42
+#: views/add_partner.py:43
 msgid "The user has been successfuly added to your partners list."
 msgstr "El usuario ha sido añadido a tu lista de socios."
 
-#: views/add_partner.py:70
+#: views/add_partner.py:76
 msgid "The partnership request has been sended to the user."
 msgstr "La petición de asociación ha sido enviada al usuario."
 
@@ -2567,35 +2562,35 @@ msgstr "Ha ocurrido un error, inténtalo de nuevo."
 msgid "You have reached the maximum number of simultaneous offers."
 msgstr "Has alcanzado el número máximo de ofertas simultáneas."
 
-#: views/propose.py:56
+#: views/propose.py:57
 msgid "You have already made the user a trade proposal."
 msgstr "Ya has enviado una propuesta de intercambio al usuario."
 
-#: views/propose.py:58
+#: views/propose.py:59
 msgid "You have reached the maximum number of pending proposals."
 msgstr "Has alcanzado el número máximo de popuestas pendientes."
 
-#: views/propose.py:60
+#: views/propose.py:61
 msgid "The user have reached the maximum number of pending proposals."
 msgstr "El usuario ha alcanzado el número máximo de propuestas pendientes."
 
-#: views/propose.py:117
+#: views/propose.py:118
 msgid "You have not selected any request or offer."
 msgstr "No has seleccionado ninguna petición u oferta."
 
-#: views/propose.py:121
+#: views/propose.py:122
 msgid "Some requests/offers have changed. Reload andtry again."
 msgstr "Algunas peticiones/offertas han cambiado, vuelve a intentarlo."
 
-#: views/propose.py:124
+#: views/propose.py:125
 msgid "Some requests/offers have changed. Reload and try again."
 msgstr "Algunas peticiones/offertas han cambiado, vuelve a intentarlo."
 
-#: views/propose.py:141 views/propose.py:157
+#: views/propose.py:142 views/propose.py:158
 msgid "Some offers/requests have changed. Reload and try again."
 msgstr "Algunas peticiones/offertas han cambiado, vuelve a intentarlo."
 
-#: views/propose.py:151
+#: views/propose.py:152
 msgid "Donations not available for the selected request."
 msgstr "Donación no disponible para la petición seleccionada."
 
@@ -2623,7 +2618,7 @@ msgstr "Resultados para"
 msgid "No results matched the query"
 msgstr "Ningún resultado para la consulta"
 
-#: views/trade.py:49 views/trade.py:52 views/trade.py:120 views/trade.py:123
+#: views/trade.py:50 views/trade.py:53 views/trade.py:126 views/trade.py:129
 msgid "Some requests/offers status have changed. Reload and try again."
 msgstr ""
 "El estado de algunas peticiones/ofertas ha cambiado. Inŧéntalo de nuevo."
