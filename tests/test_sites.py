@@ -69,7 +69,7 @@ class OfferTestCase(TestCase):
         alice = User.objects.create_user(username='alice', password='qwerty')
         Profile.objects.create(user=alice, lang='en')
         Website.objects.create(name='Forum', url='http://www.forum.com',
-            webType='FO', category='MMD')
+            webType='FO', category='MMD', email_domain='forum.com')
         Website.objects.create(name='Referral', url='http://www.referral.com',
             refvalidator="http://www.referral.com/user/\d+",
             webType='FO', category='RE')
@@ -200,7 +200,7 @@ class RequestTestCase(TestCase):
         bob = User.objects.create_user(username='bob')
         Profile.objects.create(user=alice, lang='en')
         Website.objects.create(name='Forum', url='http://www.forum.com',
-            webType='FO', category='MMD')
+            webType='FO', category='MMD', email_domain='forum.com')
         site = Website.objects.create(name='Referral',
             url='http://www.referral.com', webType='FO', category='RE')
         Offer.objects.create(user=alice, website=site, to_donate=1,

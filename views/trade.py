@@ -5,6 +5,7 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
+from django.utils import translation
 from django.utils.translation import ugettext as _
 
 from inviMarket.models import Trade, Notification
@@ -92,28 +93,31 @@ def trade(request, trade_id):
                     sender=proposer).delete()
                 # Send a notification email as well
                 if proposer.profile.notify:
-                    text = render_to_string('email/trade.txt', {
-                        'name': proposer.first_name,
-                        'receptor': receptor,
-                        'trade': trade,
-                        'domain': settings.DOMAIN,
-                        'LANGUAGE_CODE': proposer.profile.lang,
-                        })
-                    html = render_to_string('email/trade.html', {
-                        'name': proposer.first_name,
-                        'receptor': receptor,
-                        'trade': trade,
-                        'domain': settings.DOMAIN,
-                        'LANGUAGE_CODE': proposer.profile.lang,
-                        })
-                    subject = "Accepted proposal"
-                    send_mail(
-                        subject, text,
-                        "inviMarket <no-reply@inviMarket.com>",
-                        [proposer.email],
-                        html_message=html,
-                        fail_silently=False
-                        )
+                    cur_language = translation.get_language()
+                    try:
+                        translation.activate(proposer.profile.lang)
+                        text = render_to_string('email/trade.txt', {
+                            'name': proposer.first_name,
+                            'receptor': receptor,
+                            'trade': trade,
+                            'domain': settings.DOMAIN,
+                            })
+                        html = render_to_string('email/trade.html', {
+                            'name': proposer.first_name,
+                            'receptor': receptor,
+                            'trade': trade,
+                            'domain': settings.DOMAIN,
+                            })
+                        subject = "Accepted proposal"
+                        send_mail(
+                            subject, text,
+                            "inviMarket <no-reply@inviMarket.com>",
+                            [proposer.email],
+                            html_message=html,
+                            fail_silently=False
+                            )
+                    finally:
+                        translation.activate(cur_language)
                 proposer.profile.unlock()
                 receptor.profile.unlock()
                 return redirect('trade_accepted')

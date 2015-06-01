@@ -5,6 +5,7 @@ from django.core.mail import send_mail
 from django.core.urlresolvers import reverse
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
+from django.utils import translation
 from django.utils.translation import ugettext as _
 
 from inviMarket.models import User, Notification
@@ -51,24 +52,27 @@ def add_partner(request, partner_id):
         notification.save()
         # Send a notification email as well
         if partner.profile.notify:
-            text = render_to_string('email/partnership.txt', {
-                                    'name': partner.first_name,
-                                    'user': user,
-                                    'domain': settings.DOMAIN,
-                                    'LANGUAGE_CODE': partner.profile.lang,
-                                    })
-            html = render_to_string('email/partnership.html', {
-                                    'name': partner.first_name,
-                                    'user': user,
-                                    'domain': settings.DOMAIN,
-                                    'LANGUAGE_CODE': partner.profile.lang,
-                                    })
-            subject = "Partnership request"
-            send_mail(subject, text,
-                      "inviMarket <no-reply@inviMarket.com>",
-                      [partner.email],
-                      html_message=html,
-                      fail_silently=False)
+            cur_language = translation.get_language()
+            try:
+                translation.activate(partner.profile.lang)
+                text = render_to_string('email/partnership.txt', {
+                                        'name': partner.first_name,
+                                        'user': user,
+                                        'domain': settings.DOMAIN,
+                                        })
+                html = render_to_string('email/partnership.html', {
+                                        'name': partner.first_name,
+                                        'user': user,
+                                        'domain': settings.DOMAIN,
+                                        })
+                subject = "Partnership request"
+                send_mail(subject, text,
+                          "inviMarket <no-reply@inviMarket.com>",
+                          [partner.email],
+                          html_message=html,
+                          fail_silently=False)
+            finally:
+                translation.activate(cur_language)
         message = _("The partnership request has been sended to the user.")
     return render(request, 'message.html', {
         'header': header,

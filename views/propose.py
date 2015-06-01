@@ -6,6 +6,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
+from django.utils import translation
 from django.utils.safestring import mark_safe
 from django.utils.translation import ugettext as _
 from django.template.loader import render_to_string
@@ -187,24 +188,29 @@ def propose(request, receptor_id):
                             notification.save()
                             # Send a notification email as well
                             if receptor.profile.notify:
-                                text = render_to_string('email/proposal.txt',
-                                    {'name': receptor.first_name,
-                                     'proposer': proposer,
-                                     'trade': trade,
-                                     'domain': settings.DOMAIN,
-                                     'LANGUAGE_CODE': receptor.profile.lang,})
-                                html = render_to_string('email/proposal.html',
-                                    {'name': receptor.first_name,
-                                     'proposer': proposer,
-                                     'trade': trade,
-                                     'domain': settings.DOMAIN,
-                                     'LANGUAGE_CODE': receptor.profile.lang,})
-                                subject = "Trade proposal"
-                                send_mail(subject, text,
-                                          "inviMarket <no-reply@inviMarket.com>",
-                                          [receptor.email],
-                                          html_message=html,
-                                          fail_silently=False)
+                                cur_language = translation.get_language()
+                                try:
+                                    translation.activate(receptor.profile.lang)
+                                    text = render_to_string(
+                                        'email/proposal.txt',
+                                        {'name': receptor.first_name,
+                                         'proposer': proposer,
+                                         'trade': trade,
+                                         'domain': settings.DOMAIN})
+                                    html = render_to_string(
+                                        'email/proposal.html',
+                                        {'name': receptor.first_name,
+                                         'proposer': proposer,
+                                         'trade': trade,
+                                         'domain': settings.DOMAIN})
+                                    subject = "Trade proposal"
+                                    send_mail(subject, text,
+                                        "inviMarket <no-reply@inviMarket.com>",
+                                        [receptor.email],
+                                        html_message=html,
+                                        fail_silently=False)
+                                finally:
+                                    translation.activate(cur_language)
                             proposer.profile.unlock()
                             receptor.profile.unlock()
                             return redirect('proposal_submitted')
