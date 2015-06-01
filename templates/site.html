@@ -10,7 +10,10 @@
   {% include "ads/topAd.html" %}
 
   <article>
-    <h1 class="article-header">
+    <h1 class="article-header"
+        {% if site.name == "ForoCoches" %}
+        data-cursor="{% static "images/roto2.png" %}"
+        {% endif %}>
       {{ site }}
       <span>
         [ <a href="{% url 'edition' site_id=site.pk  %}">

@@ -6,7 +6,7 @@
 <main id="delete-profile">
   <h1>{% trans "Profile deletion" %}</h1>
   <form action="{% url 'register' %}"
-        class="form" method="post">{% csrf_token %}
+        class="form indented-block" method="post">{% csrf_token %}
     <p>
       {% blocktrans %}
       By default we will set your account as inactive and keep all your

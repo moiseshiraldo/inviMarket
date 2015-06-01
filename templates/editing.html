@@ -34,9 +34,11 @@ Create new sites and edit the information about the invites or referral system.
     </p>
     <div class="downButton">
       {% if user.is_authenticated %}
-      <h2 data-next="sites">{% trans "Sites" %}</h2>
+      <h2 data-next="sites" data-url="{% url 'sites' %}">{% trans "Sites" %}</h2>
       {% else%}
-      <h2 data-next="register">{% trans "Register" %}</h2>
+      <h2 data-next="register" data-url="{% url 'register' %}">
+        {% trans "Register" %}
+      </h2>
       {% endif %}
       <img src="{% static "images/down.svg" %}" alt="Down"/>
     </div>

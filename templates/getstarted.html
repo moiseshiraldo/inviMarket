@@ -141,9 +141,15 @@ Request, offer invites and share referral links.
 
     <div class="downButton">
       {% if user.is_authenticated %}
-      <h2 data-next="market">Market</h2>
+      <h2 data-next="market"
+          data-url="{% url 'index' %}"
+          data-sliders="{% static "js/sliders.js" %}">
+        Market
+      </h2>
       {% else%}
-      <h2 data-next="register">{% trans "Register" %}</h2>
+      <h2 data-next="register" data-url="{% url 'register' %}">
+        {% trans "Register" %}
+      </h2>
       {% endif %}
       <img src="{% static "images/down.svg" %}" alt="Down"/>
     </div>

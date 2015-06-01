@@ -34,8 +34,9 @@ $(window).scroll(function(){
 });
 
 // Roto2 cursor
-if ( $( "#site h1" ).text().indexOf("ForoCoches") >= 0 ) {
-  $( "#site" ).css("cursor", "url('/static/images/roto2.png'), auto");
+if ( $( "#site article h1" ).text().indexOf("ForoCoches") >= 0 ) {
+  var cursor_url = $( "#site article h1" ).data("cursor");
+  $( "#site article" ).css("cursor", "url(" + cursor_url + "), auto");
 }
 
 });

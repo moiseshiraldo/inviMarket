@@ -84,18 +84,19 @@ $(document).ready(function(){
   // Slide up get started page
   $( ".downButton" ).click(function() {
       $( ".downButton" ).parent().slideUp(1000);
-      if ( $( ".downButton h2").data("next") == 'register' ) {
+      var header = $( ".downButton h2" );
+      if ( header.data("next") == 'register' ) {
         // Load register page
-        $( "#register" ).load("/register/ #register h1, .form, .help");
+        $( "#register" ).load(header.data("url") + " #register h1, .form, .help");
       }
-      if ( $( ".downButton h2").data("next") == 'sites' ) {
+      if ( header.data("next") == 'sites' ) {
         // Load register page
-        $( "#sites" ).load("/sites/ #sites .content, #sites aside");
+        $( "#sites" ).load(header.data("url") + " #sites .content, #sites aside");
       }
-      else {
+      else if ( header.data("next") == 'market' ) {
         // Load javascript for sliders and market page
-        $.getScript("/static/js/sliders.js");
-        $( "#market" ).load("/ .container, .smallContainer", function(){
+        $.getScript(header.data("sliders"));
+        $( "#market" ).load(header.data("url") + " .container, .smallContainer", function(){
           // Initialize sliders
           var wrappers = $(".wrapper");
           for (var i = 0; i < wrappers.length; i++) {
