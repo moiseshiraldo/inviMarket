@@ -191,12 +191,14 @@ def propose(request, receptor_id):
                                     {'name': receptor.first_name,
                                      'proposer': proposer,
                                      'trade': trade,
-                                     'domain': settings.DOMAIN})
+                                     'domain': settings.DOMAIN,
+                                     'LANGUAGE_CODE': receptor.profile.lang,})
                                 html = render_to_string('email/proposal.html',
                                     {'name': receptor.first_name,
                                      'proposer': proposer,
                                      'trade': trade,
-                                     'domain': settings.DOMAIN})
+                                     'domain': settings.DOMAIN,
+                                     'LANGUAGE_CODE': receptor.profile.lang,})
                                 subject = "Trade proposal"
                                 send_mail(subject, text,
                                           "inviMarket <no-reply@inviMarket.com>",

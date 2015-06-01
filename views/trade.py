@@ -91,18 +91,20 @@ def trade(request, trade_id):
                 receptor.notification_set.filter(code=10,
                     sender=proposer).delete()
                 # Send a notification email as well
-                if receptor.profile.notify:
+                if proposer.profile.notify:
                     text = render_to_string('email/trade.txt', {
                         'name': proposer.first_name,
                         'receptor': receptor,
                         'trade': trade,
                         'domain': settings.DOMAIN,
+                        'LANGUAGE_CODE': proposer.profile.lang,
                         })
                     html = render_to_string('email/trade.html', {
                         'name': proposer.first_name,
                         'receptor': receptor,
                         'trade': trade,
                         'domain': settings.DOMAIN,
+                        'LANGUAGE_CODE': proposer.profile.lang,
                         })
                     subject = "Accepted proposal"
                     send_mail(

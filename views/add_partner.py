@@ -55,11 +55,13 @@ def add_partner(request, partner_id):
                                     'name': partner.first_name,
                                     'user': user,
                                     'domain': settings.DOMAIN,
+                                    'LANGUAGE_CODE': partner.profile.lang,
                                     })
             html = render_to_string('email/partnership.html', {
                                     'name': partner.first_name,
                                     'user': user,
                                     'domain': settings.DOMAIN,
+                                    'LANGUAGE_CODE': partner.profile.lang,
                                     })
             subject = "Partnership request"
             send_mail(subject, text,
