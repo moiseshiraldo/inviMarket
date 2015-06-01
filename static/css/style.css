@@ -396,9 +396,9 @@ article p { margin: 0 0 1em 0 }
 
 .searchInfo {
   margin: 0 0 1em 0em;
-  width: 31.5em;
+  width: 30.5em;
   background-color: WhiteSmoke;
-  padding: 0.3em;
+  padding: 0.3em 0.8em;
   border-radius: 0.5em;
 }
 

@@ -10,7 +10,7 @@
     <h1>{% trans "Login" %}</h1>
 
     {% if next %}
-    <form action="/login/?next={{next}}"
+    <form action="{% url 'login' %}?next={{ next }}"
           class="form indented-block inline-block" method="post" >
     {% else %}
     <form method="post" action="{% url 'login' %}"
@@ -75,7 +75,10 @@
     </div>
 
     <div class="downButton">
-      <h2 data-next="register">{% trans "Register" %}</h2>
+      <h2 data-next="register"
+          data-url="{% url 'register'%}">
+        {% trans "Register" %}
+      </h2>
       <img src="{% static "images/down.svg" %}" alt="Down"/>
     </div>
 

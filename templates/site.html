@@ -6,7 +6,6 @@
 
 <main id="site">
 
-  <script src="{% static "js/shareButtons.js" %}"></script>
   {% include "ads/topAd.html" %}
 
   <article>
@@ -65,10 +64,16 @@
       {% endif %}
     </section>
   </article>
+
   {% trans "Check out this site" as text %}
   {% include "blocks/social-buttons.html" with text=text url="https://"|add:request.get_host|add:request.path %}
 
   {% include "ads/bottomLink.html" %}
+
+  <script src="{% static "js/shareButtons.js" %}"></script>
+  {% if site.name == "ForoCoches" %}
+  <script src="{% static "js/roto2.js" %}"></script>
+  {% endif %}
 
 </main>
 {% endblock %}

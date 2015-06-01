@@ -36,9 +36,11 @@ request or offer invites.
   </aside>
 
   <div class="content">
+
     {% if not message and sites.object_list.count > 2 %}
     {% include "ads/topAd.html" %}
     {% endif %}
+
     {% if message %}
     <div class="searchInfo">
       {% trans message %}
@@ -48,16 +50,26 @@ request or offer invites.
     </div>
     {% endif %}
 
+    {% if sites %}
     {% for site in sites %}
     {% include "blocks/site-block.html" with class="site" %}
     {% endfor %}
-
     {% include "blocks/pagination.html" with results=sites queries=queries %}
-
     {% include "ads/bottomAd.html" %}
+
+    {% else %}
+    <div class="site">
+    {% url 'edition' as link %}
+      {% blocktrans %}
+      Can't find the site you are looking for?
+      <a href="{{ link }}">Click here</a> to create it.
+      {% endblocktrans %}
+    </div>
+    {% endif%}
+
   </div>
 
-  {% if sites.paginator.count %}
+  {% if sites %}
   {% include "ads/sideAd.html" %}
   {% endif %}
 
