@@ -1,7 +1,9 @@
 var windowWidth = window.innerWidth || $(window).width();
+var windowHeight = window.innerHeight || $(window).height();
 
 $( window ).resize(function() {
     windowWidth = window.innerWidth || $(window).width();
+    windowHeight = window.innerHeight || $(window).height();
 });
 
 $(document).ready(function(){
@@ -24,11 +26,13 @@ $(document).ready(function(){
             }
         }
         // Scroll filter form
-        if (y_scroll > 12*0.9*16) { // 15em * 0.9 (font-size) * 16 px/em
-            $(".filter form").css("top", "5em");
-        } else {
-            position = 18*0.9*16 - y_scroll;
-            $(".filter form").css("top", position + "px");
+        if (windowHeight > 480) {
+            if (y_scroll > 12*0.9*16) { // 15em * 0.9 (font-size) * 16 px/em
+                $(".filter form").css("top", "5em");
+            } else {
+                position = 18*0.9*16 - y_scroll;
+                $(".filter form").css("top", position + "px");
+            }
         }
     });
 
