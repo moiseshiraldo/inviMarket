@@ -138,15 +138,17 @@ class Website(models.Model):
     WTYPE = (
         ('APP', _('Application')),
         ('CS', _('Cloud Service')),
+        ('CO', _('Community')),
         ('DD', _('Direct Download')),
-        ('FO', _('Forum')),
         ('PTC', _('Paid-To-Click')),
         ('P2P', _('Peer to peer')),
+        ('SN', _('Social network')),
         ('ST', _('Streaming')),
         ('TR', _('Tracker')),
     )
     webType = models.CharField(max_length=3, choices=WTYPE)
     CAT = (
+        ('CUL', _('Culture')),
         ('EC', _('E-commerce')),
         ('GEN', _('Generic')),
         ('MMD', _('Multimedia')),

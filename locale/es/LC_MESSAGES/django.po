@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-01 23:12+0100\n"
-"PO-Revision-Date: 2015-06-01 19:21+0100\n"
-"Last-Translator: Moises\n"
+"POT-Creation-Date: 2015-06-05 01:40+0100\n"
+"PO-Revision-Date: 2015-06-05 01:41+0100\n"
+"Last-Translator: \n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
@@ -185,12 +185,13 @@ msgid "Cloud Service"
 msgstr "Servicio en la nube"
 
 #: models.py:141
-msgid "Direct Download"
-msgstr "Descarga directa"
+#| msgid "Comments"
+msgid "Community"
+msgstr "Comunidad"
 
 #: models.py:142
-msgid "Forum"
-msgstr "Foro"
+msgid "Direct Download"
+msgstr "Descarga directa"
 
 #: models.py:143
 msgid "Paid-To-Click"
@@ -201,30 +202,38 @@ msgid "Peer to peer"
 msgstr "Peer to peer"
 
 #: models.py:145
+msgid "Social network"
+msgstr "Red social"
+
+#: models.py:146
 msgid "Streaming"
 msgstr "Streaming"
 
-#: models.py:146
+#: models.py:147
 msgid "Tracker"
 msgstr "Tracker"
 
-#: models.py:150
+#: models.py:151
+msgid "Culture"
+msgstr "Cultura"
+
+#: models.py:152
 msgid "E-commerce"
 msgstr "Comercio"
 
-#: models.py:151
+#: models.py:153
 msgid "Generic"
 msgstr "Genérico"
 
-#: models.py:152
+#: models.py:154
 msgid "Multimedia"
 msgstr "Multimedia"
 
-#: models.py:153
+#: models.py:155
 msgid "Referral"
 msgstr "Referidos"
 
-#: models.py:154
+#: models.py:156
 msgid "Telecommunications"
 msgstr "Telecomunicaciones"
 
@@ -2646,6 +2655,9 @@ msgstr "Tu usuario y contraseña no concuerdan. Inténtalo de nuevo."
 #: views/user_login.py:56
 msgid "Username/email"
 msgstr "Usuario/email"
+
+#~ msgid "Forum"
+#~ msgstr "Foro"
 
 #~ msgid "Send"
 #~ msgstr "Enviar"
