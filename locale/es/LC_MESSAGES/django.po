@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-05 01:40+0100\n"
-"PO-Revision-Date: 2015-06-05 01:41+0100\n"
+"POT-Creation-Date: 2015-06-08 00:26+0100\n"
+"PO-Revision-Date: 2015-06-08 00:28+0100\n"
 "Last-Translator: \n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "Language: en_US\n"
@@ -90,6 +90,10 @@ msgstr "Donaciones"
 msgid "Show"
 msgstr "Mostrar"
 
+#: forms.py:180 forms.py:219
+msgid "Comments"
+msgstr "Comentarios"
+
 #: forms.py:188
 msgid "Received"
 msgstr "Recibido"
@@ -129,10 +133,6 @@ msgstr "Idioma"
 #: forms.py:218 templates/site.html:41
 msgid "Active"
 msgstr "Activo"
-
-#: forms.py:219
-msgid "Comments"
-msgstr "Comentarios"
 
 #: forms.py:250 forms.py:270
 msgid "Password"
@@ -185,7 +185,6 @@ msgid "Cloud Service"
 msgstr "Servicio en la nube"
 
 #: models.py:141
-#| msgid "Comments"
 msgid "Community"
 msgstr "Comunidad"
 
@@ -360,7 +359,7 @@ msgstr "Ratio:"
 msgid "Requests"
 msgstr "Peticiones"
 
-#: templates/blocks/sites-list.html:21
+#: templates/blocks/sites-list.html:21 templates/del_profile.html:25
 msgid "Delete"
 msgstr "Eliminar"
 
@@ -448,6 +447,10 @@ msgstr "Unirse"
 #: templates/complaint.html:4 templates/complaint.html.py:9
 msgid "Complaint"
 msgstr "Reclamación"
+
+#: templates/complaint.html:34
+msgid "Submit"
+msgstr "Enviar"
 
 #: templates/config.html:4
 msgid "Configuration"
@@ -1475,19 +1478,37 @@ msgstr "Notificaciones"
 msgid "Legal information"
 msgstr "Información legal"
 
-#: templates/index.html:247
+#: templates/index.html:235
+msgid ""
+"\n"
+"          This work is licensed under a\n"
+"          <a rel=\"license\"\n"
+"             href=\"http://creativecommons.org/licenses/by/4.0/\">\n"
+"            Creative Commons Attribution 4.0 International License\n"
+"          </a>.\n"
+"          "
+msgstr ""
+"\n"
+"          Esta obra está licenciada bajo una\n"
+"          <a rel=\"license\"\n"
+"             href=\"http://creativecommons.org/licenses/by/4.0/\">\n"
+"            licencia de Creative Commons Reconocimiento 4.0 Internacional\n"
+"          </a>.\n"
+"          "
+
+#: templates/index.html:249
 msgid "This place uses"
 msgstr "Este sitio usa"
 
-#: templates/index.html:248
+#: templates/index.html:250
 msgid "cookies"
 msgstr "cookies"
 
-#: templates/index.html:249
+#: templates/index.html:251
 msgid "and no animals were harmed in the development process."
 msgstr "y ningún animal resultó herido en el proceso de desarrollo."
 
-#: templates/index.html:251
+#: templates/index.html:253
 msgid "Close"
 msgstr "Cerrar"
 
@@ -2218,9 +2239,17 @@ msgstr "Aceptar"
 msgid "Password change"
 msgstr "Cambio de contraseña"
 
+#: templates/password_change.html:11
+msgid "Change"
+msgstr "Cambiar"
+
 #: templates/password_reset.html:3 templates/password_reset.html.py:7
 msgid "User recovery"
 msgstr "Recuperación de usuario"
+
+#: templates/password_reset.html:12 templates/suggestions.html:30
+msgid "Send"
+msgstr "Enviar"
 
 #: templates/password_reset.html:16
 msgid ""
@@ -2233,7 +2262,11 @@ msgstr ""
 "Recibirás un email con tu nombre de usuario y un link para establecer una "
 "nueva contraseña si no la recuerdas."
 
-#: templates/profile.html:31
+#: templates/profile.html:21
+msgid "Trade"
+msgstr "Intercambio"
+
+#: templates/profile.html:36
 msgid "Check out my profile"
 msgstr "Mira mi perfil"
 
@@ -2244,6 +2277,10 @@ msgstr "Selecciona tus peticiones"
 #: templates/propose.html:47
 msgid "Select your offers"
 msgstr "Selecciona tus ofertas"
+
+#: templates/propose.html:53
+msgid "Propose"
+msgstr "Proponer"
 
 #: templates/propose.html:55
 msgid "Donation available."
@@ -2387,6 +2424,10 @@ msgstr "Sugerencias:"
 #: templates/suggestions.html:29
 msgid "Your suggestions..."
 msgstr "Tus sugerencias:"
+
+#: templates/suggestions.html:31
+msgid "Reset"
+msgstr "Reiniciar"
 
 #: templates/trade.html:4 templates/trade.html.py:9
 msgid "Trade details"
@@ -2658,9 +2699,6 @@ msgstr "Usuario/email"
 
 #~ msgid "Forum"
 #~ msgstr "Foro"
-
-#~ msgid "Send"
-#~ msgstr "Enviar"
 
 #~ msgid ""
 #~ "\n"

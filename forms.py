@@ -177,7 +177,7 @@ class CommentsForm(forms.Form):
 
     """
     comments = forms.CharField(max_length=400, widget=forms.Textarea(),
-                               required=False)
+                               required=False, label=_('Comments'))
 
 class TradeFilter(forms.Form):
     """

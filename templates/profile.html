@@ -16,6 +16,11 @@
     </h1>
 
     <section class="user inline-block indented-block">
+      {% if u != user %}
+      <a class="button" href="{% url 'propose' receptor_id=u.pk %}">
+      {% trans "Trade" %}
+      </a>
+      {% endif %}
       {% with myPartners=user.profile.partners.all hisPartners=u.profile.partners.all%}
       {% include "blocks/user.html" with add="True" %}
       {% if u.profile.get_requests.count %}
