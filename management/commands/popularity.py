@@ -27,8 +27,8 @@ class Command(BaseCommand):
         for site in ref_sites:
             site.offers = site.n_links
             site_views = int(page_views.get('InviMarket: ' + site.name, 0))
-            site.popularity = (site.n_links*100/2*links['total']
-                               + site_views*100/2*max_views)
+            site.popularity = (site.n_links*100/(2*links['total'])
+                               + site_views*100/(2*max_views))
             site.save()
         for site in sites:
             site.requests = site.request_set.filter(traded=False).count()
@@ -36,12 +36,12 @@ class Command(BaseCommand):
                 site.offers = site.n_offers
             else:
                 site.offers = 0
-            site_views = int(page_views.get('InviMarket: ' + site.name, 0))
         total = sites.aggregate(
                         offers=Max('n_offers'),
                         requests=Max('requests'),
                         )
         for site in sites:
+            site_views = int(page_views.get('InviMarket: ' + site.name, 0))
             site.popularity = (site.offers*100/(3*total['offers'])
                                + site.requests*100/(3*total['requests'])
                                + site_views*100/(3*max_views))

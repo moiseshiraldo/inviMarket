@@ -166,6 +166,8 @@ def propose(request, receptor_id):
                             receptor.profile.unlock()
                         else:
                             trade.comments = comments
+                            if len(offers) == 0 or len(requests) == 0:
+                                trade.donation = True
                             trade.save()
                             # Check if the user is modifying a received proposal
                             try:
