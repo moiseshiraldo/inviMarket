@@ -207,7 +207,10 @@ h3 {
 }
 
 .inline-header { display: inline-block }
-.smallContainer h3 { font-size: 0.9em }
+.smallContainer h3 {
+  width: 80%;
+  font-size: 0.9em;
+}
 
 h4 {
   margin: 0 0 0.5em 1em;
