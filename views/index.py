@@ -52,7 +52,7 @@ def index(request):
         cache.set('new', new_sites, 60*60)
     recent_requests = cached.get('recent_requests')
     if not recent_requests:
-        recent_requests = Request.objects.filter(traded=False).order_by('?')
+        recent_requests = Request.objects.filter(traded=False).order_by('?')[:5]
         cache.set('requests', recent_requests, 60*60)
     return render(request, 'market.html', {
         'popular': popular_sites,
