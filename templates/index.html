@@ -42,8 +42,9 @@
 
   <header>
 
-    <img src="{% static 'images/logo.svg' %}" id="logo" alt="I"/>
-    <img src="{% static 'images/sublogo.svg' %}" id="superLogo" alt="NVI"/>
+    <img src="{% static 'images/logo.svg' %}" id="logo" alt="InviMarket logo"/>
+    <img src="{% static 'images/sublogo.svg' %}" id="superLogo"
+         alt="InviMarket sublogo"/>
 
     <h1 class="slogan"> INVITING PEOPLE </h1>
 
@@ -101,7 +102,7 @@
       <div id="notifications" class="notifications">
         {{ user.profile.count_notifications }}
         <img src="{% static "images/arrow.svg" %}" class="arrow"
-             alt="arrow"/>
+             alt="Decoration arrow"/>
         <ul class="messages-list">
           {% for notification in user.notification_set.all %}
           <li><a href={{ notification.url }}>

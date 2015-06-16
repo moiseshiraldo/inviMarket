@@ -151,6 +151,7 @@ class Website(models.Model):
         ('CUL', _('Culture')),
         ('EC', _('E-commerce')),
         ('GEN', _('Generic')),
+        ('KNO', _('Knowledge')),
         ('MMD', _('Multimedia')),
         ('RE', _('Referral')),
         ('TEL', _('Telecommunications')),
