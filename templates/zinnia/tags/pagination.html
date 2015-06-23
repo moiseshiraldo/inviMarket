@@ -1,0 +1,42 @@
+{% load i18n %}
+<section class="pagination">
+    {% if page.has_previous %}
+  <a class="pagNavButton" href="?{{queries.urlencode}}&amp;page={{ page.previous_page_number }}">&lt;</a>
+  {% endif %}
+
+  {% if page.number != 1 %}
+  <a class="pageNumber" href="?{{queries.urlencode}}&amp;page=1">1</a>
+  {% endif %}
+
+  {% if page.number > 3 %}
+  ...
+  {% endif %}
+
+  {% if page.number > 2 and page.has_previous %}
+  <a class="pageNumber" href="?{{queries.urlencode}}&amp;page={{ page.previous_page_number }}">
+    {{ page.previous_page_number }}
+  </a>
+  {% endif %}
+
+  <span class="current">{{ page.number }}</span>
+
+  {% if page.has_next and page.next_page_number < page.paginator.num_pages  %}
+  <a class="pageNumber" href="?{{queries.urlencode}}&amp;page={{ page.next_page_number }}">
+    {{ page.next_page_number }}
+  </a>
+  {% endif %}
+
+  {% if page.next_page_number < page.paginator.num_pages %}
+  ...
+  {% endif %}
+
+  {% if page.number != page.paginator.num_pages %}
+  <a class="pageNumber" href="?{{queries.urlencode}}&amp;page={{ page.paginator.num_pages }}">
+    {{ page.paginator.num_pages }}
+  </a>
+  {% endif %}
+
+  {% if page.has_next %}
+  <a class="pagNavButton" href="?{{queries.urlencode}}&amp;page={{ page.next_page_number }}">&gt;</a>
+  {% endif %}
+</section>

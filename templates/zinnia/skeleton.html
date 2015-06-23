@@ -1,0 +1,105 @@
+{% load i18n staticfiles %}
+<!doctype html>
+<html lang="{{ LANGUAGE_CODE }}">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      {% block title %}{% endblock title %}
+      {% block title-page %}{% endblock title-page %} - InviMarket Blog</title>
+    <meta name="robots" content="follow, all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,
+                                  minimum-scale=1" />
+    <meta name="description"
+          content="{% block meta-description %}
+                   {% trans "InviMarket official blog." %}
+                   {% endblock meta-description %}
+                   {% block meta-description-page %}
+                   {% endblock meta-description-page %}" />
+    {% block meta %}{% endblock meta %}
+    <link rel="pingback" href="/xmlrpc/" />
+    <link rel="home" href="{% url 'zinnia:entry_archive_index' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+    <link href='//fonts.googleapis.com/css?family=Londrina+Sketch%7CUbuntu:5000%7CPlay%7COpen+Sans'
+        rel='stylesheet' type='text/css'>
+    {% block link %}{% endblock link %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="{% static "js/global.js" %}"></script>
+    <script src="{% static "js/onClicks.js" %}"></script>
+    {% if not user.is_authenticated %}
+    <script src="{% static "js/cookies.js" %}"></script>
+    {% endif %}
+    {% block script %}{% endblock script %}
+  </head>
+  <body>
+
+    <header>
+      <img src="{% static 'images/logo.svg' %}" id="logo" alt="InviMarket logo"/>
+      <img src="{% static 'images/sublogo.svg' %}" id="superLogo"
+           alt="InviMarket sublogo"/>
+
+      <h1 class="slogan"> INVITING PEOPLE </h1>
+
+      <a href="{% url 'zinnia:entry_latest_feed' %}"
+         title="{% trans "RSS feed of latest entries" %}">
+        <img src="{% static 'images/rss.svg' %}" class="socialLink"
+           alt="RSS feed"/>
+      </a>
+
+      <div class="status-bar">
+        {% if user.is_authenticated %}
+        <span><a href="{% url 'logout' %}">{% trans "Logout" %}</a></span>
+        {% else %}
+        <span>
+          <a href="{% url 'login' %}">{% trans "Login" %}</a> |
+          <a href="{% url 'register' %}">{% trans "Register" %}</a>
+        </span>
+        {% endif %}
+      </div>
+
+      <nav>
+        <img src="{% static "images/menu-button.svg" %}" id="menu-button"
+          class="mobile" alt="Menu"/>
+        <ul class="menu">
+          <li><a href="{% url 'index' %}">Market</a></li>
+          <li class="menu-item">
+            <a href="{% url 'zinnia:entry_archive_index' %}">{% trans "Blog" %}</a>
+          </li>
+        </ul>
+        <form action="{% url 'zinnia:entry_search' %}" method="get">
+          <input type="search" name="pattern" placeholder="{% trans 'Keywords...' %}">
+          <input type="submit" value="">
+        </form>
+      </nav>
+    </header>
+    {% block slider %}{% endblock slider %}
+    <main>
+      <div class="content blog-content">
+        {% block content %}
+        <div class="links">
+          <h2>{% trans "Useful links" %}</h2>
+          <ul>
+            <li>
+              <a href="{% url 'zinnia:entry_archive_index' %}" title="{% trans "Weblog index" %}">
+                {% trans "Weblog index" %}
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'zinnia:sitemap' %}" title="{% trans "Sitemap" %}">
+                {% trans "Sitemap" %}
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="search">
+          <h2>{% trans "Search" %}</h2>
+          {% include "zinnia/tags/search_form.html" %}
+        </div>
+        {% endblock content %}
+      </div>
+      <aside class="filter blog-filter">
+        {% block sidebar %}
+        {% endblock sidebar %}
+      </aside>
+    </main>
+  </body>
+</html>
