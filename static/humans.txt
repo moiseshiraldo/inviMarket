@@ -1,0 +1,11 @@
+/* TEAM */
+Programmer, founder: Moisés Hiraldo
+Location: London
+
+/* SITE */
+Last update: now
+Standards: HTML5, CSS3
+Source code: https://github.com/moiseshiraldo/InviMarket
+Languages: Python, Javascript
+Components: Django, jQuery
+Software: PostgreSQL, Ubuntu Server EC2, vim, Git, bash, ssh 
