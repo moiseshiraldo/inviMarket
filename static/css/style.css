@@ -80,6 +80,11 @@ section { display: block }
   margin: 0 0 0 1em;
 }
 
+.blog-content {
+  width: 40em;
+  margin-left: 10%;
+}
+
 article {
   display: block;
   margin: 0 3em 0.5em 3em;
@@ -247,7 +252,7 @@ h1 span .active { text-transform: uppercase }
   font-size: 1.2em;
 }
 
-nav form input, .profile, .help, .infobox dl, .source, footer { font-size: 0.8em }
+nav form input, .profile, .help, .infobox dl, .source, footer, .info-block { font-size: 0.8em }
 
 .notifications {
   color: White;
@@ -374,6 +379,19 @@ footer p {
 
 .faq ul span { color: Black }
 
+.entry-info {
+  margin: -1em 0 2em 2em;
+  opacity: 0.6;
+}
+
+.entry-next {
+  text-align: right;
+  margin-right: 2em;
+}
+
+.feed {
+  margin-left: 5em;
+}
 
 
 /* -----------------------------------*/
@@ -397,13 +415,15 @@ article p { margin: 0 0 1em 0 }
 
 .trade-filter { width: 14em }
 
-.searchInfo {
+.searchInfo, .info-block {
   margin: 0 0 1em 0em;
   width: 30.5em;
   background-color: WhiteSmoke;
   padding: 0.3em 0.8em;
   border-radius: 0.5em;
 }
+
+fieldset {background-color: WhiteSmoke; text-align: right; width: 30em; }
 
 .wrapper {
   position: relative;
@@ -455,7 +475,7 @@ article p { margin: 0 0 1em 0 }
   width: 50em;
 }
 
-.site, .form, .user, .slider, .chain, .message {
+.site, .form, .user, .slider, .chain, .message, .comment {
   width: 30em;
   border: 1px solid #FFC780;
   border-radius: 0.5em;
@@ -463,6 +483,8 @@ article p { margin: 0 0 1em 0 }
   background-color: Beige;
   margin: 0 0 1em 0;
 }
+
+.hentry { border-bottom: 1px dotted LightGray }
 
 .inline-block {
   display: inline-block;
@@ -625,6 +647,28 @@ footer hr {
   display: inline-block;
   width: 30em;
   margin: 0 4em 2em 4em;
+}
+
+.filter .widget {
+  width: inherit;
+  margin: 1.5em 0 0 0;
+  padding: 1em 0 0 2em;
+  font-size: 0.8em;
+  background: linear-gradient(135deg, White, WhiteSmoke);
+  background: -webkit-linear-gradient(135deg, White, WhiteSmoke);
+  background: -webkit-gradient(bottom right, top left, White, WhiteSmoke);
+  background: -moz-linear-gradient(135deg, White, WhiteSmoke);
+  background: -o-linear-gradient(135deg, White, WhiteSmoke);
+  background: -ms-linear-gradient(135deg, White, WhiteSmoke);
+  border: 1px solid Gainsboro;
+  border-radius: 0.4em;
+}
+
+.hentry { margin-bottom: 3em; }
+
+.entry-body {
+  border-left: 1px solid LightGray;
+  padding-left: 1em;
 }
 
 
@@ -866,6 +910,7 @@ footer ul:first-child { margin-left: 20% }
 
 #FAQ ul, #glossary ul { list-style-type: none }
 
+.comment { list-style-type: none; font-size: 0.9em;}
 
 
 /* -----------------------------------*/
@@ -1040,6 +1085,13 @@ header #superLogo {
   width: 6em;
 }
 
+header .plusone {
+  display: inline-block;
+  position: absolute;
+  top: 2.5em;
+  left: 10em;
+}
+
 header .socialLink {
   position: relative;
   float: right;
@@ -1052,6 +1104,8 @@ header .socialLink {
 }
 
   header .socialLink:hover { opacity: 1 }
+
+.rss { width: 1em }
 
 nav #bell {
   position: relative;
@@ -1493,6 +1547,21 @@ footer a:hover { text-decoration: underline }
     color: Navy;
   }
 
+.blog-content a:link, .widget a:link {
+  text-decoration: none;
+  color: DodgerBlue;
+}
+.blog-content h2 a:link, .widget h3 a:link { color: inherit }
+
+.blog-content a:visited, .widget a:visited {
+  color: DodgerBlue;
+}
+.blog-content h2 a:visited, .widget h3 a:visited { color: inherit }
+
+.blog-content a:hover, .blog-content h2 a:hover, .widget a:hover {
+  color: DodgerBlue;
+  text-decoration: underline;
+}
 
 
 /* -----------------------------------*/
@@ -1564,6 +1633,12 @@ footer a:hover { text-decoration: underline }
 
   #site .sideAd { width: 25% }
 
+  .blog-content {
+  width: 35em;
+  margin-left: 2em;
+  }
+
+
 }
 
 @media only screen and (min-width : 720px) and (max-width : 959px) {
@@ -1604,7 +1679,7 @@ footer a:hover { text-decoration: underline }
 
   .site { width: 25em }
 
-  .searchInfo { width: 26.5em }
+  .searchInfo, .info-block { width: 26.5em }
 
   .message { width: 35em }
 
@@ -1663,6 +1738,17 @@ footer a:hover { text-decoration: underline }
     margin: 1em 0 0 2em;
   }
   .topAd, .bottomAd { margin-left: 0 }
+
+  .blog-content {
+    width: 35em;
+    margin-left: 2em;
+  }
+
+  .blog-filter {
+    font-size: 1em;
+    width: 30em;
+    margin-left: 2em;
+  }
 }
 
 
@@ -1791,7 +1877,7 @@ footer a:hover { text-decoration: underline }
     font-size: 0.7em;
   }
 
-  .searchInfo {
+  .searchInfo, .info-block {
     font-size: 0.9em;
     width: 18em;
   }
@@ -1908,6 +1994,19 @@ footer a:hover { text-decoration: underline }
   #site .bottomAd, #trading .bottomAd, #trades .bottomAd { margin-left: -8em }
   #site .sideAd { display: none }
 
+  .blog-content {
+    width: 28em;
+    margin-left: 1em;
+  }
+
+  .blog-filter {
+    font-size: 1em;
+    width: 26em;
+    margin-left: 1em;
+  }
+
+  .comment, fieldset { width: 25em }
+
 }
 
 
@@ -1929,6 +2028,8 @@ footer a:hover { text-decoration: underline }
     height: 2.5em;
     width: 5em;
   }
+
+  header .plusone { display: none }
 
   .status-bar {
     top: 4.25em;
@@ -2101,7 +2202,7 @@ footer a:hover { text-decoration: underline }
 
   .sitesList img { width: 1.8em }
 
-  .searchInfo {
+  .searchInfo, .info-block {
     font-size: 0.9em;
     margin: 0 0 1em 2em;
     width: 18em;
@@ -2279,6 +2380,26 @@ footer a:hover { text-decoration: underline }
     width: 320px;
   }
   #site .sideAd { display: none }
+
+  .blog-content {
+    width: 18em;
+    margin-left: 1em;
+  }
+
+  .info-block { margin-left: 0 }
+
+  .blog-filter {
+    font-size: 1em;
+    width: 16em;
+    margin-left: 1em;
+  }
+
+  .comment {
+    width: 14em;
+    margin-left: 0;
+  }
+
+  fieldset, fieldset textarea { width: 16em }
 
 }
 
