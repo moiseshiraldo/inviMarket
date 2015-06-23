@@ -7,9 +7,18 @@ from django.contrib.sitemaps.views import sitemap
 from inviMarket import views
 from inviMarket.decorators import cache_on_auth
 
+from zinnia.sitemaps import TagSitemap
+from zinnia.sitemaps import EntrySitemap
+from zinnia.sitemaps import CategorySitemap
+from zinnia.sitemaps import AuthorSitemap
+
 sitemaps = {
     'static': views.StaticViewSitemap,
     'sites': views.WebsiteSitemap,
+    'tags': TagSitemap,
+    'blog': EntrySitemap,
+    'authors': AuthorSitemap,
+    'categories': CategorySitemap,
 }
 
 urlpatterns = patterns('',
@@ -119,5 +128,6 @@ urlpatterns = patterns('',
         message = _("Your complaint has been submitted.")
         ), name='complaint_submitted'),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
-        name='django.contrib.sitemaps.views.sitemap')
+        name='django.contrib.sitemaps.views.sitemap'),
+    url(r'^sitemap-(?P<section>.+)\.xml$', sitemap, {'sitemaps': sitemaps}),
 )
