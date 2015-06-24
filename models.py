@@ -140,6 +140,7 @@ class Website(models.Model):
         ('CS', _('Cloud Service')),
         ('CO', _('Community')),
         ('DD', _('Direct Download')),
+        ('GA', _('Game')),
         ('PTC', _('Paid-To-Click')),
         ('P2P', _('Peer to peer')),
         ('SN', _('Social network')),

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-16 20:20+0100\n"
-"PO-Revision-Date: 2015-06-16 20:20+0100\n"
+"POT-Creation-Date: 2015-06-24 22:25+0100\n"
+"PO-Revision-Date: 2015-06-24 22:27+0100\n"
 "Last-Translator: \n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "Language: en_US\n"
@@ -90,7 +90,7 @@ msgstr "Donaciones"
 msgid "Show"
 msgstr "Mostrar"
 
-#: forms.py:180 forms.py:219
+#: forms.py:180 forms.py:219 templates/zinnia/entry_detail_base.html:159
 msgid "Comments"
 msgstr "Comentarios"
 
@@ -193,50 +193,54 @@ msgid "Direct Download"
 msgstr "Descarga directa"
 
 #: models.py:143
+msgid "Game"
+msgstr "Juego"
+
+#: models.py:144
 msgid "Paid-To-Click"
 msgstr "Pago por click"
 
-#: models.py:144
+#: models.py:145
 msgid "Peer to peer"
 msgstr "Peer to peer"
 
-#: models.py:145
+#: models.py:146
 msgid "Social network"
 msgstr "Red social"
 
-#: models.py:146
+#: models.py:147
 msgid "Streaming"
 msgstr "Streaming"
 
-#: models.py:147
+#: models.py:148
 msgid "Tracker"
 msgstr "Tracker"
 
-#: models.py:151
+#: models.py:152
 msgid "Culture"
 msgstr "Cultura"
 
-#: models.py:152
+#: models.py:153
 msgid "E-commerce"
 msgstr "Comercio"
 
-#: models.py:153
+#: models.py:154
 msgid "Generic"
 msgstr "Genérico"
 
-#: models.py:154
+#: models.py:155
 msgid "Knowledge"
 msgstr "Conocimiento"
 
-#: models.py:155
+#: models.py:156
 msgid "Multimedia"
 msgstr "Multimedia"
 
-#: models.py:156
+#: models.py:157
 msgid "Referral"
 msgstr "Referidos"
 
-#: models.py:157
+#: models.py:158
 msgid "Telecommunications"
 msgstr "Telecomunicaciones"
 
@@ -244,68 +248,68 @@ msgstr "Telecomunicaciones"
 msgid "Search sites"
 msgstr "Buscar sitios"
 
-#: templates/404.html:28 templates/index.html:94
+#: templates/404.html:28 templates/index.html:99
 msgid "Site name..."
 msgstr "Nombre..."
 
-#: templates/404.html:43 templates/index.html:169
+#: templates/404.html:43 templates/index.html:174
 msgid "License and source code"
 msgstr "Licencia y código fuente"
 
-#: templates/404.html:46 templates/index.html:172
+#: templates/404.html:46 templates/index.html:177
 msgid "Terms and conditions"
 msgstr "Términos y condiciones"
 
-#: templates/404.html:49 templates/index.html:175
+#: templates/404.html:49 templates/index.html:180
 msgid "Privacy policy"
 msgstr "Política de privacidad"
 
 #: templates/404.html:51 templates/email/email.html:83
-#: templates/index.html:177 templates/legal.html:11 templates/legal.html.py:23
+#: templates/index.html:185 templates/legal.html:11 templates/legal.html.py:23
 msgid "Contact"
 msgstr "Contacto"
 
-#: templates/404.html:54 templates/index.html:180
+#: templates/404.html:54 templates/index.html:188
 msgid "Get involved"
 msgstr "Colabora"
 
-#: templates/404.html:55 templates/editing.html:14 templates/index.html:181
+#: templates/404.html:55 templates/editing.html:14 templates/index.html:189
 msgid "Editing"
 msgstr "Ediciones"
 
-#: templates/404.html:56 templates/index.html:182 templates/index.html.py:225
+#: templates/404.html:56 templates/index.html:190 templates/index.html.py:233
 #: templates/market.html:50
 msgid "New sites"
 msgstr "Nuevos sitios"
 
-#: templates/404.html:58 templates/index.html:184 templates/suggestions.html:3
+#: templates/404.html:58 templates/index.html:192 templates/suggestions.html:3
 #: templates/suggestions.html.py:12
 msgid "Suggestions"
 msgstr "Sugerencias"
 
-#: templates/404.html:62 templates/index.html:188
+#: templates/404.html:62 templates/index.html:196
 msgid "Connect"
 msgstr "Conecta"
 
-#: templates/404.html:63 templates/index.html:191
+#: templates/404.html:63 templates/index.html:199
 msgid "Twitter"
 msgstr ""
 
-#: templates/404.html:64 templates/index.html:196
+#: templates/404.html:64 templates/index.html:204
 msgid "Facebook"
 msgstr ""
 
-#: templates/404.html:65 templates/index.html:202
+#: templates/404.html:65 templates/index.html:210
 msgid "Google+"
 msgstr ""
 
 #: templates/404.html:70 templates/getstarted.html:4
-#: templates/getstarted.html.py:15 templates/index.html:209
+#: templates/getstarted.html.py:15 templates/index.html:217
 msgid "Get started"
 msgstr "Comienza"
 
-#: templates/404.html:73 templates/glossary.html:3 templates/index.html:212
-#: templates/index.html.py:226
+#: templates/404.html:73 templates/glossary.html:3 templates/index.html:220
+#: templates/index.html.py:234
 msgid "Glossary"
 msgstr "Glosario"
 
@@ -448,6 +452,30 @@ msgstr "Cadena de referidos para"
 msgid "Join"
 msgstr "Unirse"
 
+#: templates/comments/zinnia/entry/form.html:11
+#, fuzzy
+#| msgid "No commments."
+msgid "Post your comment"
+msgstr "Sin comentarios."
+
+#: templates/comments/zinnia/entry/form.html:26
+#, fuzzy
+#| msgid "Comments"
+msgid "Comment as"
+msgstr "Comentarios"
+
+#: templates/comments/zinnia/entry/form.html:26
+msgid "Log out"
+msgstr ""
+
+#: templates/comments/zinnia/entry/form.html:30
+msgid "Post"
+msgstr ""
+
+#: templates/comments/zinnia/entry/form.html:31
+msgid "Preview"
+msgstr ""
+
 #: templates/complaint.html:4 templates/complaint.html.py:9
 msgid "Complaint"
 msgstr "Reclamación"
@@ -460,7 +488,7 @@ msgstr "Enviar"
 msgid "Configuration"
 msgstr "Configuración"
 
-#: templates/config.html:7 templates/index.html:83 templates/partners.html:10
+#: templates/config.html:7 templates/index.html:88 templates/partners.html:10
 #: templates/profile.html:4 templates/profile.html.py:12
 #: templates/trades.html:9
 msgid "Profile"
@@ -585,12 +613,13 @@ msgstr ""
 "infomarción será revisada por el administrador, hasta que el número de "
 "usuarios crezca y podamos implmentar un sistema de edición automático. "
 
-#: templates/editing.html:37 templates/index.html:90
+#: templates/editing.html:37 templates/index.html:95
 msgid "Sites"
 msgstr "Sitios"
 
 #: templates/editing.html:40 templates/getstarted.html:151
-#: templates/index.html:71 templates/login.html:80 templates/register.html:7
+#: templates/index.html:76 templates/login.html:80 templates/register.html:7
+#: templates/zinnia/skeleton.html:54
 msgid "Register"
 msgstr "Registrarse"
 
@@ -703,7 +732,7 @@ msgstr "DARSE DE BAJA"
 msgid "PRIVACY POLICY"
 msgstr "PRIVACIDAD"
 
-#: templates/email/email.html:64 templates/index.html:227
+#: templates/email/email.html:64 templates/index.html:235
 msgid "FAQ"
 msgstr "FAQ"
 
@@ -1462,27 +1491,32 @@ msgstr ""
 "  </section>\n"
 "  "
 
-#: templates/index.html:67
+#: templates/index.html:72 templates/zinnia/skeleton.html:50
 msgid "Logout"
 msgstr "Salir"
 
-#: templates/index.html:70 templates/login.html:4 templates/login.html.py:10
+#: templates/index.html:75 templates/login.html:4 templates/login.html.py:10
+#: templates/zinnia/skeleton.html:53
 msgid "Login"
 msgstr "Iniciar sesión"
 
-#: templates/index.html:86
+#: templates/index.html:91
 msgid "Trading"
 msgstr "Intercambio"
 
-#: templates/index.html:99
+#: templates/index.html:104
 msgid "Notifications"
 msgstr "Notificaciones"
 
-#: templates/index.html:224 templates/legal.html:3 templates/legal.html.py:7
+#: templates/index.html:183 templates/zinnia/skeleton.html:65
+msgid "Blog"
+msgstr ""
+
+#: templates/index.html:232 templates/legal.html:3 templates/legal.html.py:7
 msgid "Legal information"
 msgstr "Información legal"
 
-#: templates/index.html:236
+#: templates/index.html:244
 msgid ""
 "\n"
 "          This work is licensed under a\n"
@@ -1500,19 +1534,19 @@ msgstr ""
 "          </a>.\n"
 "          "
 
-#: templates/index.html:250
+#: templates/index.html:258
 msgid "This place uses"
 msgstr "Este sitio usa"
 
-#: templates/index.html:251
+#: templates/index.html:259
 msgid "cookies"
 msgstr "cookies"
 
-#: templates/index.html:252
+#: templates/index.html:260
 msgid "and no animals were harmed in the development process."
 msgstr "y ningún animal resultó herido en el proceso de desarrollo."
 
-#: templates/index.html:254
+#: templates/index.html:262
 msgid "Close"
 msgstr "Cerrar"
 
@@ -2496,19 +2530,361 @@ msgstr "Filtrar por peticiones"
 msgid "Filter by offers"
 msgstr "Filtrar por ofertas"
 
-#: urls.py:75
+#: templates/zinnia/_entry_detail_base.html:17
+msgid "Written by"
+msgstr ""
+
+#: templates/zinnia/_entry_detail_base.html:21
+#, python-format
+msgid "Show all %(author)s's entries"
+msgstr ""
+
+#: templates/zinnia/_entry_detail_base.html:23
+#: templates/zinnia/entry_detail_base.html:81
+#: templates/zinnia/entry_detail_base.html:125
+#: templates/zinnia/entry_detail_base.html:185
+#, fuzzy
+#| msgid "Join"
+msgctxt "on date"
+msgid "on"
+msgstr "Unirse"
+
+#: templates/zinnia/_entry_detail_base.html:25
+msgid "Written on"
+msgstr ""
+
+#: templates/zinnia/_entry_detail_base.html:35
+#, fuzzy
+#| msgid "Join"
+msgid "in"
+msgstr "Unirse"
+
+#: templates/zinnia/_entry_detail_base.html:38
+#, python-format
+msgid "Show all entries in %(category)s"
+msgstr ""
+
+#: templates/zinnia/_entry_detail_base.html:84
+#, python-format
+msgid "%(percent)s%% of %(object)s still remains to read."
+msgstr ""
+
+#: templates/zinnia/_entry_detail_base.html:86
+msgid "Continue reading"
+msgstr ""
+
+#: templates/zinnia/_entry_detail_base.html:98 templates/zinnia/base.html:38
+msgid "Tags"
+msgstr ""
+
+#: templates/zinnia/_entry_detail_base.html:101
+#, python-format
+msgid "Show all entries tagged by %(tag)s"
+msgstr ""
+
+#: templates/zinnia/_entry_detail_base.html:104
+msgid "No tags"
+msgstr ""
+
+#: templates/zinnia/_entry_detail_base.html:110
+msgid "Short url"
+msgstr ""
+
+#: templates/zinnia/_entry_detail_base.html:112
+#, python-format
+msgid "Short URL to %(object)s"
+msgstr ""
+
+#: templates/zinnia/_entry_detail_base.html:120
+msgid "Discussions"
+msgstr ""
+
+#: templates/zinnia/_entry_detail_base.html:125
+#, python-format
+msgid "Comments on %(object)s"
+msgstr ""
+
+#: templates/zinnia/_entry_detail_base.html:126
+#, python-format
+msgid "%(comment_count)s comment"
+msgid_plural "%(comment_count)s comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/zinnia/_entry_detail_base.html:130
+#: templates/zinnia/entry_detail_base.html:207
+#, fuzzy
+#| msgid "No commments."
+msgid "No comments yet."
+msgstr "Sin comentarios."
+
+#: templates/zinnia/_entry_detail_base.html:132
+#, python-format
+msgid "Leave a comment on %(object)s"
+msgstr ""
+
+#: templates/zinnia/_entry_detail_base.html:133
+msgid "Be first to comment!"
+msgstr ""
+
+#: templates/zinnia/_entry_detail_base.html:136
+#: templates/zinnia/entry_detail_base.html:203
+#: templates/zinnia/entry_detail_base.html:209
+msgid "Comments are closed."
+msgstr ""
+
+#: templates/zinnia/_entry_detail_base.html:144
+#, python-format
+msgid "Pingbacks on %(object)s"
+msgstr ""
+
+#: templates/zinnia/_entry_detail_base.html:145
+#, python-format
+msgid "%(pingback_count)s pingback"
+msgid_plural "%(pingback_count)s pingbacks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/zinnia/_entry_detail_base.html:153
+#, python-format
+msgid "Trackbacks on %(object)s"
+msgstr ""
+
+#: templates/zinnia/_entry_detail_base.html:154
+#, python-format
+msgid "%(trackback_count)s trackback"
+msgid_plural "%(trackback_count)s trackbacks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/zinnia/base.html:14 templates/zinnia/skeleton.html:43
+msgid "RSS feed of latest entries"
+msgstr ""
+
+#: templates/zinnia/base.html:15
+msgid "RSS feed of latest discussions"
+msgstr ""
+
+#: templates/zinnia/base.html:26
+#, fuzzy
+#| msgid "Category"
+msgid "Categories"
+msgstr "Categoría"
+
+#: templates/zinnia/base.html:32
+msgid "Authors"
+msgstr ""
+
+#: templates/zinnia/base.html:43
+#, fuzzy
+#| msgid "Recent offers"
+msgid "Recent entries"
+msgstr "Ofertas recientes"
+
+#: templates/zinnia/base.html:47
+#, fuzzy
+#| msgid "Recent offers"
+msgid "Recent comments"
+msgstr "Ofertas recientes"
+
+#: templates/zinnia/base.html:51
+#, fuzzy
+#| msgid "Referral links"
+msgid "Recent linkbacks"
+msgstr "Enlaces de referido"
+
+#: templates/zinnia/base.html:55
+#, fuzzy
+#| msgid "Popular sites"
+msgid "Popular entries"
+msgstr "Sitios populares"
+
+#: templates/zinnia/base.html:59
+msgid "Archives"
+msgstr ""
+
+#: templates/zinnia/entry_detail_base.html:22
+#, python-format
+msgid "RSS feed of discussions on %(object)s"
+msgstr ""
+
+#: templates/zinnia/entry_detail_base.html:24
+#, python-format
+msgid "RSS feed of comments on %(object)s"
+msgstr ""
+
+#: templates/zinnia/entry_detail_base.html:26
+#, python-format
+msgid "RSS feed of pingbacks on %(object)s"
+msgstr ""
+
+#: templates/zinnia/entry_detail_base.html:28
+#, python-format
+msgid "RSS feed of trackbacks on %(object)s"
+msgstr ""
+
+#: templates/zinnia/entry_detail_base.html:70
+msgid "Pingbacks"
+msgstr ""
+
+#: templates/zinnia/entry_detail_base.html:87
+msgid "Direct link to this pingback"
+msgstr ""
+
+#: templates/zinnia/entry_detail_base.html:103
+msgid "Pingbacks are open."
+msgstr ""
+
+#: templates/zinnia/entry_detail_base.html:105
+msgid "Pingbacks are closed."
+msgstr ""
+
+#: templates/zinnia/entry_detail_base.html:114
+msgid "Trackbacks"
+msgstr ""
+
+#: templates/zinnia/entry_detail_base.html:131
+msgid "Direct link to this trackback"
+msgstr ""
+
+#: templates/zinnia/entry_detail_base.html:149
+msgid "Trackback URL"
+msgstr ""
+
+#: templates/zinnia/entry_detail_base.html:191
+msgid "Direct link to this comment"
+msgstr ""
+
+#: templates/zinnia/entry_detail_base.html:226
+#: templates/zinnia/entry_detail_base.html:227
+msgid "Edit the entry"
+msgstr ""
+
+#: templates/zinnia/entry_list.html:9
+#, python-format
+msgid "The latest entries categorized under %(object)s"
+msgstr ""
+
+#: templates/zinnia/entry_list.html:14
+#, python-format
+msgid "The latest entries tagged with %(object)s"
+msgstr ""
+
+#: templates/zinnia/entry_list.html:18
+#, python-format
+msgid "The latest entries by %(object)s"
+msgstr ""
+
+#: templates/zinnia/entry_list.html:23
+#, python-format
+msgid "page %(object)s"
+msgstr ""
+
+#: templates/zinnia/entry_list.html:27
+#, python-format
+msgid "Category %(object)s"
+msgstr ""
+
+#: templates/zinnia/entry_list.html:31
+#, python-format
+msgid "Tag %(object)s"
+msgstr ""
+
+#: templates/zinnia/entry_list.html:35
+#, python-format
+msgid "Author %(object)s"
+msgstr ""
+
+#: templates/zinnia/entry_list.html:40
+#, python-format
+msgid "Page %(object)s"
+msgstr ""
+
+#: templates/zinnia/entry_list.html:45 templates/zinnia/entry_list.html:48
+#: templates/zinnia/entry_list.html:51 templates/zinnia/entry_list.html:67
+#: templates/zinnia/entry_list.html:68 templates/zinnia/entry_list.html:77
+#: templates/zinnia/entry_list.html:78 templates/zinnia/entry_list.html:87
+#: templates/zinnia/entry_list.html:88
+#, python-format
+msgid "RSS feed of %(object)s"
+msgstr ""
+
+#: templates/zinnia/entry_list.html:61
+#, python-format
+msgid "Category archives: %(category)s"
+msgstr ""
+
+#: templates/zinnia/entry_list.html:74
+#, python-format
+msgid "Tag archives: %(tag)s"
+msgstr ""
+
+#: templates/zinnia/entry_list.html:84
+#, python-format
+msgid "Author archives: %(author)s"
+msgstr ""
+
+#: templates/zinnia/entry_list.html:99
+msgid "No entries yet."
+msgstr ""
+
+#: templates/zinnia/entry_list.html:118 templates/zinnia/entry_list.html:119
+#, fuzzy
+#| msgid "Filter by category"
+msgid "Edit the category"
+msgstr "Filtrar por categoría"
+
+#: templates/zinnia/entry_list.html:125 templates/zinnia/entry_list.html:126
+msgid "Edit the tag"
+msgstr ""
+
+#: templates/zinnia/entry_list.html:132 templates/zinnia/entry_list.html:133
+msgid "Edit the author"
+msgstr ""
+
+#: templates/zinnia/skeleton.html:14
+msgid "InviMarket official blog."
+msgstr ""
+
+#: templates/zinnia/skeleton.html:69
+msgid "Keywords..."
+msgstr ""
+
+#: templates/zinnia/skeleton.html:79
+#, fuzzy
+#| msgid "Referral links"
+msgid "Useful links"
+msgstr "Enlaces de referido"
+
+#: templates/zinnia/skeleton.html:82 templates/zinnia/skeleton.html.py:83
+msgid "Weblog index"
+msgstr ""
+
+#: templates/zinnia/skeleton.html:87 templates/zinnia/skeleton.html.py:88
+#, fuzzy
+#| msgid "Sites"
+msgid "Sitemap"
+msgstr "Sitios"
+
+#: templates/zinnia/skeleton.html:94
+#, fuzzy
+#| msgid "Search sites"
+msgid "Search"
+msgstr "Buscar sitios"
+
+#: urls.py:84
 msgid "Your edition have been submitted and will be reviewed by the admin."
 msgstr "Tu edición ha sido enviada y será revisada por el administrador."
 
-#: urls.py:83
+#: urls.py:92
 msgid "Your offer has been succesfuly stored."
 msgstr "Tu oferta se ha almacenado correctamente."
 
-#: urls.py:86
+#: urls.py:95
 msgid "The offer has been deleted."
 msgstr "La oferta ha sido eliminada."
 
-#: urls.py:90
+#: urls.py:99
 msgid ""
 "The referral chain has been created, you can get the link on your profile "
 "page."
@@ -2516,19 +2892,19 @@ msgstr ""
 "La cadena de referidos ha sido creada, puedes obtener el link en tu página "
 "de perfil."
 
-#: urls.py:98
+#: urls.py:107
 msgid "Your trade proposal has been sended to the user."
 msgstr "Tu propuesta de intercambio ha sido enviada al usuario."
 
-#: urls.py:103
+#: urls.py:112
 msgid "The trade proposal has been accepted."
 msgstr "La propuesta de intercambio ha sido aceptada."
 
-#: urls.py:106
+#: urls.py:115
 msgid "The trade proposal has been rejected."
 msgstr "La propuesta de intercambio ha sido rechazada."
 
-#: urls.py:119
+#: urls.py:128
 msgid "Your complaint has been submitted."
 msgstr "Tu reclamación ha sido enviada."
 
