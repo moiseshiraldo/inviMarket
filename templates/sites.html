@@ -52,7 +52,7 @@ request or offer invites.
 
     {% if sites %}
     {% for site in sites %}
-    {% include "blocks/site-block.html" with class="site" %}
+    {% include "blocks/site-block.html" with class="site" description="True" %}
     {% endfor %}
     {% include "blocks/pagination.html" with results=sites queries=queries %}
     {% include "ads/bottomAd.html" %}

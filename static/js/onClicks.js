@@ -71,6 +71,21 @@ $(document).ready(function(){
         }
     });
 
+    // Show/hide site description
+    $( ".descriptionButton").click(function() {
+        var arrow = $( this ).children("img");
+        var des = $( this ).parent().children( ".description" );
+        if ( arrow.hasClass( "flipped" ) ) {
+            des.slideUp();
+            arrow.removeClass("flipped");
+        }
+        else {
+            des.load($( this ).data("url") + " article p");
+            des.slideDown();
+            arrow.addClass("flipped");
+        }
+    });
+
     // Slide up current page and load link
     $( ".downButton" ).click(function() {
         $( this ).parent().slideUp(1000);

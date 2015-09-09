@@ -27,6 +27,13 @@
     {% trans "Request" %}
   </a>
   {% endif %}
+  {% if description %}
+  <div class="description">
+  </div>
+  <div class="descriptionButton" data-url="{% url 'sites' site_name=site.name|urlencode %}">
+    <img src="{% static "images/down.svg" %}" alt="Down"/>
+  </div>
+  {% endif %}
   <ul class="info">
     <li class="category">{{ site.get_category }}, {{ site.get_type }}</li>
     <li>

@@ -476,6 +476,7 @@ fieldset {background-color: WhiteSmoke; text-align: right; width: 30em; }
 }
 
 .site, .form, .user, .slider, .chain, .message, .comment {
+  position: relative;
   width: 30em;
   border: 1px solid #FFC780;
   border-radius: 0.5em;
@@ -561,6 +562,21 @@ fieldset {background-color: WhiteSmoke; text-align: right; width: 30em; }
   border: 1px solid LightGray;
   border-radius: 0.4em;
   font-size: 0.8em;
+}
+
+.site .description {
+  display: none;
+  padding: 0.5em 1em;
+  margin: 2em 0 0 0;
+  background: linear-gradient(-45deg, White, WhiteSmoke);
+  background: -webkit-linear-gradient(-45deg, White, WhiteSmoke);
+  background: -webkit-gradient(top left, bottom right, White, WhiteSmoke);
+  background: -moz-linear-gradient(-45deg, White, WhiteSmoke);
+  background: -o-linear-gradient(-45deg, White, WhiteSmoke);
+  background: -ms-linear-gradient(-45deg, White, WhiteSmoke);
+  border: 1px solid LightGray;
+  border-radius: 0.4em;
+  font-size: 0.9em;
 }
 
 .help {
@@ -1156,6 +1172,16 @@ h1 .siteLogo {
 
 .downButton img { width: 6em }
 
+.site .descriptionButton img { width: 3em }
+.flipped {
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: FlipV;
+    -ms-filter: "FlipV";
+}
+
 .addButton img, .delButton img {
   position: relative;
   float: right;
@@ -1410,6 +1436,15 @@ h1 a:hover { text-decoration: underline }
     cursor: pointer;
     color: DodgerBlue;
   }
+
+.site .descriptionButton {
+  position: absolute;
+  text-align: left;
+  bottom: 0.5em;
+  left: 1.5em;
+}
+
+  .descriptionButton:hover { cursor:pointer }
 
 .pagination .pagNavButton {
   font-weight: bold;
