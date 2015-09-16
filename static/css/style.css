@@ -1681,7 +1681,7 @@ footer a:hover { text-decoration: underline }
 
   .sideAd, .recently-viewed, .desktop { display: none }
 
-  #menu-button, .slideButton, #mobileFooter { display: none }
+  #menu-button, .slideButton, #mobileFooter, .site .descriptionButton { display: none }
 
   .slogan {
     margin-left: 6em;
@@ -1790,7 +1790,7 @@ footer a:hover { text-decoration: underline }
 
 @media only screen and (min-width : 480px) and (max-width : 719px) {
 
-  .recently-viewed, .sideAd, .slideButton, .aside-link-unit, .slogan { display: none }
+  .recently-viewed, .sideAd, .slideButton, .aside-link-unit, .slogan, .site .descriptionButton { display: none }
 
   header { width: 99.5% }
 
@@ -2048,7 +2048,7 @@ footer a:hover { text-decoration: underline }
 
 @media only screen and (min-width : 1px) and (max-width : 479px) {
 
-  .sideAd, .tabletAd, .aside-link-unit, .recently-viewed, .slogan { display: none }
+  .sideAd, .tabletAd, .aside-link-unit, .recently-viewed, .slogan, .site .descriptionButton { display: none }
 
   header .socialLink { top: 1.5em }
 
