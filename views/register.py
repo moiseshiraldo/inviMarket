@@ -51,7 +51,7 @@ def register(request):
             key_expires = timezone.now() + datetime.timedelta(2)
             lang = request.LANGUAGE_CODE
             profile = Profile(user=new_user, activation_key=activation_key,
-                key_expires=key_expires, lang=lang)
+                key_expires=key_expires, lang=lang, last_visit=timezone.now())
             profile.save()
             # Send the activation key to the user
             text = render_to_string('email/activation.txt',
