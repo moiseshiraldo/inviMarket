@@ -5,10 +5,11 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
-from django.utils import translation
+from django.utils import translation, timezone
 from django.utils.translation import ugettext as _
 
 from inviMarket.models import Trade, Notification
+from inviMarket.forms import CommentsForm
 
 @login_required
 def trade(request, trade_id):
@@ -39,9 +40,15 @@ def trade(request, trade_id):
     # the trade is accepted
     if user != receptor and (user != proposer or trade.accepted == False):
         return redirect('index')
-    if trade.accepted == True and user == proposer:
-        # Delete the accepted trade proposal notification
-        proposer.notification_set.filter(code=30, sender=receptor).delete()
+    if trade.accepted:
+        if user == proposer:
+            # Delete the accepted trade proposal notification
+            proposer.notification_set.filter(code=30, sender=receptor).delete()
+            comments_form = CommentsForm(
+                initial={'comments': trade.proposer_comments})
+        else:
+            comments_form = CommentsForm(
+                initial={'comments': trade.receptor_comments})
     if request.method == 'POST' and user == receptor:
         # Only the trade receptor can change the proposal status
         if 'Accept_proposal' in request.POST and trade.accepted == False:
@@ -55,6 +62,7 @@ def trade(request, trade_id):
                 proposer.profile.unlock()
             if not error:
                 trade.accepted = True
+                trade.date = timezone.now()
                 trade.save()
                 for req in trade.requests.all().prefetch_related('trade_set'):
                     req.traded = True
@@ -138,9 +146,21 @@ def trade(request, trade_id):
                 proposer.profile.unlock()
                 receptor.profile.unlock()
                 return redirect('trade_rejected')
+    if request.method == 'POST':
+        if 'Save_comments' in request.POST and trade.accepted == True:
+            comments_form = CommentsForm(request.POST)
+            if comments_form.is_valid():
+                comments = comments_form.cleaned_data['comments']
+                if trade.age() < settings.SENDING_DEADLINE:
+                    if user == proposer:
+                        trade.proposer_comments = comments
+                    if user == receptor:
+                        trade.receptor_comments = comments
+                    trade.save()
     return render(request, 'trade.html', {
         'trade': trade,
         'error': error,
+        'comments_form': comments_form,
         'sending_deadline': settings.SENDING_DEADLINE,
         'complaint_deadline': settings.COMPLAINT_DEADLINE
         })

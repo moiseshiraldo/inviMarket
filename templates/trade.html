@@ -33,14 +33,22 @@
            alt="arrow" class="arrow"/>
       {% if trade.accepted == True and trade.proposer.id == user.id %}
       {% blocktrans %}
-      Send the invites to the following email addres:
+      Send the invites to
       {% endblocktrans %}
-        {{ trade.receptor }}@invimarket.com
+        {{ trade.receptor }}@invimarket.com,
+      {% blocktrans %}
+      or insert the invite codes in the comments section below.
+      {% endblocktrans %}
+      {{ trade.receptor_comments|linebreaks }}
       {% elif trade.accepted == True and trade.receptor.id == user.id %}
       {% blocktrans %}
-      Send the invites to the following email addres:
+      Send the invites to
       {% endblocktrans %}
-      {{ trade.proposer }}@invimarket.com
+      {{ trade.proposer }}@invimarket.com,
+      {% blocktrans %}
+      or insert the invite codes in the comments section below.
+      {% endblocktrans %}
+      {{ trade.proposer_comments|linebreaks }}
       {% elif trade.comments %}
       {{ trade.comments }}
       {% else %}
@@ -63,10 +71,18 @@
     {% endif %}
     {% endif %}
     {% endif %}
+    {% if trade.accepted == True and trade.age < sending_deadline %}
+    <form action="{% url 'trade' trade_id=trade.id %}" method="post">{% csrf_token %}
+      {{ comments_form.as_p }}
+      <input class="float-input" type="submit" value="{% trans "Save" %}"
+             name="Save_comments"/>
+      {% endif %}
+    </form>
   </div>
 
   {% if trade.accepted == False %}
-  <form action="{% url 'trade' trade_id=trade.id %}" method="post">{% csrf_token %}
+  <form action="{% url 'trade' trade_id=trade.id %}" method="post"
+        class="trade-form">{% csrf_token %}
     <button class="button rejectButton" type="submit" name="Reject_proposal">
       Reject
     </button>

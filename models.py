@@ -309,8 +309,9 @@ class Trade(models.Model):
     requests = models.ManyToManyField(Request)
     offers = models.ManyToManyField(Offer)
     donation = models.BooleanField(default=False)
-    date = models.DateTimeField(auto_now=True)
-    comments = models.TextField(max_length=400, blank=True)
+    date = models.DateTimeField()
+    proposer_comments = models.TextField(max_length=400, blank=True)
+    receptor_comments = models.TextField(max_length=400, blank=True)
     accepted = models.BooleanField(default=False)
 
     def age(self):

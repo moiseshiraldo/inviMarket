@@ -6,7 +6,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
-from django.utils import translation
+from django.utils import translation, timezone
 from django.utils.safestring import mark_safe
 from django.utils.translation import ugettext as _
 from django.template.loader import render_to_string
@@ -127,7 +127,8 @@ def propose(request, receptor_id):
                         proposer.profile.unlock()
                     if not error:
                         # Create a new trade object
-                        trade = Trade(proposer=proposer, receptor=receptor)
+                        trade = Trade(proposer=proposer, receptor=receptor,
+                                      date=timezone.now())
                         trade.save()
                         # Add the selected requests/offers to the trade proposal
                         for offer in offers:
@@ -165,7 +166,7 @@ def propose(request, receptor_id):
                             proposer.profile.unlock()
                             receptor.profile.unlock()
                         else:
-                            trade.comments = comments
+                            trade.proposer_comments = comments
                             if len(offers) == 0 or len(requests) == 0:
                                 trade.donation = True
                             trade.save()
@@ -180,6 +181,9 @@ def propose(request, receptor_id):
                                     sender=receptor).delete()
                             except ObjectDoesNotExist:
                                 pass
+                            # Unlock users
+                            proposer.profile.unlock()
+                            receptor.profile.unlock()
                             # Send a notification to the receptor
                             url = ('http://' + settings.DOMAIN +
                                    reverse('trade' ,
@@ -213,8 +217,6 @@ def propose(request, receptor_id):
                                         fail_silently=False)
                                 finally:
                                     translation.activate(cur_language)
-                            proposer.profile.unlock()
-                            receptor.profile.unlock()
                             return redirect('proposal_submitted')
         else:
             # Check if modifying a received proposal and get initial values

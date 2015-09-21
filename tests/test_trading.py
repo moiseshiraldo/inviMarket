@@ -231,7 +231,7 @@ class ProposeTestCase(TestCase):
         """Existing pending trade proposed by the user"""
         alice = User.objects.get(username='alice')
         bob = User.objects.get(username='bob')
-        Trade.objects.create(proposer=alice, receptor=bob)
+        Trade.objects.create(proposer=alice, receptor=bob, date=timezone.now())
         self.client.post(reverse('login'), {'username': 'alice',
             'password': 'qwerty'})
         response = self.client.get(reverse('propose',
@@ -248,7 +248,8 @@ class ProposeTestCase(TestCase):
         bob = User.objects.get(username='bob')
         for i in range(0, settings.MAX_TRADES):
             user = User.objects.create_user(username='user'+str(i))
-            Trade.objects.create(proposer=user, receptor=bob)
+            Trade.objects.create(proposer=user, receptor=bob,
+                                 date=timezone.now())
         self.client.post(reverse('login'), {'username': 'alice',
             'password': 'qwerty'})
         response = self.client.get(reverse('propose',
