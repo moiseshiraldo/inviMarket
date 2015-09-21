@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-24 22:25+0100\n"
-"PO-Revision-Date: 2015-06-24 22:27+0100\n"
+"POT-Creation-Date: 2015-09-21 23:30+0100\n"
+"PO-Revision-Date: 2015-09-21 23:35+0100\n"
 "Last-Translator: \n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
 "Language: en_US\n"
@@ -155,7 +155,7 @@ msgid "Multi-language"
 msgstr "Varios idiomas"
 
 #: models.py:113 templates/email/proposal.html:3 templates/propose.html:4
-#: templates/propose.html.py:9 views/propose.py:208
+#: templates/propose.html.py:9 views/propose.py:212
 msgid "Trade proposal"
 msgstr "Propuesta de intercambio"
 
@@ -351,15 +351,15 @@ msgstr "Referido"
 msgid "Request"
 msgstr "Pedir"
 
-#: templates/blocks/site-block.html:33
+#: templates/blocks/site-block.html:40
 msgid "Popularity:"
 msgstr "Popularidad:"
 
-#: templates/blocks/site-block.html:44
+#: templates/blocks/site-block.html:51
 msgid "Links:"
 msgstr "Enlaces:"
 
-#: templates/blocks/site-block.html:47
+#: templates/blocks/site-block.html:54
 msgid "Ratio:"
 msgstr "Ratio:"
 
@@ -502,7 +502,7 @@ msgstr "Idioma:"
 msgid "Receive email notifications:"
 msgstr "Recibir notificaciones por email:"
 
-#: templates/config.html:27
+#: templates/config.html:27 templates/trade.html:77
 msgid "Save"
 msgstr "Guardar"
 
@@ -836,7 +836,7 @@ msgstr ""
 "Haz click\n"
 "en el siguiente enlace para ver los detalles:\n"
 
-#: templates/email/trade.html:3 views/trade.py:111
+#: templates/email/trade.html:3 views/trade.py:119
 msgid "Accepted proposal"
 msgstr "Propuesta aceptada"
 
@@ -2479,18 +2479,36 @@ msgstr "Modificar"
 msgid "Complain"
 msgstr "Reclamar"
 
-#: templates/trade.html:35 templates/trade.html.py:40
+#: templates/trade.html:35 templates/trade.html.py:44
+#| msgid ""
+#| "\n"
+#| "      Send the invites to the following email addres:\n"
+#| "      "
 msgid ""
 "\n"
-"      Send the invites to the following email addres:\n"
+"      Send the invites to\n"
 "      "
 msgstr ""
 "\n"
-"      Envía las invitaciones a la siguiente dirección de correo "
-"electrónico:\n"
+"      Envía las invitaciones a\n"
 "      "
 
-#: templates/trade.html:47
+#: templates/trade.html:39 templates/trade.html.py:48
+#| msgid ""
+#| "\n"
+#| "      Send the invites to the following email addres:\n"
+#| "      "
+msgid ""
+"\n"
+"      or insert the invite codes in the comments section below.\n"
+"      "
+msgstr ""
+"\n"
+"      o inserta los códigos de invitación en la sección de comentarios de "
+"abajo:\n"
+"      "
+
+#: templates/trade.html:55
 msgid "No commments."
 msgstr "Sin comentarios."
 
@@ -3017,11 +3035,11 @@ msgstr "Algunas peticiones/offertas han cambiado, vuelve a intentarlo."
 msgid "Some requests/offers have changed. Reload and try again."
 msgstr "Algunas peticiones/offertas han cambiado, vuelve a intentarlo."
 
-#: views/propose.py:142 views/propose.py:158
+#: views/propose.py:143 views/propose.py:159
 msgid "Some offers/requests have changed. Reload and try again."
 msgstr "Algunas peticiones/offertas han cambiado, vuelve a intentarlo."
 
-#: views/propose.py:152
+#: views/propose.py:153
 msgid "Donations not available for the selected request."
 msgstr "Donación no disponible para la petición seleccionada."
 
@@ -3049,7 +3067,7 @@ msgstr "Resultados para"
 msgid "No results matched the query"
 msgstr "Ningún resultado para la consulta"
 
-#: views/trade.py:50 views/trade.py:53 views/trade.py:126 views/trade.py:129
+#: views/trade.py:57 views/trade.py:60 views/trade.py:134 views/trade.py:137
 msgid "Some requests/offers status have changed. Reload and try again."
 msgstr ""
 "El estado de algunas peticiones/ofertas ha cambiado. Inŧéntalo de nuevo."
