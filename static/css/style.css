@@ -1061,7 +1061,7 @@ label { vertical-align: top }
   margin-right: 1em;
 }
 
-#trade form {
+.trade-form {
   width: 25em;
   margin: 0 0 2em 6em;
 }
