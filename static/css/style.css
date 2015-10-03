@@ -2292,7 +2292,7 @@ footer a:hover { text-decoration: underline }
     text-align: left;
     padding: 0;
   }
-    .form input, .form textarea { width: 16em }
+    .form input, .form textarea, textarea[name=comments] { width: 16em }
     .form label {
       display: inline-block;
       width: 15em;
