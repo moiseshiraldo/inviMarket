@@ -99,6 +99,8 @@ def trade(request, trade_id):
                 notification.save()
                 receptor.notification_set.filter(code=10,
                     sender=proposer).delete()
+                proposer.profile.unlock()
+                receptor.profile.unlock()
                 # Send a notification email as well
                 if proposer.profile.notify:
                     cur_language = translation.get_language()
@@ -126,9 +128,12 @@ def trade(request, trade_id):
                             )
                     finally:
                         translation.activate(cur_language)
-                proposer.profile.unlock()
-                receptor.profile.unlock()
                 return redirect('trade_accepted')
+                # If the trade is a donation, set the donator as the proposer
+                if trade.donation:
+                    trade.proposer = trade.offers[0].user
+                    trade.receptor = trade.requests[0].user
+                    trade.save()
         if 'Reject_proposal' in request.POST:
             if not proposer.profile.lock_perm():
               error = _("Some requests/offers status have changed. Reload "
