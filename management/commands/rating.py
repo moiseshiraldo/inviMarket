@@ -25,7 +25,7 @@ class Command(BaseCommand):
                 user.save()
                 user.profile.save()
             else:
-                user.profile.trades = trades
+                user.profile.trades = trades + donations
                 user.profile.donations = donations
                 days = (timezone.now() - user.profile.last_visit).days
                 rating = (
