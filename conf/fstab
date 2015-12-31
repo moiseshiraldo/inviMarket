@@ -1,0 +1,5 @@
+LABEL=cloudimg-rootfs	/	 		ext4	defaults,discard	0 0
+/dev/xvdf		/webserver		ext4	defaults,noatime,	0 0
+/dev/xvdg		/email			ext4	defaults,noatime	0 0
+/webserver		/export/webserver	none	bind			0 0
+/email			/export/email		none	bind			0 0

@@ -1,0 +1,6 @@
+0  */4 *   * * /usr/bin/python /webserver/manage.py popularity >> $HOME/logs/commands.log
+5  2   *   * * /usr/bin/python /webserver/manage.py rating >> $HOME/logs/commands.log
+10 2   *   * * /usr/bin/python /webserver/manage.py weights >> $HOME/logs/commands.log
+15 2   */2 * * /usr/bin/python /webserver/manage.py clean_users >> $HOME/logs/commands.log
+20 2   *   * * /usr/bin/python /webserver/manage.py clean_trades >> $HOME/logs/commands.log
+30 2   */3 * * /usr/bin/python /webserver/manage.py clean_emails >> $HOME/logs/commands.log

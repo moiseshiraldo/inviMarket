@@ -1,0 +1,3 @@
+/export 		172.31.32.0/20(ro,fsid=0,insecure,no_subtree_check,async)
+/export/webserver	172.31.32.0/20(ro,nohide,insecure,subtree_check,async)
+/export/email		172.31.32.0/20(ro,nohide,insecure,no_subtree_check,async)

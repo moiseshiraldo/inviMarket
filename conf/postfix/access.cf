@@ -1,0 +1,8 @@
+hosts = invimarket.cz2wbt9k86yb.eu-west-1.rds.amazonaws.com:5432
+user = django
+password = django
+dbname = invidb 
+result_format = %s
+
+query = SELECT 'OK' FROM "inviMarket_website" WHERE email_domain='%d'
+

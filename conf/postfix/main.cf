@@ -1,0 +1,79 @@
+# See /usr/share/postfix/main.cf.dist for a commented, more complete version
+
+
+# Debian specific:  Specifying a file name will cause the first
+# line of that file to be used as the name.  The Debian default
+# is /etc/mailname.
+#myorigin = /etc/mailname
+
+smtpd_banner = $myhostname ESMTP $mail_name (Ubuntu)
+biff = no
+
+# appending .domain is the MUA's job.
+append_dot_mydomain = no
+
+# Uncomment the next line to generate "delayed mail" warnings
+#delay_warning_time = 4h
+
+readme_directory = no
+
+# TLS parameters
+smtpd_tls_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
+smtpd_tls_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
+smtpd_use_tls=no
+smtpd_tls_session_cache_database = btree:${data_directory}/smtpd_scache
+smtp_tls_session_cache_database = btree:${data_directory}/smtp_scache
+
+# SASL parameters
+smtpd_sasl_auth_enable = yes
+smtpd_sasl_type = dovecot
+smtpd_sasl_security_options = noanonymous
+smtpd_sender_login_maps = hash:/etc/postfix/controlled_envelope_senders
+smtpd_sasl_exceptions_networks = !172.31.32.0/20
+smtpd_sasl_path = private/auth
+
+# See /usr/share/doc/postfix/TLS_README.gz in the postfix-doc package for
+# information on enabling SSL in the smtp client.
+
+smtpd_restriction_classes = external
+external = permit
+smtpd_relay_restrictions = 
+	permit_mynetworks,
+	reject_sender_login_mismatch,
+	check_sasl_access hash:/etc/postfix/sasl_access,
+	permit_sasl_authenticated,
+	defer_unauth_destination,
+	check_policy_service unix:private/policy-spf,
+	check_recipient_access hash:/etc/postfix/invimarket.rules,
+	check_sender_access pgsql:/etc/postfix/access.cf,
+	reject
+myhostname = mx.invimarket.com
+mydomain = invimarket.com
+alias_maps = pgsql:/etc/postfix/virtual_forwards.cf
+virtual_mailbox_domains = localhost
+virtual_mailbox_base = /email
+virtual_mailbox_maps = pgsql:/etc/postfix/virtual_maildir.cf
+virtual_minimum_uid = 100
+virtual_uid_maps = static:1001
+virtual_gid_maps = static:1001
+myorigin = $mydomain
+mydestination = $mydomain
+relayhost = 
+mailbox_size_limit = 0
+recipient_delimiter = 
+inet_interfaces = all
+inet_protocols = all
+
+# SRS postsrsd configuration
+sender_canonical_maps = tcp:127.0.0.1:10001
+sender_canonical_classes = envelope_sender
+recipient_canonical_maps = tcp:127.0.0.1:10002
+recipient_canonical_classes= envelope_recipient,header_recipient
+
+policy-spf_time_limit = 3600s
+
+# DKIM
+milter_default_action = accept
+milter_protocol = 2
+smtpd_milters = inet:localhost:8891
+non_smtpd_milters = inet:localhost:8891

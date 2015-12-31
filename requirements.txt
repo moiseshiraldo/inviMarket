@@ -1,0 +1,9 @@
+Django==1.8.2 
+psycopg2
+boto
+django-storages
+Pillow
+pylibmc
+django-elasticache
+django-blog-zinnia
+google-api-python-client
